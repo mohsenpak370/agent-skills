@@ -61,6 +61,11 @@ For Vue and Nuxt work, Vue-specific skills may be loaded alongside
 system concerns, and Vue-specific skills for framework correctness, composables,
 Pinia, testing, and debugging.
 
+Use VueUse when an existing composable fits browser APIs, storage, sensors,
+async state, animation, or common reactive utilities. Keep Nuxt server-aware data
+fetching on `useFetch` or `useAsyncData` unless client-only fetch behavior is
+intended.
+
 Having multiple focused skills is expected. It becomes a problem only when skill
 descriptions overlap without routing guidance or when heavyweight workflows are
 forced for small edits. `AGENTS.md` defines the routing rules to avoid that.
@@ -98,6 +103,7 @@ This repository currently includes skills for:
 - Vue debugging guides
 - Vue Pinia best practices
 - Vue testing best practices
+- VueUse functions
 
 ## References
 

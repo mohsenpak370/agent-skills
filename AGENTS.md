@@ -29,6 +29,12 @@ For Vue and Nuxt work:
   UI, layout, accessibility, responsive behavior, or design-system behavior.
 - Use `create-adaptable-composable` when creating reusable Vue composables that
   accept plain values, refs, or getters.
+- Use `vueuse-functions` for VueUse composables in Vue/Nuxt work. Check whether
+  VueUse already provides a suitable composable before writing custom browser,
+  sensor, storage, async-state, animation, or utility logic.
+- Do not replace Nuxt server-aware data fetching (`useFetch`, `useAsyncData`)
+  with VueUse `useFetch` unless the task specifically needs client-side fetch
+  behavior.
 - Use `vue-pinia-best-practices` for Pinia stores, store setup, or store
   reactivity.
 - Use `vue-testing-best-practices` for Vue component, composable, Vitest, Vue

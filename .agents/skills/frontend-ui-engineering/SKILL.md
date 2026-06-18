@@ -37,6 +37,10 @@ match the task:
   Vue Router, Pinia usage, and Vue/Vite conventions.
 - `create-adaptable-composable` when creating reusable composables that accept
   plain values, refs, or getters.
+- `vueuse-functions` when VueUse can provide an existing composable for browser
+  APIs, sensors, storage, async state, animation, or utility behavior.
+  Do not replace Nuxt server-aware data fetching (`useFetch`, `useAsyncData`)
+  with VueUse `useFetch` unless client-only behavior is intended.
 - `vue-pinia-best-practices` for Pinia stores, setup, and store reactivity.
 - `vue-testing-best-practices` for Vue component, composable, Vitest, Vue Test
   Utils, or Playwright tests.
