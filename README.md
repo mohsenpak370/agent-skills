@@ -17,19 +17,19 @@ agent should load that skill before acting.
 To install this skill pack from GitHub after publishing it as `agent-skills`:
 
 ```bash
-npx skills add <github-username>/agent-skills
+npx skills add mohsenpak370/agent-skills
 ```
 
 Install every skill without prompts:
 
 ```bash
-npx skills add <github-username>/agent-skills --all
+npx skills add mohsenpak370/agent-skills --all
 ```
 
 Install selected skills only:
 
 ```bash
-npx skills add <github-username>/agent-skills --skill solana-dev frontend-ui-engineering
+npx skills add mohsenpak370/agent-skills --skill solana-dev frontend-ui-engineering
 ```
 
 For local opencode usage, this repository includes `opencode.json` configured to
