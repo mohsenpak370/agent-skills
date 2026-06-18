@@ -1,6 +1,6 @@
 ---
 name: frontend-ui-engineering
-description: Builds production-quality UIs. Use when building or modifying user-facing interfaces, including React, Nuxt 4, Vue, and Tailwind CSS 4 components, layouts, state, accessibility, and polished design-system implementation.
+description: Builds production-quality UIs. Use when building or modifying user-facing interfaces, including React, Nuxt 4, Vue, Tailwind CSS 4 component styling, layouts, state, accessibility, and visual polish. For Tailwind v4 design tokens, @theme setup, reusable variants, or design-system infrastructure, use frontend-development-tailwind-design-system.
 ---
 
 # Frontend UI Engineering
@@ -22,7 +22,7 @@ Build production-quality user interfaces that are accessible, performant, and vi
 Load the focused reference that matches the project before writing code:
 
 - React, React Query, SWR, TSX components: `references/react-ui.md`
-- Nuxt 4, Vue SFCs, Tailwind CSS 4: `references/nuxt4-tailwind4.md`
+- Nuxt 4, Vue SFCs, Tailwind CSS 4 usage: `references/nuxt4-tailwind4.md`
 - Nuxt/Vue component responsibility examples: `references/nuxt-focused-components.md`
 - Detailed accessibility checks and testing tools: `references/accessibility-checklist.md`
 
@@ -52,8 +52,11 @@ match the task:
   hydration debugging.
 
 Use this skill for product UI quality, accessibility, responsive layout,
-component architecture, and design-system implementation. Use the Vue-specific
-skills for framework correctness and deeper Vue ecosystem guidance.
+component architecture, and applying an existing design system. Use
+`frontend-development-tailwind-design-system` for Tailwind v4 tokens, CSS-first
+`@theme` setup, reusable variants, dark mode primitives, and design-system
+standardization. Use the Vue-specific skills for framework correctness and
+deeper Vue ecosystem guidance.
 
 ## Component Architecture
 

@@ -1,6 +1,6 @@
 ---
 name: frontend-development-tailwind-design-system
-description: Build scalable design systems with Tailwind CSS v4, design tokens, component libraries, and responsive patterns. Use when creating component libraries, implementing design systems, or standardizing UI patterns.
+description: Build Tailwind CSS v4 design-system infrastructure with CSS-first @theme tokens, reusable variants, dark mode primitives, and component-library foundations. Use for design tokens and standardization, not routine page or component styling.
 ---
 
 # Tailwind Design System (v4)
@@ -13,10 +13,15 @@ Build production-ready design systems with Tailwind CSS v4, including CSS-first 
 
 - Creating a component library with Tailwind v4
 - Implementing design tokens and theming with CSS-first configuration
-- Building responsive and accessible components
+- Building reusable component-library foundations
 - Standardizing UI patterns across a codebase
 - Migrating from Tailwind v3 to v4
 - Setting up dark mode with native CSS features
+
+Use `frontend-ui-engineering` instead for routine user-facing UI implementation,
+page layout, accessibility verification, visual polish, or applying an existing
+design system. Use both only when a task changes Tailwind design-system
+primitives and implements user-facing UI that depends on them.
 
 ## Key v4 Changes
 

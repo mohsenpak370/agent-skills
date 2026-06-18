@@ -54,16 +54,19 @@ For frontend work, the agent should use `frontend-ui-engineering` for:
 - Nuxt 4 or Vue single-file components
 - Tailwind CSS 4 styling
 - Accessibility and responsive layout work
-- Component architecture and design-system implementation
+- Component architecture and applying existing design systems
 
 Use `frontend-development-tailwind-design-system` for Tailwind CSS v4 design
 tokens, CSS-first `@theme` configuration, reusable component variants, dark mode,
 and design-system standardization.
 
+Use both frontend skills only when a task changes Tailwind design-system
+primitives and implements user-facing UI that depends on them.
+
 For Vue and Nuxt work, Vue-specific skills may be loaded alongside
-`frontend-ui-engineering`. Use the frontend skill for UI quality and design
-system concerns, and Vue-specific skills for framework correctness, composables,
-Pinia, testing, and debugging.
+`frontend-ui-engineering`. Use the frontend skill for UI quality and applying
+existing design systems, and Vue-specific skills for framework correctness,
+composables, Pinia, testing, and debugging.
 
 Use `nuxt` for Nuxt 3 and Nuxt 4 routing, data fetching, server routes,
 middleware, Nitro, modules, layers, and rendering modes. The Nuxt skill is based

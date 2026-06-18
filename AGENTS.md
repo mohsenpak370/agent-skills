@@ -19,10 +19,12 @@ installed skills.
 
 Use `frontend-ui-engineering` for building or modifying user-facing interfaces,
 including React, Nuxt 4, Vue, Tailwind CSS 4, accessibility, component
-architecture, layout, and design-system work.
+architecture, layout, visual polish, and applying an existing design system.
 Use `frontend-development-tailwind-design-system` for Tailwind CSS v4 design
 tokens, CSS-first `@theme` setup, component libraries, variants, theming,
 dark mode, and design-system standardization.
+Use both only when a task changes Tailwind design-system primitives and builds
+user-facing UI that depends on them.
 
 For Vue and Nuxt work:
 
@@ -39,7 +41,8 @@ For Vue and Nuxt work:
 - Use `vue-best-practices` for any Vue, `.vue`, Vue Router, Pinia, or Vue/Vite
   task.
 - Use `frontend-ui-engineering` alongside it when the task affects user-facing
-  UI, layout, accessibility, responsive behavior, or design-system behavior.
+  UI, layout, accessibility, responsive behavior, or applying an existing design
+  system.
 - Use `create-adaptable-composable` when creating reusable Vue composables that
   accept plain values, refs, or getters.
 - Use `vueuse-functions` for VueUse composables in Vue/Nuxt work. Check whether
