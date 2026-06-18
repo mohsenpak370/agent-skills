@@ -71,6 +71,12 @@ For backend, Python, and Django work:
   generics, and mypy or pyright configuration.
 - Use `python-development-python-error-handling` for validation, exception
   strategy, robust API failures, and partial failure handling.
+- Use `python-development-python-resource-management` for context managers,
+  deterministic cleanup, file handles, connections, and streaming resources.
+- Use `python-development-python-resilience` for retries, timeouts, exponential
+  backoff, circuit breakers, rate limits, and transient failure handling.
+- Use `python-development-python-observability` for Python structured logging,
+  metrics, tracing, correlation IDs, and production diagnostics.
 - Use `python-development-python-testing-patterns` for pytest, fixtures, mocks,
   and Python-specific test structure. Use `test-driven-development` alongside it
   when the task is about the red-green-refactor workflow.
@@ -86,6 +92,12 @@ For backend, Python, and Django work:
 - Use `database-design-postgresql` when designing or reviewing PostgreSQL schemas,
   migrations, constraints, indexes, data types, query access paths, and database
   performance risks.
+- Use `developer-essentials-sql-optimization-patterns` for slow SQL queries,
+  EXPLAIN analysis, index tuning, N+1 query problems, and database performance
+  optimization. Use `database-design-postgresql` alongside it for PostgreSQL
+  schema, constraint, and migration design.
+- Use `developer-essentials-e2e-testing-patterns` for Playwright, Cypress,
+  browser automation, flaky E2E tests, and end-to-end test suite design.
 - Use `developer-essentials-auth-implementation-patterns` for authentication,
   authorization, sessions, OAuth, JWT, RBAC, resource ownership, and securing
   APIs. Use `security-and-hardening` alongside it for security-sensitive changes.
@@ -101,9 +113,18 @@ For broader engineering work, select the matching lifecycle or specialty skill:
 - API design: `api-and-interface-design`
 - Security-sensitive work: `security-and-hardening`
 - Performance work: `performance-optimization`
+- Slow SQL or query plans: `developer-essentials-sql-optimization-patterns`
 - Git, commits, and branching: `git-workflow-and-versioning`
 - Documentation or ADRs: `documentation-and-adrs`
+- OpenAPI specs or SDK generation: `documentation-generation-openapi-spec-generation`
 - CI/CD automation: `ci-cd-and-automation`
+- GitHub Actions workflows: `cicd-automation-github-actions-templates`
+- Deployment pipeline design: `cicd-automation-deployment-pipeline-design`
+- CI/CD secrets: `cicd-automation-secrets-management`
+- SLOs and error budgets: `observability-monitoring-slo-implementation`
+- SAST setup: `security-scanning-sast-configuration`
+- Security requirements from threats: `security-scanning-security-requirement-extraction`
+- Threat-to-control mapping: `security-scanning-threat-mitigation-mapping`
 - Shipping or launch work: `shipping-and-launch`
 
 Before writing framework-specific UI code, load the relevant skill reference and

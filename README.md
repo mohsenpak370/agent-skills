@@ -88,10 +88,15 @@ task:
 | Python style | `python-development-python-code-style` |
 | Python typing | `python-development-python-type-safety` |
 | Python errors | `python-development-python-error-handling` |
+| Python resources | `python-development-python-resource-management` |
+| Python resilience | `python-development-python-resilience` |
+| Python observability | `python-development-python-observability` |
 | Python testing | `python-development-python-testing-patterns` |
 | Backend architecture | `backend-development-architecture-patterns` |
 | API design | `backend-development-api-design-principles`, `api-and-interface-design` |
 | PostgreSQL | `database-design-postgresql` |
+| SQL optimization | `developer-essentials-sql-optimization-patterns`, `database-design-postgresql` |
+| E2E testing | `developer-essentials-e2e-testing-patterns` |
 | Auth and authorization | `developer-essentials-auth-implementation-patterns`, `security-and-hardening` |
 
 For Django work, load `django-backend-development` first, then combine it with
@@ -114,6 +119,9 @@ This repository currently includes skills for:
 - Backend architecture patterns
 - Browser testing with DevTools
 - CI/CD and automation
+- CI/CD deployment pipeline design
+- CI/CD GitHub Actions templates
+- CI/CD secrets management
 - Code review and quality
 - Code simplification
 - Context engineering
@@ -121,8 +129,11 @@ This repository currently includes skills for:
 - Debugging and error recovery
 - Deprecation and migration
 - Developer auth implementation patterns
+- Developer E2E testing patterns
+- Developer SQL optimization patterns
 - Django backend development
 - Documentation and ADRs
+- OpenAPI spec generation
 - Doubt-driven development
 - Frontend UI engineering
 - Git workflow and versioning
@@ -132,16 +143,23 @@ This repository currently includes skills for:
 - Nuxt framework guidance
 - Nuxt UI component and theming guidance
 - Observability and instrumentation
+- SLO implementation
 - Performance optimization
 - Planning and task breakdown
 - Python code style
 - Python configuration
 - Python error handling
+- Python observability
 - Python project structure
+- Python resilience
+- Python resource management
 - Python testing patterns
 - Python type safety
 - Python uv package management
 - Security and hardening
+- SAST configuration
+- Security requirement extraction
+- Threat mitigation mapping
 - Shipping and launch
 - Source-driven development
 - Spec-driven development
