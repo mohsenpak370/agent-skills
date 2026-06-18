@@ -56,6 +56,15 @@ For frontend work, the agent should use `frontend-ui-engineering` for:
 - Accessibility and responsive layout work
 - Component architecture and design-system implementation
 
+For Vue and Nuxt work, Vue-specific skills may be loaded alongside
+`frontend-ui-engineering`. Use the frontend skill for UI quality and design
+system concerns, and Vue-specific skills for framework correctness, composables,
+Pinia, testing, and debugging.
+
+Having multiple focused skills is expected. It becomes a problem only when skill
+descriptions overlap without routing guidance or when heavyweight workflows are
+forced for small edits. `AGENTS.md` defines the routing rules to avoid that.
+
 ## Installed Skills
 
 This repository currently includes skills for:
@@ -84,6 +93,11 @@ This repository currently includes skills for:
 - Spec-driven development
 - Test-driven development
 - Using agent skills
+- Vue adaptable composables
+- Vue best practices
+- Vue debugging guides
+- Vue Pinia best practices
+- Vue testing best practices
 
 ## References
 

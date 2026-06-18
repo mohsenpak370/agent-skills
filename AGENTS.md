@@ -21,6 +21,21 @@ Use `frontend-ui-engineering` for building or modifying user-facing interfaces,
 including React, Nuxt 4, Vue, Tailwind CSS 4, accessibility, component
 architecture, layout, and design-system work.
 
+For Vue and Nuxt work:
+
+- Use `vue-best-practices` for any Vue, `.vue`, Vue Router, Pinia, or Vue/Vite
+  task.
+- Use `frontend-ui-engineering` alongside it when the task affects user-facing
+  UI, layout, accessibility, responsive behavior, or design-system behavior.
+- Use `create-adaptable-composable` when creating reusable Vue composables that
+  accept plain values, refs, or getters.
+- Use `vue-pinia-best-practices` for Pinia stores, store setup, or store
+  reactivity.
+- Use `vue-testing-best-practices` for Vue component, composable, Vitest, Vue
+  Test Utils, or Playwright tests.
+- Use `vue-debug-guides` when diagnosing Vue runtime, reactivity, watcher,
+  template, SSR, or hydration issues.
+
 For broader engineering work, select the matching lifecycle or specialty skill:
 
 - New feature or unclear requirements: `spec-driven-development`

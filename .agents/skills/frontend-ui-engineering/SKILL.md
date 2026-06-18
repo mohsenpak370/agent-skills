@@ -28,6 +28,25 @@ Load the focused reference that matches the project before writing code:
 
 Preserve the existing project structure and naming conventions first. Use references when there is no stronger local pattern.
 
+## Vue Companion Skills
+
+For Vue and Nuxt projects, use Vue-specific skills alongside this one when they
+match the task:
+
+- `vue-best-practices` for Vue correctness, Composition API, SFC structure,
+  Vue Router, Pinia usage, and Vue/Vite conventions.
+- `create-adaptable-composable` when creating reusable composables that accept
+  plain values, refs, or getters.
+- `vue-pinia-best-practices` for Pinia stores, setup, and store reactivity.
+- `vue-testing-best-practices` for Vue component, composable, Vitest, Vue Test
+  Utils, or Playwright tests.
+- `vue-debug-guides` for Vue runtime, reactivity, watcher, template, SSR, or
+  hydration debugging.
+
+Use this skill for product UI quality, accessibility, responsive layout,
+component architecture, and design-system implementation. Use the Vue-specific
+skills for framework correctness and deeper Vue ecosystem guidance.
+
 ## Component Architecture
 
 Colocate everything related to a component when the project allows it:
