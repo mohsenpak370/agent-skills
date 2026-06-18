@@ -35,19 +35,19 @@
       "source": "wshobson/agents",
       "sourceType": "github",
       "skillPath": "plugins/cicd-automation/skills/deployment-pipeline-design/SKILL.md",
-      "computedHash": "49e64f7ae3bec1a6f5054799487f4068d5733a1cb0ab06881a3ad150a8725b7d"
+      "computedHash": "9a56bd9401c1dc8ef5a15758d7234f211193097ddb3895d46d1ddcd730687b18"
     },
     "cicd-automation-github-actions-templates": {
       "source": "wshobson/agents",
       "sourceType": "github",
       "skillPath": "plugins/cicd-automation/skills/github-actions-templates/SKILL.md",
-      "computedHash": "acf499578887965900409e898b25e4bfdf740801e752e6f9a12d857a1e7e1472"
+      "computedHash": "a280b280bd57708d6ed834c37253605d169c7a6f0214b64789c70de73f17ea69"
     },
     "cicd-automation-secrets-management": {
       "source": "wshobson/agents",
       "sourceType": "github",
       "skillPath": "plugins/cicd-automation/skills/secrets-management/SKILL.md",
-      "computedHash": "bbb4412efe9816bb4c4363aca1753c8fdfe43971259656fee662ae7defc1a0ea"
+      "computedHash": "da14565446a404c0a3ca2cf4363f755dc06a351c4b588be453ea73680d5658d0"
     },
     "code-review-and-quality": {
       "source": "addyosmani/agent-skills",
@@ -101,13 +101,13 @@
       "source": "wshobson/agents",
       "sourceType": "github",
       "skillPath": "plugins/developer-essentials/skills/e2e-testing-patterns/SKILL.md",
-      "computedHash": "7aabe0dbc7c906570514fc4aefb4c562273bc3e78a125ec500c138f64815ae19"
+      "computedHash": "1653690dde9eeca6dcb66086277791c2a3ccc2b37eaab6ec9b627a10adfb94be"
     },
     "developer-essentials-sql-optimization-patterns": {
       "source": "wshobson/agents",
       "sourceType": "github",
       "skillPath": "plugins/developer-essentials/skills/sql-optimization-patterns/SKILL.md",
-      "computedHash": "3ccc14a97ed353b5e98f435c484a12ee3885848a41ec50c76188cd90226b4449"
+      "computedHash": "cfe8234323daaeb47577261c96933f519004fad2f45f1460f340b883af5d7354"
     },
     "django-backend-development": {
       "source": "vintasoftware/django-ai-plugins",
@@ -125,7 +125,7 @@
       "source": "wshobson/agents",
       "sourceType": "github",
       "skillPath": "plugins/documentation-generation/skills/openapi-spec-generation/SKILL.md",
-      "computedHash": "f726473262c558e36d083814364ef80cf157b27485aa01a561583bf4245af2d8"
+      "computedHash": "8071736973f8a99cbe8644e21f638493ac062c77d650d8fabc4a469285485d7e"
     },
     "doubt-driven-development": {
       "source": "addyosmani/agent-skills",
@@ -185,7 +185,7 @@
       "source": "wshobson/agents",
       "sourceType": "github",
       "skillPath": "plugins/observability-monitoring/skills/slo-implementation/SKILL.md",
-      "computedHash": "7d8ebba6f20b4a1519c4d23163c6c78950b3cfbd229d6e1cd455d6325fb93c6c"
+      "computedHash": "1436f6003627c6978872e3a8c94f8f601315e39105c04565d8883f661c827150"
     },
     "performance-optimization": {
       "source": "addyosmani/agent-skills",
@@ -221,7 +221,7 @@
       "source": "wshobson/agents",
       "sourceType": "github",
       "skillPath": "plugins/python-development/skills/python-observability/SKILL.md",
-      "computedHash": "74cb9554fa8a3661e0f4eb62a05b51a8a107669f02b1bcf3fafa1eafb70f5b2f"
+      "computedHash": "bf547d6ee0284ce20bbe521af3e40d53ca9481634dfeaaf16f25c88de6828f56"
     },
     "python-development-python-project-structure": {
       "source": "wshobson/agents",
@@ -233,13 +233,13 @@
       "source": "wshobson/agents",
       "sourceType": "github",
       "skillPath": "plugins/python-development/skills/python-resilience/SKILL.md",
-      "computedHash": "6d9c0901ab2cac93d3debd485839f3b53345727004e3aaffefabdd6108521f66"
+      "computedHash": "ddf3a7dc5bd59dd228a65a3ee7ae60fe740e9dc6e98bfac0ce0be5330fcc5332"
     },
     "python-development-python-resource-management": {
       "source": "wshobson/agents",
       "sourceType": "github",
       "skillPath": "plugins/python-development/skills/python-resource-management/SKILL.md",
-      "computedHash": "c9a508a72bf95c2e65063fb3121806cf19702faf121cc77c12cb41722a098ec2"
+      "computedHash": "1d60cbc5ce7a9e86fa7f64e147f04f21d5d174b56bf96f5f628c905892068aa5"
     },
     "python-development-python-testing-patterns": {
       "source": "wshobson/agents",
@@ -269,19 +269,19 @@
       "source": "wshobson/agents",
       "sourceType": "github",
       "skillPath": "plugins/security-scanning/skills/sast-configuration/SKILL.md",
-      "computedHash": "cb66459bda8479a92d6c76b553e527fa57060c6b8171a4694fc1c38d0d8ae724"
+      "computedHash": "cc31d39b62ed486936e2f48fcfffd789224503eac5a02fde3595f4d789ea997d"
     },
     "security-scanning-security-requirement-extraction": {
       "source": "wshobson/agents",
       "sourceType": "github",
       "skillPath": "plugins/security-scanning/skills/security-requirement-extraction/SKILL.md",
-      "computedHash": "d6344acda871c9da9aa14caa07fc351fc4cb7f351176c35736cd25dd32cd0f12"
+      "computedHash": "bf391927dc404280e0f4d8c0ec20513c579fc6c277dfd04ad5a8e0a730ce8dde"
     },
     "security-scanning-threat-mitigation-mapping": {
       "source": "wshobson/agents",
       "sourceType": "github",
       "skillPath": "plugins/security-scanning/skills/threat-mitigation-mapping/SKILL.md",
-      "computedHash": "fc1f1fb96bbc53e4f213be08a5713fbac101338cdd815210c75dd85267f694a0"
+      "computedHash": "40cf933689b7783480fbf567c9b7573a9626977912acf7fcb808287934c7dfa8"
     },
     "shipping-and-launch": {
       "source": "addyosmani/agent-skills",
