@@ -56,6 +56,10 @@ For frontend work, the agent should use `frontend-ui-engineering` for:
 - Accessibility and responsive layout work
 - Component architecture and design-system implementation
 
+Use `frontend-development-tailwind-design-system` for Tailwind CSS v4 design
+tokens, CSS-first `@theme` configuration, reusable component variants, dark mode,
+and design-system standardization.
+
 For Vue and Nuxt work, Vue-specific skills may be loaded alongside
 `frontend-ui-engineering`. Use the frontend skill for UI quality and design
 system concerns, and Vue-specific skills for framework correctness, composables,
@@ -136,6 +140,7 @@ This repository currently includes skills for:
 - OpenAPI spec generation
 - Doubt-driven development
 - Frontend UI engineering
+- Frontend Tailwind design systems
 - Git workflow and versioning
 - Idea refinement
 - Incremental implementation

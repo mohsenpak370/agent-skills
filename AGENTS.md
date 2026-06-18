@@ -20,6 +20,9 @@ installed skills.
 Use `frontend-ui-engineering` for building or modifying user-facing interfaces,
 including React, Nuxt 4, Vue, Tailwind CSS 4, accessibility, component
 architecture, layout, and design-system work.
+Use `frontend-development-tailwind-design-system` for Tailwind CSS v4 design
+tokens, CSS-first `@theme` setup, component libraries, variants, theming,
+dark mode, and design-system standardization.
 
 For Vue and Nuxt work:
 
