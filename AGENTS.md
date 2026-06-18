@@ -27,6 +27,12 @@ For Vue and Nuxt work:
   `useAsyncData`, Nitro, file-based routing, modules, layers, or hybrid
   rendering. The `nuxt` skill is based on Nuxt 3.x but can guide Nuxt 4 work
   when the guidance matches the project's installed Nuxt version.
+- Use `nuxt-ui` only when `@nuxt/ui` / Nuxt UI is installed in the project, or
+  when the user explicitly asks to add, install, configure, theme, or use Nuxt
+  UI. Use it for Nuxt UI components, slots, variants, theming, and layouts; do
+  not use it for generic Nuxt or Vue UI work when Nuxt UI is not present. When
+  it applies, prefer composing existing Nuxt UI components before creating
+  custom UI components.
 - Use `vue-best-practices` for any Vue, `.vue`, Vue Router, Pinia, or Vue/Vite
   task.
 - Use `frontend-ui-engineering` alongside it when the task affects user-facing
