@@ -7,6 +7,18 @@
       "skillPath": "skills/api-and-interface-design/SKILL.md",
       "computedHash": "3cf54553433e55875c664baf78f9c769820bdfac155f09bf2989d70e20e6e147"
     },
+    "backend-development-api-design-principles": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/backend-development/skills/api-design-principles/SKILL.md",
+      "computedHash": "9ff7e786161f9df66e413a5457d094cc44e5e8055b175efee96307fbcffcd300"
+    },
+    "backend-development-architecture-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/backend-development/skills/architecture-patterns/SKILL.md",
+      "computedHash": "b4f68908b6d7340a7d88b3d31f900b308dc58c84b99a26e1f7ca4d5ba31fa0ce"
+    },
     "browser-testing-with-devtools": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
@@ -43,6 +55,12 @@
       "skillPath": "skills/create-adaptable-composable/SKILL.md",
       "computedHash": "2f215126499d29a733be980ef9ce8f4ffb5f25a8831aec965d86c0cd21b2c5d2"
     },
+    "database-design-postgresql": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/database-design/skills/postgresql/SKILL.md",
+      "computedHash": "5a06f1264f729050ecf7670d81e3420370cf52e7135cf05a54e670786c54cad6"
+    },
     "debugging-and-error-recovery": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
@@ -54,6 +72,18 @@
       "sourceType": "github",
       "skillPath": "skills/deprecation-and-migration/SKILL.md",
       "computedHash": "ad5b7a0b67d5cd952aafd0069865c10c21e2f5fe179bfbc544e11b3c853953c2"
+    },
+    "developer-essentials-auth-implementation-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/developer-essentials/skills/auth-implementation-patterns/SKILL.md",
+      "computedHash": "917deaf65c927bd619517a9a5c549a72b654a1c8de5a570658778a6d3988803a"
+    },
+    "django-backend-development": {
+      "source": "vintasoftware/django-ai-plugins",
+      "sourceType": "github",
+      "skillPath": "skills/django-expert/SKILL.md",
+      "computedHash": "5a7d17851f6e344e9a7b7188777af2d3037bf756f613a1b3074e5399381dd78a"
     },
     "documentation-and-adrs": {
       "source": "addyosmani/agent-skills",
@@ -71,7 +101,7 @@
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/frontend-ui-engineering/SKILL.md",
-      "computedHash": "917f6cf8c3d694c2b145463799ee492a2b88d7bf22ff479e08111d3ea5501e65"
+      "computedHash": "eb52e9a8bfc562ad35e6fdba5e3d58a2ce841f3166244c7c59564fb09bde52c0"
     },
     "git-workflow-and-versioning": {
       "source": "addyosmani/agent-skills",
@@ -101,13 +131,13 @@
       "source": "antfu/skills",
       "sourceType": "github",
       "skillPath": "skills/nuxt/SKILL.md",
-      "computedHash": "9e8237ec92083db9a6f4c77d5e5bf4b1d9873d670671235bc75455ee1ca39c74"
+      "computedHash": "288552fa723c1a26b9505e160ca970b0db51a455ecdf4eca4067b66d383c57a7"
     },
     "nuxt-ui": {
       "source": "nuxt/ui",
       "sourceType": "github",
       "skillPath": "skills/nuxt-ui/SKILL.md",
-      "computedHash": "de41e63eeda35c2bfdd3ed783d3e04361dc85bff28ad71f9c4dbdc01bb8f4e57"
+      "computedHash": "b3ba85b7feb136070e24592c0f0a2d66cd1f9d3d4422f6f88b4653ad949b014f"
     },
     "observability-and-instrumentation": {
       "source": "addyosmani/agent-skills",
@@ -126,6 +156,48 @@
       "sourceType": "github",
       "skillPath": "skills/planning-and-task-breakdown/SKILL.md",
       "computedHash": "6ee11641fc8d8f299a6acb3a10976e7e50719ad012290123e11ec34a525b4cc0"
+    },
+    "python-development-python-code-style": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/python-development/skills/python-code-style/SKILL.md",
+      "computedHash": "740cf410aa0eece440f763580eb12089982a40afff5d15983e1cf3e8e836a0a5"
+    },
+    "python-development-python-configuration": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/python-development/skills/python-configuration/SKILL.md",
+      "computedHash": "f1fc31ee65c2fef95e1f7878f51abe36cb8ceaa2596e30d8e4a8d065b6b63b9c"
+    },
+    "python-development-python-error-handling": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/python-development/skills/python-error-handling/SKILL.md",
+      "computedHash": "1b437c02185f66d5572295d256dc52517527d29b42585b42ef488a46e33e41b2"
+    },
+    "python-development-python-project-structure": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/python-development/skills/python-project-structure/SKILL.md",
+      "computedHash": "8479cfebdcb9b033e43611f2948159d9038e4d5e54c4378930f63dbdb559310b"
+    },
+    "python-development-python-testing-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/python-development/skills/python-testing-patterns/SKILL.md",
+      "computedHash": "7cd3c1b84ede4860d497fcfc6dcdbac1aa9bd0d1356018e2aba62d7156a01e6c"
+    },
+    "python-development-python-type-safety": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/python-development/skills/python-type-safety/SKILL.md",
+      "computedHash": "d7ec09936a966c1825e19c747efe44b1a9327fb0b21f411e4c44bbf1f8c5b198"
+    },
+    "python-development-uv-package-manager": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/python-development/skills/uv-package-manager/SKILL.md",
+      "computedHash": "94630977fdeccf82b40f4e6b59b5899414668332c9628f24ec555a21868d4630"
     },
     "security-and-hardening": {
       "source": "addyosmani/agent-skills",

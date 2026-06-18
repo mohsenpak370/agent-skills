@@ -52,6 +52,44 @@ For Vue and Nuxt work:
 - Use `vue-debug-guides` when diagnosing Vue runtime, reactivity, watcher,
   template, SSR, or hydration issues.
 
+For backend, Python, and Django work:
+
+- Use `django-backend-development` for Django apps, Django REST Framework,
+  models, ORM queries, migrations, views, serializers, forms, settings,
+  management commands, Django tests, performance, security, and deployment.
+  Combine it with the Python, backend architecture, API design, PostgreSQL,
+  auth, testing, security, and observability skills that match the task.
+- Use `python-development-uv-package-manager` when setting up Python versions,
+  virtual environments, dependencies, or `uv` workflows.
+- Use `python-development-python-project-structure` when creating or reorganizing
+  Python packages, Django apps, modules, public APIs, or test layout.
+- Use `python-development-python-configuration` for environment variables,
+  typed settings, secrets, and environment-specific behavior.
+- Use `python-development-python-code-style` for Python style, naming, linting,
+  formatting, docstrings, and project standards.
+- Use `python-development-python-type-safety` for type annotations, protocols,
+  generics, and mypy or pyright configuration.
+- Use `python-development-python-error-handling` for validation, exception
+  strategy, robust API failures, and partial failure handling.
+- Use `python-development-python-testing-patterns` for pytest, fixtures, mocks,
+  and Python-specific test structure. Use `test-driven-development` alongside it
+  when the task is about the red-green-refactor workflow.
+- Use `backend-development-architecture-patterns` for backend service boundaries,
+  dependency direction, layered architecture, domain logic placement, and avoiding
+  business logic in Django views or framework adapters. Apply it proportionally;
+  do not introduce microservice, CQRS, event-sourcing, or heavy DDD complexity
+  unless the project requirements justify it.
+- Use `backend-development-api-design-principles` for REST or GraphQL resource
+  design, endpoint naming, status codes, pagination, filtering, versioning, and
+  API documentation. Use `api-and-interface-design` alongside it for broader
+  contracts between frontend, backend, SDKs, or external consumers.
+- Use `database-design-postgresql` when designing or reviewing PostgreSQL schemas,
+  migrations, constraints, indexes, data types, query access paths, and database
+  performance risks.
+- Use `developer-essentials-auth-implementation-patterns` for authentication,
+  authorization, sessions, OAuth, JWT, RBAC, resource ownership, and securing
+  APIs. Use `security-and-hardening` alongside it for security-sensitive changes.
+
 For broader engineering work, select the matching lifecycle or specialty skill:
 
 - New feature or unclear requirements: `spec-driven-development`

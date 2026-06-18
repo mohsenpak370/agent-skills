@@ -71,6 +71,36 @@ async state, animation, or common reactive utilities. Keep Nuxt server-aware dat
 fetching on `useFetch` or `useAsyncData` unless client-only fetch behavior is
 intended.
 
+Use `nuxt-ui` only when `@nuxt/ui` / Nuxt UI is installed in the target project,
+or when the task is explicitly to add, install, configure, theme, or use Nuxt UI.
+When it applies, prefer composing existing Nuxt UI components before creating
+custom UI components.
+
+For backend, Python, and Django work, combine the focused skills that match the
+task:
+
+| Area | Skills |
+| --- | --- |
+| Django | `django-backend-development` |
+| Python setup | `python-development-uv-package-manager` |
+| Python structure | `python-development-python-project-structure` |
+| Python config | `python-development-python-configuration` |
+| Python style | `python-development-python-code-style` |
+| Python typing | `python-development-python-type-safety` |
+| Python errors | `python-development-python-error-handling` |
+| Python testing | `python-development-python-testing-patterns` |
+| Backend architecture | `backend-development-architecture-patterns` |
+| API design | `backend-development-api-design-principles`, `api-and-interface-design` |
+| PostgreSQL | `database-design-postgresql` |
+| Auth and authorization | `developer-essentials-auth-implementation-patterns`, `security-and-hardening` |
+
+For Django work, load `django-backend-development` first, then combine it with
+the Python, backend architecture, API design, PostgreSQL, auth, testing,
+security, and observability skills that match the task. Apply architecture
+guidance proportionally: avoid putting business logic in Django views, but do not
+force microservice, CQRS, event-sourcing, or heavy DDD patterns unless the product
+requirements justify them.
+
 Having multiple focused skills is expected. It becomes a problem only when skill
 descriptions overlap without routing guidance or when heavyweight workflows are
 forced for small edits. `AGENTS.md` defines the routing rules to avoid that.
@@ -80,13 +110,18 @@ forced for small edits. `AGENTS.md` defines the routing rules to avoid that.
 This repository currently includes skills for:
 
 - API and interface design
+- Backend API design principles
+- Backend architecture patterns
 - Browser testing with DevTools
 - CI/CD and automation
 - Code review and quality
 - Code simplification
 - Context engineering
+- Database design with PostgreSQL
 - Debugging and error recovery
 - Deprecation and migration
+- Developer auth implementation patterns
+- Django backend development
 - Documentation and ADRs
 - Doubt-driven development
 - Frontend UI engineering
@@ -95,9 +130,17 @@ This repository currently includes skills for:
 - Incremental implementation
 - Interview-driven clarification
 - Nuxt framework guidance
+- Nuxt UI component and theming guidance
 - Observability and instrumentation
 - Performance optimization
 - Planning and task breakdown
+- Python code style
+- Python configuration
+- Python error handling
+- Python project structure
+- Python testing patterns
+- Python type safety
+- Python uv package management
 - Security and hardening
 - Shipping and launch
 - Source-driven development
