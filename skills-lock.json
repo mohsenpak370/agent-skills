@@ -295,6 +295,12 @@
       "skillPath": "skills/shipping-and-launch/SKILL.md",
       "computedHash": "3cd9f8154c7aa578cf7db15c43b54e358bbe7da03c633d289b0302acf4a83028"
     },
+    "solana-dev": {
+      "source": "solana-foundation/solana-dev-skill",
+      "sourceType": "github",
+      "skillPath": "skill/SKILL.md",
+      "computedHash": "51ba37080e2377cd57f278db8702dc9cfcd1f7520a42cbcca8f83924d59b0560"
+    },
     "source-driven-development": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
