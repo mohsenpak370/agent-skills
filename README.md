@@ -1,17 +1,39 @@
-# Skills
+# agent-skills
 
-Project-level agent skills and instructions for opencode.
+Installable agent skills and routing instructions for opencode.
 
 ## Contents
 
 - `AGENTS.md`: Root agent instructions for when and how to use installed skills.
-- `.agents/skills/`: Installed agent skills.
+- `skills/`: Installable agent skills.
 - `skills-lock.json`: Installed skill lockfile.
+- `opencode.json`: Local opencode config that loads skills from `skills/`.
 
 ## Usage
 
 Open this repository in opencode. When a request matches an installed skill, the
 agent should load that skill before acting.
+
+To install this skill pack from GitHub after publishing it as `agent-skills`:
+
+```bash
+npx skills add <github-username>/agent-skills
+```
+
+Install every skill without prompts:
+
+```bash
+npx skills add <github-username>/agent-skills --all
+```
+
+Install selected skills only:
+
+```bash
+npx skills add <github-username>/agent-skills --skill solana-dev frontend-ui-engineering
+```
+
+For local opencode usage, this repository includes `opencode.json` configured to
+load skills from `skills/` and instructions from `AGENTS.md`.
 
 Use natural language. The root `AGENTS.md` tells the agent to choose the right
 skill based on the task, such as:
@@ -203,7 +225,7 @@ The frontend skill points agents to focused references:
 
 Keep skill descriptions specific and action-oriented so opencode can select the
 right skill automatically. If you add a new skill, place it under
-`.agents/skills/<skill-name>/SKILL.md` and include clear frontmatter with `name`
+`skills/<skill-name>/SKILL.md` and include clear frontmatter with `name`
 and `description`.
 
 Restart opencode after changing `AGENTS.md`, skill files, or references so new

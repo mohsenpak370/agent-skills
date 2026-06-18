@@ -5,6 +5,7 @@ acting.
 
 ## Skill Use Rules
 
+- This repository stores installable skills under `skills/`.
 - Always check whether an installed skill applies before acting.
 - If a skill clearly applies, use the `skill` tool before proceeding.
 - Do not skip required workflows from a loaded skill.
