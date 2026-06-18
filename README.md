@@ -83,6 +83,15 @@ or when the task is explicitly to add, install, configure, theme, or use Nuxt UI
 When it applies, prefer composing existing Nuxt UI components before creating
 custom UI components.
 
+Use `solana-dev` for Solana dApps, wallet connection and signing flows,
+transaction building, Anchor or Pinocchio programs, PDAs, CPIs, SPL Token,
+Token-2022, Codama client generation, LiteSVM, Mollusk, Surfpool, devnet or
+mainnet JSON-RPC lookups, and Anchor or Solana CLI version issues. Combine it
+with `frontend-ui-engineering` for Solana UI and wallet UX, `test-driven-development`
+for tests, and `security-and-hardening` for signing, token transfers, CPIs,
+account validation, or mainnet-risk changes. Never sign/send transactions,
+access private keys, or target mainnet without explicit user approval.
+
 For backend, Python, and Django work, combine the focused skills that match the
 task:
 
@@ -169,6 +178,7 @@ This repository currently includes skills for:
 - Security requirement extraction
 - Threat mitigation mapping
 - Shipping and launch
+- Solana development
 - Source-driven development
 - Spec-driven development
 - Test-driven development
