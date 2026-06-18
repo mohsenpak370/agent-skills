@@ -61,6 +61,11 @@ For Vue and Nuxt work, Vue-specific skills may be loaded alongside
 system concerns, and Vue-specific skills for framework correctness, composables,
 Pinia, testing, and debugging.
 
+Use `nuxt` for Nuxt 3 and Nuxt 4 routing, data fetching, server routes,
+middleware, Nitro, modules, layers, and rendering modes. The Nuxt skill is based
+on Nuxt 3.x, so verify version-specific features against the project's installed
+Nuxt version.
+
 Use VueUse when an existing composable fits browser APIs, storage, sensors,
 async state, animation, or common reactive utilities. Keep Nuxt server-aware data
 fetching on `useFetch` or `useAsyncData` unless client-only fetch behavior is
@@ -89,6 +94,7 @@ This repository currently includes skills for:
 - Idea refinement
 - Incremental implementation
 - Interview-driven clarification
+- Nuxt framework guidance
 - Observability and instrumentation
 - Performance optimization
 - Planning and task breakdown

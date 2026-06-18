@@ -35,6 +35,10 @@ match the task:
 
 - `vue-best-practices` for Vue correctness, Composition API, SFC structure,
   Vue Router, Pinia usage, and Vue/Vite conventions.
+- `nuxt` for Nuxt routing, data fetching, server routes, middleware, Nitro,
+  modules, layers, and rendering mode guidance. Treat Nuxt 3-based guidance as
+  applicable to Nuxt 4 only when it matches the project's installed version and
+  structure.
 - `create-adaptable-composable` when creating reusable composables that accept
   plain values, refs, or getters.
 - `vueuse-functions` when VueUse can provide an existing composable for browser

@@ -23,6 +23,10 @@ architecture, layout, and design-system work.
 
 For Vue and Nuxt work:
 
+- Use `nuxt` for Nuxt apps, server routes, middleware, `useFetch`,
+  `useAsyncData`, Nitro, file-based routing, modules, layers, or hybrid
+  rendering. The `nuxt` skill is based on Nuxt 3.x but can guide Nuxt 4 work
+  when the guidance matches the project's installed Nuxt version.
 - Use `vue-best-practices` for any Vue, `.vue`, Vue Router, Pinia, or Vue/Vite
   task.
 - Use `frontend-ui-engineering` alongside it when the task affects user-facing
