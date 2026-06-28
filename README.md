@@ -100,6 +100,14 @@ async state, animation, or common reactive utilities. Keep Nuxt server-aware dat
 fetching on `useFetch` or `useAsyncData` unless client-only fetch behavior is
 intended.
 
+Use `vue-solana` for Vue or Nuxt apps that use `@vue-solana/core`,
+`@vue-solana/vue`, or `@vue-solana/nuxt`, including package setup, composables,
+Nuxt module config, wallet discovery, Android Mobile Wallet Adapter, iOS browser
+wallets, RPC, balances, transactions, and Solana web3-compat boundaries. Combine
+it with `vue-best-practices`, `nuxt`, `frontend-ui-engineering`, `solana-dev`,
+`test-driven-development`, and `security-and-hardening` when those concerns also
+apply.
+
 Use `nuxt-ui` only when `@nuxt/ui` / Nuxt UI is installed in the target project,
 or when the task is explicitly to add, install, configure, theme, or use Nuxt UI.
 When it applies, prefer composing existing Nuxt UI components before creating
@@ -113,6 +121,10 @@ with `frontend-ui-engineering` for Solana UI and wallet UX, `test-driven-develop
 for tests, and `security-and-hardening` for signing, token transfers, CPIs,
 account validation, or mainnet-risk changes. Never sign/send transactions,
 access private keys, or target mainnet without explicit user approval.
+
+For Solana work in Vue or Nuxt apps that use the Vue Solana package ecosystem,
+load `vue-solana` alongside `solana-dev` so framework-specific package selection,
+wallet flows, SSR boundaries, and composable patterns are applied correctly.
 
 For backend, Python, and Django work, combine the focused skills that match the
 task:
@@ -209,6 +221,7 @@ This repository currently includes skills for:
 - Vue best practices
 - Vue debugging guides
 - Vue Pinia best practices
+- Vue Solana apps
 - Vue testing best practices
 - VueUse functions
 
