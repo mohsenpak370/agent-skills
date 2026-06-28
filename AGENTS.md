@@ -54,6 +54,10 @@ For Vue and Nuxt work:
   behavior.
 - Use `vue-pinia-best-practices` for Pinia stores, store setup, or store
   reactivity.
+- Use `vue-solana` for Vue or Nuxt apps that use `@vue-solana/core`,
+  `@vue-solana/vue`, or `@vue-solana/nuxt`, including package setup,
+  composables, Nuxt module config, wallet discovery, mobile wallet adapters,
+  RPC, balances, transactions, or Solana web3-compat boundaries.
 - Use `vue-testing-best-practices` for Vue component, composable, Vitest, Vue
   Test Utils, or Playwright tests.
 - Use `vue-debug-guides` when diagnosing Vue runtime, reactivity, watcher,
@@ -115,6 +119,8 @@ For Solana and Web3 work:
   transaction building, Anchor or Pinocchio programs, PDAs, CPIs, SPL Token,
   Token-2022, Codama client generation, LiteSVM, Mollusk, Surfpool, devnet or
   mainnet JSON-RPC lookups, and Anchor or Solana CLI version issues.
+- Use `vue-solana` alongside `solana-dev` when the Solana work is specifically
+  in a Vue or Nuxt app using the Vue Solana packages.
 - Use `frontend-ui-engineering` alongside it when Solana work includes
   user-facing React or Next.js UI, wallet UX, accessibility, or layout.
 - Use `test-driven-development` alongside it when writing or running tests, but
