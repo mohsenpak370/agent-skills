@@ -1,6 +1,6 @@
 # agent-skills
 
-Installable agent skills and routing instructions for opencode.
+A curated collection of installable agent skills and routing instructions—built for Nuxt, Django, and Solana applications.
 
 ## Contents
 
@@ -11,10 +11,23 @@ Installable agent skills and routing instructions for opencode.
 
 ## Usage
 
-Open this repository in opencode. When a request matches an installed skill, the
-agent should load that skill before acting.
+This skill pack is agent-agnostic—it works with Codex, Claude Code, opencode, or any other AI coding agent that supports skills and routing instructions.
 
-To install this skill pack from GitHub after publishing it as `agent-skills`:
+When a request matches an installed skill, your agent will load that skill before acting.
+
+To help your agent discover and use the right skills, include the routing instructions from this repository's `AGENTS.md` in your agent's instruction file. Depending on your agent, this could be:
+
+- AGENTS.md (opencode, Claude Code, and many others)
+
+- CLAUDE.md (Claude Code)
+
+- Custom instructions or system prompts for other agents
+
+Just copy the relevant sections or reference this repo's instructions in your agent configuration.
+
+---
+
+**To install this skill pack**, run the following command:
 
 ```bash
 npx skills add mohsenpak370/agent-skills
@@ -32,11 +45,7 @@ Install selected skills only:
 npx skills add mohsenpak370/agent-skills --skill solana-dev frontend-ui-engineering
 ```
 
-For local opencode usage, this repository includes `opencode.json` configured to
-load skills from `skills/` and instructions from `AGENTS.md`.
-
-Use natural language. The root `AGENTS.md` tells the agent to choose the right
-skill based on the task, such as:
+Simply describe your task in natural language. Your agent's instruction file (`AGENTS.md`, `CLAUDE.md`, or custom prompts) tells it which skill to use for the task, such as:
 
 - `using-agent-skills` when it needs to discover which skill applies
 - `spec-driven-development` for unclear requirements or significant new features
@@ -60,6 +69,8 @@ skill based on the task, such as:
 
 The development lifecycle is handled implicitly through skills. Use natural
 language instead of slash commands; the agent maps the work to the right skill.
+
+You can also explicitly mention keywords like "DEFINE," "PLAN," "BUILD," "VERIFY," "REVIEW," or "SHIP" to guide the agent toward the appropriate skill.
 
 | Phase | Skill |
 | --- | --- |
@@ -236,7 +247,7 @@ The frontend skill points agents to focused references:
 
 ## Maintenance
 
-Keep skill descriptions specific and action-oriented so opencode can select the
+Keep skill descriptions specific and action-oriented so agents can select the
 right skill automatically. If you add a new skill, place it under
 `skills/<skill-name>/SKILL.md` and include clear frontmatter with `name`
 and `description`.
