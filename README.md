@@ -209,6 +209,8 @@ This repository currently includes skills for:
 - Python testing patterns
 - Python type safety
 - Python uv package management
+- Rust best practices
+- Rust unsafe code and FFI review
 - Security and hardening
 - SAST configuration
 - Security requirement extraction

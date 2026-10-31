@@ -14,7 +14,7 @@ const args = process.argv.slice(2);
 const check = args.includes("--check");
 const minIdx = args.indexOf("--min-lines");
 const minLines = minIdx >= 0 ? Number(args[minIdx + 1]) : 100;
-const roots = args.filter((a, i) => !a.startsWith("--") && i !== minIdx + 1);
+const roots = args.filter((a, i) => !a.startsWith("--") && (minIdx < 0 || i !== minIdx + 1));
 if (roots.length === 0) roots.push("skills", "references");
 
 const MAX_ENTRIES = 40;

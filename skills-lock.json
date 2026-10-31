@@ -265,6 +265,18 @@
       "skillPath": "plugins/python-development/skills/uv-package-manager/SKILL.md",
       "computedHash": "6802e406d2f09edbee10c2aa33b84adf30e86ad81bc7b9b8caed54a3faaee197"
     },
+    "rust-best-practices": {
+      "source": "leonardomso/rust-skills",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "fb4bf5a89e3ec2f0b14e98eed8bd7a78072421f06835f0ed2a0caebbffcf9505"
+    },
+    "rust-unsafe-checker": {
+      "source": "actionbook/rust-skills",
+      "sourceType": "github",
+      "skillPath": "skills/unsafe-checker/SKILL.md",
+      "computedHash": "4cff8ec758c214d29ccbc2403c176f53f5b13c9b05d345b024a1bb0c4cd5b51c"
+    },
     "security-and-hardening": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
