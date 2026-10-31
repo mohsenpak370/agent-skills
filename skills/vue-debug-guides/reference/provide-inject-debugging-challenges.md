@@ -8,6 +8,21 @@ tags: [vue3, provide-inject, debugging, devtools, architecture]
 
 # Provide/Inject Has Limited DevTools Support - Plan for Debugging
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Challenge](#the-challenge)
+- [Strategies for Better Debugging](#strategies-for-better-debugging)
+  - [1. Use Descriptive Symbol Names](#1-use-descriptive-symbol-names)
+  - [2. Document Providers Clearly](#2-document-providers-clearly)
+  - [3. Development-Only Logging](#3-development-only-logging)
+  - [4. Inject with Missing Provider Warnings](#4-inject-with-missing-provider-warnings)
+  - [5. Create Provider Registry for Complex Apps](#5-create-provider-registry-for-complex-apps)
+- [When to Use Pinia Instead](#when-to-use-pinia-instead)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: LOW** - While provide/inject is powerful for avoiding prop drilling, it creates less visible data flow than props. Provided values are not as easily inspectable in Vue DevTools, and tracing where a value comes from requires navigating the component tree manually.
 
 ## Task Checklist

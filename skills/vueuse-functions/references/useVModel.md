@@ -4,6 +4,21 @@ category: Component
 
 # useVModel
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Options API](#options-api)
+- [Options](#options)
+  - [Passive Mode](#passive-mode)
+  - [Deep Watching](#deep-watching)
+  - [Clone Values](#clone-values)
+  - [Default Value](#default-value)
+  - [Custom Event Name](#custom-event-name)
+  - [Emit Validation](#emit-validation)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Shorthand for v-model binding, props + emit -> ref
 
 > We encourage you to use Vue's [`defineModel`](https://vuejs.org/api/sfc-script-setup.html#definemodel) over this composable, however there are some edge-cases like using `TSX` or the `deep: true` option that `defineModel` doesn't support.

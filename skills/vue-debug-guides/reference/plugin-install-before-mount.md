@@ -1,5 +1,19 @@
 # Install Plugins Before Mounting the App
 
+<!-- toc -->
+## Contents
+
+- [Rule](#rule)
+- [Why This Matters](#why-this-matters)
+- [Bad Practice](#bad-practice)
+- [Good Practice](#good-practice)
+- [Plugin Installation Order](#plugin-installation-order)
+- [Async Plugin Installation](#async-plugin-installation)
+- [Duplicate Installation Protection](#duplicate-installation-protection)
+- [Common Symptoms of Late Plugin Installation](#common-symptoms-of-late-plugin-installation)
+- [References](#references)
+<!-- /toc -->
+
 ## Rule
 
 All plugins must be installed using `app.use()` BEFORE calling `app.mount()`. Installing plugins after the app is mounted can lead to reactivity issues, missing dependencies, and unexpected behavior.

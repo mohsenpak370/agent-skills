@@ -8,6 +8,17 @@ tags: [vue3, composables, composition-api, watchEffect, toValue, reactivity]
 
 # Call toValue() Inside watchEffect for Proper Dependency Tracking
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Same Applies to Direct Ref Access](#the-same-applies-to-direct-ref-access)
+- [Pattern: Using watch() with Getter Functions](#pattern-using-watch-with-getter-functions)
+- [Why This Happens](#why-this-happens)
+- [Quick Checklist for Composable Authors](#quick-checklist-for-composable-authors)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - When writing composables that accept `MaybeRefOrGetter` arguments, you must call `toValue()` inside the `watchEffect` callback, not outside. If you extract the value before the watchEffect, Vue cannot track the dependency and the effect will never re-run when the source changes.
 
 This is a subtle but critical mistake that leads to composables that work with initial values but never update.

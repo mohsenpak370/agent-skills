@@ -4,6 +4,14 @@ category: Sensors
 
 # useSpeechSynthesis
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Options](#options)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive [SpeechSynthesis](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis).
 
 > [Can I use?](https://caniuse.com/mdn-api_speechsynthesis)

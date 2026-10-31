@@ -8,6 +8,19 @@ tags: [vue3, defineEmits, typescript, compilation-error, script-setup]
 
 # Cannot Mix Runtime and Type Declarations in defineEmits
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Problem](#the-problem)
+- [Correct: Type-Based Declaration (TypeScript)](#correct-type-based-declaration-typescript)
+- [Correct: Runtime Declaration (JavaScript or Simple Cases)](#correct-runtime-declaration-javascript-or-simple-cases)
+- [Adding Validation to Type-Based Emits](#adding-validation-to-type-based-emits)
+- [Choosing Between Styles](#choosing-between-styles)
+- [Same Rule Applies to defineProps](#same-rule-applies-to-defineprops)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - `defineEmits` supports two declaration styles: runtime (array/object syntax) and type-based (TypeScript generics). You CANNOT use both at the same time. Attempting to do so results in a compile-time error.
 
 This is a common mistake when learning Vue 3 with TypeScript.

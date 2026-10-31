@@ -8,6 +8,21 @@ tags: [vue3, directives, custom-directives, composition, typescript]
 
 # Directive Best Practices
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Treat Directive Arguments as Read-Only](#treat-directive-arguments-as-read-only)
+- [Avoid Directives on Components](#avoid-directives-on-components)
+- [Clean Up Side Effects in `unmounted`](#clean-up-side-effects-in-unmounted)
+- [Prefer Function Shorthand for Single-Hook Directives](#prefer-function-shorthand-for-single-hook-directives)
+- [Use the `v-` Prefix and Script Setup Registration](#use-the-v--prefix-and-script-setup-registration)
+- [Type Custom Directives in TypeScript Projects](#type-custom-directives-in-typescript-projects)
+- [Handle SSR with `getSSRProps`](#handle-ssr-with-getssrprops)
+- [Prefer Declarative Templates When Possible](#prefer-declarative-templates-when-possible)
+- [Decide Between Directives and Components](#decide-between-directives-and-components)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Directives are for low-level DOM access. Use them sparingly, keep them side-effect safe, and prefer components or composables when you need stateful or reusable UI behavior.
 
 ## Task List

@@ -8,6 +8,15 @@ tags: [vue3, watch, watchers, reactive, getter, common-mistake]
 
 # Use Getter Function When Watching Reactive Object Properties
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Watching Multiple Properties](#watching-multiple-properties)
+- [When Direct Watching Works](#when-direct-watching-works)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Directly watching a property of a reactive object passes a primitive value to `watch()`, not a reactive reference. The watcher will never trigger because primitives are not reactive.
 
 When you need to watch a specific property of a reactive object, always wrap it in a getter function `() => obj.property`.

@@ -1,5 +1,22 @@
 # Component Selection
 
+<!-- toc -->
+## Contents
+
+- [Overlays](#overlays)
+  - [Rules](#rules)
+- [Navigation](#navigation)
+  - [Rules](#rules-1)
+- [Inputs](#inputs)
+  - [Rules](#rules-2)
+- [Feedback](#feedback)
+  - [Rules](#rules-3)
+- [Markdown](#markdown)
+  - [Rules](#rules-4)
+- [Layout containers](#layout-containers)
+  - [Rules](#rules-5)
+<!-- /toc -->
+
 Decision matrices for choosing the right component. When in doubt, use the MCP `search-components` tool.
 
 ## Overlays

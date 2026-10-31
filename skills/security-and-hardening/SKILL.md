@@ -5,6 +5,34 @@ description: Hardens code against vulnerabilities. Use when auditing an input ha
 
 # Security and Hardening
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [Process: Threat Model First](#process-threat-model-first)
+- [The Three-Tier Boundary System](#the-three-tier-boundary-system)
+  - [Always Do (No Exceptions)](#always-do-no-exceptions)
+  - [Ask First (Requires Human Approval)](#ask-first-requires-human-approval)
+  - [Never Do](#never-do)
+- [Hardening Controls](#hardening-controls)
+  - [Injection, XSS, and access control](#injection-xss-and-access-control)
+  - [Authentication and sessions](#authentication-and-sessions)
+  - [Headers, CORS, and responses](#headers-cors-and-responses)
+  - [Input validation and uploads](#input-validation-and-uploads)
+  - [Server-side fetches (SSRF)](#server-side-fetches-ssrf)
+  - [Destructive operations on derived paths](#destructive-operations-on-derived-paths)
+  - [Rate limiting](#rate-limiting)
+  - [Secrets](#secrets)
+  - [Dependencies and supply chain](#dependencies-and-supply-chain)
+  - [Personal data and privacy](#personal-data-and-privacy)
+  - [AI / LLM features](#ai--llm-features)
+- [Review Checklist](#review-checklist)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 Security-first development practices for web applications. Treat every external input as hostile, every secret as sacred, and every authorization check as mandatory. Security isn't a phase — it's a constraint on every line of code that touches user data, authentication, or external systems.

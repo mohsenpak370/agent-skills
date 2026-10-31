@@ -8,6 +8,18 @@ tags: [vue3, testing, suspense, async-setup, vue-test-utils, vitest]
 
 # Wrap Async Setup Components in Suspense for Testing
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Testing with onErrorCaptured](#testing-with-onerrorcaptured)
+- [Using with Nuxt's mountSuspended](#using-with-nuxts-mountsuspended)
+- [Important Caveats](#important-caveats)
+  - [@testing-library/vue Limitation](#testing-libraryvue-limitation)
+  - [Accessing Component Instance](#accessing-component-instance)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Components using `async setup()` require a `<Suspense>` wrapper to function correctly. Testing them without Suspense causes the component to never render, leading to test failures and confusing errors.
 
 Create a test wrapper component with Suspense or use a `mountSuspense` helper function for testing async components.

@@ -8,6 +8,22 @@ tags: [vue3, keepalive, vue-router, nested-routes, double-mount, bug]
 
 # KeepAlive with Nested Routes Double Mount Issue
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Problem](#the-problem)
+- [Diagnosis](#diagnosis)
+- [Workarounds](#workarounds)
+  - [Option 1: Use `useActivatedRoute` Pattern](#option-1-use-useactivatedroute-pattern)
+  - [Option 2: Avoid KeepAlive for Nested Route Parents](#option-2-avoid-keepalive-for-nested-route-parents)
+  - [Option 3: Guard Against Double Initialization](#option-3-guard-against-double-initialization)
+  - [Option 4: Use Route-Level Cache Control](#option-4-use-route-level-cache-control)
+  - [Option 5: Flatten Route Structure](#option-5-flatten-route-structure)
+- [Key Points](#key-points)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - When using `<KeepAlive>` with nested Vue Router routes, child route components may mount twice. This is a known issue that can cause duplicate API calls, broken state, and confusing behavior.
 
 ## Task Checklist

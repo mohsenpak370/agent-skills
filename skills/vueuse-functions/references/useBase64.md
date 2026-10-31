@@ -4,6 +4,18 @@ category: Utilities
 
 # useBase64
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Supported Input Types](#supported-input-types)
+  - [Return Values](#return-values)
+  - [Data URL Format](#data-url-format)
+  - [Canvas and Image Options](#canvas-and-image-options)
+  - [Custom Serializer](#custom-serializer)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive base64 transforming. Supports plain text, buffer, files, canvas, objects, maps, sets and images.
 
 ## Usage

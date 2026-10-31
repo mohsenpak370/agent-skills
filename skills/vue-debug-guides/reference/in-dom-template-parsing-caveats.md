@@ -8,6 +8,18 @@ tags: [vue3, templates, in-dom, html-parsing, kebab-case, self-closing-tags]
 
 # In-DOM Template Parsing Caveats
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Issue 1: Case Insensitivity](#issue-1-case-insensitivity)
+- [Issue 2: Self-Closing Tags Fail](#issue-2-self-closing-tags-fail)
+- [Issue 3: Element Placement Restrictions](#issue-3-element-placement-restrictions)
+- [When Do These Apply?](#when-do-these-apply)
+- [Best Practice: Use SFCs](#best-practice-use-sfcs)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - When writing Vue templates directly in the DOM (not in `.vue` files), the browser's native HTML parser processes the template BEFORE Vue sees it. This causes three critical issues: case sensitivity problems, self-closing tag failures, and element placement restrictions.
 
 These issues do NOT apply to Single-File Components (SFCs) or string templates where Vue's compiler handles parsing directly.

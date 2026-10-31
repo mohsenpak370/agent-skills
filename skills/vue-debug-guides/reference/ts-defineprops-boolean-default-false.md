@@ -8,6 +8,22 @@ tags: [vue3, typescript, props, boolean, defineProps]
 
 # Boolean Props Default to false, Not undefined
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Gotcha](#the-gotcha)
+- [Why This Happens](#why-this-happens)
+- [Solutions](#solutions)
+  - [Solution 1: Be Explicit with withDefaults](#solution-1-be-explicit-with-withdefaults)
+  - [Solution 2: Use a Three-State Type](#solution-2-use-a-three-state-type)
+  - [Solution 3: Use null for "Not Set"](#solution-3-use-null-for-not-set)
+- [Boolean Casting Order](#boolean-casting-order)
+- [Common Bug Pattern](#common-bug-pattern)
+- [TypeScript Type Accuracy](#typescript-type-accuracy)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - When using type-based `defineProps`, optional boolean props (marked with `?`) behave differently than TypeScript expects. Vue treats boolean props specially: an absent boolean prop defaults to `false`, not `undefined`. This can cause confusion when TypeScript thinks the type is `boolean | undefined`.
 
 ## Task Checklist

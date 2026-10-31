@@ -1,5 +1,27 @@
 # Hardening Patterns
 
+<!-- toc -->
+## Contents
+
+- [OWASP Top 10 Prevention Patterns](#owasp-top-10-prevention-patterns)
+  - [Injection](#injection)
+  - [Broken Authentication](#broken-authentication)
+  - [Cross-Site Scripting (XSS)](#cross-site-scripting-xss)
+  - [Broken Access Control](#broken-access-control)
+  - [Security Misconfiguration](#security-misconfiguration)
+  - [Sensitive Data Exposure](#sensitive-data-exposure)
+  - [Server-Side Request Forgery (SSRF)](#server-side-request-forgery-ssrf)
+- [Input Validation Patterns](#input-validation-patterns)
+  - [Schema Validation at Boundaries](#schema-validation-at-boundaries)
+  - [File Upload Safety](#file-upload-safety)
+  - [Destructive Operations on Derived Paths](#destructive-operations-on-derived-paths)
+- [Dependency Audit Triage](#dependency-audit-triage)
+- [Rate Limiting](#rate-limiting)
+- [Secrets Management](#secrets-management)
+- [Data Classification](#data-classification)
+- [LLM Output Handling](#llm-output-handling)
+<!-- /toc -->
+
 Code patterns and decision aids for the `security-and-hardening` skill. The skill states each rule; this file shows one concrete implementation of it. Open the section you need when you reach that code — it is not meant to be read top to bottom.
 
 Shared checklists (threat modeling, pre-commit checks, security headers, CORS, the package-manager matrix, install-script gate, and the OWASP quick-reference tables) live in `../../../references/security-checklist.md`.

@@ -8,6 +8,15 @@ tags: [vue3, composition-api, react-hooks, setup, stale-closure]
 
 # Vue Composition API Runs Once, Unlike React Hooks
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Vue's Advantages Over React Hooks](#vues-advantages-over-react-hooks)
+- [When Vue Patterns Differ](#when-vue-patterns-differ)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Vue's `setup()` or `<script setup>` executes only once per component instance, while React Hooks run on every render. Developers coming from React often apply patterns (dependency arrays, excessive memoization, useCallback) that are unnecessary and counterproductive in Vue.
 
 Understanding this fundamental difference is crucial for writing idiomatic Vue code. Vue's approach eliminates entire categories of bugs (stale closures, exhaustive deps) that plague React applications.

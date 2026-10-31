@@ -8,6 +8,17 @@ tags: [vue3, events, components, emit, click, migration]
 
 # Click Events on Custom Components Require Emit or Fallthrough
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Component Events Don't Bubble](#component-events-dont-bubble)
+- [Vue 3 Native Event Behavior](#vue-3-native-event-behavior)
+- [Composition API Emit Pattern](#composition-api-emit-pattern)
+- [Migration from Vue 2](#migration-from-vue-2)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Unlike native HTML elements, custom Vue components don't automatically forward native DOM events like `click`. You must either emit the event explicitly, rely on attribute fallthrough to a single root element, or use the `.native` modifier (Vue 2 only, removed in Vue 3). This is a common source of confusion and migration issues.
 
 ## Task Checklist

@@ -1,5 +1,27 @@
 # Forms
 
+<!-- toc -->
+## Contents
+
+- [Basic pattern](#basic-pattern)
+- [Key rules](#key-rules)
+- [UFormField props](#uformfield-props)
+- [Field layout patterns](#field-layout-patterns)
+  - [Vertical stack (default)](#vertical-stack-default)
+  - [Inline fields with UFieldGroup](#inline-fields-with-ufieldgroup)
+  - [Grid layout](#grid-layout)
+- [Common field patterns](#common-field-patterns)
+  - [Select](#select)
+  - [Checkbox](#checkbox)
+  - [Radio group](#radio-group)
+  - [Switch](#switch)
+  - [Textarea](#textarea)
+  - [File upload](#file-upload)
+  - [Date](#date)
+- [Programmatic validation](#programmatic-validation)
+- [Form in a modal](#form-in-a-modal)
+<!-- /toc -->
+
 ## Basic pattern
 
 Nuxt UI forms use `UForm` + `UFormField` + Standard Schema validation (Zod, Valibot, Yup, or Joi).

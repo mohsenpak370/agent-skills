@@ -1,5 +1,20 @@
 # sql-optimization-patterns — detailed patterns and worked examples
 
+<!-- toc -->
+## Contents
+
+- [Optimization Patterns](#optimization-patterns)
+  - [Pattern 1: Eliminate N+1 Queries](#pattern-1-eliminate-n1-queries)
+  - [Pattern 2: Optimize Pagination](#pattern-2-optimize-pagination)
+  - [Pattern 3: Aggregate Efficiently](#pattern-3-aggregate-efficiently)
+  - [Pattern 4: Subquery Optimization](#pattern-4-subquery-optimization)
+  - [Pattern 5: Batch Operations](#pattern-5-batch-operations)
+- [Advanced Techniques](#advanced-techniques)
+  - [Materialized Views](#materialized-views)
+  - [Partitioning](#partitioning)
+  - [Query Hints and Optimization](#query-hints-and-optimization)
+<!-- /toc -->
+
 ## Optimization Patterns
 
 ### Pattern 1: Eliminate N+1 Queries

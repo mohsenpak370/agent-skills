@@ -8,6 +8,14 @@ tags: [vue3, template, expressions, interpolation, syntax]
 
 # Template Expressions Must Be Single Expressions
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Use Directives for Control Flow](#use-directives-for-control-flow)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Vue templates only support single JavaScript expressions, not statements. Using variable declarations, if statements, or multiple statements will cause template compilation errors.
 
 Template interpolation `{{ }}` and directive bindings evaluate JavaScript expressions that produce a value. Statements like `if`, `for`, variable declarations, or multi-line code blocks are not allowed.

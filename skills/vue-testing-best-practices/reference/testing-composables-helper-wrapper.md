@@ -8,6 +8,15 @@ tags: [vue3, testing, composables, vitest, lifecycle-hooks, provide-inject]
 
 # Test Complex Composables with Host Component Wrapper
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Enhanced withSetup Helper with Provide Support](#enhanced-withsetup-helper-with-provide-support)
+- [Testing with @vue/test-utils mount](#testing-with-vuetest-utils-mount)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Composables that use Vue lifecycle hooks (`onMounted`, `onUnmounted`) or dependency injection (`inject`) require a component context to function. Testing them directly will cause errors or incorrect behavior.
 
 Simple composables using only reactivity APIs can be tested directly. Complex composables need a helper function that creates a host component context.

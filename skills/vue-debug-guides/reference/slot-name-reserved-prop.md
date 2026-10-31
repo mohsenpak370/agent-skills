@@ -8,6 +8,15 @@ tags: [vue3, slots, scoped-slots, reserved-props, naming]
 
 # Slot Name is Reserved and Not Included in Slot Props
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [What Gets Passed as Slot Props](#what-gets-passed-as-slot-props)
+- [Multiple Named Slots Example](#multiple-named-slots-example)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: LOW** - When using scoped slots, the `name` attribute on the `<slot>` element is reserved for identifying the slot. It is not passed as part of the slot props to the parent component.
 
 ## Task Checklist

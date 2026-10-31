@@ -8,6 +8,18 @@ tags: [vue3, transition, scoped-css, slot, reusable-component]
 
 # Avoid Scoped Styles in Reusable Transition Components
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Alternative: Use Unique Prefixed Class Names](#alternative-use-unique-prefixed-class-names)
+- [Alternative: CSS Modules with :global()](#alternative-css-modules-with-global)
+- [Alternative: Custom Transition Classes](#alternative-custom-transition-classes)
+- [Complete Reusable Transition Component Example](#complete-reusable-transition-component-example)
+- [Why This Happens](#why-this-happens)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - When creating reusable transition wrapper components, using `<style scoped>` will prevent the transition CSS classes from applying to slotted content. Scoped styles only affect elements directly in the component's template, not content passed through slots. Your transition animations will silently fail.
 
 ## Task Checklist

@@ -8,6 +8,26 @@ tags: [vue3, reactivity, ref, reactive, shallowRef, computed, watch, watchEffect
 
 # Reactivity Core Patterns (ref, reactive, shallowRef, computed, watch)
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Declare reactive state correctly](#declare-reactive-state-correctly)
+  - [Always use `shallowRef()` instead of `ref()` for primitive values (string, number, boolean, null, etc.) for better performance.](#always-use-shallowref-instead-of-ref-for-primitive-values-string-number-boolean-null-etc-for-better-performance)
+  - [Choose the correct reactive declaration method for objects/arrays/map/set](#choose-the-correct-reactive-declaration-method-for-objectsarraysmapset)
+- [Best practices for `reactive`](#best-practices-for-reactive)
+  - [Avoid destructuring from `reactive()` directly](#avoid-destructuring-from-reactive-directly)
+  - [Watch correctly for reactive](#watch-correctly-for-reactive)
+- [Best practices for `computed`](#best-practices-for-computed)
+  - [Prefer `computed` over watcher-assigned derived refs](#prefer-computed-over-watcher-assigned-derived-refs)
+  - [Keep filtered/sorted derivations out of templates](#keep-filteredsorted-derivations-out-of-templates)
+  - [Use `computed` for reusable class/style logic](#use-computed-for-reusable-classstyle-logic)
+  - [Keep computed getters pure (no side effects) and put side effects in watchers instead](#keep-computed-getters-pure-no-side-effects-and-put-side-effects-in-watchers-instead)
+- [Best practices for watchers](#best-practices-for-watchers)
+  - [Use `immediate: true` instead of duplicate initial calls](#use-immediate-true-instead-of-duplicate-initial-calls)
+  - [Clean up async effects for watchers](#clean-up-async-effects-for-watchers)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Choose the right reactive primitive first, derive with `computed`, and use watchers only for side effects.
 
 This reference covers the core reactivity decisions for local state, external data, derived values, and effects.

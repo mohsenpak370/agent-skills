@@ -4,6 +4,15 @@ category: Elements
 
 # useElementOverflow
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Component Usage](#component-usage)
+- [Directive Usage](#directive-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive element's overflow state.
 
 ## Usage

@@ -1,5 +1,22 @@
 # Quick RPC Lookups (public endpoints + curl)
 
+<!-- toc -->
+## Contents
+
+- [Public RPC endpoints](#public-rpc-endpoints)
+- [Request shape](#request-shape)
+- [Common lookups](#common-lookups)
+  - [Wallet SOL balance — `getBalance`](#wallet-sol-balance--getbalance)
+  - [Account info — `getAccountInfo`](#account-info--getaccountinfo)
+  - [Transaction — `getTransaction`](#transaction--gettransaction)
+  - [Token account balance — `getTokenAccountBalance`](#token-account-balance--gettokenaccountbalance)
+  - [All token accounts owned by a wallet — `getTokenAccountsByOwner`](#all-token-accounts-owned-by-a-wallet--gettokenaccountsbyowner)
+  - [Recent signatures for an address — `getSignaturesForAddress`](#recent-signatures-for-an-address--getsignaturesforaddress)
+  - [Cluster liveness — `getSlot` / `getHealth`](#cluster-liveness--getslot--gethealth)
+- [Handling results](#handling-results)
+- [When to escalate to kit](#when-to-escalate-to-kit)
+<!-- /toc -->
+
 Use this when the user asks a one-shot read-only question about on-chain state and you just need an answer — wallet balance, a specific transaction, a token account balance, account info. No SDK install, no project setup, just `curl`.
 
 For anything beyond a quick lookup (building/sending transactions, indexing, repeated reads, app code) drop back to `@solana/kit` — see `kit/overview.md`.

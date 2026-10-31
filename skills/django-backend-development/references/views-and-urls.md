@@ -1,5 +1,42 @@
 # Django Views & URLs Best Practices
 
+<!-- toc -->
+## Contents
+
+- [Function-Based Views (FBV) vs Class-Based Views (CBV)](#function-based-views-fbv-vs-class-based-views-cbv)
+  - [When to Use Each](#when-to-use-each)
+- [Function-Based Views](#function-based-views)
+  - [Basic FBV Pattern](#basic-fbv-pattern)
+  - [Handling Different HTTP Methods](#handling-different-http-methods)
+- [Class-Based Views](#class-based-views)
+  - [Generic Class-Based Views](#generic-class-based-views)
+  - [Custom Class-Based Views](#custom-class-based-views)
+- [Mixins](#mixins)
+  - [Built-in Mixins](#built-in-mixins)
+  - [Custom Mixins](#custom-mixins)
+- [URL Configuration](#url-configuration)
+  - [URL Patterns](#url-patterns)
+  - [URL Converters](#url-converters)
+  - [Including Other URLconfs](#including-other-urlconfs)
+  - [Reverse URL Resolution](#reverse-url-resolution)
+- [Context and Template Rendering](#context-and-template-rendering)
+  - [Adding Context to Views](#adding-context-to-views)
+  - [Context Processors](#context-processors)
+- [HTTP Responses](#http-responses)
+  - [Response Types](#response-types)
+  - [Custom Response Status Codes](#custom-response-status-codes)
+- [Error Handling](#error-handling)
+  - [Custom Error Pages](#custom-error-pages)
+  - [Exception Handling in Views](#exception-handling-in-views)
+- [Middleware](#middleware)
+  - [Custom Middleware](#custom-middleware)
+  - [Common Middleware Patterns](#common-middleware-patterns)
+- [Decorators](#decorators)
+  - [Common View Decorators](#common-view-decorators)
+  - [Custom Decorators](#custom-decorators)
+- [View Best Practices Checklist](#view-best-practices-checklist)
+<!-- /toc -->
+
 ## Function-Based Views (FBV) vs Class-Based Views (CBV)
 
 ### When to Use Each

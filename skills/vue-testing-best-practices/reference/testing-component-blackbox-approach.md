@@ -8,6 +8,17 @@ tags: [vue3, testing, component-testing, vitest, vue-test-utils, blackbox]
 
 # Test Components Using Blackbox Approach - Focus on Behavior Not Implementation
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Using @testing-library/vue for Better Blackbox Tests](#using-testing-libraryvue-for-better-blackbox-tests)
+- [What to Test vs What Not to Test](#what-to-test-vs-what-not-to-test)
+  - [DO Test (Public Interface)](#do-test-public-interface)
+  - [DON'T Test (Implementation Details)](#dont-test-implementation-details)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Tests that rely on implementation details (internal state, private methods, component structure) break during refactoring even when functionality remains correct. This leads to false negatives and high test maintenance burden.
 
 Follow Kent C. Dodds' testing philosophy: "The more your tests resemble how your software is used, the more confidence they can give you."

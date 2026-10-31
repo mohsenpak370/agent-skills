@@ -5,6 +5,25 @@ description: Optimizes application performance across frontend, backend, queries
 
 # Performance Optimization
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [Core Web Vitals Targets](#core-web-vitals-targets)
+- [The Optimization Workflow](#the-optimization-workflow)
+  - [Step 1: Measure](#step-1-measure)
+  - [Where to Start Measuring](#where-to-start-measuring)
+  - [Step 2: Identify the Bottleneck](#step-2-identify-the-bottleneck)
+  - [Step 3: Fix the Bottleneck](#step-3-fix-the-bottleneck)
+  - [Step 4: Verify (Keep or Revert)](#step-4-verify-keep-or-revert)
+  - [Step 5: Guard Against Regression](#step-5-guard-against-regression)
+- [See Also](#see-also)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 Measure before optimizing. Performance work without measurement is guessing — and guessing leads to premature optimization that adds complexity without improving what matters. Profile first, identify the actual bottleneck, fix it, measure again. Optimize only what measurements prove matters.

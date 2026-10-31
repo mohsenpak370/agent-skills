@@ -8,6 +8,25 @@ metadata:
 
 # Vue Solana
 
+<!-- toc -->
+## Contents
+
+- [Package Selection](#package-selection)
+- [Install Commands](#install-commands)
+- [Vue Setup](#vue-setup)
+- [Nuxt Setup](#nuxt-setup)
+- [Wallet Flow](#wallet-flow)
+- [RPC, Account, And Balance Reads](#rpc-account-and-balance-reads)
+- [Data Layer (Request, Subscription, Tracked Data)](#data-layer-request-subscription-tracked-data)
+- [Solana Pay](#solana-pay)
+- [Sign In With Solana](#sign-in-with-solana)
+- [Error Handling](#error-handling)
+- [Transactions](#transactions)
+- [Client Capabilities, Payer, Identity, And Transaction Planning](#client-capabilities-payer-identity-and-transaction-planning)
+- [Common Gotchas](#common-gotchas)
+- [Verification Checklist](#verification-checklist)
+<!-- /toc -->
+
 Use this skill when helping with apps or libraries that use the Vue Solana ecosystem.
 
 ## Package Selection

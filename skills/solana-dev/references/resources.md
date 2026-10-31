@@ -5,6 +5,34 @@ description: Authoritative Solana learning platforms, documentation, tooling ref
 
 # Curated Resources (Source-of-Truth First)
 
+<!-- toc -->
+## Contents
+
+- [Learning Platforms](#learning-platforms)
+- [Core Solana Docs](#core-solana-docs)
+- [Transaction v1 / Larger Transactions (SIMD-0385)](#transaction-v1--larger-transactions-simd-0385)
+- [Modern JS/TS SDK](#modern-jsts-sdk)
+- [web3.js v3 (classic API on Kit internals)](#web3js-v3-classic-api-on-kit-internals)
+- [Scaffolding](#scaffolding)
+- [Program Frameworks](#program-frameworks)
+  - [Anchor](#anchor)
+  - [Pinocchio](#pinocchio)
+- [Testing](#testing)
+  - [Surfpool](#surfpool)
+  - [LiteSVM](#litesvm)
+  - [Mollusk](#mollusk)
+  - [Fuzzing](#fuzzing)
+- [IDLs and Codegen](#idls-and-codegen)
+- [Tokens and NFTs](#tokens-and-nfts)
+- [Payments](#payments)
+- [Signing Infrastructure](#signing-infrastructure)
+- [Security](#security)
+- [Reference Programs Worth Reading](#reference-programs-worth-reading)
+- [Performance and Optimization](#performance-and-optimization)
+- [Cryptography Primer](#cryptography-primer)
+- [Agent Skills](#agent-skills)
+<!-- /toc -->
+
 ## Learning Platforms
 - [Blueshift](https://learn.blueshift.gg/) - Free, open-source Solana learning platform
 - [Blueshift GitHub](https://github.com/blueshift-gg) - Course content and tools

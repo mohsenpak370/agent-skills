@@ -6,6 +6,20 @@ compatibility: Requires a Django project, or an explicit task to create, configu
 
 # Django Backend Development
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [Instructions](#instructions)
+  - [1. Analyze the Request and Gather Context](#1-analyze-the-request-and-gather-context)
+  - [2. Load Relevant Reference Documentation](#2-load-relevant-reference-documentation)
+  - [3. Implement Following Django Best Practices](#3-implement-following-django-best-practices)
+  - [4. Validate and Test](#4-validate-and-test)
+- [Bundled Resources](#bundled-resources)
+- [Additional Notes](#additional-notes)
+<!-- /toc -->
+
 ## Overview
 
 This skill provides Django backend development guidance with comprehensive coverage of models, views, Django REST Framework, forms, authentication, testing, and performance optimization. It follows official Django best practices and modern Python conventions to help you build robust, maintainable applications.

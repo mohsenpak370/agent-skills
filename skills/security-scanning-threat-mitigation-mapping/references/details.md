@@ -1,5 +1,15 @@
 # Threat-mitigation mapping — templates and worked examples
 
+<!-- toc -->
+## Contents
+
+- [Templates](#templates)
+  - [Template 1: Mitigation Model](#template-1-mitigation-model)
+  - [Template 2: Control Library](#template-2-control-library)
+  - [Template 3: Mitigation Analysis](#template-3-mitigation-analysis)
+  - [Template 4: Control Effectiveness Testing](#template-4-control-effectiveness-testing)
+<!-- /toc -->
+
 ## Templates
 
 ### Template 1: Mitigation Model

@@ -5,6 +5,28 @@ description: Breaks work into ordered tasks. Use when you have a spec or clear r
 
 # Planning and Task Breakdown
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [The Planning Process](#the-planning-process)
+  - [Step 1: Enter Plan Mode](#step-1-enter-plan-mode)
+  - [Step 2: Identify the Dependency Graph](#step-2-identify-the-dependency-graph)
+  - [Step 3: Slice Vertically](#step-3-slice-vertically)
+  - [Step 4: Write Tasks](#step-4-write-tasks)
+  - [Step 5: Order and Checkpoint](#step-5-order-and-checkpoint)
+- [Task Sizing Guidelines](#task-sizing-guidelines)
+- [Output Files](#output-files)
+  - [Task List Target](#task-list-target)
+- [Plan Document Template](#plan-document-template)
+- [Parallelization Opportunities](#parallelization-opportunities)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+- [See Also](#see-also)
+<!-- /toc -->
+
 ## Overview
 
 Decompose work into small, verifiable tasks with explicit acceptance criteria. Good task breakdown is the difference between an agent that completes work reliably and one that produces a tangled mess. Every task should be small enough to implement, test, and verify in a single focused session.

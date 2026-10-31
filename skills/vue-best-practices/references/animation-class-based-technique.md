@@ -8,6 +8,19 @@ tags: [vue3, animation, css, class-binding, state]
 
 # Use Class-based Animations for Non-Enter/Leave Effects
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Basic Pattern](#basic-pattern)
+- [Common Animation Patterns](#common-animation-patterns)
+  - [Pulse on Success](#pulse-on-success)
+  - [Highlight on Change](#highlight-on-change)
+  - [Bounce Attention](#bounce-attention)
+- [Using animationend Event](#using-animationend-event)
+- [Composable for Reusable Animations](#composable-for-reusable-animations)
+<!-- /toc -->
+
 **Impact: LOW** - For animations on elements that are not entering or leaving the DOM, use CSS class-based animations triggered by Vue's reactive state. This is simpler than `<Transition>` and more appropriate for feedback animations like shake, pulse, or highlight effects.
 
 ## Task List

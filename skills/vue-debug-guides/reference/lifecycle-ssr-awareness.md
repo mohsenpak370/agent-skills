@@ -8,6 +8,16 @@ tags: [vue3, lifecycle, ssr, server-side-rendering, nuxt, onMounted, mounted, hy
 
 # Mounted and Unmounted Hooks Do Not Run During SSR
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Checking for Browser Environment](#checking-for-browser-environment)
+- [Nuxt.js Specific Patterns](#nuxtjs-specific-patterns)
+- [Handling Hydration Mismatches](#handling-hydration-mismatches)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - During server-side rendering (SSR), lifecycle hooks like `mounted`, `onMounted`, `unmounted`, and `onUnmounted` are never called on the server. This can cause differences between server-rendered and client-rendered content, hydration mismatches, and missing functionality if critical logic is placed only in these hooks.
 
 On the server, only `beforeCreate`, `created`, and their Composition API equivalents run. Client-specific operations (DOM access, browser APIs, third-party libraries) must be in mounted hooks, but you must handle the SSR case appropriately.

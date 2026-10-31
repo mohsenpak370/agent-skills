@@ -4,6 +4,18 @@ category: Elements
 
 # useElementVisibility
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [rootMargin](#rootmargin)
+  - [threshold](#threshold)
+  - [controls](#controls)
+- [Component Usage](#component-usage)
+- [Directive Usage](#directive-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Tracks the visibility of an element within the viewport.
 
 ## Usage

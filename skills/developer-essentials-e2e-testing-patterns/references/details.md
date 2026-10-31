@@ -1,5 +1,24 @@
 # e2e-testing-patterns — detailed patterns and worked examples
 
+<!-- toc -->
+## Contents
+
+- [Playwright Patterns](#playwright-patterns)
+  - [Setup and Configuration](#setup-and-configuration)
+  - [Pattern 1: Page Object Model](#pattern-1-page-object-model)
+  - [Pattern 2: Fixtures for Test Data](#pattern-2-fixtures-for-test-data)
+  - [Pattern 3: Waiting Strategies](#pattern-3-waiting-strategies)
+  - [Pattern 4: Network Mocking and Interception](#pattern-4-network-mocking-and-interception)
+- [Cypress Patterns](#cypress-patterns)
+  - [Setup and Configuration](#setup-and-configuration-1)
+  - [Pattern 1: Custom Commands](#pattern-1-custom-commands)
+  - [Pattern 2: Cypress Intercept](#pattern-2-cypress-intercept)
+- [Advanced Patterns](#advanced-patterns)
+  - [Pattern 1: Visual Regression Testing](#pattern-1-visual-regression-testing)
+  - [Pattern 2: Parallel Testing with Sharding](#pattern-2-parallel-testing-with-sharding)
+  - [Pattern 3: Accessibility Testing](#pattern-3-accessibility-testing)
+<!-- /toc -->
+
 ## Playwright Patterns
 
 ### Setup and Configuration

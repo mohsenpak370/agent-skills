@@ -8,6 +8,22 @@ tags: [vue3, typescript, reactive, ref-unwrapping, composition-api]
 
 # Do Not Use Generic Argument with reactive()
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Problem](#the-problem)
+- [The Solution: Interface Annotation](#the-solution-interface-annotation)
+- [Why This Happens](#why-this-happens)
+- [Correct Patterns](#correct-patterns)
+  - [Pattern 1: Simple Interface Annotation](#pattern-1-simple-interface-annotation)
+  - [Pattern 2: Partial for Optional Fields](#pattern-2-partial-for-optional-fields)
+  - [Pattern 3: Use ref() Instead](#pattern-3-use-ref-instead)
+- [Generic Composables: Use Ref<T> or shallowRef](#generic-composables-use-ref-or-shallowref)
+- [When Generic Argument IS Safe](#when-generic-argument-is-safe)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - It is NOT recommended to use the generic argument of `reactive()` because the returned type, which handles nested ref unwrapping, is different from the generic argument type. Use interface annotation on the variable instead.
 
 ## Task Checklist

@@ -8,6 +8,18 @@ tags: [vue3, composables, composition-api, code-organization, api-design, readon
 
 # Composable Organization Patterns
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Choose an Extraction Boundary](#choose-an-extraction-boundary)
+- [Extract a Stateful Responsibility, Not the Whole Component Script](#extract-a-stateful-responsibility-not-the-whole-component-script)
+- [Keep Composable APIs Focused](#keep-composable-apis-focused)
+- [Use Options Object Pattern for Composable Parameters](#use-options-object-pattern-for-composable-parameters)
+- [Return Readonly State with Explicit Actions](#return-readonly-state-with-explicit-actions)
+- [Keep Utilities as Utilities](#keep-utilities-as-utilities)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Treat composables as reusable, stateful building blocks and keep their code organized by feature concern. This keeps large components maintainable and prevents hard-to-debug mutation and API design issues.
 
 ## Task List

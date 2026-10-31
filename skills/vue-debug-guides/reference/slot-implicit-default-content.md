@@ -8,6 +8,16 @@ tags: [vue3, slots, named-slots, default-slot, implicit-behavior]
 
 # Non-Template Content Is Implicitly Default Slot Content
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [When Implicit Behavior Causes Confusion](#when-implicit-behavior-causes-confusion)
+- [Best Practices](#best-practices)
+- [The Child Component](#the-child-component)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: LOW** - When using named slots, any top-level content not wrapped in a `<template>` tag is automatically treated as default slot content. This implicit behavior can cause confusion about where content will render.
 
 ## Task Checklist

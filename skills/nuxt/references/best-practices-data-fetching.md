@@ -5,6 +5,41 @@ description: Patterns and best practices for efficient data fetching in Nuxt
 
 # Data Fetching Best Practices
 
+<!-- toc -->
+## Contents
+
+- [Choose the Right Tool](#choose-the-right-tool)
+- [Await vs Non-Await Usage](#await-vs-non-await-usage)
+  - [With `await` - Blocking Navigation](#with-await---blocking-navigation)
+  - [Without `await` - Non-Blocking (Lazy)](#without-await---non-blocking-lazy)
+  - [When to Use Each](#when-to-use-each)
+- [Avoid Double Fetching](#avoid-double-fetching)
+  - [❌ Wrong: Using $fetch Alone in Setup](#-wrong-using-fetch-alone-in-setup)
+  - [✅ Correct: Use useFetch](#-correct-use-usefetch)
+- [Use Explicit Cache Keys](#use-explicit-cache-keys)
+  - [❌ Avoid: Auto-generated Keys](#-avoid-auto-generated-keys)
+  - [✅ Better: Explicit Keys](#-better-explicit-keys)
+- [Handle Loading States Properly](#handle-loading-states-properly)
+- [Use Lazy Fetching for Non-critical Data](#use-lazy-fetching-for-non-critical-data)
+- [Minimize Payload Size](#minimize-payload-size)
+  - [Use `pick` for Simple Filtering](#use-pick-for-simple-filtering)
+  - [Use `transform` for Complex Transformations](#use-transform-for-complex-transformations)
+- [Parallel Fetching](#parallel-fetching)
+  - [Fetch Independent Data with useAsyncData](#fetch-independent-data-with-useasyncdata)
+  - [Multiple useFetch Calls](#multiple-usefetch-calls)
+- [Efficient Refresh Patterns](#efficient-refresh-patterns)
+  - [Watch Reactive Dependencies](#watch-reactive-dependencies)
+  - [Manual Refresh](#manual-refresh)
+  - [Conditional Fetching](#conditional-fetching)
+- [Server-only Fetching](#server-only-fetching)
+- [Error Handling](#error-handling)
+- [Shared Data Across Components](#shared-data-across-components)
+- [Centralize API Config with createUseFetch](#centralize-api-config-with-createusefetch)
+- [Avoid useAsyncData for Side Effects](#avoid-useasyncdata-for-side-effects)
+  - [❌ Wrong: Side Effects in useAsyncData](#-wrong-side-effects-in-useasyncdata)
+  - [✅ Correct: Use callOnce for Side Effects](#-correct-use-callonce-for-side-effects)
+<!-- /toc -->
+
 Effective data fetching patterns for SSR-friendly, performant Nuxt applications.
 
 ## Choose the Right Tool

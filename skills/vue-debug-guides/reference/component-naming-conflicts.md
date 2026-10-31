@@ -8,6 +8,17 @@ tags: [vue3, component-registration, naming-conflicts, global-local, debugging]
 
 # Avoid Component Naming Conflicts Between Global and Local
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Explicit Aliasing for Clarity](#explicit-aliasing-for-clarity)
+- [Resolution Order](#resolution-order)
+- [Third-Party Library Conflicts](#third-party-library-conflicts)
+- [Naming Convention Strategy](#naming-convention-strategy)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - When a global component and a local component have the same name (or resolve to the same name due to casing differences), unexpected behavior occurs. The precedence rules can be confusing, and the wrong component may render silently without any error. This is particularly problematic when using third-party component libraries.
 
 ## Task Checklist

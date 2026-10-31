@@ -8,6 +8,15 @@ tags: [vue3, computed, reactivity, dependency-tracking, gotcha]
 
 # Ensure All Dependencies Are Accessed in Computed Properties
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Dependency Tracking Mechanism](#the-dependency-tracking-mechanism)
+- [Pattern: Destructure All Dependencies First](#pattern-destructure-all-dependencies-first)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Vue tracks computed property dependencies by monitoring which reactive properties are accessed during execution. If conditional logic prevents a property from being accessed on the first run, Vue won't track it as a dependency, causing the computed property to not update when that property changes.
 
 This is a subtle but common source of bugs, especially with short-circuit evaluation (`&&`, `||`) and early returns.

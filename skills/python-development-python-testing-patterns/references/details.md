@@ -1,5 +1,19 @@
 # python-testing-patterns — detailed patterns and worked examples
 
+<!-- toc -->
+## Contents
+
+- [Fundamental Patterns](#fundamental-patterns)
+  - [Pattern 1: Basic pytest Tests](#pattern-1-basic-pytest-tests)
+  - [Pattern 2: Fixtures for Setup and Teardown](#pattern-2-fixtures-for-setup-and-teardown)
+  - [Pattern 3: Parameterized Tests](#pattern-3-parameterized-tests)
+  - [Pattern 4: Mocking with unittest.mock](#pattern-4-mocking-with-unittestmock)
+  - [Pattern 5: Testing Exceptions](#pattern-5-testing-exceptions)
+- [Test Design Principles](#test-design-principles)
+  - [One Behavior Per Test](#one-behavior-per-test)
+  - [Test Error Paths](#test-error-paths)
+<!-- /toc -->
+
 ## Fundamental Patterns
 
 ### Pattern 1: Basic pytest Tests

@@ -5,6 +5,23 @@ description: Create production-ready GitHub Actions workflows for automated test
 
 # GitHub Actions Templates
 
+<!-- toc -->
+## Contents
+
+- [Purpose](#purpose)
+- [When to Use](#when-to-use)
+- [Common Workflow Patterns](#common-workflow-patterns)
+  - [Pattern 1: Test Workflow](#pattern-1-test-workflow)
+  - [Pattern 2: Build and Push Docker Image](#pattern-2-build-and-push-docker-image)
+  - [Pattern 3: Deploy to Kubernetes](#pattern-3-deploy-to-kubernetes)
+  - [Pattern 4: Matrix Build](#pattern-4-matrix-build)
+- [Workflow Best Practices](#workflow-best-practices)
+- [Reusable Workflows](#reusable-workflows)
+- [Security Scanning](#security-scanning)
+- [Deployment with Approvals](#deployment-with-approvals)
+- [Related Skills](#related-skills)
+<!-- /toc -->
+
 Production-ready GitHub Actions workflow patterns for testing, building, and deploying applications.
 
 ## Purpose

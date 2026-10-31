@@ -8,6 +8,19 @@ tags: [vue3, ssr, browser-api, nodejs, universal, isomorphic, server-side-render
 
 # Guard Platform-Specific APIs in Universal SSR Code
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Common Browser APIs That Break SSR](#common-browser-apis-that-break-ssr)
+- [Nuxt.js Guards](#nuxtjs-guards)
+- [Cross-Platform Libraries](#cross-platform-libraries)
+- [Common Node.js APIs That Break in Browser](#common-nodejs-apis-that-break-in-browser)
+- [Environment Detection Utility](#environment-detection-utility)
+- [Third-Party Library Issues](#third-party-library-issues)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - SSR applications run the same code on both server (Node.js) and client (browser). Browser APIs like `window`, `document`, and `localStorage` don't exist in Node.js and will throw `ReferenceError`. Similarly, Node.js APIs like `fs` and `process` aren't available in browsers.
 
 Universal/isomorphic code must guard platform-specific API access or use libraries that work on both platforms.

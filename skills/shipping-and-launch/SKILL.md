@@ -5,6 +5,35 @@ description: Prepares production launches. Use when preparing to deploy to produ
 
 # Shipping and Launch
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [The Pre-Launch Checklist](#the-pre-launch-checklist)
+  - [Code Quality](#code-quality)
+  - [Security](#security)
+  - [Performance](#performance)
+  - [Accessibility](#accessibility)
+  - [Infrastructure](#infrastructure)
+  - [Documentation](#documentation)
+- [Feature Flag Strategy](#feature-flag-strategy)
+- [Staged Rollout](#staged-rollout)
+  - [The Rollout Sequence](#the-rollout-sequence)
+  - [Rollout Decision Thresholds](#rollout-decision-thresholds)
+  - [When to Roll Back](#when-to-roll-back)
+- [Monitoring and Observability](#monitoring-and-observability)
+  - [What to Monitor](#what-to-monitor)
+  - [Error Reporting](#error-reporting)
+  - [Post-Launch Verification](#post-launch-verification)
+- [Error Budget Release Gate](#error-budget-release-gate)
+- [Rollback Strategy](#rollback-strategy)
+- [See Also](#see-also)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 Ship with confidence. The goal is not just to deploy — it's to deploy safely, with monitoring in place, a rollback plan ready, and a clear understanding of what success looks like. Every launch should be reversible, observable, and incremental.

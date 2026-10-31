@@ -4,6 +4,15 @@ category: '@Integrations'
 
 # useIDBKeyval
 
+<!-- toc -->
+## Contents
+
+- [Install idb-keyval as a peer dependency](#install-idb-keyval-as-a-peer-dependency)
+- [Usage](#usage)
+- [Cross-tab syncing](#cross-tab-syncing)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Wrapper for [`idb-keyval`](https://www.npmjs.com/package/idb-keyval).
 
 ## Install idb-keyval as a peer dependency

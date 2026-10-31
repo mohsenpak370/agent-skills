@@ -8,6 +8,16 @@ tags: [vue3, events, keyboard, modifiers, shortcuts, accessibility]
 
 # Use .exact Modifier for Precise Keyboard/Mouse Shortcuts
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Behavior Comparison](#behavior-comparison)
+- [Practical Example: File Browser Selection](#practical-example-file-browser-selection)
+- [Keyboard Shortcuts with .exact](#keyboard-shortcuts-with-exact)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - By default, Vue's modifier key handlers (`.ctrl`, `.alt`, `.shift`, `.meta`) fire even when other modifier keys are also pressed. Use `.exact` to require that ONLY the specified modifiers are pressed, preventing accidental triggering of shortcuts.
 
 ## Task Checklist

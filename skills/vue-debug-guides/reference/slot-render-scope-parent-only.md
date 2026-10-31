@@ -8,6 +8,14 @@ tags: [vue3, slots, scope, reactivity, common-mistake]
 
 # Slot Content Only Has Access to Parent Component Scope
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Function Analogy](#the-function-analogy)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Slot content is compiled in the parent component's scope and cannot access data defined in the child component. This follows JavaScript's lexical scoping rules and is a common source of confusion.
 
 When you provide content for a slot, that content is defined in your parent template and can only access data available in the parent component. The child component's internal state is not accessible unless explicitly passed via scoped slots.

@@ -5,6 +5,17 @@ related: useThrottleFn
 
 # useDebounceFn
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Cancel](#cancel)
+- [Pending State](#pending-state)
+- [Flush](#flush)
+- [Recommended Reading](#recommended-reading)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Debounce execution of a function.
 
 > Debounce is an overloaded waiter: if you keep asking, your requests will be ignored until you stop and give them some time to think about your latest inquiry.

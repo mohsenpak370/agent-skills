@@ -8,6 +8,17 @@ tags: [vue3, plugins, provide-inject, typescript, dependency-injection]
 
 # Vue Plugin Best Practices
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Structure Plugins for `app.use()`](#structure-plugins-for-appuse)
+- [Register Capabilities Explicitly in `install()`](#register-capabilities-explicitly-in-install)
+- [Type Plugin Contracts](#type-plugin-contracts)
+- [Use Symbol Injection Keys in Plugins](#use-symbol-injection-keys-in-plugins)
+- [Provide Required Injection Helpers](#provide-required-injection-helpers)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Vue plugins should follow the `app.use()` contract, expose explicit capabilities, and use collision-safe injection keys. This keeps plugin setup predictable and composable across large apps.
 
 ## Task List

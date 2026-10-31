@@ -4,6 +4,17 @@ category: Browser
 
 # useBreakpoints
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Shortcut Methods](#shortcut-methods)
+  - [Strategy](#strategy)
+  - [Available Methods](#available-methods)
+- [Presets](#presets)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive viewport breakpoints.
 
 ## Usage

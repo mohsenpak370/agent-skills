@@ -4,6 +4,14 @@ category: Elements
 
 # useResizeObserver
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Directive Usage](#directive-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reports changes to the dimensions of an Element's content or the border-box
 
 ## Usage

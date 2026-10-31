@@ -1,5 +1,47 @@
 # REST API Best Practices
 
+<!-- toc -->
+## Contents
+
+- [URL Structure](#url-structure)
+  - [Resource Naming](#resource-naming)
+  - [Nested Resources](#nested-resources)
+- [HTTP Methods and Status Codes](#http-methods-and-status-codes)
+  - [GET - Retrieve Resources](#get---retrieve-resources)
+  - [POST - Create Resources](#post---create-resources)
+  - [PUT - Replace Resources](#put---replace-resources)
+  - [PATCH - Partial Update](#patch---partial-update)
+  - [DELETE - Remove Resources](#delete---remove-resources)
+- [Filtering, Sorting, and Searching](#filtering-sorting-and-searching)
+  - [Query Parameters](#query-parameters)
+- [Pagination Patterns](#pagination-patterns)
+  - [Offset-Based Pagination](#offset-based-pagination)
+  - [Cursor-Based Pagination (for large datasets)](#cursor-based-pagination-for-large-datasets)
+  - [Link Header Pagination (RESTful)](#link-header-pagination-restful)
+- [Versioning Strategies](#versioning-strategies)
+  - [URL Versioning (Recommended)](#url-versioning-recommended)
+  - [Header Versioning](#header-versioning)
+  - [Query Parameter](#query-parameter)
+- [Rate Limiting](#rate-limiting)
+  - [Headers](#headers)
+  - [Implementation Pattern](#implementation-pattern)
+- [Authentication and Authorization](#authentication-and-authorization)
+  - [Bearer Token](#bearer-token)
+  - [API Keys](#api-keys)
+- [Error Response Format](#error-response-format)
+  - [Consistent Structure](#consistent-structure)
+  - [Status Code Guidelines](#status-code-guidelines)
+- [Caching](#caching)
+  - [Cache Headers](#cache-headers)
+- [Bulk Operations](#bulk-operations)
+  - [Batch Endpoints](#batch-endpoints)
+- [Idempotency](#idempotency)
+  - [Idempotency Keys](#idempotency-keys)
+- [CORS Configuration](#cors-configuration)
+- [Documentation with OpenAPI](#documentation-with-openapi)
+- [Health and Monitoring Endpoints](#health-and-monitoring-endpoints)
+<!-- /toc -->
+
 ## URL Structure
 
 ### Resource Naming

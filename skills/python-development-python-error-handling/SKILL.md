@@ -5,6 +5,25 @@ description: Python error handling patterns including input validation, exceptio
 
 # Python Error Handling
 
+<!-- toc -->
+## Contents
+
+- [When to Use This Skill](#when-to-use-this-skill)
+- [Core Concepts](#core-concepts)
+  - [1. Fail Fast](#1-fail-fast)
+  - [2. Meaningful Exceptions](#2-meaningful-exceptions)
+  - [3. Partial Failures](#3-partial-failures)
+  - [4. Preserve Context](#4-preserve-context)
+- [Quick Start](#quick-start)
+- [Fundamental Patterns](#fundamental-patterns)
+  - [Pattern 1: Early Input Validation](#pattern-1-early-input-validation)
+  - [Pattern 2: Convert to Domain Types Early](#pattern-2-convert-to-domain-types-early)
+  - [Pattern 3: Pydantic for Complex Validation](#pattern-3-pydantic-for-complex-validation)
+  - [Pattern 4: Map Errors to Standard Exceptions](#pattern-4-map-errors-to-standard-exceptions)
+- [Detailed worked examples and patterns](#detailed-worked-examples-and-patterns)
+- [Best Practices Summary](#best-practices-summary)
+<!-- /toc -->
+
 Build robust Python applications with proper input validation, meaningful exceptions, and graceful failure handling. Good error handling makes debugging easier and systems more reliable.
 
 ## When to Use This Skill

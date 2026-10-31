@@ -8,6 +8,14 @@ tags: [vue3, computed, reactivity, immutability, common-mistake]
 
 # Never Mutate Computed Property Return Values
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Writable Computed for Bidirectional Binding](#writable-computed-for-bidirectional-binding)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - The returned value from a computed property is derived state - a temporary snapshot. Mutating this value leads to bugs that are difficult to debug.
 
 **Important:** Mutations DO persist while the computed cache remains valid, but are lost when recomputation occurs. The danger lies in unpredictable cache invalidation timing - any change to the computed's dependencies triggers recomputation, silently discarding your mutations. This makes bugs intermittent and hard to reproduce.

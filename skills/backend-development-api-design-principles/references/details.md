@@ -1,5 +1,19 @@
 # api-design-principles — detailed patterns and worked examples
 
+<!-- toc -->
+## Contents
+
+- [REST API Design Patterns](#rest-api-design-patterns)
+  - [Pattern 1: Resource Collection Design](#pattern-1-resource-collection-design)
+  - [Pattern 2: Pagination and Filtering](#pattern-2-pagination-and-filtering)
+  - [Pattern 3: Error Handling and Status Codes](#pattern-3-error-handling-and-status-codes)
+  - [Pattern 4: HATEOAS (Hypermedia as the Engine of Application State)](#pattern-4-hateoas-hypermedia-as-the-engine-of-application-state)
+- [GraphQL Design Patterns](#graphql-design-patterns)
+  - [Pattern 1: Schema Design](#pattern-1-schema-design)
+  - [Pattern 2: Resolver Design](#pattern-2-resolver-design)
+  - [Pattern 3: DataLoader (N+1 Problem Prevention)](#pattern-3-dataloader-n1-problem-prevention)
+<!-- /toc -->
+
 ## REST API Design Patterns
 
 ### Pattern 1: Resource Collection Design

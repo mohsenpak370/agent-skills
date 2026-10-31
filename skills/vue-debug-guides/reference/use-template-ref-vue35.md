@@ -8,6 +8,15 @@ tags: [vue3, vue35, template-refs, useTemplateRef, composition-api]
 
 # Use useTemplateRef for Template Refs in Vue 3.5+
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Limitation: v-for Refs](#limitation-v-for-refs)
+- [Migration Guide](#migration-guide)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Before Vue 3.5, template refs required declaring a `ref()` with a name exactly matching the template's ref attribute. This fragile connection breaks silently during refactoring. Vue 3.5's `useTemplateRef()` eliminates this issue with explicit binding and better TypeScript support.
 
 The legacy pattern causes no errors or warnings when names don't match - the ref simply stays null, leading to confusing debugging sessions.

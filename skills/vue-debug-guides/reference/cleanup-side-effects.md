@@ -8,6 +8,15 @@ tags: [vue3, lifecycle, memory-leak, event-listeners, intervals, cleanup]
 
 # Clean Up Event Listeners and Intervals in onUnmounted
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Using Composable Pattern for Auto-Cleanup](#using-composable-pattern-for-auto-cleanup)
+- [VueUse Alternative](#vueuse-alternative)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Failing to clean up event listeners, intervals, timeouts, and subscriptions when a component unmounts causes memory leaks and ghost handlers that continue running, leading to performance degradation and subtle bugs in Single Page Applications.
 
 When using custom events, timers, WebSocket connections, or third-party libraries, always clean up in `onUnmounted` (Composition API) or `unmounted` (Options API).

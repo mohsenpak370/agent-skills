@@ -4,6 +4,16 @@ category: Utilities
 
 # useToggle
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Toggle Function](#toggle-function)
+  - [Custom Values](#custom-values)
+- [Caution](#caution)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 A boolean switcher with utility functions.
 
 ## Usage

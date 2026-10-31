@@ -5,6 +5,28 @@ description: Extracts what the user actually wants instead of what they think th
 
 # Interview Me
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [Loading Constraints](#loading-constraints)
+- [The Process](#the-process)
+  - [Step 1: Hypothesize, with a confidence number](#step-1-hypothesize-with-a-confidence-number)
+  - [Step 2: Ask one question at a time, each with a guess attached](#step-2-ask-one-question-at-a-time-each-with-a-guess-attached)
+  - [Step 3: Listen for "want vs. should want"](#step-3-listen-for-want-vs-should-want)
+  - [Step 4: Restate intent in the user's own words](#step-4-restate-intent-in-the-users-own-words)
+  - [Step 5: Confirm — explicit yes, not "whatever you think"](#step-5-confirm--explicit-yes-not-whatever-you-think)
+  - [Step 6: Terminal Turn & Stop Rule (CRITICAL)](#step-6-terminal-turn--stop-rule-critical)
+  - [The 95% Confidence Stop](#the-95-confidence-stop)
+- [Output](#output)
+- [Example](#example)
+- [Interaction with Other Skills](#interaction-with-other-skills)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 What people ask for and what they actually want are different things. They ask for "a dashboard" because that's what one asks for, not because a dashboard solves their problem. They say "make it faster" without a number to hit.

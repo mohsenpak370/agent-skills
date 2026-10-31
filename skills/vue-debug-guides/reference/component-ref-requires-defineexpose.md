@@ -8,6 +8,14 @@ tags: [vue3, template-refs, script-setup, defineExpose, component-communication]
 
 # Component Refs Require defineExpose with Script Setup
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Best Practice Reminder](#best-practice-reminder)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Components using `<script setup>` are private by default. A parent component using a template ref to access a child will get an empty object unless the child explicitly exposes properties using `defineExpose()`. This is a fundamental change from Options API behavior.
 
 This catches many developers off-guard when migrating from Options API, where `this.$refs.child` gave full access to the child instance.

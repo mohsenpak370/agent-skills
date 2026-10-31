@@ -4,6 +4,19 @@ category: Sensors
 
 # onLongPress
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Custom Delay](#custom-delay)
+  - [Distance Threshold](#distance-threshold)
+  - [On Mouse Up Callback](#on-mouse-up-callback)
+  - [Modifiers](#modifiers)
+- [Component Usage](#component-usage)
+- [Directive Usage](#directive-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Listen for a long press on an element. Returns a stop function.
 
 ## Usage

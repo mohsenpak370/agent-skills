@@ -5,6 +5,16 @@ alias: throttledWatch
 
 # watchThrottled
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Options](#options)
+  - [Leading and Trailing](#leading-and-trailing)
+- [How It Works](#how-it-works)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Throttled watch. The callback will be invoked at most once per specified duration.
 
 ## Usage

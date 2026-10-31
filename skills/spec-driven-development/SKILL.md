@@ -5,6 +5,23 @@ description: Creates specs before coding. Use when starting a new project, featu
 
 # Spec-Driven Development
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [The Gated Workflow](#the-gated-workflow)
+  - [Phase 0: Scope Check](#phase-0-scope-check)
+  - [Phase 1: Specify](#phase-1-specify)
+  - [Phase 2: Plan](#phase-2-plan)
+  - [Phase 3: Tasks](#phase-3-tasks)
+  - [Phase 4: Implement](#phase-4-implement)
+- [Keeping the Spec Alive](#keeping-the-spec-alive)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 Write a structured specification before writing any code. The spec is the shared source of truth between you and the human engineer — it defines what we're building, why, and how we'll know it's done. Code without a spec is guessing.

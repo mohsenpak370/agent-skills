@@ -4,6 +4,15 @@ category: Browser
 
 # useMediaControls
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Basic Usage](#basic-usage)
+  - [Providing Captions, Subtitles, etc...](#providing-captions-subtitles-etc)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive media controls for both `audio` and `video` elements
 
 ## Usage

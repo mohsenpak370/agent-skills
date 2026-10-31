@@ -5,6 +5,22 @@ outline: deep
 
 # createReusableTemplate
 
+<!-- toc -->
+## Contents
+
+- [Motivation](#motivation)
+- [Usage](#usage)
+  - [Options API](#options-api)
+  - [Passing Data](#passing-data)
+  - [TypeScript Support](#typescript-support)
+  - [Props and Attributes](#props-and-attributes)
+  - [Passing Slots](#passing-slots)
+- [Caveats](#caveats)
+  - [Boolean props](#boolean-props)
+- [References](#references)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Define and reuse template inside the component scope.
 
 ## Motivation

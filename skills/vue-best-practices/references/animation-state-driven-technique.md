@@ -8,6 +8,20 @@ tags: [vue3, animation, css, transition, style-binding, state, interactive]
 
 # State-driven Animations with CSS Transitions and Style Bindings
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Basic Pattern](#basic-pattern)
+- [Common Use Cases](#common-use-cases)
+  - [Following Mouse Position](#following-mouse-position)
+  - [Progress Animation](#progress-animation)
+  - [Scroll-based Animation](#scroll-based-animation)
+  - [Color Theme Transition](#color-theme-transition)
+- [Advanced: Numerical Tweening with Watchers](#advanced-numerical-tweening-with-watchers)
+- [Performance Considerations](#performance-considerations)
+<!-- /toc -->
+
 **Impact: LOW** - For responsive, interactive animations that react to user input or state changes, combine Vue's dynamic style bindings with CSS transitions. This creates smooth animations that interpolate values in real-time based on state.
 
 ## Task List

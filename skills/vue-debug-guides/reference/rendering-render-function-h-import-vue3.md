@@ -8,6 +8,17 @@ tags: [vue3, render-function, migration, h, vnode, breaking-change]
 
 # Import h Globally in Vue 3 Render Functions
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [With Composition API](#with-composition-api)
+- [With script setup (Not Recommended)](#with-script-setup-not-recommended)
+- [Component Resolution Change](#component-resolution-change)
+- [Why This Changed](#why-this-changed)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - In Vue 2, the `h` function (createElement) was passed as an argument to render functions. In Vue 3, `h` must be explicitly imported from 'vue'. Using Vue 2 patterns causes runtime errors.
 
 ## Task Checklist

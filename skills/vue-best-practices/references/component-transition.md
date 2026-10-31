@@ -8,6 +8,16 @@ tags: [vue3, transition, animation, performance, keys]
 
 # Transition Component Best Practices
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Use Transition for a Single Root Element](#use-transition-for-a-single-root-element)
+- [Force Transitions Between Same Element Types](#force-transitions-between-same-element-types)
+- [Use `mode` to Avoid Overlap During Swaps](#use-mode-to-avoid-overlap-during-swaps)
+- [Animate `transform` and `opacity` for Performance](#animate-transform-and-opacity-for-performance)
+<!-- /toc -->
+
 **Impact: MEDIUM** - `<Transition>` animates entering/leaving of a single element or component. It is ideal for toggling UI states, swapping views, or animating one component at a time.
 
 ## Task List

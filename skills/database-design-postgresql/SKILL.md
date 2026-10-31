@@ -5,6 +5,21 @@ description: Use this skill when designing or reviewing a PostgreSQL-specific sc
 
 # PostgreSQL Table Design
 
+<!-- toc -->
+## Contents
+
+- [When to Use](#when-to-use)
+- [Core Rules](#core-rules)
+- [PostgreSQL Gotchas](#postgresql-gotchas)
+- [Data Types](#data-types)
+  - [Types to avoid](#types-to-avoid)
+- [Constraints](#constraints)
+- [Indexing](#indexing)
+- [Partitioning](#partitioning)
+- [Examples](#examples)
+- [Going deeper](#going-deeper)
+<!-- /toc -->
+
 ## When to Use
 
 - Designing a new PostgreSQL schema, or reviewing one before it ships.

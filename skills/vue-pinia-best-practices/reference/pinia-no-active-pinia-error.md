@@ -8,6 +8,21 @@ tags: [vue3, pinia, state-management, setup, initialization, error]
 
 # Fix "No Active Pinia" Error - Store Setup Timing
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Error](#the-error)
+- [Common Cause 1: Wrong Plugin Order](#common-cause-1-wrong-plugin-order)
+- [Common Cause 2: Store Used at Module Level](#common-cause-2-store-used-at-module-level)
+- [Common Cause 3: Script Tag Missing "setup"](#common-cause-3-script-tag-missing-setup)
+- [Common Cause 4: mapStores with Parentheses](#common-cause-4-mapstores-with-parentheses)
+- [Common Cause 5: Router Guards Before Pinia](#common-cause-5-router-guards-before-pinia)
+- [Debugging Checklist](#debugging-checklist)
+- [Safe Pattern: Conditional Store Access](#safe-pattern-conditional-store-access)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - The error "getActivePinia() was called but there was no active Pinia" is one of the most common Pinia errors. It occurs when you try to use a store before Pinia has been installed on the Vue app, causing your application to crash.
 
 ## Task Checklist

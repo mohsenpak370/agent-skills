@@ -5,6 +5,27 @@ description: Define and implement Service Level Indicators (SLIs) and Service Le
 
 # SLO Implementation
 
+<!-- toc -->
+## Contents
+
+- [Purpose](#purpose)
+- [When to Use](#when-to-use)
+- [SLI/SLO/SLA Hierarchy](#slislosla-hierarchy)
+- [Defining SLIs](#defining-slis)
+  - [Common SLI Types](#common-sli-types)
+- [Setting SLO Targets](#setting-slo-targets)
+  - [Availability SLO Examples](#availability-slo-examples)
+  - [Choose Appropriate SLOs](#choose-appropriate-slos)
+- [Error Budget Calculation](#error-budget-calculation)
+  - [Error Budget Formula](#error-budget-formula)
+  - [Error Budget Policy](#error-budget-policy)
+- [SLO Implementation](#slo-implementation)
+  - [Prometheus Recording Rules](#prometheus-recording-rules)
+  - [SLO Alerting Rules](#slo-alerting-rules)
+- [SLO Dashboard](#slo-dashboard)
+- [Additional patterns and templates](#additional-patterns-and-templates)
+<!-- /toc -->
+
 Framework for defining and implementing Service Level Indicators (SLIs), Service Level Objectives (SLOs), and error budgets.
 
 ## Purpose

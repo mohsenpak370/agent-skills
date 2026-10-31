@@ -5,6 +5,20 @@ description: Kit-compatible @solana-program/system client for account creation, 
 
 # System Program
 
+<!-- toc -->
+## Contents
+
+- [Account Types](#account-types)
+  - [Nonce](#nonce)
+- [Key Instructions](#key-instructions)
+  - [Create Account](#create-account)
+  - [Transfer SOL](#transfer-sol)
+  - [Initialize Nonce Account](#initialize-nonce-account)
+  - [Advance Nonce](#advance-nonce)
+- [Complete Pattern: Create Account + Transfer](#complete-pattern-create-account--transfer)
+- [Error Handling](#error-handling)
+<!-- /toc -->
+
 Solana's built-in program for creating accounts, transferring SOL, and managing durable nonces. Every on-chain account is created through this program.
 
 If using plugin clients, prefer `client.use(systemProgram())` for a fluent API. The low-level instructions below are for manual `pipe()` transaction building. See [overview.md](../overview.md) and [plugins.md](../plugins.md).

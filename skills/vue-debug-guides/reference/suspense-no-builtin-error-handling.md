@@ -1,5 +1,17 @@
 # Suspense Has No Built-in Error Handling
 
+<!-- toc -->
+## Contents
+
+- [Rule](#rule)
+- [Why This Matters](#why-this-matters)
+- [Bad Code](#bad-code)
+- [Good Code](#good-code)
+- [Reusable Error Boundary Pattern](#reusable-error-boundary-pattern)
+- [Key Points](#key-points)
+- [References](#references)
+<!-- /toc -->
+
 ## Rule
 
 `<Suspense>` does not provide error handling via the component itself. You must implement error handling using `errorCaptured` option or `onErrorCaptured()` hook in a parent component to catch async errors.

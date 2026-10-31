@@ -8,6 +8,14 @@ tags: [vue3, template, functions, performance, side-effects]
 
 # Template Functions Must Be Pure Without Side Effects
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Pure Function Guidelines](#pure-function-guidelines)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Functions called in templates execute on every component re-render. Functions with side effects (modifying data, API calls, logging) will cause unpredictable behavior, performance issues, and difficult-to-debug bugs.
 
 Template expressions including function calls are evaluated whenever the component updates. This makes them unsuitable for operations that should only happen once or that modify state.

@@ -8,6 +8,19 @@ tags: [vue3, transition-group, animation, performance, list, css-framework]
 
 # TransitionGroup Performance with Large Lists and CSS Frameworks
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Performance Optimization Strategies](#performance-optimization-strategies)
+  - [1. Skip Animations for Bulk Operations](#1-skip-animations-for-bulk-operations)
+  - [2. Virtual Scrolling for Large Lists](#2-virtual-scrolling-for-large-lists)
+  - [3. Reduce CSS Complexity During Transitions](#3-reduce-css-complexity-during-transitions)
+  - [4. Use CSS content-visibility](#4-use-css-content-visibility)
+- [When to Avoid TransitionGroup](#when-to-avoid-transitiongroup)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Vue's `<TransitionGroup>` can experience significant DOM update lag when animating list changes, particularly when:
 - Using CSS frameworks (Tailwind, Bootstrap, etc.)
 - Performing array operations like `slice()` that change multiple items

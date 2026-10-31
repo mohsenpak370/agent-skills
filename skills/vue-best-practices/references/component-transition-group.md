@@ -8,6 +8,16 @@ tags: [vue3, transition-group, animation, lists, keys]
 
 # TransitionGroup Component Best Practices
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Use TransitionGroup for Lists](#use-transitiongroup-for-lists)
+- [Always Provide Stable Keys](#always-provide-stable-keys)
+- [Do Not Use `mode` on TransitionGroup](#do-not-use-mode-on-transitiongroup)
+- [Stagger List Animations with Data Attributes](#stagger-list-animations-with-data-attributes)
+<!-- /toc -->
+
 **Impact: MEDIUM** - `<TransitionGroup>` animates lists of items entering, leaving, and moving. Use it for `v-for` lists or dynamic collections where individual items change over time.
 
 ## Task List

@@ -1,5 +1,13 @@
 # Nuxt Focused Components Reference
 
+<!-- toc -->
+## Contents
+
+- [Rule](#rule)
+- [Bad: Mixed Concerns](#bad-mixed-concerns)
+- [Good: Page and Presentation Split](#good-page-and-presentation-split)
+<!-- /toc -->
+
 Use this reference when deciding whether Nuxt or Vue components should be split
 by responsibility.
 

@@ -5,6 +5,25 @@ description: Python configuration management via environment variables and typed
 
 # Python Configuration Management
 
+<!-- toc -->
+## Contents
+
+- [When to Use This Skill](#when-to-use-this-skill)
+- [Core Concepts](#core-concepts)
+  - [1. Externalized Configuration](#1-externalized-configuration)
+  - [2. Typed Settings](#2-typed-settings)
+  - [3. Fail Fast](#3-fail-fast)
+  - [4. Sensible Defaults](#4-sensible-defaults)
+- [Quick Start](#quick-start)
+- [Fundamental Patterns](#fundamental-patterns)
+  - [Pattern 1: Typed Settings with Pydantic](#pattern-1-typed-settings-with-pydantic)
+  - [Pattern 2: Fail Fast on Missing Configuration](#pattern-2-fail-fast-on-missing-configuration)
+  - [Pattern 3: Local Development Defaults](#pattern-3-local-development-defaults)
+  - [Pattern 4: Namespaced Environment Variables](#pattern-4-namespaced-environment-variables)
+- [Detailed worked examples and patterns](#detailed-worked-examples-and-patterns)
+- [Best Practices Summary](#best-practices-summary)
+<!-- /toc -->
+
 Externalize configuration from code using environment variables and typed settings. Well-managed configuration enables the same code to run in any environment without modification.
 
 ## When to Use This Skill

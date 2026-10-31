@@ -1,5 +1,16 @@
 # python-resource-management — detailed worked examples
 
+<!-- toc -->
+## Contents
+
+- [Advanced Patterns](#advanced-patterns)
+  - [Pattern 5: Selective Exception Suppression](#pattern-5-selective-exception-suppression)
+  - [Pattern 6: Streaming with Accumulated State](#pattern-6-streaming-with-accumulated-state)
+  - [Pattern 7: Efficient String Accumulation](#pattern-7-efficient-string-accumulation)
+  - [Pattern 8: Tracking Stream Metrics](#pattern-8-tracking-stream-metrics)
+  - [Pattern 9: Managing Multiple Resources with ExitStack](#pattern-9-managing-multiple-resources-with-exitstack)
+<!-- /toc -->
+
 ## Advanced Patterns
 
 ### Pattern 5: Selective Exception Suppression

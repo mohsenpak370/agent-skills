@@ -8,6 +8,19 @@ tags: [vue3, sfc, scoped-css, slots, deep-selector]
 
 # Scoped CSS Cannot Style Slot Content Directly
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Using :deep() Alternative](#using-deep-alternative)
+- [Why This Happens](#why-this-happens)
+- [:slotted() vs :deep() for Slots](#slotted-vs-deep-for-slots)
+- [Combining with Named Slots](#combining-with-named-slots)
+- [Performance Tip: Use Classes](#performance-tip-use-classes)
+- [When to Use Unscoped Styles](#when-to-use-unscoped-styles)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - When a parent passes content through a slot, that content receives the parent component's scoped style attributes, not the child component's. This means the child component cannot style slot content with regular scoped CSS.
 
 ## Task Checklist

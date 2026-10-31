@@ -1,5 +1,27 @@
 # Conventions
 
+<!-- toc -->
+## Contents
+
+- [Auto-registered modules](#auto-registered-modules)
+- [Content module integration](#content-module-integration)
+- [IDE setup](#ide-setup)
+- [UApp wrapper](#uapp-wrapper)
+- [Icons](#icons)
+  - [Default icon overrides](#default-icon-overrides)
+- [Slot patterns](#slot-patterns)
+- [Items arrays](#items-arrays)
+- [Composables](#composables)
+  - [useToast](#usetoast)
+  - [useOverlay](#useoverlay)
+  - [defineShortcuts](#defineshortcuts)
+  - [extractShortcuts](#extractshortcuts)
+  - [Internationalization (i18n)](#internationalization-i18n)
+- [Color mode](#color-mode)
+- [Official templates](#official-templates)
+- [Responsive patterns](#responsive-patterns)
+<!-- /toc -->
+
 Coding patterns specific to Nuxt UI.
 
 ## Auto-registered modules

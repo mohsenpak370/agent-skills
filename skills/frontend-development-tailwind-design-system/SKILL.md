@@ -5,6 +5,18 @@ description: Build Tailwind CSS v4 design-system infrastructure with CSS-first @
 
 # Tailwind Design System (v4)
 
+<!-- toc -->
+## Contents
+
+- [When to Use This Skill](#when-to-use-this-skill)
+- [Key v4 Changes](#key-v4-changes)
+- [Quick Start](#quick-start)
+- [Core Concepts](#core-concepts)
+  - [1. Design Token Hierarchy](#1-design-token-hierarchy)
+  - [2. Component Architecture](#2-component-architecture)
+- [Detailed patterns and worked examples](#detailed-patterns-and-worked-examples)
+<!-- /toc -->
+
 Build production-ready design systems with Tailwind CSS v4, including CSS-first configuration, design tokens, component variants, responsive patterns, and accessibility.
 
 > **Note**: This skill targets Tailwind CSS v4 (2024+). For v3 projects, refer to the [upgrade guide](https://tailwindcss.com/docs/upgrade-guide).

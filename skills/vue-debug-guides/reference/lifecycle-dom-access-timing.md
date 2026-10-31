@@ -8,6 +8,17 @@ tags: [vue3, vue2, lifecycle, dom, mounted, created, beforeMount, template-refs]
 
 # Access DOM Only After Mounted Hook
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Vue 3 Composition API Pattern](#vue-3-composition-api-pattern)
+- [Vue 3.5+ useTemplateRef Pattern](#vue-35-usetemplateref-pattern)
+- [Composition API with nextTick](#composition-api-with-nexttick)
+- [Common Third-Party Libraries](#common-third-party-libraries)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Attempting to access DOM elements or `this.$el` in `created` or `beforeMount` hooks fails because the component's template has not yet been rendered to the DOM. This leads to undefined errors, null references, and failed third-party library initializations.
 
 The component's DOM is only available starting from the `mounted` hook (Options API) or after `onMounted` runs (Composition API). Before this point, `this.$el` is undefined and template refs are null.

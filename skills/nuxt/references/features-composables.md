@@ -5,6 +5,26 @@ description: Auto-imported Vue APIs, Nuxt composables, and custom utilities
 
 # Composables Auto-imports
 
+<!-- toc -->
+## Contents
+
+- [Built-in Auto-imports](#built-in-auto-imports)
+  - [Vue APIs](#vue-apis)
+  - [Nuxt Composables](#nuxt-composables)
+  - [useAnnouncer (Accessibility)](#useannouncer-accessibility)
+- [Custom Composables (`app/composables/`)](#custom-composables-appcomposables)
+  - [Creating Composables](#creating-composables)
+  - [Using Composables](#using-composables)
+  - [File Scanning Rules](#file-scanning-rules)
+- [Utilities (`app/utils/`)](#utilities-apputils)
+- [Server Utils (`server/utils/`)](#server-utils-serverutils)
+- [Shared Utilities (`shared/`)](#shared-utilities-shared)
+- [Third-party Package Imports](#third-party-package-imports)
+- [Explicit Imports](#explicit-imports)
+- [Composable Context Rules](#composable-context-rules)
+- [Disabling Auto-imports](#disabling-auto-imports)
+<!-- /toc -->
+
 Nuxt automatically imports Vue APIs, Nuxt composables, and your custom composables/utilities.
 
 ## Built-in Auto-imports

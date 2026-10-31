@@ -5,6 +5,21 @@ description: Master REST and GraphQL API design principles to build intuitive, s
 
 # API Design Principles
 
+<!-- toc -->
+## Contents
+
+- [When to Use This Skill](#when-to-use-this-skill)
+- [Core Concepts](#core-concepts)
+  - [1. RESTful Design Principles](#1-restful-design-principles)
+  - [2. GraphQL Design Principles](#2-graphql-design-principles)
+  - [3. API Versioning Strategies](#3-api-versioning-strategies)
+- [Detailed patterns and worked examples](#detailed-patterns-and-worked-examples)
+- [Best Practices](#best-practices)
+  - [REST APIs](#rest-apis)
+  - [GraphQL APIs](#graphql-apis)
+- [Common Pitfalls](#common-pitfalls)
+<!-- /toc -->
+
 Master REST and GraphQL API design principles to build intuitive, scalable, and maintainable APIs that delight developers and stand the test of time.
 
 ## When to Use This Skill

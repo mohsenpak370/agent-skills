@@ -5,6 +5,23 @@ description: NuxtLink, NuxtPage, NuxtLayout, and other built-in Nuxt components
 
 # Built-in Components
 
+<!-- toc -->
+## Contents
+
+- [NuxtLink](#nuxtlink)
+- [NuxtPage](#nuxtpage)
+- [NuxtLayout](#nuxtlayout)
+- [NuxtLoadingIndicator](#nuxtloadingindicator)
+- [NuxtErrorBoundary](#nuxterrorboundary)
+- [ClientOnly](#clientonly)
+- [DevOnly](#devonly)
+- [NuxtIsland](#nuxtisland)
+- [NuxtImg and NuxtPicture](#nuxtimg-and-nuxtpicture)
+- [Teleport](#teleport)
+- [NuxtRouteAnnouncer](#nuxtrouteannouncer)
+- [NuxtAnnouncer](#nuxtannouncer)
+<!-- /toc -->
+
 Nuxt provides several built-in components for common functionality.
 
 ## NuxtLink

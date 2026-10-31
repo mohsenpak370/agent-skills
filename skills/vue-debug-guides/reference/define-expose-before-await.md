@@ -8,6 +8,14 @@ tags: [vue3, script-setup, defineExpose, async, component-refs]
 
 # defineExpose Must Be Called Before Any Await
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Why This Happens](#why-this-happens)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - In `<script setup>`, if you call `defineExpose()` after an `await` statement, the exposed properties will NOT be accessible to parent components using template refs. This is a subtle async timing issue that causes silent failures.
 
 The compiler transforms top-level await, and code after await runs in a different execution context where defineExpose cannot properly register with the component instance.

@@ -5,6 +5,25 @@ description: Field-tested Solana program design and code-organization patterns c
 
 # Program Design Patterns
 
+<!-- toc -->
+## Contents
+
+- [Project & code structure](#project--code-structure)
+  - [Naming](#naming)
+- [State design & account layout](#state-design--account-layout)
+  - [Explicit state machines](#explicit-state-machines)
+- [PDA seed conventions](#pda-seed-conventions)
+- [Performance, compute & transaction size](#performance-compute--transaction-size)
+  - [CPI limits (reference)](#cpi-limits-reference)
+- [Account lifecycle & size](#account-lifecycle--size)
+- [Events, logging & monitoring](#events-logging--monitoring)
+- [Access control & multi-program design](#access-control--multi-program-design)
+- [Operational patterns](#operational-patterns)
+- [Rust / Anchor ergonomics](#rust--anchor-ergonomics)
+- [Vault topology](#vault-topology)
+- [In-transaction credit (flashloan pattern)](#in-transaction-credit-flashloan-pattern)
+<!-- /toc -->
+
 Architecture and code-organization guidance for on-chain programs. For vulnerability categories and their preventions, see [../security.md](../security.md); for runtime mechanics (rent, PDAs, wire format), see [../concepts.md](../concepts.md).
 
 ## Project & code structure

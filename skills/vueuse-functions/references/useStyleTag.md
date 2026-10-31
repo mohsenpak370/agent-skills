@@ -4,6 +4,16 @@ category: Browser
 
 # useStyleTag
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Basic usage](#basic-usage)
+  - [Custom ID](#custom-id)
+  - [Media query](#media-query)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Inject reactive `style` element in head.
 
 ## Usage

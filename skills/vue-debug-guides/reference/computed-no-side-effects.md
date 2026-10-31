@@ -8,6 +8,14 @@ tags: [vue3, computed, reactivity, side-effects, best-practices]
 
 # Computed Property Getters Must Be Side-Effect Free
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [What Counts as a Side Effect](#what-counts-as-a-side-effect)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Computed getter functions should only perform pure computation. Side effects in computed getters break Vue's reactivity model and cause bugs that are difficult to trace.
 
 Computed properties are designed to declaratively describe how to derive a value from other reactive state. They are not meant to perform actions or modify state.

@@ -5,6 +5,18 @@ related: useLocalStorage, useSessionStorage, useStorageAsync
 
 # useStorage
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Merge Defaults](#merge-defaults)
+- [Custom Serialization](#custom-serialization)
+  - [Built-in Serializers](#built-in-serializers)
+- [Options](#options)
+- [Reactive Key](#reactive-key)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Create a reactive ref that can be used to access & modify [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) or [SessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage).
 
 Uses localStorage by default, other storage sources be specified via third argument.

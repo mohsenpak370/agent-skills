@@ -8,6 +8,27 @@ tags: [vue3, pinia, state-management, devtools, architecture, scalability]
 
 # Use Pinia for Large-Scale Vue Applications
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [When Hand-Rolled State is Acceptable](#when-hand-rolled-state-is-acceptable)
+- [When to Use Pinia](#when-to-use-pinia)
+  - [1. DevTools Integration](#1-devtools-integration)
+  - [2. TypeScript Support](#2-typescript-support)
+  - [3. Team Collaboration](#3-team-collaboration)
+  - [4. Hot Module Replacement (HMR)](#4-hot-module-replacement-hmr)
+  - [5. Server-Side Rendering (SSR)](#5-server-side-rendering-ssr)
+  - [6. Plugin Ecosystem](#6-plugin-ecosystem)
+- [Pinia vs Hand-Rolled Comparison](#pinia-vs-hand-rolled-comparison)
+- [Migration from Vuex](#migration-from-vuex)
+- [Pinia Store Styles](#pinia-store-styles)
+  - [Options Style (Similar to Options API)](#options-style-similar-to-options-api)
+  - [Setup Style (Composition API)](#setup-style-composition-api)
+- [Quick Start](#quick-start)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - While Vue's Composition API allows creating simple reactive stores with `reactive()` and `ref()`, these hand-rolled solutions lack the tooling, conventions, and debugging capabilities needed for large-scale production applications. Pinia is the official Vue state management solution and should be used for any non-trivial application.
 
 ## Task Checklist

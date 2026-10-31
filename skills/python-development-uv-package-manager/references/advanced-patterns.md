@@ -1,5 +1,40 @@
 # UV Package Manager — Advanced Reference
 
+<!-- toc -->
+## Contents
+
+- [Advanced Workflows](#advanced-workflows)
+  - [Pattern 12: Monorepo Support](#pattern-12-monorepo-support)
+  - [Pattern 13: CI/CD Integration](#pattern-13-cicd-integration)
+  - [Pattern 14: Docker Integration](#pattern-14-docker-integration)
+  - [Pattern 15: Lockfile Workflows](#pattern-15-lockfile-workflows)
+- [Performance Optimization](#performance-optimization)
+  - [Pattern 16: Using Global Cache](#pattern-16-using-global-cache)
+  - [Pattern 17: Parallel Installation](#pattern-17-parallel-installation)
+  - [Pattern 18: Offline Mode](#pattern-18-offline-mode)
+- [Comparison with Other Tools](#comparison-with-other-tools)
+  - [uv vs pip](#uv-vs-pip)
+  - [uv vs poetry](#uv-vs-poetry)
+  - [uv vs pip-tools](#uv-vs-pip-tools)
+- [Common Workflows](#common-workflows)
+  - [Pattern 19: Starting a New Project](#pattern-19-starting-a-new-project)
+  - [Pattern 20: Maintaining Existing Project](#pattern-20-maintaining-existing-project)
+- [Tool Integration](#tool-integration)
+  - [Pattern 21: Pre-commit Hooks](#pattern-21-pre-commit-hooks)
+  - [Pattern 22: VS Code Integration](#pattern-22-vs-code-integration)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+- [Best Practices](#best-practices)
+  - [Project Setup](#project-setup)
+  - [Performance Tips](#performance-tips)
+- [Migration Guide](#migration-guide)
+  - [From pip + requirements.txt](#from-pip--requirementstxt)
+  - [From Poetry](#from-poetry)
+  - [From pip-tools](#from-pip-tools)
+- [Command Reference](#command-reference)
+  - [Essential Commands](#essential-commands)
+<!-- /toc -->
+
 Advanced workflows including Docker integration, lockfile management, performance optimization, tool comparison, common workflows, tool integration, troubleshooting, best practices, migration guides, and command reference.
 
 ## Advanced Workflows

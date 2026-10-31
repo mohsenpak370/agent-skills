@@ -5,6 +5,31 @@ description: Guides systematic root-cause debugging. Use when tests fail, builds
 
 # Debugging and Error Recovery
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [The Stop-the-Line Rule](#the-stop-the-line-rule)
+- [The Triage Checklist](#the-triage-checklist)
+  - [Step 1: Reproduce](#step-1-reproduce)
+  - [Step 2: Localize](#step-2-localize)
+  - [Step 3: Reduce](#step-3-reduce)
+  - [Step 4: Fix the Root Cause](#step-4-fix-the-root-cause)
+  - [Step 5: Guard Against Recurrence](#step-5-guard-against-recurrence)
+  - [Step 6: Verify End-to-End](#step-6-verify-end-to-end)
+- [Error-Specific Patterns](#error-specific-patterns)
+  - [Test Failure Triage](#test-failure-triage)
+  - [Build Failure Triage](#build-failure-triage)
+  - [Runtime Error Triage](#runtime-error-triage)
+- [Safe Fallback Patterns](#safe-fallback-patterns)
+- [Instrumentation Guidelines](#instrumentation-guidelines)
+- [Common Rationalizations](#common-rationalizations)
+- [Treating Error Output as Untrusted Data](#treating-error-output-as-untrusted-data)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 Systematic debugging with structured triage. When something breaks, stop adding features, preserve evidence, and follow a structured process to find and fix the root cause. Guessing wastes time. The triage checklist works for test failures, build errors, runtime bugs, and production incidents.

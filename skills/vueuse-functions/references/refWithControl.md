@@ -6,6 +6,17 @@ related: computedWithControl
 
 # refWithControl
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [`peek`, `lay`, `untrackedGet`, `silentSet`](#peek-lay-untrackedget-silentset)
+- [Configurations](#configurations)
+  - [`onBeforeChange()`](#onbeforechange)
+  - [`onChanged()`](#onchanged)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Fine-grained controls over ref and its reactivity.
 
 ## Usage

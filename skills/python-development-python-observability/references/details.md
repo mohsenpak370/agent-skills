@@ -1,5 +1,15 @@
 # python-observability — detailed worked examples
 
+<!-- toc -->
+## Contents
+
+- [Advanced Patterns](#advanced-patterns)
+  - [Pattern 5: The Four Golden Signals with Prometheus](#pattern-5-the-four-golden-signals-with-prometheus)
+  - [Pattern 6: Bounded Cardinality](#pattern-6-bounded-cardinality)
+  - [Pattern 7: Timed Operations with Context Manager](#pattern-7-timed-operations-with-context-manager)
+  - [Pattern 8: OpenTelemetry Tracing](#pattern-8-opentelemetry-tracing)
+<!-- /toc -->
+
 ## Advanced Patterns
 
 ### Pattern 5: The Four Golden Signals with Prometheus

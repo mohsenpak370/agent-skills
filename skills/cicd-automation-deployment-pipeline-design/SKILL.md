@@ -5,6 +5,25 @@ description: Design multi-stage CI/CD pipelines with approval gates, security ch
 
 # Deployment Pipeline Design
 
+<!-- toc -->
+## Contents
+
+- [Purpose](#purpose)
+- [Input / Output](#input--output)
+  - [What You Provide](#what-you-provide)
+  - [What This Skill Produces](#what-this-skill-produces)
+- [When to Use](#when-to-use)
+- [Detailed patterns and worked examples](#detailed-patterns-and-worked-examples)
+- [Troubleshooting](#troubleshooting)
+  - [Health check passes in pipeline but service is unhealthy in production](#health-check-passes-in-pipeline-but-service-is-unhealthy-in-production)
+  - [Canary deployment never promotes to 100%](#canary-deployment-never-promotes-to-100)
+  - [Staging deploy succeeds but production job never starts](#staging-deploy-succeeds-but-production-job-never-starts)
+  - [Docker layer cache busted on every run causing slow builds](#docker-layer-cache-busted-on-every-run-causing-slow-builds)
+  - [Rollback leaves database migrations applied to old code](#rollback-leaves-database-migrations-applied-to-old-code)
+- [Advanced Topics](#advanced-topics)
+- [Related Skills](#related-skills)
+<!-- /toc -->
+
 Architecture patterns for multi-stage CI/CD pipelines with approval gates, deployment strategies, and environment promotion workflows.
 
 ## Purpose

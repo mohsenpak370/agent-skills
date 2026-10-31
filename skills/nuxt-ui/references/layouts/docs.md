@@ -1,5 +1,18 @@
 # Docs Layout
 
+<!-- toc -->
+## Contents
+
+- [When to use](#when-to-use)
+- [Component tree](#component-tree)
+- [App shell](#app-shell)
+- [Layout](#layout)
+- [Page](#page)
+  - [How nesting works](#how-nesting-works)
+  - [Common mistakes](#common-mistakes)
+- [Key components](#key-components)
+<!-- /toc -->
+
 Build documentation sites with sidebar navigation, table of contents, and surround links.
 
 ## When to use

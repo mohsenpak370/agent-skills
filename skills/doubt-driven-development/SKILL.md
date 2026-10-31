@@ -5,6 +5,24 @@ description: Subjects every non-trivial decision to a fresh-context adversarial 
 
 # Doubt-Driven Development
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [Loading Constraints](#loading-constraints)
+- [The Process](#the-process)
+  - [Step 1: CLAIM — Surface what stands](#step-1-claim--surface-what-stands)
+  - [Step 2: EXTRACT — Smallest reviewable unit](#step-2-extract--smallest-reviewable-unit)
+  - [Step 3: DOUBT — Invoke the fresh-context reviewer](#step-3-doubt--invoke-the-fresh-context-reviewer)
+  - [Step 4: RECONCILE — Fold findings back](#step-4-reconcile--fold-findings-back)
+  - [Step 5: STOP — Bounded loop, not recursion](#step-5-stop--bounded-loop-not-recursion)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Interaction with Other Skills](#interaction-with-other-skills)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 A confident answer is not a correct one. Long sessions accumulate context that quietly turns assumptions into "facts" without anyone noticing. Doubt-driven development is the discipline of materializing a fresh-context reviewer — biased to **disprove**, not approve — before any non-trivial output stands.

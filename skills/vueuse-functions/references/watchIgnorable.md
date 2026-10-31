@@ -5,6 +5,16 @@ alias: ignorableWatch
 
 # watchIgnorable
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [WatchOptionFlush timing](#watchoptionflush-timing)
+- [`ignorePrevAsyncUpdates`](#ignoreprevasyncupdates)
+- [Recommended Readings](#recommended-readings)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Ignorable watch
 
 ## Usage

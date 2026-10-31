@@ -1,5 +1,24 @@
 # auth-implementation-patterns — detailed patterns and worked examples
 
+<!-- toc -->
+## Contents
+
+- [JWT Authentication](#jwt-authentication)
+  - [Pattern 1: JWT Implementation](#pattern-1-jwt-implementation)
+  - [Pattern 2: Refresh Token Flow](#pattern-2-refresh-token-flow)
+- [Session-Based Authentication](#session-based-authentication)
+  - [Pattern 1: Express Session](#pattern-1-express-session)
+- [OAuth2 / Social Login](#oauth2--social-login)
+  - [Pattern 1: OAuth2 with Passport.js](#pattern-1-oauth2-with-passportjs)
+- [Authorization Patterns](#authorization-patterns)
+  - [Pattern 1: Role-Based Access Control (RBAC)](#pattern-1-role-based-access-control-rbac)
+  - [Pattern 2: Permission-Based Access Control](#pattern-2-permission-based-access-control)
+  - [Pattern 3: Resource Ownership](#pattern-3-resource-ownership)
+- [Security Best Practices](#security-best-practices)
+  - [Pattern 1: Password Security](#pattern-1-password-security)
+  - [Pattern 2: Rate Limiting](#pattern-2-rate-limiting)
+<!-- /toc -->
+
 ## JWT Authentication
 
 ### Pattern 1: JWT Implementation

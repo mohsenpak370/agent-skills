@@ -4,6 +4,15 @@ category: '@Electron'
 
 # useIpcRenderer
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Available Methods](#available-methods)
+  - [With Custom IpcRenderer](#with-custom-ipcrenderer)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Provides [ipcRenderer](https://www.electronjs.org/docs/api/ipc-renderer) and all of its APIs with Vue reactivity.
 
 ## Usage

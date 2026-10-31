@@ -1,5 +1,16 @@
 # frontend-development-tailwind-design-system - detailed patterns and worked examples
 
+<!-- toc -->
+## Contents
+
+- [Patterns](#patterns)
+  - [Pattern 1: CVA (Class Variance Authority) Components](#pattern-1-cva-class-variance-authority-components)
+  - [Pattern 2: Compound Components (React 19)](#pattern-2-compound-components-react-19)
+  - [Pattern 3: Form Components](#pattern-3-form-components)
+  - [Pattern 4: Responsive Grid System](#pattern-4-responsive-grid-system)
+- [Utility Functions](#utility-functions)
+<!-- /toc -->
+
 ## Patterns
 
 ### Pattern 1: CVA (Class Variance Authority) Components

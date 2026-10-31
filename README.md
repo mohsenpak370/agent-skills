@@ -8,6 +8,8 @@ Installable agent skills and routing instructions for opencode.
 - `skills/`: Installable agent skills.
 - `skills-lock.json`: Installed skill lockfile.
 - `opencode.json`: Local opencode config that loads skills from `skills/`.
+- `references/`: Shared checklists linked from several skills.
+- `scripts/generate-tocs.mjs`: Adds tables of contents to long skill files.
 
 ## Usage
 
@@ -240,6 +242,16 @@ Keep skill descriptions specific and action-oriented so opencode can select the
 right skill automatically. If you add a new skill, place it under
 `skills/<skill-name>/SKILL.md` and include clear frontmatter with `name`
 and `description`.
+
+Markdown files in `skills/` and `references/` longer than 100 lines start with
+a generated `## Contents` section, so an agent previewing only the top of a file
+can still see everything it covers. Regenerate them after adding or updating a
+skill:
+
+```bash
+node scripts/generate-tocs.mjs          # add or refresh TOCs
+node scripts/generate-tocs.mjs --check  # list files whose TOC is missing or stale
+```
 
 Restart opencode after changing `AGENTS.md`, skill files, or references so new
 sessions pick up the updated instructions.

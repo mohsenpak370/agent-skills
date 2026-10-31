@@ -4,6 +4,21 @@ category: Network
 
 # useWebSocket
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Return Values](#return-values)
+  - [Callbacks](#callbacks)
+  - [immediate](#immediate)
+  - [autoConnect](#autoconnect)
+  - [autoClose](#autoclose)
+  - [autoReconnect](#autoreconnect)
+  - [heartbeat](#heartbeat)
+  - [Sub-protocols](#sub-protocols)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/WebSocket) client.
 
 ## Usage

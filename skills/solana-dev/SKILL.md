@@ -10,6 +10,28 @@ metadata:
 
 # Solana Development Skill
 
+<!-- toc -->
+## Contents
+
+- [What this Skill is for](#what-this-skill-is-for)
+- [Default stack decisions (opinionated)](#default-stack-decisions-opinionated)
+- [Agent safety guardrails](#agent-safety-guardrails)
+  - [Transaction review (W009)](#transaction-review-w009)
+  - [Untrusted data handling (W011)](#untrusted-data-handling-w011)
+- [Agent-friendly CLI usage (NO_DNA)](#agent-friendly-cli-usage-no_dna)
+- [Operating procedure (how to execute tasks)](#operating-procedure-how-to-execute-tasks)
+  - [1. Classify the task layer](#1-classify-the-task-layer)
+  - [2. Pick the right building blocks](#2-pick-the-right-building-blocks)
+  - [3. Implement with Solana-specific correctness](#3-implement-with-solana-specific-correctness)
+  - [4. Add tests](#4-add-tests)
+  - [5. Deliverables expectations](#5-deliverables-expectations)
+- [Solana MCP server (live docs + expert assistance)](#solana-mcp-server-live-docs--expert-assistance)
+  - [Auto-install](#auto-install)
+  - [Available MCP tools](#available-mcp-tools)
+  - [When to reach for MCP tools](#when-to-reach-for-mcp-tools)
+- [Progressive disclosure (read when needed)](#progressive-disclosure-read-when-needed)
+<!-- /toc -->
+
 ## What this Skill is for
 Use this Skill when the user asks for:
 - Solana dApp UI work (React / Next.js)

@@ -5,6 +5,16 @@ alias: debouncedWatch
 
 # watchDebounced
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Options](#options)
+  - [Reactive Debounce Time](#reactive-debounce-time)
+- [How It Works](#how-it-works)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Debounced watch. The callback will only be invoked after the source stops changing for the specified duration.
 
 ## Usage

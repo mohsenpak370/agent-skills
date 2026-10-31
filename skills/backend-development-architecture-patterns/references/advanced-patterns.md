@@ -1,5 +1,18 @@
 # Advanced Architecture Patterns — Reference
 
+<!-- toc -->
+## Contents
+
+- [Full Multi-Service Project Structure](#full-multi-service-project-structure)
+- [Onion Architecture vs. Clean Architecture](#onion-architecture-vs-clean-architecture)
+- [Anti-Corruption Layer (ACL)](#anti-corruption-layer-acl)
+- [Context Map — Relationships Between Bounded Contexts](#context-map--relationships-between-bounded-contexts)
+- [Dependency Injection Wiring — Infrastructure Layer](#dependency-injection-wiring--infrastructure-layer)
+- [Aggregate Design Heuristics](#aggregate-design-heuristics)
+- [Domain Events — Publishing and Handling](#domain-events--publishing-and-handling)
+- [Detecting and Breaking Dependency Cycles](#detecting-and-breaking-dependency-cycles)
+<!-- /toc -->
+
 Deep-dive implementation examples for DDD bounded contexts, Onion Architecture, Anti-Corruption Layers, and full project structures. Referenced from SKILL.md.
 
 ---

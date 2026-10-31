@@ -8,6 +8,18 @@ tags: [vue3, sfc, scoped-css, deep-selector, child-components]
 
 # Use Deep Selectors for Styling Child Component Elements
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [How Scoped CSS Works](#how-scoped-css-works)
+- [Vue 3 Deep Selector Syntax](#vue-3-deep-selector-syntax)
+- [Scoping Deep Selectors for Safety](#scoping-deep-selectors-for-safety)
+- [Child Component Root Element Exception](#child-component-root-element-exception)
+- [Performance Consideration](#performance-consideration)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - When using scoped CSS in Vue SFCs, styles do not penetrate into child components. Without using deep selectors (`:deep()`), your styles will silently fail to apply to elements rendered by child components or third-party libraries.
 
 ## Task Checklist

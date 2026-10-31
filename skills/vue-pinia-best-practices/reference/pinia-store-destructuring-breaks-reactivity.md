@@ -8,6 +8,20 @@ tags: [vue3, pinia, state-management, reactivity, destructuring]
 
 # Use storeToRefs When Destructuring Pinia Stores
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Problem: Direct Destructuring](#the-problem-direct-destructuring)
+- [The Solution: Use storeToRefs](#the-solution-use-storetorefs)
+- [Understanding Why This Happens](#understanding-why-this-happens)
+- [Complete Pattern: State, Getters, and Actions](#complete-pattern-state-getters-and-actions)
+- [Alternative: Don't Destructure](#alternative-dont-destructure)
+- [Common Mistake: Mixing storeToRefs with Actions](#common-mistake-mixing-storetorefs-with-actions)
+- [TypeScript Tip](#typescript-tip)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Pinia stores are wrapped with `reactive`, so destructuring them directly extracts non-reactive values. Changes to the store won't be reflected in your component, causing stale UI and confusing bugs.
 
 This is one of the most common mistakes when using Pinia, especially for developers coming from Vuex or other state management libraries.

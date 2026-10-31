@@ -1,5 +1,40 @@
 # Orchestration Patterns
 
+<!-- toc -->
+## Contents
+
+- [Endorsed patterns](#endorsed-patterns)
+  - [1. Direct invocation (no orchestration)](#1-direct-invocation-no-orchestration)
+  - [2. Single-persona slash command](#2-single-persona-slash-command)
+  - [3. Parallel fan-out with merge](#3-parallel-fan-out-with-merge)
+  - [4. Sequential pipeline as user-driven slash commands](#4-sequential-pipeline-as-user-driven-slash-commands)
+  - [5. Research isolation (context preservation)](#5-research-isolation-context-preservation)
+- [Claude Code compatibility](#claude-code-compatibility)
+  - [Where personas live](#where-personas-live)
+  - [Subagents vs. Agent Teams](#subagents-vs-agent-teams)
+  - [Platform-enforced rules](#platform-enforced-rules)
+  - [Built-in subagents to know about](#built-in-subagents-to-know-about)
+  - [Frontmatter restrictions for plugin agents](#frontmatter-restrictions-for-plugin-agents)
+  - [Spawning multiple subagents in parallel](#spawning-multiple-subagents-in-parallel)
+- [Worked example: Agent Teams for competing-hypothesis debugging](#worked-example-agent-teams-for-competing-hypothesis-debugging)
+  - [The scenario](#the-scenario)
+  - [Why this is *not* a `/ship` job](#why-this-is-not-a-ship-job)
+  - [Setup (one-time, per-environment)](#setup-one-time-per-environment)
+  - [The trigger prompt](#the-trigger-prompt)
+  - [What happens](#what-happens)
+  - [When to clean up](#when-to-clean-up)
+  - [Cost expectation](#cost-expectation)
+  - [Anti-pattern in this scenario](#anti-pattern-in-this-scenario)
+  - [When *not* to use Agent Teams](#when-not-to-use-agent-teams)
+- [Anti-patterns](#anti-patterns)
+  - [A. Router persona ("meta-orchestrator")](#a-router-persona-meta-orchestrator)
+  - [B. Persona that calls another persona](#b-persona-that-calls-another-persona)
+  - [C. Sequential orchestrator that paraphrases](#c-sequential-orchestrator-that-paraphrases)
+  - [D. Deep persona trees](#d-deep-persona-trees)
+- [Decision flow](#decision-flow)
+- [When to add a new pattern to this catalog](#when-to-add-a-new-pattern-to-this-catalog)
+<!-- /toc -->
+
 Reference catalog of agent orchestration patterns this repo endorses, plus anti-patterns to avoid. Read this before adding a new slash command that coordinates multiple personas, or before introducing a new persona that "wraps" existing ones.
 
 The governing rule: **the user (or a slash command) is the orchestrator. Personas do not invoke other personas.** Skills are mandatory hops inside a persona's workflow.

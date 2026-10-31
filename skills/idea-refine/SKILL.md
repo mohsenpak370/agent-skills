@@ -5,6 +5,24 @@ description: Refines raw ideas into sharp, actionable concepts through structure
 
 # Idea Refine
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [How It Works](#how-it-works)
+- [Usage](#usage)
+- [Output](#output)
+- [Detailed Instructions](#detailed-instructions)
+  - [Philosophy](#philosophy)
+  - [Process](#process)
+  - [Anti-patterns to Avoid](#anti-patterns-to-avoid)
+  - [Tone](#tone)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 Refines raw ideas into sharp, actionable concepts worth building through structured divergent and convergent thinking.

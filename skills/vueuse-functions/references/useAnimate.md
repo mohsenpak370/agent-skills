@@ -4,6 +4,17 @@ category: Animation
 
 # useAnimate
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Basic Usage](#basic-usage)
+  - [Custom Keyframes](#custom-keyframes)
+  - [Options](#options)
+  - [Delaying Start](#delaying-start)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API).
 
 ## Usage

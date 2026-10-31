@@ -4,6 +4,22 @@ category: '@Integrations'
 
 # useSortable
 
+<!-- toc -->
+## Contents
+
+- [Install](#install)
+- [Usage](#usage)
+  - [Use template ref](#use-template-ref)
+  - [Use specifies the selector to operate on](#use-specifies-the-selector-to-operate-on)
+  - [Use a selector to get the root element](#use-a-selector-to-get-the-root-element)
+  - [Using Component](#using-component)
+  - [Return Values](#return-values)
+  - [Watch Element Changes](#watch-element-changes)
+  - [Custom Update Handler](#custom-update-handler)
+  - [Helper Functions](#helper-functions)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Wrapper for [`sortable`](https://github.com/SortableJS/Sortable).
 
 For more information on what options can be passed, see [`Sortable.options`](https://github.com/SortableJS/Sortable#options) in the `Sortable` documentation.

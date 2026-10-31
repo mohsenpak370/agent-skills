@@ -6,6 +6,19 @@ compatibility: Use only in projects with @nuxt/ui installed, or when the task is
 
 # Nuxt UI
 
+<!-- toc -->
+## Contents
+
+- [MCP Server](#mcp-server)
+- [Core rules (always apply)](#core-rules-always-apply)
+- [How to use this skill](#how-to-use-this-skill)
+  - [Reference files](#reference-files)
+  - [Routing table](#routing-table)
+- [Installation](#installation)
+  - [Nuxt](#nuxt)
+  - [Vue (Vite)](#vue-vite)
+<!-- /toc -->
+
 Vue component library built on [Reka UI](https://reka-ui.com/) + [Tailwind CSS](https://tailwindcss.com/) + [Tailwind Variants](https://www.tailwind-variants.org/). Works with Nuxt, Vue (Vite), Laravel (Vite + Inertia), and AdonisJS (Vite + Inertia).
 
 ## MCP Server

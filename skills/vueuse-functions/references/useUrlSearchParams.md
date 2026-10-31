@@ -4,6 +4,16 @@ category: Browser
 
 # useUrlSearchParams
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Hash Mode](#hash-mode)
+  - [Hash Params](#hash-params)
+  - [Custom Stringify Function](#custom-stringify-function)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive [URLSearchParams](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams)
 
 ## Usage

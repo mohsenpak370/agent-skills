@@ -8,6 +8,20 @@ tags: [vue3, render-function, components, resolveComponent, migration]
 
 # Use resolveComponent for String Component Names in Render Functions
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [When to Use Each Approach](#when-to-use-each-approach)
+- [Handling Missing Components](#handling-missing-components)
+- [Dynamic Component Selection](#dynamic-component-selection)
+- [Practical Example: Tab Component](#practical-example-tab-component)
+- [Resolving Built-in Components](#resolving-built-in-components)
+- [Resolving Directives](#resolving-directives)
+- [Migration from Vue 2](#migration-from-vue-2)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - In Vue 2, render functions could use string names for globally or locally registered components. In Vue 3, you must either import components directly or use `resolveComponent()`. Using string names causes components to render as HTML elements or fail silently.
 
 ## Task Checklist

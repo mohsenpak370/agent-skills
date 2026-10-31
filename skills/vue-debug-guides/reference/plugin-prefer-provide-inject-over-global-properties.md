@@ -1,5 +1,17 @@
 # Prefer provide/inject Over Global Properties in Plugins
 
+<!-- toc -->
+## Contents
+
+- [Rule](#rule)
+- [Why This Matters](#why-this-matters)
+- [Bad Practice](#bad-practice)
+- [Good Practice](#good-practice)
+- [Hybrid Approach](#hybrid-approach)
+- [TypeScript Type Augmentation (if using globalProperties)](#typescript-type-augmentation-if-using-globalproperties)
+- [References](#references)
+<!-- /toc -->
+
 ## Rule
 
 When creating Vue plugins, prefer using `app.provide()` to make plugin functionality available to components instead of attaching properties to `app.config.globalProperties`.

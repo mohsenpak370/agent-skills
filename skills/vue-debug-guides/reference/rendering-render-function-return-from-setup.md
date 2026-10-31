@@ -8,6 +8,17 @@ tags: [vue3, render-function, composition-api, setup, reactivity]
 
 # Return Render Function from setup(), Not Direct VNodes
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Why This Happens](#why-this-happens)
+- [Common Mistake: Mixing Template and Render Function](#common-mistake-mixing-template-and-render-function)
+- [Exposing Values While Using Render Functions](#exposing-values-while-using-render-functions)
+- [With Slots](#with-slots)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - When using render functions with the Composition API, you must return a function that returns vnodes, not the vnodes directly. Returning vnodes directly creates a static render that never updates when reactive state changes.
 
 ## Task Checklist

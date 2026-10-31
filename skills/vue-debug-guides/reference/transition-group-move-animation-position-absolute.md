@@ -8,6 +8,16 @@ tags: [vue3, transition-group, animation, move-transition, css, list-animation]
 
 # TransitionGroup Move Animation Requires Position Absolute on Leaving Items
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Why This Works](#why-this-works)
+- [Visual Diagram](#visual-diagram)
+- [Additional Considerations](#additional-considerations)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - When items are added or removed from a list with `<TransitionGroup>`, surrounding items will instantly "jump" to their new positions instead of smoothly animating. This creates a jarring user experience and is one of the most common mistakes with list animations.
 
 The fix is to set `position: absolute` on the `leave-active` class so leaving items are taken out of the layout flow, allowing other items to smoothly animate into their new positions.

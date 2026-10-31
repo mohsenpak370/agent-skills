@@ -8,6 +8,16 @@ tags: [vue3, transition, animation, duration, nested, timing]
 
 # Specify Explicit Duration for Nested Transitions
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Different Enter and Leave Durations](#different-enter-and-leave-durations)
+- [Choreographed Staggered Animations](#choreographed-staggered-animations)
+- [Calculating Duration](#calculating-duration)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - When transitioning elements that contain nested child elements with different animation timings, Vue by default listens only for the first `transitionend` or `animationend` event on the **root** transition element. This means if inner elements have longer or delayed animations, they may be cut off when the root element's transition completes.
 
 ## Task Checklist

@@ -5,6 +5,37 @@ description: Common type errors and runtime pitfalls with @solana/kit and their 
 
 # Solana Kit Gotchas
 
+<!-- toc -->
+## Contents
+
+- [Plugin Client Gotchas](#plugin-client-gotchas)
+  - [Plugin Ordering — Type Error](#plugin-ordering--type-error)
+  - [Forgetting to `await` Async Client](#forgetting-to-await-async-client)
+- [Type Errors](#type-errors)
+  - [`IInstruction` does not exist](#iinstruction-does-not-exist)
+  - ["Transaction message must be signed"](#transaction-message-must-be-signed)
+  - ["Missing blockhash lifetime"](#missing-blockhash-lifetime)
+  - [`signAndSendTransactionMessageWithSigners` type error](#signandsendtransactionmessagewithsigners-type-error)
+  - [Wrong signer type for wallet](#wrong-signer-type-for-wallet)
+  - [Missing Lifetime Type Assertion](#missing-lifetime-type-assertion)
+  - [Missing `TransactionWithinSizeLimit`](#missing-transactionwithinsizelimit)
+  - [RPC URL String vs Cluster Wrapper](#rpc-url-string-vs-cluster-wrapper)
+- [Runtime Errors](#runtime-errors)
+  - [`SOLANA_ERROR__KEYS__VERIFICATION_REQUIRES_EXTRACTABLE_PUBLIC_KEY` from `verifySignature()`](#solana_error__keys__verification_requires_extractable_public_key-from-verifysignature)
+  - ["Account does not exist"](#account-does-not-exist)
+  - [Blockhash expired after CU estimation](#blockhash-expired-after-cu-estimation)
+  - [Simulation fails with "account not found"](#simulation-fails-with-account-not-found)
+- [Transaction v1 Gotchas](#transaction-v1-gotchas)
+  - [Plugin client sends v0 when you expected v1](#plugin-client-sends-v0-when-you-expected-v1)
+  - [`Version 1 transactions are not yet supported by rpcTransactionPlanner`](#version-1-transactions-are-not-yet-supported-by-rpctransactionplanner)
+  - [`microLamportsPerComputeUnit` is a type error with `version: 1`](#microlamportspercomputeunit-is-a-type-error-with-version-1)
+  - [`createTransactionMessage({ version: 1 })` is a type error](#createtransactionmessage-version-1--is-a-type-error)
+  - [v1 transaction fails with `MaxLoadedAccountsDataSizeExceeded`](#v1-transaction-fails-with-maxloadedaccountsdatasizeexceeded)
+  - [`setTransactionMessageComputeUnitPrice` type error on a v1 message](#settransactionmessagecomputeunitprice-type-error-on-a-v1-message)
+  - [Priority fee or CU limit reads as 0 for some transactions](#priority-fee-or-cu-limit-reads-as-0-for-some-transactions)
+- [Quick Reference](#quick-reference)
+<!-- /toc -->
+
 Common type errors and runtime pitfalls with their fixes.
 
 ## Plugin Client Gotchas

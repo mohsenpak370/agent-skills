@@ -4,6 +4,15 @@ category: '@Integrations'
 
 # useFocusTrap
 
+<!-- toc -->
+## Contents
+
+- [Install](#install)
+- [Usage](#usage)
+- [Using Component](#using-component)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive wrapper for [`focus-trap`](https://github.com/focus-trap/focus-trap).
 
 For more information on what options can be passed, see [`createOptions`](https://github.com/focus-trap/focus-trap#createoptions) in the `focus-trap` documentation.

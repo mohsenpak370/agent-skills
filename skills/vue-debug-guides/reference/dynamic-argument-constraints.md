@@ -8,6 +8,16 @@ tags: [vue3, template, directives, v-bind, v-on, dynamic-arguments]
 
 # Dynamic Directive Arguments Have Syntax Constraints
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [In-DOM Template Workaround](#in-dom-template-workaround)
+- [SFC vs In-DOM Templates](#sfc-vs-in-dom-templates)
+- [Valid Dynamic Argument Values](#valid-dynamic-argument-values)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Dynamic directive arguments (e.g., `:[attributeName]`, `@[eventName]`) have value and syntax constraints that can cause silent failures. In-DOM templates also have case sensitivity issues with browsers lowercasing attribute names.
 
 Dynamic arguments allow runtime determination of which attribute or event to bind, but they have restrictions that differ from static arguments.

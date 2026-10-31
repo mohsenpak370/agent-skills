@@ -8,6 +8,16 @@ tags: [vue3, sfc, script-setup, reactivity, ref, composition-api]
 
 # Variables in Script Setup Are Not Reactive by Default
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Common Mistake: Plain Computed](#common-mistake-plain-computed)
+- [When to Use ref() vs reactive()](#when-to-use-ref-vs-reactive)
+- [Template Automatic Unwrapping](#template-automatic-unwrapping)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Unlike Options API's `data()` which automatically makes properties reactive, variables declared in `<script setup>` are plain JavaScript values. You must explicitly use `ref()` or `reactive()` to make them reactive. Forgetting this causes the UI to not update when values change.
 
 ## Task Checklist

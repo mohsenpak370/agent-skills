@@ -4,6 +4,16 @@ category: Time
 
 # useDateFormat
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Basic](#basic)
+  - [Use with locales](#use-with-locales)
+  - [Use with custom meridiem](#use-with-custom-meridiem)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Get the formatted date according to the string of tokens passed in, inspired
 by [dayjs](https://github.com/iamkun/dayjs).
 

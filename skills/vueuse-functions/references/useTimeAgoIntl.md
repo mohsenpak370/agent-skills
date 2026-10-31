@@ -5,6 +5,14 @@ utils: formatTimeAgoIntl
 
 # useTimeAgoIntl
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Non-Reactivity Usage](#non-reactivity-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive time ago with i18n supported. Automatically update the time ago string when the time changes. Powered by `Intl.RelativeTimeFormat`.
 
 ## Usage

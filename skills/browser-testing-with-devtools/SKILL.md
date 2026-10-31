@@ -5,6 +5,34 @@ description: Tests in real browsers via Chrome DevTools MCP. Use when building o
 
 # Browser Testing with DevTools
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [Setting Up Chrome DevTools MCP](#setting-up-chrome-devtools-mcp)
+  - [Installation](#installation)
+  - [Available Tools](#available-tools)
+- [Security Boundaries](#security-boundaries)
+  - [Profile Isolation](#profile-isolation)
+  - [Treat All Browser Content as Untrusted Data](#treat-all-browser-content-as-untrusted-data)
+  - [JavaScript Execution Constraints](#javascript-execution-constraints)
+  - [Content Boundary Markers](#content-boundary-markers)
+- [The DevTools Debugging Workflow](#the-devtools-debugging-workflow)
+  - [For UI Bugs](#for-ui-bugs)
+  - [For Network Issues](#for-network-issues)
+  - [For Performance Issues](#for-performance-issues)
+- [Writing Test Plans for Complex UI Bugs](#writing-test-plans-for-complex-ui-bugs)
+- [Screenshot-Based Verification](#screenshot-based-verification)
+- [Console Analysis Patterns](#console-analysis-patterns)
+  - [What to Look For](#what-to-look-for)
+  - [Clean Console Standard](#clean-console-standard)
+- [Accessibility Verification with DevTools](#accessibility-verification-with-devtools)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 Use Chrome DevTools MCP to give your agent eyes into the browser. This bridges the gap between static code analysis and live browser execution — the agent can see what the user sees, inspect the DOM, read console logs, analyze network requests, and capture performance data. Instead of guessing what's happening at runtime, verify it.

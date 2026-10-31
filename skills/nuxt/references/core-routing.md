@@ -5,6 +5,27 @@ description: File-based routing, dynamic routes, navigation, and middleware in N
 
 # Routing
 
+<!-- toc -->
+## Contents
+
+- [Nuxt 5 Routing Defaults](#nuxt-5-routing-defaults)
+- [Basic Routing](#basic-routing)
+- [Dynamic Routes](#dynamic-routes)
+- [Navigation](#navigation)
+  - [NuxtLink Component](#nuxtlink-component)
+  - [Programmatic Navigation](#programmatic-navigation)
+- [Route Middleware](#route-middleware)
+  - [Named Middleware](#named-middleware)
+  - [Global Middleware](#global-middleware)
+  - [Inline Middleware](#inline-middleware)
+- [Page Meta](#page-meta)
+- [Route Validation](#route-validation)
+- [Layouts](#layouts)
+  - [Passing Props to Layouts (Nuxt 4.4+)](#passing-props-to-layouts-nuxt-44)
+- [Named Views](#named-views)
+- [Navigation Hooks](#navigation-hooks)
+<!-- /toc -->
+
 Nuxt uses file-system routing based on vue-router. Files in `app/pages/` automatically create routes.
 
 ## Nuxt 5 Routing Defaults

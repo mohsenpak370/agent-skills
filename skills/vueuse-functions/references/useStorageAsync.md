@@ -4,6 +4,14 @@ category: State
 
 # useStorageAsync
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Wait First Loaded](#wait-first-loaded)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive Storage with async support.
 
 ## Usage

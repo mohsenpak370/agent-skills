@@ -8,6 +8,15 @@ tags: [vue3, performance, props, v-for, re-renders, optimization]
 
 # Keep Props Stable to Minimize Child Re-renders
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Common Patterns That Cause Prop Instability](#common-patterns-that-cause-prop-instability)
+- [Performance Impact Example](#performance-impact-example)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - When props passed to child components change, Vue must re-render those components. Passing derived values like `activeId` to every list item causes all items to re-render when activeId changes, even if only one item's active state actually changed.
 
 Move comparison logic to the parent and pass the boolean result instead. This is one of the most impactful update performance optimizations in Vue.

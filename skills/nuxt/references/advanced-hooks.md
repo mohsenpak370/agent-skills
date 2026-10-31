@@ -5,6 +5,29 @@ description: Nuxt and Nitro hooks for extending build-time and runtime behavior
 
 # Lifecycle Hooks
 
+<!-- toc -->
+## Contents
+
+- [Build-time Hooks (Nuxt)](#build-time-hooks-nuxt)
+  - [In nuxt.config.ts](#in-nuxtconfigts)
+  - [In Modules](#in-modules)
+  - [Common Build Hooks](#common-build-hooks)
+- [App Hooks (Runtime)](#app-hooks-runtime)
+  - [In Plugins](#in-plugins)
+  - [Common App Hooks](#common-app-hooks)
+  - [Using Runtime Hooks](#using-runtime-hooks)
+- [Server Hooks (Nitro)](#server-hooks-nitro)
+  - [Common Nitro Hooks](#common-nitro-hooks)
+- [Custom Hooks](#custom-hooks)
+  - [Define Custom Hook Types](#define-custom-hook-types)
+  - [Call Custom Hooks](#call-custom-hooks)
+- [useRuntimeHook](#useruntimehook)
+- [Hook Examples](#hook-examples)
+  - [Page View Tracking](#page-view-tracking)
+  - [Performance Monitoring](#performance-monitoring)
+  - [Inject HTML](#inject-html)
+<!-- /toc -->
+
 Nuxt provides hooks to tap into the build process, application lifecycle, and server runtime.
 
 ## Build-time Hooks (Nuxt)

@@ -5,6 +5,33 @@ description: Automates CI/CD pipeline setup. Use when setting up or modifying bu
 
 # CI/CD and Automation
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [The Quality Gate Pipeline](#the-quality-gate-pipeline)
+- [GitHub Actions Configuration](#github-actions-configuration)
+  - [Basic CI Pipeline](#basic-ci-pipeline)
+  - [With Database Integration Tests](#with-database-integration-tests)
+  - [E2E Tests](#e2e-tests)
+- [Feeding CI Failures Back to Agents](#feeding-ci-failures-back-to-agents)
+- [Deployment Strategies](#deployment-strategies)
+  - [Preview Deployments](#preview-deployments)
+  - [Feature Flags](#feature-flags)
+  - [Staged Rollouts](#staged-rollouts)
+  - [Rollback Plan](#rollback-plan)
+- [Environment Management](#environment-management)
+- [Automation Beyond CI](#automation-beyond-ci)
+  - [Dependabot / Renovate](#dependabot--renovate)
+  - [Build Cop Role](#build-cop-role)
+  - [PR Checks](#pr-checks)
+- [CI Optimization](#ci-optimization)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 Automate quality gates so that no change reaches production without passing tests, lint, type checking, and build. CI/CD is the enforcement mechanism for every other skill — it catches what humans and agents miss, and it does so consistently on every single change.

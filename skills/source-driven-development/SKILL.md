@@ -5,6 +5,21 @@ description: Grounds every implementation decision in official documentation. Us
 
 # Source-Driven Development
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [The Process](#the-process)
+  - [Step 1: Detect Stack and Versions](#step-1-detect-stack-and-versions)
+  - [Step 2: Fetch Official Documentation](#step-2-fetch-official-documentation)
+  - [Step 3: Implement Following Documented Patterns](#step-3-implement-following-documented-patterns)
+  - [Step 4: Cite Your Sources](#step-4-cite-your-sources)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 Every framework-specific code decision must be backed by official documentation. Don't implement from memory — verify, cite, and let the user see your sources. Training data goes stale, APIs get deprecated, best practices evolve. This skill ensures the user gets code they can trust because every pattern traces back to an authoritative source they can check.

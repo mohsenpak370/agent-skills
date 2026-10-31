@@ -5,6 +5,22 @@ description: Kit-native React bindings from @solana/react (ClientProvider, typed
 
 # Solana Kit React Reference
 
+<!-- toc -->
+## Contents
+
+- [Client Provider + Typed useClient](#client-provider--typed-useclient)
+- [Data Hooks](#data-hooks)
+  - [useTrackedData / useTrackedDataSWR / useTrackedDataQuery](#usetrackeddata--usetrackeddataswr--usetrackeddataquery)
+  - [useAction](#useaction)
+- [Client Capability Hooks (requires `@solana/react` 7.1+)](#client-capability-hooks-requires-solanareact-71)
+  - [usePayer / useIdentity](#usepayer--useidentity)
+  - [usePlanTransaction / usePlanTransactions / useSendTransaction / useSendTransactions](#useplantransaction--useplantransactions--usesendtransaction--usesendtransactions)
+  - [useAirdrop](#useairdrop)
+- [Wallet Hooks (`@solana/kit-plugin-wallet/react`)](#wallet-hooks-solanakit-plugin-walletreact)
+- [Chain Identifiers](#chain-identifiers)
+- [Full App Pattern](#full-app-pattern)
+<!-- /toc -->
+
 Two packages cover React apps:
 
 1. **`@solana/react` (8+)** — Kit client bindings: `ClientProvider`, `useClient`, `useClientCapability`, data hooks (`useAction`, `useRequest`, `useSubscription`, `useTrackedData`), and adapters for SWR (`@solana/react/swr`) and TanStack Query (`@solana/react/query`).

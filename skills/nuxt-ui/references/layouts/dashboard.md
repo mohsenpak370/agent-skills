@@ -1,5 +1,25 @@
 # Dashboard Layout
 
+<!-- toc -->
+## Contents
+
+- [When to use](#when-to-use)
+- [Component tree](#component-tree)
+- [Layout](#layout)
+- [Page](#page)
+  - [Common mistakes](#common-mistakes)
+- [Key components](#key-components)
+  - [DashboardGroup](#dashboardgroup)
+  - [DashboardSidebar](#dashboardsidebar)
+  - [DashboardPanel](#dashboardpanel)
+  - [DashboardNavbar / DashboardToolbar](#dashboardnavbar--dashboardtoolbar)
+  - [UNavigationMenu in sidebar](#unavigationmenu-in-sidebar)
+- [Multi-panel (list-detail)](#multi-panel-list-detail)
+- [With toolbar](#with-toolbar)
+- [With search](#with-search)
+- [Right sidebar](#right-sidebar)
+<!-- /toc -->
+
 Build admin interfaces with resizable sidebars, multi-panel layouts, and toolbars.
 
 ## When to use

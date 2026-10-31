@@ -5,6 +5,19 @@ description: Master end-to-end testing with Playwright and Cypress to build reli
 
 # E2E Testing Patterns
 
+<!-- toc -->
+## Contents
+
+- [When to Use This Skill](#when-to-use-this-skill)
+- [Core Concepts](#core-concepts)
+  - [1. E2E Testing Fundamentals](#1-e2e-testing-fundamentals)
+  - [2. Test Philosophy](#2-test-philosophy)
+- [Detailed patterns and worked examples](#detailed-patterns-and-worked-examples)
+- [Best Practices](#best-practices)
+- [Common Pitfalls](#common-pitfalls)
+- [Debugging Failing Tests](#debugging-failing-tests)
+<!-- /toc -->
+
 Build reliable, fast, and maintainable end-to-end test suites that provide confidence to ship code quickly and catch regressions before users do.
 
 ## When to Use This Skill

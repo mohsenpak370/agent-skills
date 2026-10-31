@@ -8,6 +8,16 @@ tags: [vue3, performance, components, abstraction, lists, optimization]
 
 # Avoid Excessive Component Abstraction in Large Lists
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [When Abstraction Is Still Worth It](#when-abstraction-is-still-worth-it)
+- [Measuring Component Overhead](#measuring-component-overhead)
+- [Alternatives to Wrapper Components](#alternatives-to-wrapper-components)
+- [Impact Calculation](#impact-calculation)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Component instances are more expensive than plain DOM nodes. While abstractions improve code organization, unnecessary nesting creates overhead. In large lists, this overhead multiplies - 100 items with 3 levels of abstraction means 300+ component instances instead of 100.
 
 Don't avoid abstraction entirely, but be mindful of component depth in frequently-rendered elements like list items.

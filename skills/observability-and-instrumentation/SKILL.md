@@ -5,6 +5,24 @@ description: Instruments code so production behavior is visible and diagnosable.
 
 # Observability and Instrumentation
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [Process](#process)
+  - [1. Define "working" before instrumenting](#1-define-working-before-instrumenting)
+  - [2. Pick the right signal for each question](#2-pick-the-right-signal-for-each-question)
+  - [3. Structured logging](#3-structured-logging)
+  - [4. Metrics](#4-metrics)
+  - [5. Distributed tracing](#5-distributed-tracing)
+  - [6. Alerting](#6-alerting)
+  - [7. Verify the telemetry itself](#7-verify-the-telemetry-itself)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 Code you can't observe is code you can't operate. Observability is the ability to answer "what is the system doing and why?" from the outside, using the telemetry the code emits. Instrumentation is not a post-launch add-on — it's written alongside the feature, the same way tests are. If a feature ships without telemetry, the first user-reported bug becomes archaeology instead of a query.

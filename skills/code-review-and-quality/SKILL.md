@@ -5,6 +5,39 @@ description: Conducts multi-axis code review. Use before merging any change. Use
 
 # Code Review and Quality
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [The Five-Axis Review](#the-five-axis-review)
+  - [1. Correctness](#1-correctness)
+  - [2. Readability & Simplicity](#2-readability--simplicity)
+  - [3. Architecture](#3-architecture)
+  - [4. Security](#4-security)
+  - [5. Performance](#5-performance)
+- [Structural Remedies](#structural-remedies)
+- [Change Sizing](#change-sizing)
+- [Change Descriptions](#change-descriptions)
+- [Review Process](#review-process)
+  - [Step 1: Understand the Context](#step-1-understand-the-context)
+  - [Step 2: Review the Tests First](#step-2-review-the-tests-first)
+  - [Step 3: Review the Implementation](#step-3-review-the-implementation)
+  - [Step 4: Categorize Findings](#step-4-categorize-findings)
+  - [Step 5: Verify the Verification](#step-5-verify-the-verification)
+- [Multi-Model Review Pattern](#multi-model-review-pattern)
+- [Dead Code Hygiene](#dead-code-hygiene)
+- [Review Speed](#review-speed)
+- [Handling Disagreements](#handling-disagreements)
+- [Honesty in Review](#honesty-in-review)
+- [Dependency Discipline](#dependency-discipline)
+- [The Review Checklist](#the-review-checklist)
+- [See Also](#see-also)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 Multi-dimensional code review with quality gates. Every change gets reviewed before merge — no exceptions. Review covers five axes: correctness, readability, architecture, security, and performance.

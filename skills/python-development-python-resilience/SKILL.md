@@ -5,6 +5,25 @@ description: Python resilience patterns including automatic retries, exponential
 
 # Python Resilience Patterns
 
+<!-- toc -->
+## Contents
+
+- [When to Use This Skill](#when-to-use-this-skill)
+- [Core Concepts](#core-concepts)
+  - [1. Transient vs Permanent Failures](#1-transient-vs-permanent-failures)
+  - [2. Exponential Backoff](#2-exponential-backoff)
+  - [3. Jitter](#3-jitter)
+  - [4. Bounded Retries](#4-bounded-retries)
+- [Quick Start](#quick-start)
+- [Fundamental Patterns](#fundamental-patterns)
+  - [Pattern 1: Basic Retry with Tenacity](#pattern-1-basic-retry-with-tenacity)
+  - [Pattern 2: Retry Only Appropriate Errors](#pattern-2-retry-only-appropriate-errors)
+  - [Pattern 3: HTTP Status Code Retries](#pattern-3-http-status-code-retries)
+  - [Pattern 4: Combined Exception and Status Retry](#pattern-4-combined-exception-and-status-retry)
+- [Detailed worked examples and patterns](#detailed-worked-examples-and-patterns)
+- [Best Practices Summary](#best-practices-summary)
+<!-- /toc -->
+
 Build fault-tolerant Python applications that gracefully handle transient failures, network issues, and service outages. Resilience patterns keep systems running when dependencies are unreliable.
 
 ## When to Use This Skill

@@ -5,6 +5,22 @@ description: Universal rendering, client-side rendering, and hybrid rendering in
 
 # Rendering Modes
 
+<!-- toc -->
+## Contents
+
+- [Universal Rendering (Default)](#universal-rendering-default)
+- [Client-Side Rendering](#client-side-rendering)
+  - [SPA Loading Template](#spa-loading-template)
+- [Hybrid Rendering](#hybrid-rendering)
+  - [Route Rules Reference](#route-rules-reference)
+  - [Inline Route Rules](#inline-route-rules)
+- [Prerendering](#prerendering)
+  - [Nuxt 5: Payload Extraction & Error Pages](#nuxt-5-payload-extraction--error-pages)
+  - [Programmatic Prerendering](#programmatic-prerendering)
+- [Edge-Side Rendering](#edge-side-rendering)
+- [Conditional Rendering](#conditional-rendering)
+<!-- /toc -->
+
 Nuxt supports multiple rendering modes: universal (SSR), client-side (CSR), and hybrid rendering.
 
 ## Universal Rendering (Default)

@@ -5,6 +5,15 @@ related: syncRef
 
 # syncRefs
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Sync with multiple targets](#sync-with-multiple-targets)
+- [Watch options](#watch-options)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Keep target refs in sync with a source ref
 
 ## Usage

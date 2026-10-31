@@ -8,6 +8,17 @@ tags: [vue3, performance, virtual-list, large-data, dom, optimization]
 
 # Virtualize Large Lists to Avoid DOM Overload
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Recommended Libraries](#recommended-libraries)
+- [Using @tanstack/vue-virtual](#using-tanstackvue-virtual)
+- [Dynamic Heights with vue-virtual-scroller](#dynamic-heights-with-vue-virtual-scroller)
+- [Performance Comparison](#performance-comparison)
+- [When NOT to Virtualize](#when-not-to-virtualize)
+<!-- /toc -->
+
 **Impact: HIGH** - Rendering all items in a large list (hundreds or thousands) creates massive amounts of DOM nodes. Each node consumes memory, slows down initial render, and makes updates expensive. List virtualization only renders visible items, dramatically improving performance.
 
 Use a virtualization library when dealing with lists that could exceed 50-100 items, especially if items have complex content.

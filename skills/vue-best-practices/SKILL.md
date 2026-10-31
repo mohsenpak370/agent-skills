@@ -9,6 +9,26 @@ metadata:
 
 # Vue Best Practices Workflow
 
+<!-- toc -->
+## Contents
+
+- [Core Principles](#core-principles)
+- [1) Confirm architecture before coding (required)](#1-confirm-architecture-before-coding-required)
+  - [1.1 Must-read core references (required)](#11-must-read-core-references-required)
+  - [1.2 Plan component boundaries before coding (required)](#12-plan-component-boundaries-before-coding-required)
+- [2) Apply essential Vue foundations (required)](#2-apply-essential-vue-foundations-required)
+  - [Reactivity](#reactivity)
+  - [SFC structure and template safety](#sfc-structure-and-template-safety)
+  - [Choose useful boundaries](#choose-useful-boundaries)
+  - [Component data flow](#component-data-flow)
+  - [Composables](#composables)
+- [3) Consider optional features only when requirements call for them](#3-consider-optional-features-only-when-requirements-call-for-them)
+  - [3.1 Standard optional features](#31-standard-optional-features)
+  - [3.2 Less-common optional features](#32-less-common-optional-features)
+- [4) Run performance optimization after behavior is correct](#4-run-performance-optimization-after-behavior-is-correct)
+- [5) Final self-check before finishing](#5-final-self-check-before-finishing)
+<!-- /toc -->
+
 Use this skill as an instruction set. Follow the workflow in order unless the user explicitly asks for a different order.
 
 ## Core Principles

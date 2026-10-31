@@ -5,6 +5,26 @@ description: Nuxt project folder structure, conventions, and file organization
 
 # Directory Structure
 
+<!-- toc -->
+## Contents
+
+- [Standard Project Structure](#standard-project-structure)
+- [Key Directories](#key-directories)
+  - [`app/` Directory](#app-directory)
+  - [`app/components/`](#appcomponents)
+  - [`app/composables/`](#appcomposables)
+  - [`app/pages/`](#apppages)
+  - [`app/layouts/`](#applayouts)
+  - [`app/middleware/`](#appmiddleware)
+  - [`app/plugins/`](#appplugins)
+  - [`server/` Directory](#server-directory)
+  - [`shared/` Directory](#shared-directory)
+  - [`public/` Directory](#public-directory)
+  - [`app/assets/` Directory](#appassets-directory)
+- [Special Files](#special-files)
+- [File Naming Conventions](#file-naming-conventions)
+<!-- /toc -->
+
 Nuxt uses a conventions-based directory structure. Understanding it is key to effective development.
 
 > **Directory layout:** The default `srcDir` is `app/`. All Vue application code (`app.vue`, `components/`, `composables/`, `pages/`, etc.) lives inside `app/`, while `server/`, `shared/`, `public/`, `modules/`, `layers/` and `nuxt.config.ts` stay at the project root.

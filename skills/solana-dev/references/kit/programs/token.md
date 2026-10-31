@@ -5,6 +5,26 @@ description: Kit-compatible @solana-program/token client for mint creation, tran
 
 # SPL Token Program
 
+<!-- toc -->
+## Contents
+
+- [Account Types](#account-types)
+  - [Mint (82 bytes)](#mint-82-bytes)
+  - [Token Account (165 bytes)](#token-account-165-bytes)
+  - [Multisig](#multisig)
+- [PDA: Associated Token Account](#pda-associated-token-account)
+- [Key Instructions](#key-instructions)
+  - [Initialize Mint](#initialize-mint)
+  - [Transfer](#transfer)
+  - [Mint To](#mint-to)
+  - [Approve Delegate](#approve-delegate)
+  - [Burn](#burn)
+- [Instruction Plans](#instruction-plans)
+  - [Create Mint](#create-mint)
+  - [Mint to ATA (Creates ATA if needed)](#mint-to-ata-creates-ata-if-needed)
+- [Complete Pattern: Create Token + Mint](#complete-pattern-create-token--mint)
+<!-- /toc -->
+
 Solana's standard token program. Defines Mints (token config + supply) and Token Accounts (per-owner balances). For tokens that need extensions, use [Token-2022](token-2022.md) instead.
 
 If using plugin clients, prefer `client.use(tokenProgram())` for a fluent API that auto-derives ATAs and defaults the payer. The low-level instructions below are for manual `pipe()` transaction building. See [overview.md](../overview.md) and [plugins.md](../plugins.md).

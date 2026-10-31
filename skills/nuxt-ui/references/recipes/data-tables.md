@@ -1,5 +1,17 @@
 # Data Tables
 
+<!-- toc -->
+## Contents
+
+- [Basic table](#basic-table)
+- [With search and filters (dashboard)](#with-search-and-filters-dashboard)
+- [With row selection](#with-row-selection)
+- [With pagination](#with-pagination)
+- [With async data (Nuxt)](#with-async-data-nuxt)
+- [Updating large datasets](#updating-large-datasets)
+- [Tips](#tips)
+<!-- /toc -->
+
 Complete patterns for displaying and managing tabular data.
 
 ## Basic table

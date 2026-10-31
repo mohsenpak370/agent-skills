@@ -5,6 +5,32 @@ description: Records decisions and documentation. Use when you need to document 
 
 # Documentation and ADRs
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [Architecture Decision Records (ADRs)](#architecture-decision-records-adrs)
+  - [When to Write an ADR](#when-to-write-an-adr)
+  - [Match the existing convention first](#match-the-existing-convention-first)
+  - [ADR Template](#adr-template)
+  - [ADR Lifecycle](#adr-lifecycle)
+- [Inline Documentation](#inline-documentation)
+  - [When to Comment](#when-to-comment)
+  - [When NOT to Comment](#when-not-to-comment)
+  - [Document Known Gotchas](#document-known-gotchas)
+- [API Documentation](#api-documentation)
+  - [Inline with Types (Preferred for TypeScript)](#inline-with-types-preferred-for-typescript)
+  - [OpenAPI / Swagger for REST APIs](#openapi--swagger-for-rest-apis)
+- [README Structure](#readme-structure)
+- [Changelog Maintenance](#changelog-maintenance)
+- [Documentation for Agents](#documentation-for-agents)
+- [Prose Review](#prose-review)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 Document decisions, not just code. The most valuable documentation captures the *why* — the context, constraints, and trade-offs that led to a decision. Code shows *what* was built; documentation explains *why it was built this way* and *what alternatives were considered*. This context is essential for future humans and agents working in the codebase.

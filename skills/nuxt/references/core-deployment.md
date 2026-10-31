@@ -5,6 +5,22 @@ description: Deploying Nuxt applications to various hosting platforms
 
 # Deployment
 
+<!-- toc -->
+## Contents
+
+- [Deployment Modes](#deployment-modes)
+  - [Node.js Server](#nodejs-server)
+  - [Static Generation](#static-generation)
+  - [Preset Configuration](#preset-configuration)
+- [Recommended Platforms](#recommended-platforms)
+  - [Vercel](#vercel)
+  - [Netlify](#netlify)
+  - [Cloudflare Pages](#cloudflare-pages)
+  - [GitHub Actions + Self-hosted/VPS](#github-actions--self-hostedvps)
+- [Quick Decision Guide](#quick-decision-guide)
+- [Docker Deployment](#docker-deployment)
+<!-- /toc -->
+
 Nuxt is platform-agnostic thanks to [Nitro](https://nitro.build), its server engine. You can deploy to almost any platform with minimal configuration—Node.js servers, static hosting, serverless functions, or edge networks.
 
 > **Full list of supported platforms:** https://nitro.build/deploy

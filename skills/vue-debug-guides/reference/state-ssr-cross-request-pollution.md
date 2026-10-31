@@ -8,6 +8,21 @@ tags: [vue3, ssr, state-management, pinia, vuex, security, server-side-rendering
 
 # Prevent Cross-Request State Pollution in SSR Applications
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Problem: Singleton State in SSR](#the-problem-singleton-state-in-ssr)
+- [Solution 1: Use Pinia (Recommended)](#solution-1-use-pinia-recommended)
+- [Solution 2: Factory Pattern for Hand-Rolled State](#solution-2-factory-pattern-for-hand-rolled-state)
+- [Solution 3: Context-Based State (Advanced)](#solution-3-context-based-state-advanced)
+- [Nuxt.js Handles This Automatically](#nuxtjs-handles-this-automatically)
+- [Testing for State Pollution](#testing-for-state-pollution)
+- [Red Flags to Watch For](#red-flags-to-watch-for)
+- [Why Pinia is Recommended for SSR](#why-pinia-is-recommended-for-ssr)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: CRITICAL** - In Server-Side Rendering (SSR) applications, a singleton store pattern creates a single instance that is shared across all server requests. This means data from one user's request could leak into another user's response, causing serious security and data integrity issues.
 
 This is one of the most critical gotchas in Vue state management that can have severe production consequences.

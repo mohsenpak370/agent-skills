@@ -5,6 +5,24 @@ description: Nuxt configuration files including nuxt.config.ts, app.config.ts, a
 
 # Nuxt Configuration
 
+<!-- toc -->
+## Contents
+
+- [nuxt.config.ts](#nuxtconfigts)
+  - [Path Aliases](#path-aliases)
+  - [`nuxt.config` Loading (Nuxt 5: no more `jiti`)](#nuxtconfig-loading-nuxt-5-no-more-jiti)
+  - [Compatibility Version](#compatibility-version)
+  - [Environment Overrides](#environment-overrides)
+- [Runtime Config](#runtime-config)
+- [App Config](#app-config)
+- [runtimeConfig vs app.config](#runtimeconfig-vs-appconfig)
+- [External Tool Configuration](#external-tool-configuration)
+  - [Environment-specific Vite Config](#environment-specific-vite-config)
+- [Vue Configuration](#vue-configuration)
+- [Nuxt 5 Default Changes](#nuxt-5-default-changes)
+- [Other Experimental Flags](#other-experimental-flags)
+<!-- /toc -->
+
 Nuxt uses configuration files to customize application behavior. The main configuration options are `nuxt.config.ts` for build-time settings and `app.config.ts` for runtime settings.
 
 ## nuxt.config.ts

@@ -7,6 +7,39 @@ metadata:
   version: "19.0.1"
 ---
 
+<!-- toc -->
+## Contents
+
+- [Reactivity](#reactivity)
+- [Computed](#computed)
+- [Watchers](#watchers)
+- [Components](#components)
+- [Props & Emits](#props--emits)
+- [Templates](#templates)
+- [Template Refs](#template-refs)
+- [Forms & v-model](#forms--v-model)
+- [Events & Modifiers](#events--modifiers)
+- [Lifecycle](#lifecycle)
+- [Slots](#slots)
+- [Provide/Inject](#provideinject)
+- [Attrs](#attrs)
+- [Composables](#composables)
+- [Composition API](#composition-api)
+- [Animation](#animation)
+- [TypeScript](#typescript)
+- [Async Components](#async-components)
+- [Render Functions](#render-functions)
+- [KeepAlive](#keepalive)
+- [Transitions](#transitions)
+- [Teleport](#teleport)
+- [Suspense](#suspense)
+- [SSR](#ssr)
+- [Performance](#performance)
+- [SFC (Single File Components)](#sfc-single-file-components)
+- [Plugins](#plugins)
+- [App Configuration](#app-configuration)
+<!-- /toc -->
+
 Vue 3 debugging and error handling for runtime issues, warnings, async failures, and hydration bugs.
 For development best practices and common gotchas, use `vue-best-practices`.
 

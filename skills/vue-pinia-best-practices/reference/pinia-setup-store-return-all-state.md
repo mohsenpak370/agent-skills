@@ -8,6 +8,19 @@ tags: [vue3, pinia, state-management, setup-stores, ssr, devtools]
 
 # Return All State Properties in Pinia Setup Stores
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Problem: Private State in Setup Stores](#the-problem-private-state-in-setup-stores)
+- [The Solution: Return Everything](#the-solution-return-everything)
+- [If You Need "Private" State](#if-you-need-private-state)
+- [Option Stores Don't Have This Problem](#option-stores-dont-have-this-problem)
+- [How Setup Stores Map to State](#how-setup-stores-map-to-state)
+- [Debugging: Verify All State is Returned](#debugging-verify-all-state-is-returned)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - When using Pinia's setup store syntax (Composition API style), you MUST return all state properties from the setup function. Private state that isn't returned will break Server-Side Rendering (SSR), Vue DevTools inspection, and Pinia plugins.
 
 This is a critical gotcha that can cause silent failures in production.

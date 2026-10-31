@@ -8,6 +8,18 @@ tags: [vue3, render-function, h, v-model, directives, performance, jsx]
 
 # Render Function Patterns and Performance
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Prefer templates over render functions](#prefer-templates-over-render-functions)
+- [Always add keys for list rendering](#always-add-keys-for-list-rendering)
+- [Use `withModifiers` / `withKeys` for event modifiers](#use-withmodifiers--withkeys-for-event-modifiers)
+- [Implement `v-model` explicitly](#implement-v-model-explicitly)
+- [Use `withDirectives` for custom directives](#use-withdirectives-for-custom-directives)
+- [Prefer functional components for stateless UI](#prefer-functional-components-for-stateless-ui)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Render functions are powerful but opt out of template compiler optimizations. Use them intentionally and apply the key patterns below to keep output correct and performant.
 
 ## Task List

@@ -1,5 +1,15 @@
 # security-requirement-extraction — templates and worked examples
 
+<!-- toc -->
+## Contents
+
+- [Templates](#templates)
+  - [Template 1: Security Requirement Model](#template-1-security-requirement-model)
+  - [Template 2: Threat-to-Requirement Extractor](#template-2-threat-to-requirement-extractor)
+  - [Template 3: Compliance Mapping](#template-3-compliance-mapping)
+  - [Template 4: Security User Story Generator](#template-4-security-user-story-generator)
+<!-- /toc -->
+
 ## Templates
 
 ### Template 1: Security Requirement Model

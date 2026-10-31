@@ -8,6 +8,20 @@ tags: [vue3, ssr, hydration, debugging, nuxt, server-side-rendering]
 
 # Understand and Fix SSR Hydration Mismatches
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Cause 1: Invalid HTML Nesting](#cause-1-invalid-html-nesting)
+- [Cause 2: Random Values in Render](#cause-2-random-values-in-render)
+- [Cause 3: Timezone and Date Differences](#cause-3-timezone-and-date-differences)
+- [Cause 4: Browser Extensions and Modifications](#cause-4-browser-extensions-and-modifications)
+- [Vue 3.5+ Suppressing Intentional Mismatches](#vue-35-suppressing-intentional-mismatches)
+- [Debugging Hydration Mismatches](#debugging-hydration-mismatches)
+- [Common Error Messages](#common-error-messages)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Hydration mismatches occur when the HTML rendered on the client differs from what the server rendered. Vue attempts to recover by discarding and re-rendering mismatched nodes, causing performance degradation, visual flickering, and potentially broken event handlers.
 
 Understanding the common causes helps you prevent and debug these issues effectively.

@@ -1,5 +1,15 @@
 # python-error-handling — detailed worked examples
 
+<!-- toc -->
+## Contents
+
+- [Advanced Patterns](#advanced-patterns)
+  - [Pattern 5: Custom Exceptions with Context](#pattern-5-custom-exceptions-with-context)
+  - [Pattern 6: Exception Chaining](#pattern-6-exception-chaining)
+  - [Pattern 7: Batch Processing with Partial Failures](#pattern-7-batch-processing-with-partial-failures)
+  - [Pattern 8: Progress Reporting for Long Operations](#pattern-8-progress-reporting-for-long-operations)
+<!-- /toc -->
+
 ## Advanced Patterns
 
 ### Pattern 5: Custom Exceptions with Context

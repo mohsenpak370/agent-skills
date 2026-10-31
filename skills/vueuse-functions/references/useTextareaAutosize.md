@@ -4,6 +4,16 @@ category: Browser
 
 # useTextareaAutosize
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Simple example](#simple-example)
+  - [With `rows` attribute](#with-rows-attribute)
+  - [With `maxHeight`](#with-maxheight)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Automatically update the height of a textarea depending on the content.
 
 > [!TIP]

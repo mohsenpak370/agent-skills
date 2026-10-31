@@ -8,6 +8,17 @@ tags: [vue3, transition, animation, css, type, timing]
 
 # Specify Transition Type When Mixing CSS Transitions and Animations
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [When to Use Each Type](#when-to-use-each-type)
+  - [Use `type="animation"` when:](#use-typeanimation-when)
+  - [Use `type="transition"` when:](#use-typetransition-when)
+- [Common Symptoms Without Type Specification](#common-symptoms-without-type-specification)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - When you have both CSS transitions and CSS animations applied to the same element (for example, a Vue-triggered animation combined with a hover transition effect), Vue cannot automatically determine which end event to listen for. You must explicitly tell Vue which type to prioritize using the `type` attribute with a value of either `"animation"` or `"transition"`.
 
 ## Task Checklist

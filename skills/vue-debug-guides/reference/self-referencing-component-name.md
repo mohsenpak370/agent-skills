@@ -8,6 +8,17 @@ tags: [vue3, component-registration, self-reference, recursive-components, sfc]
 
 # Self-Referencing Components Use Filename as Implicit Name
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Priority: Imports Override Self-Reference](#priority-imports-override-self-reference)
+- [Options API: Explicit Name Option](#options-api-explicit-name-option)
+- [Common Use Cases for Self-Reference](#common-use-cases-for-self-reference)
+- [Avoid Infinite Recursion](#avoid-infinite-recursion)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: LOW** - In Single-File Components (SFC), a component can reference itself in its own template using its filename as the component name. This is useful for recursive components like tree structures or nested comments. However, this implicit registration has lower priority than explicitly imported components, which can cause confusion.
 
 ## Task Checklist

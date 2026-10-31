@@ -4,6 +4,17 @@ category: Browser
 
 # useWebMCP
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Result normalization](#result-normalization)
+- [Reactive & conditional registration](#reactive--conditional-registration)
+- [Registering multiple tools](#registering-multiple-tools)
+- [References](#references)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Register a [WebMCP](https://github.com/webmachinelearning/webmcp) tool and tie its lifecycle to the current Vue scope.
 
 WebMCP lets a page expose JavaScript functions as "tools" that an AI agent (browser-built-in, iframe-hosted, or extension) can discover and call, instead of scraping the DOM, the accessibility tree, or screenshots. `useWebMCP` wraps the imperative, `AbortSignal`-based registration API in a declarative composable: the tool is registered when the composable runs and **unregistered automatically when the scope is disposed**, so the set of tools an agent sees stays in lockstep with what is actually on screen.

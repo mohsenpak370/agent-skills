@@ -5,6 +5,28 @@ description: Full reference for all surfnet_* RPC methods to manipulate time, ac
 
 # Surfpool Cheatcodes Reference
 
+<!-- toc -->
+## Contents
+
+- [Account Manipulation](#account-manipulation)
+- [Confidential Balances (v1.6.0+)](#confidential-balances-v160)
+- [Program Management](#program-management)
+- [Time Control](#time-control)
+- [Transaction Profiling](#transaction-profiling)
+- [Network State](#network-state)
+- [Scenarios](#scenarios)
+- [Meta / Control](#meta--control)
+- [Parameter Examples](#parameter-examples)
+  - [surfnet_setAccount](#surfnet_setaccount)
+  - [surfnet_setTokenAccount](#surfnet_settokenaccount)
+  - [surfnet_deriveConfidentialKeys](#surfnet_deriveconfidentialkeys)
+  - [surfnet_getConfidentialBalance](#surfnet_getconfidentialbalance)
+  - [surfnet_timeTravel](#surfnet_timetravel)
+  - [surfnet_profileTransaction](#surfnet_profiletransaction)
+  - [surfnet_exportSnapshot](#surfnet_exportsnapshot)
+- [Surfpool MCP Server](#surfpool-mcp-server)
+<!-- /toc -->
+
 All 28 `surfnet_*` JSON-RPC methods available on the surfnet RPC endpoint (default `http://127.0.0.1:8899`), as of Surfpool v1.6.1. v1.6.0 added the two confidential-balance methods; nothing was removed or renamed since v1.5.0.
 
 In TypeScript, call these through `client.cheatcodes` from the Kit plugin instead of hand-rolling JSON-RPC — method names drop the `surfnet_` prefix and responses arrive unwrapped. See [kit-plugin.md](kit-plugin.md#typed-cheatcodes). The schemas below are the wire format, shared by both paths.

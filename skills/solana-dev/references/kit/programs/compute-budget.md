@@ -5,6 +5,25 @@ description: Budgeting compute units, priority fees, heap, and loaded-accounts d
 
 # Compute Budget Program
 
+<!-- toc -->
+## Contents
+
+- [Where the budget lives depends on the transaction version](#where-the-budget-lives-depends-on-the-transaction-version)
+- [Version-routed setters (manual `pipe()` path)](#version-routed-setters-manual-pipe-path)
+- [Instructions (legacy / v0)](#instructions-legacy--v0)
+  - [Set Compute Unit Limit](#set-compute-unit-limit)
+  - [Set Compute Unit Price (Priority Fee)](#set-compute-unit-price-priority-fee)
+  - [Request Heap Frame](#request-heap-frame)
+- [CU Estimation Helpers (legacy / v0)](#cu-estimation-helpers-legacy--v0)
+  - [Basic Estimator](#basic-estimator)
+  - [Auto-Update Estimator](#auto-update-estimator)
+- [Transaction Helpers (legacy / v0)](#transaction-helpers-legacy--v0)
+  - [Update or Append Instructions](#update-or-append-instructions)
+- [Full Pattern: Build, Estimate, Send (v1)](#full-pattern-build-estimate-send-v1)
+  - [Legacy / v0 equivalent](#legacy--v0-equivalent)
+- [Priority Fee Estimation](#priority-fee-estimation)
+<!-- /toc -->
+
 Program address: `ComputeBudget111111111111111111111111111111`
 
 ```ts

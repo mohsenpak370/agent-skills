@@ -4,6 +4,15 @@ category: Elements
 
 # useIntersectionObserver
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Controls and cleanup](#controls-and-cleanup)
+- [Directive Usage](#directive-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Detects changes to a target element's visibility.
 
 ## Usage

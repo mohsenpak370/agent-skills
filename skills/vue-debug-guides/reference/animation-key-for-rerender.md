@@ -8,6 +8,20 @@ tags: [vue3, animation, key, autoanimate, rerender, dom]
 
 # Use Key Attribute to Force Re-render Animations
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Why This Works](#why-this-works)
+- [Common Use Cases](#common-use-cases)
+  - [Animating Text Content Changes](#animating-text-content-changes)
+  - [Animating Dynamic Components](#animating-dynamic-components)
+  - [Animating Route Transitions](#animating-route-transitions)
+- [With Vue's Built-in Transition](#with-vues-built-in-transition)
+- [Caution: Performance Implications](#caution-performance-implications)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Vue optimizes performance by reusing DOM elements when possible. However, this optimization can prevent animation libraries (like AutoAnimate) from detecting changes, because the element is updated in place rather than re-created. Adding a `:key` attribute forces Vue to treat changed elements as new, triggering proper animations.
 
 ## Task Checklist

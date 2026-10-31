@@ -8,6 +8,19 @@ tags: [vue3, keepalive, cache, performance, router, dynamic-components]
 
 # KeepAlive Component Best Practices
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [When to Use KeepAlive](#when-to-use-keepalive)
+- [When NOT to Use KeepAlive](#when-not-to-use-keepalive)
+- [Limit and Control the Cache](#limit-and-control-the-cache)
+- [Ensure Component Names Match include/exclude](#ensure-component-names-match-includeexclude)
+- [Cache Invalidation Strategies](#cache-invalidation-strategies)
+- [Lifecycle Hooks for Cached Components](#lifecycle-hooks-for-cached-components)
+- [Router Caching and Freshness](#router-caching-and-freshness)
+<!-- /toc -->
+
 **Impact: HIGH** - `<KeepAlive>` caches component instances instead of destroying them. Use it to preserve state across switches, but manage cache size and freshness explicitly to avoid memory growth or stale UI.
 
 ## Task List

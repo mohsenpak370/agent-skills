@@ -8,6 +8,16 @@ tags: [vue3, composables, composition-api, naming, conventions, refs]
 
 # Follow Composable Naming Convention and Return Pattern
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Using reactive() Wrapper for Auto-Unwrapping](#using-reactive-wrapper-for-auto-unwrapping)
+- [Pattern: Returning Both State and Actions](#pattern-returning-both-state-and-actions)
+- [Naming Convention Examples](#naming-convention-examples)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Vue composables should follow established conventions: prefix names with "use" and return plain objects containing refs (not reactive objects). Returning reactive objects causes reactivity loss when destructuring, while inconsistent naming makes code harder to understand.
 
 ## Task Checklist

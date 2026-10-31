@@ -5,6 +5,34 @@ description: Guides stable API and interface design. Use when designing APIs, mo
 
 # API and Interface Design
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [Core Principles](#core-principles)
+  - [Hyrum's Law](#hyrums-law)
+  - [The One-Version Rule](#the-one-version-rule)
+  - [1. Contract First](#1-contract-first)
+  - [2. Consistent Error Semantics](#2-consistent-error-semantics)
+  - [3. Validate at Boundaries](#3-validate-at-boundaries)
+  - [4. Prefer Addition Over Modification](#4-prefer-addition-over-modification)
+  - [5. Predictable Naming](#5-predictable-naming)
+  - [6. Honouring an Idempotency Key](#6-honouring-an-idempotency-key)
+- [REST API Patterns](#rest-api-patterns)
+  - [Resource Design](#resource-design)
+  - [Pagination](#pagination)
+  - [Filtering](#filtering)
+  - [Partial Updates (PATCH)](#partial-updates-patch)
+- [TypeScript Interface Patterns](#typescript-interface-patterns)
+  - [Use Discriminated Unions for Variants](#use-discriminated-unions-for-variants)
+  - [Input/Output Separation](#inputoutput-separation)
+  - [Use Branded Types for IDs](#use-branded-types-for-ids)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 Design stable, well-documented interfaces that are hard to misuse. Good interfaces make the right thing easy and the wrong thing hard. This applies to REST APIs, GraphQL schemas, module boundaries, component props, and any surface where one piece of code talks to another.

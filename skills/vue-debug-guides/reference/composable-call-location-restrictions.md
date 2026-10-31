@@ -8,6 +8,16 @@ tags: [vue3, composables, composition-api, setup, async, lifecycle]
 
 # Call Composables Only in Setup Context Synchronously
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Exception: Calling in Lifecycle Hooks](#exception-calling-in-lifecycle-hooks)
+- [Special Case: Async Setup in `<script setup>`](#special-case-async-setup-in-)
+- [Why This Matters](#why-this-matters)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Composables must be called synchronously within `<script setup>`, the `setup()` function, or lifecycle hooks. Calling composables asynchronously (after await), in callbacks, or outside component context prevents Vue from associating lifecycle hooks with the component instance, causing silent failures.
 
 This is critical because composables often register `onMounted` and `onUnmounted` hooks internally. If called in the wrong context, these hooks are never registered, leading to uninitialized state or memory leaks.

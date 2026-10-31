@@ -1,5 +1,18 @@
 # React UI Reference
 
+<!-- toc -->
+## Contents
+
+- [File Structure](#file-structure)
+- [Focused Components](#focused-components)
+- [Data and Presentation](#data-and-presentation)
+- [State Management](#state-management)
+- [Accessibility Examples](#accessibility-examples)
+- [Empty States](#empty-states)
+- [Loading and Optimistic Updates](#loading-and-optimistic-updates)
+- [React Verification](#react-verification)
+<!-- /toc -->
+
 Use this reference when working in React, TSX, React Query, SWR, Zustand, Redux, or similar React application code.
 
 ## File Structure

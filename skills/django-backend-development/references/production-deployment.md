@@ -1,5 +1,25 @@
 # Django Production Deployment Reference
 
+<!-- toc -->
+## Contents
+
+- [Pre-Deployment Checklist](#pre-deployment-checklist)
+- [Critical Settings](#critical-settings)
+- [Database Configuration](#database-configuration)
+- [HTTPS Configuration](#https-configuration)
+- [Static and Media Files](#static-and-media-files)
+- [Caching](#caching)
+- [Email Configuration](#email-configuration)
+- [Error Monitoring and Logging](#error-monitoring-and-logging)
+- [Security Headers](#security-headers)
+- [Performance Optimization](#performance-optimization)
+- [Environment-Based Settings](#environment-based-settings)
+- [Deployment Process](#deployment-process)
+- [Monitoring and Observability](#monitoring-and-observability)
+- [Backup Strategy](#backup-strategy)
+- [Checklist Summary](#checklist-summary)
+<!-- /toc -->
+
 This guide covers essential configuration and best practices for deploying Django applications to production environments.
 
 ## Pre-Deployment Checklist

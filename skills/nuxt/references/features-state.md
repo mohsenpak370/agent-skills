@@ -5,6 +5,21 @@ description: useState composable and SSR-friendly state management in Nuxt
 
 # State Management
 
+<!-- toc -->
+## Contents
+
+- [useState](#usestate)
+- [Creating Shared State](#creating-shared-state)
+- [Initializing State](#initializing-state)
+- [Best Practices](#best-practices)
+  - [❌ Don't Define State Outside Setup](#-dont-define-state-outside-setup)
+  - [✅ Use useState Instead](#-use-usestate-instead)
+- [Clearing State](#clearing-state)
+- [With Pinia](#with-pinia)
+- [Advanced: Locale Example](#advanced-locale-example)
+- [State Serialization](#state-serialization)
+<!-- /toc -->
+
 Nuxt provides `useState` for SSR-friendly reactive state that persists across components.
 
 ## useState

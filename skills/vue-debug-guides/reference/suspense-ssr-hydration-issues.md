@@ -1,5 +1,21 @@
 # Suspense SSR Hydration Issues and Workarounds
 
+<!-- toc -->
+## Contents
+
+- [Rule](#rule)
+- [Why This Matters](#why-this-matters)
+- [Bad Code](#bad-code)
+- [Good Code](#good-code)
+  - [Solution 1: Wrap Async Components with Suspense](#solution-1-wrap-async-components-with-suspense)
+  - [Solution 2: Use ClientOnly Wrapper (Nuxt/SSR Frameworks)](#solution-2-use-clientonly-wrapper-nuxtssr-frameworks)
+  - [Solution 3: Prefetch with Proper Stale Time (with TanStack Query)](#solution-3-prefetch-with-proper-stale-time-with-tanstack-query)
+  - [Solution 4: Handle Hydration Errors Gracefully](#solution-4-handle-hydration-errors-gracefully)
+- [Common SSR + Suspense Issues](#common-ssr--suspense-issues)
+- [Key Points](#key-points)
+- [References](#references)
+<!-- /toc -->
+
 ## Rule
 
 `<Suspense>` has known issues with SSR hydration, particularly with async components. During initial hydration, Suspense may not properly include child components within its "cloak of suspense," leading to hydration mismatches, flickering, or runtime crashes.

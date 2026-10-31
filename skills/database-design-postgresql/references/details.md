@@ -1,5 +1,27 @@
 # PostgreSQL table design: details
 
+<!-- toc -->
+## Contents
+
+- [Data type catalog](#data-type-catalog)
+- [Table types](#table-types)
+- [Row-level security](#row-level-security)
+- [Workload patterns](#workload-patterns)
+  - [Update-heavy tables](#update-heavy-tables)
+  - [Insert-heavy workloads](#insert-heavy-workloads)
+  - [Upsert-friendly design](#upsert-friendly-design)
+  - [Safe schema evolution](#safe-schema-evolution)
+- [Constraint and index notes](#constraint-and-index-notes)
+- [Partitioning details](#partitioning-details)
+- [Generated columns](#generated-columns)
+- [Extensions](#extensions)
+- [JSONB guidance](#jsonb-guidance)
+- [Examples](#examples)
+  - [Users](#users)
+  - [Orders](#orders)
+  - [JSONB](#jsonb)
+<!-- /toc -->
+
 Deep material for the `postgresql-table-design` skill. `SKILL.md` carries the rules and
 the decision points; this file carries the full data-type catalog, workload patterns,
 extensions, JSONB indexing, and worked DDL.

@@ -1,5 +1,15 @@
 # Overlays
 
+<!-- toc -->
+## Contents
+
+- [Confirmation dialog](#confirmation-dialog)
+- [Programmatic confirmation (useOverlay)](#programmatic-confirmation-useoverlay)
+- [Form in a slideover](#form-in-a-slideover)
+- [Command palette](#command-palette)
+- [Drawer (bottom sheet)](#drawer-bottom-sheet)
+<!-- /toc -->
+
 Patterns for modals, slideovers, drawers, and command palettes.
 
 ## Confirmation dialog

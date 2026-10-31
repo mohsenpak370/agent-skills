@@ -4,6 +4,15 @@ category: Sensors
 
 # useInfiniteScroll
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Direction](#direction)
+- [Directive Usage](#directive-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Infinite scrolling of the element.
 
 ## Usage

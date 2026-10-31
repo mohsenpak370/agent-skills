@@ -5,6 +5,15 @@ utils: formatTimeAgo
 
 # useTimeAgo
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Component Usage](#component-usage)
+- [Non-Reactivity Usage](#non-reactivity-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive time ago. Automatically update the time ago string when the time changes.
 
 ## Usage

@@ -5,6 +5,34 @@ description: Configure Static Application Security Testing (SAST) tools for auto
 
 # SAST Configuration
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [Core Capabilities](#core-capabilities)
+  - [1. Semgrep Configuration](#1-semgrep-configuration)
+  - [2. SonarQube Setup](#2-sonarqube-setup)
+  - [3. CodeQL Analysis](#3-codeql-analysis)
+- [Quick Start](#quick-start)
+  - [Initial Assessment](#initial-assessment)
+  - [Basic Setup](#basic-setup)
+- [Integration Patterns](#integration-patterns)
+  - [CI/CD Pipeline Integration](#cicd-pipeline-integration)
+  - [Pre-commit Hook](#pre-commit-hook)
+- [Best Practices](#best-practices)
+- [Common Use Cases](#common-use-cases)
+  - [New Project Setup](#new-project-setup)
+  - [Custom Rule Development](#custom-rule-development)
+  - [Compliance Scanning](#compliance-scanning)
+- [Troubleshooting](#troubleshooting)
+  - [High False Positive Rate](#high-false-positive-rate)
+  - [Performance Issues](#performance-issues)
+  - [Integration Failures](#integration-failures)
+- [Related Skills](#related-skills)
+- [Tool Comparison](#tool-comparison)
+- [Next Steps](#next-steps)
+<!-- /toc -->
+
 Static Application Security Testing (SAST) tool setup, configuration, and custom rule creation for comprehensive security scanning across multiple programming languages.
 
 ## Overview

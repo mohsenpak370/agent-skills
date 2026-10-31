@@ -10,6 +10,35 @@ compatibility: Requires Vue 3 (or above) or Nuxt 3 (or above) project
 
 # VueUse Functions
 
+<!-- toc -->
+## Contents
+
+- [When to Apply](#when-to-apply)
+- [Functions](#functions)
+  - [State](#state)
+  - [Elements](#elements)
+  - [Browser](#browser)
+  - [Sensors](#sensors)
+  - [Network](#network)
+  - [Animation](#animation)
+  - [Component](#component)
+  - [Watch](#watch)
+  - [Reactivity](#reactivity)
+  - [Array](#array)
+  - [Time](#time)
+  - [Utilities](#utilities)
+  - [@Electron](#electron)
+  - [@Firebase](#firebase)
+  - [@Head](#head)
+  - [@Integrations](#integrations)
+  - [@Math](#math)
+  - [@Motion](#motion)
+  - [@Router](#router)
+  - [@RxJS](#rxjs)
+  - [@SchemaOrg](#schemaorg)
+  - [@Sound](#sound)
+<!-- /toc -->
+
 This skill is a decision-and-implementation guide for VueUse composables in Vue.js / Nuxt projects. It maps requirements to the most suitable VueUse function, applies the correct usage pattern, and prefers composable-based solutions over bespoke code to keep implementations concise, maintainable, and performant.
 
 ## When to Apply

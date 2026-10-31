@@ -8,6 +8,15 @@ tags: [vue3, composition-api, reactivity, functional-programming, paradigm]
 
 # Composition API Uses Mutable Reactivity, Not Functional Programming
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [When Immutability Patterns Make Sense](#when-immutability-patterns-make-sense)
+- [The Vue Mental Model](#the-vue-mental-model)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Despite being function-based, the Composition API follows Vue's mutable, fine-grained reactivity paradigm—NOT functional programming principles. Treating it like a functional paradigm leads to incorrect patterns like unnecessary cloning, immutable-style updates, or avoiding mutation when mutation is the intended pattern.
 
 Vue's Composition API leverages imported functions to organize code, but the underlying model is based on mutable reactive state that Vue tracks and responds to. This is fundamentally different from functional programming with immutability (like Redux reducers).

@@ -4,6 +4,23 @@ category: Time
 
 # useTemporalNow
 
+<!-- toc -->
+## Contents
+
+- [Requirements](#requirements)
+- [Usage](#usage)
+  - [Basic Usage](#basic-usage)
+  - [Timezone Conversion](#timezone-conversion)
+  - [Calendar Systems](#calendar-systems)
+  - [Date/Time Manipulation](#datetime-manipulation)
+  - [Format Options](#format-options)
+  - [Control Auto-Update](#control-auto-update)
+- [Examples](#examples)
+  - [World Clock](#world-clock)
+  - [Calendar System Converter](#calendar-system-converter)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive [Temporal API](https://tc39.es/proposal-temporal/docs/) with timezone conversion and calendar system support.
 
 Uses the modern Temporal API instead of the legacy `Date` object, providing better timezone handling, calendar systems, and date/time operations.

@@ -1,5 +1,22 @@
 # Django Expert - Reference Documentation
 
+<!-- toc -->
+## Contents
+
+- [Purpose](#purpose)
+- [Recommended Reference Files](#recommended-reference-files)
+  - [1. `models-and-orm.md` - Model Design & ORM Best Practices](#1-models-and-ormmd---model-design--orm-best-practices)
+  - [2. `views-and-urls.md` - Views, URLs, and Request Handling](#2-views-and-urlsmd---views-urls-and-request-handling)
+  - [3. `drf-guidelines.md` - Django REST Framework Best Practices](#3-drf-guidelinesmd---django-rest-framework-best-practices)
+  - [4. `testing-strategies.md` - Testing Django Applications](#4-testing-strategiesmd---testing-django-applications)
+  - [5. `security-checklist.md` - Django Security Best Practices](#5-security-checklistmd---django-security-best-practices)
+  - [6. `performance-optimization.md` - Performance and Scaling](#6-performance-optimizationmd---performance-and-scaling)
+- [How to Populate These Files](#how-to-populate-these-files)
+- [Example Reference File](#example-reference-file)
+- [Usage](#usage)
+- [Notes](#notes)
+<!-- /toc -->
+
 This directory contains comprehensive Django best practices documentation that
 will be loaded into the active AI coding agent's context when needed.
 

@@ -8,6 +8,19 @@ tags: [vue3, performance, v-once, v-memo, optimization, directives]
 
 # Use v-once and v-memo to Skip Unnecessary Updates
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [v-once: Render Once, Never Update](#v-once-render-once-never-update)
+- [v-memo: Conditional Memoization for Lists](#v-memo-conditional-memoization-for-lists)
+- [v-memo with Multiple Dependencies](#v-memo-with-multiple-dependencies)
+- [v-memo with Empty Array = v-once](#v-memo-with-empty-array--v-once)
+- [When NOT to Use These Directives](#when-not-to-use-these-directives)
+- [Performance Comparison](#performance-comparison)
+- [Debugging Memoized Components](#debugging-memoized-components)
+<!-- /toc -->
+
 **Impact: MEDIUM** - When a component re-renders, its render function re-creates VNodes for the dynamic parts of its template. For content that never changes or changes infrequently, `v-once` and `v-memo` let Vue reuse the previous VNodes, skipping VNode creation and diffing for that subtree.
 
 Use `v-once` for content that uses runtime data but never needs updating, and `v-memo` only when profiling identifies costly list rendering. Incomplete memo dependencies can render stale data.

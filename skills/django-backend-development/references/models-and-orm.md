@@ -1,5 +1,42 @@
 # Django ORM Best Practices
 
+<!-- toc -->
+## Contents
+
+- [The N+1 Query Problem](#the-n1-query-problem)
+  - [Problem Example](#problem-example)
+  - [Solution: select_related()](#solution-select_related)
+  - [Solution: prefetch_related()](#solution-prefetch_related)
+- [Combining select_related() and prefetch_related()](#combining-select_related-and-prefetch_related)
+- [Advanced Prefetching](#advanced-prefetching)
+  - [Prefetch with Filtering](#prefetch-with-filtering)
+  - [Nested Prefetching](#nested-prefetching)
+- [Custom Managers](#custom-managers)
+- [QuerySet Methods](#queryset-methods)
+  - [only() and defer()](#only-and-defer)
+  - [values() and values_list()](#values-and-values_list)
+  - [exists() and count()](#exists-and-count)
+- [Aggregation & Annotation](#aggregation--annotation)
+  - [aggregate()](#aggregate)
+  - [annotate()](#annotate)
+- [Bulk Operations](#bulk-operations)
+  - [bulk_create()](#bulk_create)
+  - [bulk_update()](#bulk_update)
+  - [update()](#update)
+- [Database Indexes](#database-indexes)
+  - [When to Add Indexes](#when-to-add-indexes)
+- [Query Optimization Patterns](#query-optimization-patterns)
+  - [1. Filter Early, Annotate/Aggregate Late](#1-filter-early-annotateaggregate-late)
+  - [2. Use iterator() for Large QuerySets](#2-use-iterator-for-large-querysets)
+  - [3. Avoid Chaining Multiple Queries](#3-avoid-chaining-multiple-queries)
+- [Transactions](#transactions)
+- [Raw SQL (When Necessary)](#raw-sql-when-necessary)
+- [Debugging Queries](#debugging-queries)
+  - [See Generated SQL](#see-generated-sql)
+  - [Django Debug Toolbar](#django-debug-toolbar)
+- [Performance Checklist](#performance-checklist)
+<!-- /toc -->
+
 ## The N+1 Query Problem
 
 The most common performance issue in Django applications.

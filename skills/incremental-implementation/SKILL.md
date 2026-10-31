@@ -5,6 +5,32 @@ description: Delivers changes incrementally in thin, verifiable slices. Use when
 
 # Incremental Implementation
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [The Increment Cycle](#the-increment-cycle)
+- [Slicing Strategies](#slicing-strategies)
+  - [Vertical Slices (Preferred)](#vertical-slices-preferred)
+  - [Contract-First Slicing](#contract-first-slicing)
+  - [Risk-First Slicing](#risk-first-slicing)
+- [Implementation Rules](#implementation-rules)
+  - [Rule 0: Simplicity First](#rule-0-simplicity-first)
+  - [Rule 0.5: Scope Discipline](#rule-05-scope-discipline)
+  - [Rule 1: One Thing at a Time](#rule-1-one-thing-at-a-time)
+  - [Rule 2: Keep It Compilable](#rule-2-keep-it-compilable)
+  - [Rule 3: Feature Flags for Incomplete Features](#rule-3-feature-flags-for-incomplete-features)
+  - [Rule 4: Safe Defaults](#rule-4-safe-defaults)
+  - [Rule 5: Rollback-Friendly](#rule-5-rollback-friendly)
+- [Working with Agents](#working-with-agents)
+- [Increment Checklist](#increment-checklist)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+- [See Also](#see-also)
+<!-- /toc -->
+
 ## Overview
 
 Build in thin vertical slices — implement one piece, test it, verify it, then expand. Avoid implementing an entire feature in one pass. Each increment should leave the system in a working, testable state. This is the execution discipline that makes large features manageable.

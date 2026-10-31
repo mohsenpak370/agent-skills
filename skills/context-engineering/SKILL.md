@@ -5,6 +5,38 @@ description: Optimizes agent context setup. Use when starting a new session, whe
 
 # Context Engineering
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [The Context Hierarchy](#the-context-hierarchy)
+  - [Level 1: Rules Files](#level-1-rules-files)
+  - [Level 2: Specs and Architecture](#level-2-specs-and-architecture)
+  - [Level 3: Relevant Source Files](#level-3-relevant-source-files)
+  - [Level 4: Error Output](#level-4-error-output)
+  - [Level 5: Conversation Management](#level-5-conversation-management)
+  - [Restartable Session Boundaries](#restartable-session-boundaries)
+- [Context Packing Strategies](#context-packing-strategies)
+  - [The Brain Dump](#the-brain-dump)
+  - [The Selective Include](#the-selective-include)
+  - [The Hierarchical Summary](#the-hierarchical-summary)
+- [Context Budget Management](#context-budget-management)
+  - [What to cut first](#what-to-cut-first)
+  - [What to protect until the end](#what-to-protect-until-the-end)
+  - [Compress before dropping](#compress-before-dropping)
+  - [Order for recency](#order-for-recency)
+- [MCP Integrations](#mcp-integrations)
+- [Confusion Management](#confusion-management)
+  - [When Context Conflicts](#when-context-conflicts)
+  - [When Requirements Are Incomplete](#when-requirements-are-incomplete)
+  - [The Inline Planning Pattern](#the-inline-planning-pattern)
+- [Anti-Patterns](#anti-patterns)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 Feed agents the right information at the right time. Context is the single biggest lever for agent output quality — too little and the agent hallucinates, too much and it loses focus. Context engineering is the practice of deliberately curating what the agent sees, when it sees it, and how it's structured.

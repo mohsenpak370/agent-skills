@@ -8,6 +8,16 @@ tags: [vue3, computed, methods, parameters, common-mistake]
 
 # Computed Properties Cannot Accept Parameters
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Workaround: Computed Returning a Function](#workaround-computed-returning-a-function)
+- [When to Use Each Approach](#when-to-use-each-approach)
+- [Make Parameters Reactive](#make-parameters-reactive)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Computed properties are designed to derive values from reactive state without parameters. Attempting to pass arguments defeats the caching mechanism or causes errors. Use methods or computed properties that return functions instead.
 
 ## Task Checklist

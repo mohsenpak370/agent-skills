@@ -5,6 +5,14 @@ related: useRefHistory
 
 # useManualRefHistory
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [History Capacity](#history-capacity)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Manually track the change history of a ref when the user calls `commit()`, also provides undo and redo functionality
 
 ## Usage

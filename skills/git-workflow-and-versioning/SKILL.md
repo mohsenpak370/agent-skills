@@ -5,6 +5,36 @@ description: Structures git workflow practices. Use when making any code change.
 
 # Git Workflow and Versioning
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [Core Principles](#core-principles)
+  - [Trunk-Based Development (Recommended)](#trunk-based-development-recommended)
+  - [1. Commit Early, Commit Often](#1-commit-early-commit-often)
+  - [2. Atomic Commits](#2-atomic-commits)
+  - [3. Descriptive Messages](#3-descriptive-messages)
+  - [4. Keep Concerns Separate](#4-keep-concerns-separate)
+  - [5. Size Your Changes](#5-size-your-changes)
+- [Branching Strategy](#branching-strategy)
+  - [Feature Branches](#feature-branches)
+  - [Branch Naming](#branch-naming)
+- [Working with Worktrees](#working-with-worktrees)
+- [The Save Point Pattern](#the-save-point-pattern)
+- [Change Summaries](#change-summaries)
+- [Pre-Commit Hygiene](#pre-commit-hygiene)
+- [Handling Generated Files](#handling-generated-files)
+- [Using Git for Debugging](#using-git-for-debugging)
+- [Release & Versioning](#release--versioning)
+  - [Semantic Versioning](#semantic-versioning)
+  - [Tag the release, and let the tag be the source of truth](#tag-the-release-and-let-the-tag-be-the-source-of-truth)
+  - [Keep a changelog written for humans](#keep-a-changelog-written-for-humans)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 Git is your safety net. Treat commits as save points, branches as sandboxes, and history as documentation. With AI agents generating code at high speed, disciplined version control is the mechanism that keeps changes manageable, reviewable, and reversible.

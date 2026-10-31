@@ -8,6 +8,15 @@ tags: [vue3, composition-api, script-setup, async, await, suspense]
 
 # Top-Level await in script setup Preserves Component Context
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Why This Happens](#why-this-happens)
+- [Suspense Requirement](#suspense-requirement)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - In `<script setup>`, top-level `await` statements preserve component context (allowing lifecycle hooks and watchers after `await`), but this is a special case. Nested async functions or callbacks lose context, causing lifecycle hooks to silently fail.
 
 Vue's compiler automatically injects context restoration after each top-level await in `<script setup>`. This doesn't apply to `setup()` function or nested async contexts.

@@ -1,5 +1,26 @@
 # Components
 
+<!-- toc -->
+## Contents
+
+- [Layout](#layout)
+- [Element](#element)
+- [Form](#form)
+- [Overlay](#overlay)
+- [Navigation](#navigation)
+- [Data](#data)
+- [Dashboard](#dashboard)
+- [Page (marketing)](#page-marketing)
+- [Blog & Changelog](#blog--changelog)
+- [Pricing](#pricing)
+- [Prose — Base Typography](#prose--base-typography)
+- [Prose — Feature Components](#prose--feature-components)
+- [Content (Nuxt Content)](#content-nuxt-content)
+- [Chat (AI)](#chat-ai)
+- [Editor](#editor)
+- [Color Mode](#color-mode)
+<!-- /toc -->
+
 Quick-reference index of all 125+ components. For full API docs (props, slots, events, examples), use the MCP `get-component` or `get-component-metadata` tools.
 
 ## Layout

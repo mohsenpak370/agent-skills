@@ -8,6 +8,23 @@ tags: [typescript, shallowRef, dynamic-components, reactivity, performance]
 
 # Use shallowRef for Dynamic Component References
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Problem](#the-problem)
+- [Solution 1: Use shallowRef](#solution-1-use-shallowref)
+- [Solution 2: Use markRaw in Reactive Objects](#solution-2-use-markraw-in-reactive-objects)
+- [TypeScript Typing](#typescript-typing)
+- [Dynamic Import with shallowRef](#dynamic-import-with-shallowref)
+- [Component Registry Pattern](#component-registry-pattern)
+- [When to Use Each Approach](#when-to-use-each-approach)
+- [Common Mistakes](#common-mistakes)
+  - [Mistake 1: Using computed with ref](#mistake-1-using-computed-with-ref)
+  - [Mistake 2: Forgetting markRaw in map](#mistake-2-forgetting-markraw-in-map)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - When storing Vue components in reactive state for dynamic rendering, using `ref()` or `reactive()` causes Vue warnings and unnecessary reactivity overhead. Use `shallowRef()` instead.
 
 ## Task Checklist

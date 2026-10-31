@@ -8,6 +8,16 @@ tags: [vue3, teleport, modal, dom, lifecycle]
 
 # Teleport Target Must Exist Before Mount
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Defer Prop Limitations (Vue 3.5+)](#defer-prop-limitations-vue-35)
+- [Common Patterns](#common-patterns)
+  - [Recommended: Centralized Teleport Containers](#recommended-centralized-teleport-containers)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - The teleport `to` target must already exist in the DOM when the `<Teleport>` component is mounted. If the target doesn't exist, Vue will throw an error and the teleported content won't render.
 
 This is a common source of bugs when using modals, tooltips, or other teleported UI elements, especially when targeting Vue-rendered elements.

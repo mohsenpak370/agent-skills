@@ -4,6 +4,15 @@ category: '@RxJS'
 
 # useExtractedObservable
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Options](#options)
+- [Return Value](#return-value)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Use an RxJS [`Observable`](https://rxjs.dev/guide/observable) as extracted from one or more composables, return a `ref`,
 and automatically unsubscribe from it when the component is unmounted.
 

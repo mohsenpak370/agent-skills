@@ -8,6 +8,16 @@ tags: [vue3, transition-group, animation, flip, css, display, inline-block]
 
 # TransitionGroup FLIP Animations Do Not Work With Inline Elements
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Why Inline Elements Don't Work](#why-inline-elements-dont-work)
+- [Elements That Are Inline by Default](#elements-that-are-inline-by-default)
+- [Move Animations Also Require Transform Transition](#move-animations-also-require-transform-transition)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - The FLIP (First, Last, Invert, Play) animation technique that Vue uses for `<TransitionGroup>` move transitions does not work with elements that have `display: inline`. The move animation will silently fail, and items will jump to their new positions instead of smoothly transitioning.
 
 This is a CSS limitation, not a Vue bug. CSS transforms (which FLIP uses internally) do not apply to inline elements per the CSS specification.

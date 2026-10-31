@@ -5,6 +5,39 @@ description: Drives development with tests using the red-green-refactor loop. Us
 
 # Test-Driven Development
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [Discover the Stack First](#discover-the-stack-first)
+- [The TDD Cycle](#the-tdd-cycle)
+  - [Step 1: RED — Write a Failing Test](#step-1-red--write-a-failing-test)
+  - [Step 2: GREEN — Make It Pass](#step-2-green--make-it-pass)
+  - [Step 3: REFACTOR — Clean Up](#step-3-refactor--clean-up)
+- [The Prove-It Pattern (Bug Fixes)](#the-prove-it-pattern-bug-fixes)
+- [The Test Pyramid](#the-test-pyramid)
+  - [Test Sizes (Resource Model)](#test-sizes-resource-model)
+  - [Decision Guide](#decision-guide)
+- [Writing Good Tests](#writing-good-tests)
+  - [Test State, Not Interactions](#test-state-not-interactions)
+  - [DAMP Over DRY in Tests](#damp-over-dry-in-tests)
+  - [Prefer Real Implementations Over Mocks](#prefer-real-implementations-over-mocks)
+  - [Use the Arrange-Act-Assert Pattern](#use-the-arrange-act-assert-pattern)
+  - [One Assertion Per Concept](#one-assertion-per-concept)
+  - [Name Tests Descriptively](#name-tests-descriptively)
+- [Test Anti-Patterns to Avoid](#test-anti-patterns-to-avoid)
+- [Browser Testing with DevTools](#browser-testing-with-devtools)
+  - [The DevTools Debugging Workflow](#the-devtools-debugging-workflow)
+  - [What to Check](#what-to-check)
+  - [Security Boundaries](#security-boundaries)
+- [When to Use Subagents for Testing](#when-to-use-subagents-for-testing)
+- [See Also](#see-also)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 Write a failing test before writing the code that makes it pass. For bug fixes, reproduce the bug with a test before attempting a fix. Tests are proof — "seems right" is not done. A codebase with good tests is an AI agent's superpower; a codebase without tests is a liability.

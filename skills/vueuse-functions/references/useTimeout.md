@@ -4,6 +4,17 @@ category: Animation
 
 # useTimeout
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [With Controls](#with-controls)
+  - [Options](#options)
+  - [Callback on Timeout](#callback-on-timeout)
+  - [Reactive Interval](#reactive-interval)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive value that becomes `true` after a given time.
 
 ## Usage

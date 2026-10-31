@@ -5,6 +5,24 @@ description: The @solana/surfpool/kit plugin — one .use(surfpool()) gives a Ki
 
 # Surfpool Kit Plugin (`@solana/surfpool/kit`)
 
+<!-- toc -->
+## Contents
+
+- [Choosing an Entry Point](#choosing-an-entry-point)
+- [Install](#install)
+- [Embedded Mode](#embedded-mode)
+  - [Teardown](#teardown)
+- [What The Plugin Installs](#what-the-plugin-installs)
+- [Typed Cheatcodes](#typed-cheatcodes)
+  - [Seeding Structured Accounts With A Codec](#seeding-structured-accounts-with-a-codec)
+  - [Cheatcodes Without The Full Plugin](#cheatcodes-without-the-full-plugin)
+- [Configuration](#configuration)
+- [Composing With Program Plugins](#composing-with-program-plugins)
+- [Attach Mode](#attach-mode)
+- [Gotchas](#gotchas)
+- [See Also](#see-also)
+<!-- /toc -->
+
 `@solana/surfpool/kit` boots a surfnet inside the test process and hands back a `@solana/kit` client already pointed at it. A single `.use(surfpool())` replaces the RPC plugin you would otherwise reach for (`solanaLocalRpc()`, `litesvm()`) and adds a pre-funded payer plus a typed cheatcodes RPC.
 
 ```ts

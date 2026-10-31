@@ -4,6 +4,14 @@ category: Utilities
 
 # useOffsetPagination
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Component Usage](#component-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive offset pagination.
 
 ## Usage

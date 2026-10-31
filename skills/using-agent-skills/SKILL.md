@@ -5,6 +5,24 @@ description: Discovers and invokes agent skills. Use when starting a session, or
 
 # Using Agent Skills
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [Skill Discovery](#skill-discovery)
+- [Core Operating Behaviors](#core-operating-behaviors)
+  - [1. Surface Assumptions](#1-surface-assumptions)
+  - [2. Manage Confusion Actively](#2-manage-confusion-actively)
+  - [3. Push Back When Warranted](#3-push-back-when-warranted)
+  - [4. Enforce Simplicity](#4-enforce-simplicity)
+  - [5. Maintain Scope Discipline](#5-maintain-scope-discipline)
+  - [6. Verify, Don't Assume](#6-verify-dont-assume)
+- [Failure Modes to Avoid](#failure-modes-to-avoid)
+- [Skill Rules](#skill-rules)
+- [Lifecycle Sequence](#lifecycle-sequence)
+- [Quick Reference](#quick-reference)
+<!-- /toc -->
+
 ## Overview
 
 Agent Skills is a collection of engineering workflow skills organized by development phase. Each skill encodes a specific process that senior engineers follow. This meta-skill helps you discover and apply the right skill for your current task.

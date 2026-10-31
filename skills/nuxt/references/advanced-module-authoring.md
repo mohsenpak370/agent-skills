@@ -5,6 +5,39 @@ description: Complete guide to creating publishable Nuxt modules with best pract
 
 # Module Authoring
 
+<!-- toc -->
+## Contents
+
+- [Module Structure](#module-structure)
+- [Module Definition](#module-definition)
+  - [Basic Module with Type-safe Options](#basic-module-with-type-safe-options)
+  - [Using `.with()` for Strict Type Inference](#using-with-for-strict-type-inference)
+- [Adding Runtime Assets](#adding-runtime-assets)
+  - [Components](#components)
+  - [Composables and Auto-imports](#composables-and-auto-imports)
+  - [Keyed Composables (SSR/client key injection)](#keyed-composables-ssrclient-key-injection)
+  - [Plugins](#plugins)
+- [Server Extensions](#server-extensions)
+  - [Server Handlers](#server-handlers)
+  - [Server Composables](#server-composables)
+  - [Nitro Plugin](#nitro-plugin)
+- [Nuxt 5 / Nitro v3 for Module Authors](#nuxt-5--nitro-v3-for-module-authors)
+- [Templates and Virtual Files](#templates-and-virtual-files)
+  - [Generate Virtual Files](#generate-virtual-files)
+  - [Access Virtual Files](#access-virtual-files)
+- [Extending Pages and Routes](#extending-pages-and-routes)
+- [Module Dependencies](#module-dependencies)
+  - [Dynamic Dependencies](#dynamic-dependencies)
+- [Lifecycle Hooks](#lifecycle-hooks)
+- [Extending Configuration](#extending-configuration)
+- [Using Hooks](#using-hooks)
+- [Path Resolution](#path-resolution)
+- [Module Package.json](#module-packagejson)
+- [Disabling Modules](#disabling-modules)
+- [Development Workflow](#development-workflow)
+- [Best Practices](#best-practices)
+<!-- /toc -->
+
 This guide covers creating publishable Nuxt modules with proper structure, type safety, and best practices.
 
 ## Module Structure

@@ -8,6 +8,21 @@ tags: [vue3, props, emits, v-model, provide-inject, data-flow, typescript]
 
 # Component Data Flow Best Practices
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Props: One-Way Data Down](#props-one-way-data-down)
+- [Use reactive props destructure](#use-reactive-props-destructure)
+- [Prefer props/emit over component refs](#prefer-propsemit-over-component-refs)
+- [Type component refs when imperative access is required](#type-component-refs-when-imperative-access-is-required)
+- [Emits: Explicit Events Up](#emits-explicit-events-up)
+- [`v-model`: Predictable Two-Way Bindings](#v-model-predictable-two-way-bindings)
+- [Diagnose Forwarding Before Choosing a Transport](#diagnose-forwarding-before-choosing-a-transport)
+- [Provide/Inject: Scoped Shared Dependencies](#provideinject-scoped-shared-dependencies)
+- [Use TypeScript Contracts for Public Component APIs](#use-typescript-contracts-for-public-component-apis)
+<!-- /toc -->
+
 **Impact: HIGH** - Vue components stay reliable when data flow is explicit: props go down, events go up, `v-model` handles two-way bindings, and provide/inject supports cross-tree dependencies. Blurring these boundaries leads to stale state, hidden coupling, and hard-to-debug UI.
 
 The main principle of data flow in Vue.js is **Props Down / Events Up**. This is the most maintainable default, and one-way flow scales well.

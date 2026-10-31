@@ -1,5 +1,18 @@
 # Optimization Patterns
 
+<!-- toc -->
+## Contents
+
+- [N+1 Queries (Backend)](#n1-queries-backend)
+- [Unbounded Data Fetching](#unbounded-data-fetching)
+- [Queries That Ignore Their Index](#queries-that-ignore-their-index)
+- [Connection Pool Exhaustion](#connection-pool-exhaustion)
+- [Missing Image Optimization (Frontend)](#missing-image-optimization-frontend)
+- [Unnecessary Re-renders (React)](#unnecessary-re-renders-react)
+- [Large Bundle Size](#large-bundle-size)
+- [Missing Caching (Backend)](#missing-caching-backend)
+<!-- /toc -->
+
 Worked fixes for the anti-patterns named in Step 3 of the `performance-optimization` skill. The skill states the rule and the signature to look for; this file shows one concrete implementation. Open the section you need after Step 2 has identified the bottleneck — it is not meant to be read top to bottom.
 
 Checklists, measurement commands, TTFB diagnosis, and caching read/write strategies live in `../../../references/performance-checklist.md`.

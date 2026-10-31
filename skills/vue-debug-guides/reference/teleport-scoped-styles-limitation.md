@@ -8,6 +8,15 @@ tags: [vue3, teleport, scoped-styles, css]
 
 # Scoped Styles May Not Apply to Teleported Content
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Multi-Root Components with Teleport](#multi-root-components-with-teleport)
+- [Best Practice: Dedicated Modal Styles](#best-practice-dedicated-modal-styles)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - When using scoped styles with Teleport, the styles may not apply correctly to teleported elements. This is a known limitation related to how Vue's scoped style attributes work with elements rendered outside the component's DOM tree.
 
 ## Task Checklist

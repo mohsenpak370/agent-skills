@@ -4,6 +4,15 @@ category: Utilities
 
 # useStepper
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Steps as array](#steps-as-array)
+  - [Steps as object](#steps-as-object)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Provides helpers for building a multi-step wizard interface.
 
 ## Usage

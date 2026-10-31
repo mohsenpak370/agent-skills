@@ -8,6 +8,17 @@ tags: [vue3, slots, v-slot, compilation-error, common-mistake]
 
 # v-slot Can Only Be Used on Components or Template Tags
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Common Scenarios](#common-scenarios)
+  - [Wrapping Slot Content in HTML](#wrapping-slot-content-in-html)
+  - [Multiple v-slot on Same Element](#multiple-v-slot-on-same-element)
+- [Valid v-slot Locations](#valid-v-slot-locations)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - The `v-slot` directive (and its shorthand `#`) can only be used on Vue components or `<template>` tags. Using it on native HTML elements like `<div>` or `<span>` causes a Vue compilation error.
 
 ## Task Checklist

@@ -8,6 +8,16 @@ tags: [vue3, computed, performance, reactivity, vue3.4]
 
 # Return Stable Object References from Computed Properties
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Primitive vs Object Computed Behavior (Vue 3.4+)](#primitive-vs-object-computed-behavior-vue-34)
+- [Advanced: Deep Object Comparison](#advanced-deep-object-comparison)
+- [Important: Always Compute Before Comparing](#important-always-compute-before-comparing)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - In Vue 3.4+, computed properties only trigger effects when their value changes. However, if a computed returns a new object each time, Vue cannot detect that the values inside are the same. This causes unnecessary effect re-runs.
 
 For primitive values, Vue 3.4+ handles this automatically. For objects, manually compare and return the previous value when nothing meaningful has changed.

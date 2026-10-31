@@ -5,6 +5,26 @@ description: API routes, server middleware, and Nitro server engine in Nuxt
 
 # Server Routes
 
+<!-- toc -->
+## Contents
+
+- [Nuxt 5: `nuxt/server` Imports (auto-imports off by default)](#nuxt-5-nuxtserver-imports-auto-imports-off-by-default)
+- [API Routes](#api-routes)
+  - [HTTP Methods](#http-methods)
+  - [Route Parameters](#route-parameters)
+  - [Query Parameters](#query-parameters)
+  - [Request Body](#request-body)
+  - [Headers and Cookies](#headers-and-cookies)
+- [Server Middleware](#server-middleware)
+- [Error Handling](#error-handling)
+- [Request Validation](#request-validation)
+- [Sessions](#sessions)
+- [Server Utils](#server-utils)
+- [Server Plugins](#server-plugins)
+- [Streaming Responses](#streaming-responses)
+- [Server Storage](#server-storage)
+<!-- /toc -->
+
 Nuxt includes the Nitro server engine for building full-stack applications with API routes and server middleware. Nuxt 5 runs on **Nitro v3** (built on h3 v2 and srvx, using Web-standard `Request`/`Response`).
 
 ## Nuxt 5: `nuxt/server` Imports (auto-imports off by default)

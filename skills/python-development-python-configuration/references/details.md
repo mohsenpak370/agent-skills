@@ -1,5 +1,16 @@
 # python-configuration — detailed worked examples
 
+<!-- toc -->
+## Contents
+
+- [Advanced Patterns](#advanced-patterns)
+  - [Pattern 5: Type Coercion](#pattern-5-type-coercion)
+  - [Pattern 6: Environment-Specific Configuration](#pattern-6-environment-specific-configuration)
+  - [Pattern 7: Nested Configuration Groups](#pattern-7-nested-configuration-groups)
+  - [Pattern 8: Secrets from Files](#pattern-8-secrets-from-files)
+  - [Pattern 9: Configuration Validation](#pattern-9-configuration-validation)
+<!-- /toc -->
+
 ## Advanced Patterns
 
 ### Pattern 5: Type Coercion

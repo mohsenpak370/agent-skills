@@ -8,6 +8,17 @@ tags: [vue3, events, modifiers, scroll, touch, performance]
 
 # Never Use .passive and .prevent Together
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Understanding .passive](#understanding-passive)
+- [When to Use .passive](#when-to-use-passive)
+- [When to Use .prevent (Without .passive)](#when-to-use-prevent-without-passive)
+- [Browser Warning](#browser-warning)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - The `.passive` modifier tells the browser you will NOT call `preventDefault()`, while `.prevent` does exactly that. Using them together causes `.prevent` to be ignored and triggers browser console warnings. This is a logical contradiction that leads to broken event handling.
 
 ## Task Checklist

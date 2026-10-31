@@ -5,6 +5,25 @@ description: Python observability patterns including structured logging, metrics
 
 # Python Observability
 
+<!-- toc -->
+## Contents
+
+- [When to Use This Skill](#when-to-use-this-skill)
+- [Core Concepts](#core-concepts)
+  - [1. Structured Logging](#1-structured-logging)
+  - [2. The Four Golden Signals](#2-the-four-golden-signals)
+  - [3. Correlation IDs](#3-correlation-ids)
+  - [4. Bounded Cardinality](#4-bounded-cardinality)
+- [Quick Start](#quick-start)
+- [Fundamental Patterns](#fundamental-patterns)
+  - [Pattern 1: Structured Logging with Structlog](#pattern-1-structured-logging-with-structlog)
+  - [Pattern 2: Consistent Log Fields](#pattern-2-consistent-log-fields)
+  - [Pattern 3: Semantic Log Levels](#pattern-3-semantic-log-levels)
+  - [Pattern 4: Correlation ID Propagation](#pattern-4-correlation-id-propagation)
+- [Detailed worked examples and patterns](#detailed-worked-examples-and-patterns)
+- [Best Practices Summary](#best-practices-summary)
+<!-- /toc -->
+
 Instrument Python applications with structured logs, metrics, and traces. When something breaks in production, you need to answer "what, where, and why" without deploying new code.
 
 ## When to Use This Skill

@@ -5,6 +5,17 @@ related: useManualRefHistory
 
 # useRefHistory
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Objects / arrays](#objects--arrays)
+  - [History Capacity](#history-capacity)
+  - [History WatchOptionFlush Timing](#history-watchoptionflush-timing)
+- [Recommended Readings](#recommended-readings)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Track the change history of a ref, also provides undo and redo functionality
 
 <CourseLink href="https://vueschool.io/lessons/ref-history-with-vueuse?friend=vueuse">Learn useRefHistory with this FREE video lesson from Vue School!</CourseLink>

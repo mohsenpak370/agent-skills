@@ -5,6 +5,21 @@ description: Build React and Next.js Solana apps with a Kit plugin client, Walle
 
 # Frontend with Solana Kit (Next.js / React)
 
+<!-- toc -->
+## Contents
+
+- [Goals](#goals)
+- [Recommended dependencies](#recommended-dependencies)
+- [Bootstrap recommendation](#bootstrap-recommendation)
+- [Client setup (Next.js App Router)](#client-setup-nextjs-app-router)
+- [Wallet connection](#wallet-connection)
+  - [Transaction version support](#transaction-version-support)
+- [Sending transactions](#sending-transactions)
+- [Data fetching and subscriptions](#data-fetching-and-subscriptions)
+- [Transaction UX checklist](#transaction-ux-checklist)
+- [Legacy apps](#legacy-apps)
+<!-- /toc -->
+
 ## Goals
 - One Kit client instance for the app (RPC + wallet + transaction sending)
 - Wallet Standard-first discovery/connect (no wallet-specific adapters)

@@ -5,6 +5,28 @@ description: useFetch, useAsyncData, and $fetch for SSR-friendly data fetching
 
 # Data Fetching
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+  - [On `await`](#on-await)
+- [useFetch](#usefetch)
+  - [With Options](#with-options)
+  - [Reactive Parameters](#reactive-parameters)
+  - [Computed URL](#computed-url)
+- [useAsyncData](#useasyncdata)
+  - [Multiple Requests](#multiple-requests)
+- [Custom Fetchers: createUseFetch / createUseAsyncData](#custom-fetchers-createusefetch--createuseasyncdata)
+- [Typed Routes (Nuxt 5)](#typed-routes-nuxt-5)
+- [$fetch](#fetch)
+- [Return Values](#return-values)
+- [Lazy Fetching](#lazy-fetching)
+- [Refresh & Watch](#refresh--watch)
+- [Caching](#caching)
+- [Interceptors](#interceptors)
+- [Passing Headers (SSR)](#passing-headers-ssr)
+<!-- /toc -->
+
 Nuxt provides composables for SSR-friendly data fetching that prevent double-fetching and handle hydration.
 
 ## Overview

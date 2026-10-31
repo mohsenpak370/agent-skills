@@ -5,6 +5,33 @@ description: Manages deprecation and migration. Use when removing old systems, A
 
 # Deprecation and Migration
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [Core Principles](#core-principles)
+  - [Code Is a Liability](#code-is-a-liability)
+  - [Hyrum's Law Makes Removal Hard](#hyrums-law-makes-removal-hard)
+  - [Deprecation Planning Starts at Design Time](#deprecation-planning-starts-at-design-time)
+- [The Deprecation Decision](#the-deprecation-decision)
+- [Compulsory vs Advisory Deprecation](#compulsory-vs-advisory-deprecation)
+- [The Migration Process](#the-migration-process)
+  - [Step 1: Build the Replacement](#step-1-build-the-replacement)
+  - [Step 2: Announce and Document](#step-2-announce-and-document)
+  - [Step 3: Migrate Incrementally](#step-3-migrate-incrementally)
+  - [Step 4: Remove the Old System](#step-4-remove-the-old-system)
+- [Migration Patterns](#migration-patterns)
+  - [Strangler Pattern](#strangler-pattern)
+  - [Adapter Pattern](#adapter-pattern)
+  - [Feature Flag Migration](#feature-flag-migration)
+  - [Database Schema Migrations (Expand/Contract)](#database-schema-migrations-expandcontract)
+- [Zombie Code](#zombie-code)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 Code is a liability, not an asset. Every line of code has ongoing maintenance cost — bugs to fix, dependencies to update, security patches to apply, and new engineers to onboard. Deprecation is the discipline of removing code that no longer earns its keep, and migration is the process of moving users safely from the old to the new.

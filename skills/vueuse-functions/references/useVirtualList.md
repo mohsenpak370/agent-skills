@@ -4,6 +4,18 @@ category: Component
 
 # useVirtualList
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Simple list](#simple-list)
+  - [Config](#config)
+  - [Reactive list](#reactive-list)
+  - [Horizontal list](#horizontal-list)
+- [Component Usage](#component-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 ::: warning
 Consider using [`@tanstack/vue-virtual`](https://tanstack.com/virtual/v3/docs/framework/vue/vue-virtual) instead, if you are looking for more features.
 :::

@@ -1,5 +1,20 @@
 # Refinement & Evaluation Criteria
 
+<!-- toc -->
+## Contents
+
+- [Core Evaluation Dimensions](#core-evaluation-dimensions)
+  - [1. User Value](#1-user-value)
+  - [2. Feasibility](#2-feasibility)
+  - [3. Differentiation](#3-differentiation)
+- [Assumption Audit](#assumption-audit)
+  - [Must Be True (Dealbreakers)](#must-be-true-dealbreakers)
+  - [Should Be True (Important)](#should-be-true-important)
+  - [Might Be True (Nice to Have)](#might-be-true-nice-to-have)
+- [Decision Framework](#decision-framework)
+- [MVP Scoping Principles](#mvp-scoping-principles)
+<!-- /toc -->
+
 Use this rubric during Phase 2 (Evaluate & Converge) to stress-test idea directions. Not every criterion applies to every idea — use judgment about which dimensions matter most for the specific context.
 
 ## Core Evaluation Dimensions

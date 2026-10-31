@@ -5,6 +5,31 @@ description: Simplifies code for clarity. Use when refactoring code for clarity 
 
 # Code Simplification
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [The Five Principles](#the-five-principles)
+  - [1. Preserve Behavior Exactly](#1-preserve-behavior-exactly)
+  - [2. Follow Project Conventions](#2-follow-project-conventions)
+  - [3. Prefer Clarity Over Cleverness](#3-prefer-clarity-over-cleverness)
+  - [4. Maintain Balance](#4-maintain-balance)
+  - [5. Scope to What Changed](#5-scope-to-what-changed)
+- [The Simplification Process](#the-simplification-process)
+  - [Step 1: Understand Before Touching (Chesterton's Fence)](#step-1-understand-before-touching-chestertons-fence)
+  - [Step 2: Identify Simplification Opportunities](#step-2-identify-simplification-opportunities)
+  - [Step 3: Apply Changes Incrementally](#step-3-apply-changes-incrementally)
+  - [Step 4: Verify the Result](#step-4-verify-the-result)
+- [Language-Specific Guidance](#language-specific-guidance)
+  - [TypeScript / JavaScript](#typescript--javascript)
+  - [Python](#python)
+  - [React / JSX](#react--jsx)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 > Inspired by the [Claude Code Simplifier plugin](https://github.com/anthropics/claude-plugins-official/blob/main/plugins/code-simplifier/agents/code-simplifier.md). Adapted here as a model-agnostic, process-driven skill for any AI coding agent.
 
 ## Overview
