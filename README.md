@@ -90,9 +90,9 @@ For Vue and Nuxt work, Vue-specific skills may be loaded alongside
 existing design systems, and Vue-specific skills for framework correctness,
 composables, Pinia, testing, and debugging.
 
-Use `nuxt` for Nuxt 3 and Nuxt 4 routing, data fetching, server routes,
+Use `nuxt` for Nuxt 4 and Nuxt 5 routing, data fetching, server routes,
 middleware, Nitro, modules, layers, and rendering modes. The Nuxt skill is based
-on Nuxt 3.x, so verify version-specific features against the project's installed
+on Nuxt 5.x, so verify version-specific features against the project's installed
 Nuxt version.
 
 Use VueUse when an existing composable fits browser APIs, storage, sensors,

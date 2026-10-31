@@ -31,7 +31,7 @@ For Vue and Nuxt work:
 
 - Use `nuxt` for Nuxt apps, server routes, middleware, `useFetch`,
   `useAsyncData`, Nitro, file-based routing, modules, layers, or hybrid
-  rendering. The `nuxt` skill is based on Nuxt 3.x but can guide Nuxt 4 work
+  rendering. The `nuxt` skill is based on Nuxt 5.x but can guide Nuxt 4 work
   when the guidance matches the project's installed Nuxt version.
 - Use `nuxt-ui` only when `@nuxt/ui` / Nuxt UI is installed in the project, or
   when the user explicitly asks to add, install, configure, theme, or use Nuxt
