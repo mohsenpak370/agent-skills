@@ -47,6 +47,30 @@ Install selected skills only:
 npx skills add mohsenpak370/agent-skills --skill solana-dev frontend-ui-engineering
 ```
 
+**To update installed skills**, run:
+
+```bash
+npx skills update                         # update every installed skill that has changed
+npx skills update rust-best-practices     # update specific skills only
+npx skills update -p                      # project-level installs only (-g for global)
+npx skills update -y                      # no scope prompt; picks project if run inside one
+```
+
+Unpinned installs track the `main` branch. `update` replaces each changed skill
+folder, so local edits to installed skills are overwritten.
+
+To pin a release instead, add the skills with a tag. `update` keeps the pin, so
+run `add` again with a newer tag to upgrade:
+
+```bash
+npx skills add mohsenpak370/agent-skills#v1.1.0            # pin all skills
+npx skills add mohsenpak370/agent-skills#v1.1.0@solana-dev  # pin one skill
+```
+
+If you use a clone of this repository directly, run `git pull` (or
+`git checkout <tag>`). Start a new agent session after updating so it picks up
+the changed skills and `AGENTS.md`.
+
 Simply describe your task in natural language. Your agent's instruction file (`AGENTS.md`, `CLAUDE.md`, or custom prompts) tells it which skill to use for the task, such as:
 
 - `using-agent-skills` when it needs to discover which skill applies
