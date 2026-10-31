@@ -4,6 +4,14 @@ category: Utilities
 
 # useEventBus
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [TypeScript](#typescript)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 A basic event bus.
 
 ## Usage

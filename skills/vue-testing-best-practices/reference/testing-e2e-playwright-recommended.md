@@ -8,6 +8,20 @@ tags: [vue3, testing, e2e, playwright, cypress, end-to-end]
 
 # Use Playwright for E2E Testing - Cross-Browser Support and Better DX
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Quick Setup](#quick-setup)
+- [E2E Test Example](#e2e-test-example)
+- [Playwright vs Cypress Comparison](#playwright-vs-cypress-comparison)
+- [Testing Vue Components with Data-Testid](#testing-vue-components-with-data-testid)
+- [Page Object Pattern for Vue Apps](#page-object-pattern-for-vue-apps)
+- [Visual Regression Testing](#visual-regression-testing)
+- [Running Tests](#running-tests)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Playwright offers superior cross-browser testing (Chromium, WebKit, Firefox), excellent debugging tools, and is fully open source. Cypress has limitations with WebKit support and requires paid subscriptions for some features.
 
 Use Playwright for new E2E testing setups. Consider Cypress if team already has expertise or for its visual debugging UI.

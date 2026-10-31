@@ -1,5 +1,31 @@
 # API Design Checklist
 
+<!-- toc -->
+## Contents
+
+- [Pre-Implementation Review](#pre-implementation-review)
+  - [Resource Design](#resource-design)
+  - [HTTP Methods](#http-methods)
+  - [Status Codes](#status-codes)
+  - [Pagination](#pagination)
+  - [Filtering & Sorting](#filtering--sorting)
+  - [Versioning](#versioning)
+  - [Error Handling](#error-handling)
+  - [Authentication & Authorization](#authentication--authorization)
+  - [Rate Limiting](#rate-limiting)
+  - [Documentation](#documentation)
+  - [Testing](#testing)
+  - [Security](#security)
+  - [Performance](#performance)
+  - [Monitoring](#monitoring)
+- [GraphQL-Specific Checks](#graphql-specific-checks)
+  - [Schema Design](#schema-design)
+  - [Queries](#queries)
+  - [Mutations](#mutations)
+  - [Performance](#performance-1)
+  - [Documentation](#documentation-1)
+<!-- /toc -->
+
 ## Pre-Implementation Review
 
 ### Resource Design

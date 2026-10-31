@@ -8,6 +8,22 @@ tags: [vue3, keepalive, transition, memory-leak, animation]
 
 # KeepAlive with Transition Memory Leak
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Problem](#the-problem)
+- [Diagnosis](#diagnosis)
+- [Workarounds](#workarounds)
+  - [Option 1: Remove Transition if Not Essential](#option-1-remove-transition-if-not-essential)
+  - [Option 2: Use CSS Animations Instead](#option-2-use-css-animations-instead)
+  - [Option 3: Use Strict Cache Limits](#option-3-use-strict-cache-limits)
+  - [Option 4: Key-Based Cache Invalidation](#option-4-key-based-cache-invalidation)
+- [Keep Vue Updated](#keep-vue-updated)
+- [Key Points](#key-points)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - There is a known memory leak when using `<Transition>` and `<KeepAlive>` together. Component instances may not be properly freed from memory when combining these features.
 
 ## Task Checklist

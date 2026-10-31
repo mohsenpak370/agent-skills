@@ -1,5 +1,22 @@
 # Frontend Tailwind Design System: Advanced Patterns
 
+<!-- toc -->
+## Contents
+
+- [Pattern 5: Native CSS Animations (v4)](#pattern-5-native-css-animations-v4)
+- [Pattern 6: Dark Mode with CSS (v4)](#pattern-6-dark-mode-with-css-v4)
+- [Advanced v4 Patterns](#advanced-v4-patterns)
+  - [Custom Utilities with `@utility`](#custom-utilities-with-utility)
+  - [Theme Modifiers](#theme-modifiers)
+  - [Namespace Overrides](#namespace-overrides)
+  - [Semi-transparent Color Variants](#semi-transparent-color-variants)
+  - [Container Queries](#container-queries)
+- [v3 to v4 Migration Checklist](#v3-to-v4-migration-checklist)
+- [Best Practices](#best-practices)
+  - [Do's](#dos)
+  - [Don'ts](#donts)
+<!-- /toc -->
+
 Advanced Tailwind CSS v4 patterns including animations, dark mode theming, custom utilities, theme modifiers, namespace overrides, and the v3-to-v4 migration checklist.
 
 ## Pattern 5: Native CSS Animations (v4)

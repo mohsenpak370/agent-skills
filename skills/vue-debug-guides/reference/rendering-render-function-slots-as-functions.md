@@ -8,6 +8,18 @@ tags: [vue3, render-function, slots, children, vnode]
 
 # Pass Slots as Functions in Render Functions, Not Direct Children
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Why Functions?](#why-functions)
+- [The null Props Gotcha](#the-null-props-gotcha)
+- [Forwarding Slots from Parent](#forwarding-slots-from-parent)
+- [Scoped Slots in Render Functions](#scoped-slots-in-render-functions)
+- [Common Patterns](#common-patterns)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - When creating component vnodes with `h()`, children must be passed as slot functions, not as direct children. Passing children directly may cause them to be interpreted as props or fail to render.
 
 ## Task Checklist

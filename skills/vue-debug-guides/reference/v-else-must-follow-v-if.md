@@ -8,6 +8,14 @@ tags: [vue3, conditional-rendering, v-if, v-else, v-else-if]
 
 # v-else Must Immediately Follow v-if or v-else-if
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Debugging Tips](#debugging-tips)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - A `v-else` or `v-else-if` element must immediately follow a `v-if` or `v-else-if` element in the DOM. If there's any element in between:
 
 - **SFC compilation (Vite/vue-loader):** Vue throws a **compile-time SyntaxError** - the code won't build at all

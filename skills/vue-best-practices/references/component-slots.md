@@ -8,6 +8,17 @@ tags: [vue3, slots, components, typescript, composables]
 
 # Component Slots Best Practices
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Shorthand syntax for named slots](#shorthand-syntax-for-named-slots)
+- [Conditionally Render Optional Slot Wrappers](#conditionally-render-optional-slot-wrappers)
+- [Type Scoped Slot Props with defineSlots](#type-scoped-slot-props-with-defineslots)
+- [Provide Slot Fallback Content](#provide-slot-fallback-content)
+- [Prefer Composables for Pure Logic Reuse](#prefer-composables-for-pure-logic-reuse)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Slots are a core component API surface in Vue. Structure them intentionally so templates stay predictable, typed, and performant.
 
 ## Task List

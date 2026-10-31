@@ -8,6 +8,16 @@ tags: [vue3, events, keyboard, modifiers, shortcuts, accessibility]
 
 # Use .exact Modifier for Precise Keyboard/Mouse Shortcuts
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Behavior Comparison](#behavior-comparison)
+- [Practical Example: File Browser Selection](#practical-example-file-browser-selection)
+- [Keyboard Shortcuts with .exact](#keyboard-shortcuts-with-exact)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - By default, Vue's modifier key handlers (`.ctrl`, `.alt`, `.shift`, `.meta`) fire even when other modifier keys are also pressed. Use `.exact` to require that ONLY the specified modifiers are pressed, preventing accidental triggering of shortcuts.
 
 ## Task Checklist
@@ -99,22 +109,6 @@ tags: [vue3, events, keyboard, modifiers, shortcuts, accessibility]
 ## Practical Example: File Browser Selection
 
 ```vue
-<template>
-  <ul class="file-list">
-    <li
-      v-for="file in files"
-      :key="file.id"
-      @click.exact="selectSingle(file)"
-      @click.ctrl.exact="toggleSelection(file)"
-      @click.shift.exact="selectRange(file)"
-      @click.ctrl.shift.exact="addRangeToSelection(file)"
-      :class="{ selected: isSelected(file) }"
-    >
-      {{ file.name }}
-    </li>
-  </ul>
-</template>
-
 <script setup>
 // Each click type has distinct, non-overlapping behavior
 function selectSingle(file) {
@@ -133,6 +127,22 @@ function addRangeToSelection(file) {
   // Add range to existing selection
 }
 </script>
+
+<template>
+  <ul class="file-list">
+    <li
+      v-for="file in files"
+      :key="file.id"
+      @click.exact="selectSingle(file)"
+      @click.ctrl.exact="toggleSelection(file)"
+      @click.shift.exact="selectRange(file)"
+      @click.ctrl.shift.exact="addRangeToSelection(file)"
+      :class="{ selected: isSelected(file) }"
+    >
+      {{ file.name }}
+    </li>
+  </ul>
+</template>
 ```
 
 ## Keyboard Shortcuts with .exact

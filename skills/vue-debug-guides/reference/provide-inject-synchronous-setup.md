@@ -8,6 +8,19 @@ tags: [vue3, provide-inject, composition-api, async, setup]
 
 # Provide Must Be Called Synchronously During Setup
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Gotcha: Async Provide Fails Silently](#the-gotcha-async-provide-fails-silently)
+- [Solution: Provide Synchronously, Update Async](#solution-provide-synchronously-update-async)
+- [Pattern: Async Data Provider](#pattern-async-data-provider)
+- [Why This Happens](#why-this-happens)
+- [Checking for Setup Context](#checking-for-setup-context)
+- [App-Level Provide (Exception)](#app-level-provide-exception)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - The `provide()` function must be called synchronously during the component's `setup()` phase. Calling it asynchronously (inside callbacks, promises, or after await) will fail silently, and descendant components will not receive the provided value.
 
 ## Task Checklist

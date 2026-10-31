@@ -4,6 +4,16 @@ category: Watch
 
 # whenever
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Callback Function](#callback-function)
+  - [Computed](#computed)
+  - [Options](#options)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Shorthand for watching value to be truthy.
 
 ## Usage

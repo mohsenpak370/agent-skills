@@ -4,6 +4,15 @@ category: Elements
 
 # useElementBounding
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Component Usage](#component-usage)
+- [Directive Usage](#directive-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive [bounding box](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) of an HTML element
 
 ## Usage

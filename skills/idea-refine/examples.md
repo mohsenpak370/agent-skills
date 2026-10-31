@@ -1,5 +1,25 @@
 # Ideation Session Examples
 
+<!-- toc -->
+## Contents
+
+- [Example 1: Vague Early-Stage Concept (Full 3-Phase Session)](#example-1-vague-early-stage-concept-full-3-phase-session)
+  - [Phase 1: Understand & Expand](#phase-1-understand--expand)
+  - [Phase 2: Evaluate & Converge](#phase-2-evaluate--converge)
+  - [Phase 3: Sharpen & Ship](#phase-3-sharpen--ship)
+- [Problem Statement](#problem-statement)
+- [Recommended Direction](#recommended-direction)
+- [Key Assumptions to Validate](#key-assumptions-to-validate)
+- [MVP Scope](#mvp-scope)
+- [Not Doing (and Why)](#not-doing-and-why)
+- [Open Questions](#open-questions)
+- [Example 2: Feature Idea Within an Existing Product (Codebase-Aware)](#example-2-feature-idea-within-an-existing-product-codebase-aware)
+  - [Phase 1: Understand & Expand](#phase-1-understand--expand-1)
+- [Example 3: Process/Workflow Idea (Non-Product)](#example-3-processworkflow-idea-non-product)
+  - [Phase 1: Understand & Expand](#phase-1-understand--expand-2)
+- [What to Notice in These Examples](#what-to-notice-in-these-examples)
+<!-- /toc -->
+
 These examples demonstrate what good ideation sessions look like across different kinds of ideas. Study the rhythm, tone, and structure — not just the content. The skill should feel equally at home with a vague startup concept, a feature for an existing product, or a process improvement.
 
 ---

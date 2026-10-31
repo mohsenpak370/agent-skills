@@ -1,5 +1,22 @@
 # Quick RPC Lookups (public endpoints + curl)
 
+<!-- toc -->
+## Contents
+
+- [Public RPC endpoints](#public-rpc-endpoints)
+- [Request shape](#request-shape)
+- [Common lookups](#common-lookups)
+  - [Wallet SOL balance — `getBalance`](#wallet-sol-balance--getbalance)
+  - [Account info — `getAccountInfo`](#account-info--getaccountinfo)
+  - [Transaction — `getTransaction`](#transaction--gettransaction)
+  - [Token account balance — `getTokenAccountBalance`](#token-account-balance--gettokenaccountbalance)
+  - [All token accounts owned by a wallet — `getTokenAccountsByOwner`](#all-token-accounts-owned-by-a-wallet--gettokenaccountsbyowner)
+  - [Recent signatures for an address — `getSignaturesForAddress`](#recent-signatures-for-an-address--getsignaturesforaddress)
+  - [Cluster liveness — `getSlot` / `getHealth`](#cluster-liveness--getslot--gethealth)
+- [Handling results](#handling-results)
+- [When to escalate to kit](#when-to-escalate-to-kit)
+<!-- /toc -->
+
 Use this when the user asks a one-shot read-only question about on-chain state and you just need an answer — wallet balance, a specific transaction, a token account balance, account info. No SDK install, no project setup, just `curl`.
 
 For anything beyond a quick lookup (building/sending transactions, indexing, repeated reads, app code) drop back to `@solana/kit` — see `kit/overview.md`.
@@ -59,10 +76,10 @@ Use `jsonParsed` for token/system accounts; falls back to base64 when no parser 
 ```bash
 curl -s https://api.mainnet-beta.solana.com -X POST \
   -H "Content-Type: application/json" \
-  -d '{"jsonrpc":"2.0","id":1,"method":"getTransaction","params":["<SIGNATURE>",{"maxSupportedTransactionVersion":0,"encoding":"jsonParsed"}]}'
+  -d '{"jsonrpc":"2.0","id":1,"method":"getTransaction","params":["<SIGNATURE>",{"maxSupportedTransactionVersion":1,"encoding":"jsonParsed"}]}'
 ```
 
-Always include `maxSupportedTransactionVersion: 0` — without it, v0 transactions return an error.
+Always include `maxSupportedTransactionVersion` — without it, any versioned transaction returns an error. Use the integer `1`, not `0`: v1 transactions ([SIMD-0385](https://github.com/solana-foundation/solana-improvement-documents/blob/main/proposals/0385-transaction-v1.md)) are live on mainnet, `0` fails on one exactly like omitting the parameter, and on `getBlock` a single v1 transaction fails the entire block. See [transactions-v1.md](transactions-v1.md).
 
 ### Token account balance — `getTokenAccountBalance`
 
@@ -93,6 +110,8 @@ curl -s https://api.mainnet-beta.solana.com -X POST \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc":"2.0","id":1,"method":"getSignaturesForAddress","params":["<PUBKEY>",{"limit":10}]}'
 ```
+
+If the endpoint supports it, `getTransactionsForAddress` replaces this call plus the follow-up `getTransaction` fan-out with one query — it does address-history discovery and per-transaction fetching together, with server-side filtering, bidirectional sorting, cursor pagination, and both `signatures`-only and `full` (`json`/`jsonParsed`/`base58`/`base64`) response modes. It's part of the upcoming solana-rpc spec and already live at major RPC providers, but not yet universally available — check the target endpoint before assuming it's there.
 
 ### Cluster liveness — `getSlot` / `getHealth`
 

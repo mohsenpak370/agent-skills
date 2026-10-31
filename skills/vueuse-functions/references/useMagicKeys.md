@@ -4,6 +4,19 @@ category: Sensors
 
 # useMagicKeys
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Combinations](#combinations)
+  - [Current Pressed keys](#current-pressed-keys)
+  - [Key Aliasing](#key-aliasing)
+  - [Conditionally Disable](#conditionally-disable)
+  - [Custom Event Handler](#custom-event-handler)
+  - [Reactive Mode](#reactive-mode)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive keys pressed state, with magical keys combination support.
 
 ## Usage

@@ -8,6 +8,21 @@ tags: [vue3, testing, vitest, vite, configuration, setup]
 
 # Use Vitest for Vue 3 Testing - Recommended by Vue Team
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Quick Setup](#quick-setup)
+- [Test File Example](#test-file-example)
+- [Vitest vs Jest Comparison](#vitest-vs-jest-comparison)
+- [Using with Testing Library](#using-with-testing-library)
+- [Advanced Configuration](#advanced-configuration)
+- [Common Patterns](#common-patterns)
+  - [Mocking Modules](#mocking-modules)
+  - [Testing with Fake Timers](#testing-with-fake-timers)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Vitest is created and maintained by Vue/Vite team members and shares the same configuration and transform pipeline as Vite. Using Jest or other test runners with Vite-based projects requires additional configuration and can result in slower test execution and compatibility issues.
 
 Use Vitest for new Vue 3 projects. Only consider Jest if migrating an existing test suite.

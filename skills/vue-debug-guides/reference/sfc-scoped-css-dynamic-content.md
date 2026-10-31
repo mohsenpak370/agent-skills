@@ -8,6 +8,17 @@ tags: [vue3, sfc, scoped-css, dynamic-content, v-html]
 
 # Scoped CSS Does Not Apply to Dynamically Added Content
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Why This Happens](#why-this-happens)
+- [Alternative: Global Styles with Unique Prefix](#alternative-global-styles-with-unique-prefix)
+- [Programmatic DOM Manipulation](#programmatic-dom-manipulation)
+- [Best Practice: Prefer Reactive Templates](#best-practice-prefer-reactive-templates)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Vue's scoped CSS works by adding data attributes to elements at compile time. Content added dynamically at runtime (via `v-html`, JavaScript DOM manipulation, or third-party libraries) won't have these attributes, so scoped styles won't apply.
 
 ## Task Checklist

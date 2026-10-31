@@ -4,6 +4,14 @@ category: Browser
 
 # useScriptTag
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Creates a script tag, with support for automatically unloading (deleting) the script tag on unmount.
 
 If a script tag already exists for the given URL, `useScriptTag()` will not create another script tag, but keep in mind that depending on how you use it, `useScriptTag()` might have already loaded then unloaded that particular JS file from a previous call of `useScriptTag()`.

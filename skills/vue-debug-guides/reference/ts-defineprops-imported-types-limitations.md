@@ -8,6 +8,25 @@ tags: [vue3, typescript, defineProps, imported-types, vue3.3]
 
 # Imported Types Have Limitations in defineProps
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Supported Patterns (Vue 3.3+)](#supported-patterns-vue-33)
+- [Unsupported Patterns](#unsupported-patterns)
+  - [Conditional Types for Entire Props Object](#conditional-types-for-entire-props-object)
+  - [Conditional Types for Individual Props ARE Supported](#conditional-types-for-individual-props-are-supported)
+  - [Global Ambient Types](#global-ambient-types)
+  - [Complex Mapped Types](#complex-mapped-types)
+  - [Union of Imported Interfaces](#union-of-imported-interfaces)
+- [Best Practices](#best-practices)
+  - [Keep Props Types Simple](#keep-props-types-simple)
+  - [Resolve Types Before Export](#resolve-types-before-export)
+  - [Use Dual Script Blocks for Complex Cases](#use-dual-script-blocks-for-complex-cases)
+- [Version-Specific Behavior](#version-specific-behavior)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - While Vue 3.3+ supports imported types in `defineProps<>()`, certain complex types are not fully supported. Conditional types, mapped types that require full type analysis, and global ambient types can cause "Unresolvable type reference" errors.
 
 ## Task Checklist

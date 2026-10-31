@@ -1,9 +1,35 @@
 ---
 name: incremental-implementation
-description: Delivers changes incrementally. Use when implementing any feature or change that touches more than one file. Use when you're about to write a large amount of code at once, or when a task feels too big to land in one step.
+description: Delivers changes incrementally in thin, verifiable slices. Use when implementing any feature or change that touches more than one file, or when picking up the next task from a plan. Use when rolling a change out behind a feature flag, when you're about to write a large amount of code at once, or when a task feels too big to land in one step.
 ---
 
 # Incremental Implementation
+
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [The Increment Cycle](#the-increment-cycle)
+- [Slicing Strategies](#slicing-strategies)
+  - [Vertical Slices (Preferred)](#vertical-slices-preferred)
+  - [Contract-First Slicing](#contract-first-slicing)
+  - [Risk-First Slicing](#risk-first-slicing)
+- [Implementation Rules](#implementation-rules)
+  - [Rule 0: Simplicity First](#rule-0-simplicity-first)
+  - [Rule 0.5: Scope Discipline](#rule-05-scope-discipline)
+  - [Rule 1: One Thing at a Time](#rule-1-one-thing-at-a-time)
+  - [Rule 2: Keep It Compilable](#rule-2-keep-it-compilable)
+  - [Rule 3: Feature Flags for Incomplete Features](#rule-3-feature-flags-for-incomplete-features)
+  - [Rule 4: Safe Defaults](#rule-4-safe-defaults)
+  - [Rule 5: Rollback-Friendly](#rule-5-rollback-friendly)
+- [Working with Agents](#working-with-agents)
+- [Increment Checklist](#increment-checklist)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+- [See Also](#see-also)
+<!-- /toc -->
 
 ## Overview
 
@@ -190,21 +216,21 @@ When directing an agent to implement incrementally:
 Start with just the database schema change and the API endpoint.
 Don't touch the UI yet — we'll do that in the next increment.
 
-After implementing, run `npm test` and `npm run build` to verify
-nothing is broken."
+After implementing, run the repository's test and build commands to
+verify nothing is broken."
 ```
 
 Be explicit about what's in scope and what's NOT in scope for each increment.
 
 ## Increment Checklist
 
-After each increment, verify:
+After each increment, verify with the repository's own commands (see the test-driven-development skill's Discover the Stack First section):
 
 - [ ] The change does one thing and does it completely
-- [ ] All existing tests still pass (`npm test`)
-- [ ] The build succeeds (`npm run build`)
-- [ ] Type checking passes (`npx tsc --noEmit`)
-- [ ] Linting passes (`npm run lint`)
+- [ ] All existing tests still pass (the repository's test command: `npm test`, `./gradlew test`, `pytest`, ...)
+- [ ] The build succeeds (the repository's build command)
+- [ ] Type checking passes, where the stack has one (`npx tsc --noEmit`, `mypy`, ...)
+- [ ] Linting passes (the repository's lint command)
 - [ ] The new functionality works as expected
 - [ ] The change is committed with a descriptive message
 
@@ -243,3 +269,7 @@ After completing all increments for a task:
 - [ ] The build is clean
 - [ ] The feature works end-to-end as specified
 - [ ] No uncommitted changes remain
+
+## See Also
+
+Per-increment verification is the local check. Before declaring a task done, apply the project-wide Definition of Done as the final gate, the standing bar every increment clears regardless of the task. See `../../references/definition-of-done.md`.

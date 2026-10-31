@@ -6,6 +6,19 @@ compatibility: Use only in projects with @nuxt/ui installed, or when the task is
 
 # Nuxt UI
 
+<!-- toc -->
+## Contents
+
+- [MCP Server](#mcp-server)
+- [Core rules (always apply)](#core-rules-always-apply)
+- [How to use this skill](#how-to-use-this-skill)
+  - [Reference files](#reference-files)
+  - [Routing table](#routing-table)
+- [Installation](#installation)
+  - [Nuxt](#nuxt)
+  - [Vue (Vite)](#vue-vite)
+<!-- /toc -->
+
 Vue component library built on [Reka UI](https://reka-ui.com/) + [Tailwind CSS](https://tailwindcss.com/) + [Tailwind Variants](https://www.tailwind-variants.org/). Works with Nuxt, Vue (Vite), Laravel (Vite + Inertia), and AdonisJS (Vite + Inertia).
 
 ## MCP Server
@@ -25,12 +38,12 @@ claude mcp add --transport http nuxt-ui https://ui.nuxt.com/mcp
 ```
 
 Key MCP tools:
-- `search_components` — find components by name, description, or category (no params = list all)
-- `search_composables` — find composables by name or description (no params = list all)
-- `search_icons` — search Iconify icons (defaults to `lucide`), returns `i-{prefix}-{name}` names
-- `get_component` — full component documentation with usage examples
-- `get_component_metadata` — props, slots, events (lightweight, no docs content)
-- `get_example` — real-world code examples
+- `search-components` — find components by name, category, or intent (no params = list all)
+- `search-composables` — find composables by name or description (no params = list all)
+- `search-icons` — search Iconify icons (defaults to `lucide`), returns `i-{prefix}-{name}` names
+- `get-component` — full component documentation with usage examples
+- `get-component-metadata` — props, slots, events (lightweight, no docs content)
+- `get-example` — real-world code examples
 
 When you need to know **what a component accepts** or **how its API works**, use the MCP. This skill teaches you **when to use which component** and **how to build well**.
 
@@ -41,7 +54,7 @@ When you need to know **what a component accepts** or **how its API works**, use
 3. **Prefer Nuxt UI components first** — compose existing Nuxt UI components before creating custom UI components. Create a custom component only when Nuxt UI cannot express the behavior, accessibility, or layout cleanly.
 4. **Read generated theme files for slot names** — Nuxt: `.nuxt/ui/<component>.ts`, Vue: `node_modules/.nuxt-ui/ui/<component>.ts`. These show every slot, variant, and default class for any component.
 5. **Override priority** (highest wins): `ui` prop / `class` prop → global config → theme defaults.
-6. **Icons use `i-{collection}-{name}` format** — `lucide` is the default collection. Use the MCP `search_icons` tool to find icons, or browse at [icones.js.org](https://icones.js.org).
+6. **Icons use `i-{collection}-{name}` format** — `lucide` is the default collection. Use the MCP `search-icons` tool to find icons, or browse at [icones.js.org](https://icones.js.org).
 
 ## How to use this skill
 

@@ -5,6 +5,20 @@ description: Master SQL query optimization, indexing strategies, and EXPLAIN ana
 
 # SQL Optimization Patterns
 
+<!-- toc -->
+## Contents
+
+- [When to Use This Skill](#when-to-use-this-skill)
+- [Core Concepts](#core-concepts)
+  - [1. Query Execution Plans (EXPLAIN)](#1-query-execution-plans-explain)
+  - [2. Index Strategies](#2-index-strategies)
+  - [3. Query Optimization Patterns](#3-query-optimization-patterns)
+- [Detailed patterns and worked examples](#detailed-patterns-and-worked-examples)
+- [Best Practices](#best-practices)
+- [Common Pitfalls](#common-pitfalls)
+- [Monitoring Queries](#monitoring-queries)
+<!-- /toc -->
+
 Transform slow database queries into lightning-fast operations through systematic optimization, proper indexing, and query plan analysis.
 
 ## When to Use This Skill

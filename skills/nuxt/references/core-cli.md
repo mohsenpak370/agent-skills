@@ -5,7 +5,39 @@ description: Nuxt CLI commands for development, building, and project management
 
 # CLI Commands
 
+<!-- toc -->
+## Contents
+
+- [Project Initialization](#project-initialization)
+  - [Create New Project](#create-new-project)
+- [Development](#development)
+  - [Start Dev Server](#start-dev-server)
+- [Building](#building)
+  - [Production Build](#production-build)
+  - [Static Generation](#static-generation)
+  - [Preview Production Build](#preview-production-build)
+- [Utilities](#utilities)
+  - [Prepare (Type Generation)](#prepare-type-generation)
+  - [Type Check](#type-check)
+  - [Analyze Bundle](#analyze-bundle)
+  - [Cleanup](#cleanup)
+  - [Info](#info)
+  - [Upgrade](#upgrade)
+- [Module Commands](#module-commands)
+  - [Add Module](#add-module)
+  - [Build Module (for module authors)](#build-module-for-module-authors)
+- [DevTools](#devtools)
+- [Common Workflows](#common-workflows)
+  - [Development](#development-1)
+  - [Production Deployment](#production-deployment)
+  - [After Cloning](#after-cloning)
+- [Environment-specific Builds](#environment-specific-builds)
+- [Layer Extension](#layer-extension)
+<!-- /toc -->
+
 Nuxt provides CLI commands via `nuxi` (or `npx nuxt`) for development, building, and project management.
+
+> The CLI reference now lives in the [`nuxt/cli`](https://github.com/nuxt/cli) repo (its docs moved out of the main Nuxt repo). Commands and flags are unchanged.
 
 ## Project Initialization
 
@@ -256,8 +288,6 @@ npx nuxt build --extends ./base-layer
 
 <!-- 
 Source references:
-- https://nuxt.com/docs/api/commands/dev
-- https://nuxt.com/docs/api/commands/build
-- https://nuxt.com/docs/api/commands/generate
-- https://nuxt.com/docs/api/commands/init
+- https://github.com/nuxt/cli
+- https://nuxt.com/docs/api/commands
 -->

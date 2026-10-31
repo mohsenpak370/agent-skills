@@ -5,6 +5,26 @@ description: Auto-imported Vue APIs, Nuxt composables, and custom utilities
 
 # Composables Auto-imports
 
+<!-- toc -->
+## Contents
+
+- [Built-in Auto-imports](#built-in-auto-imports)
+  - [Vue APIs](#vue-apis)
+  - [Nuxt Composables](#nuxt-composables)
+  - [useAnnouncer (Accessibility)](#useannouncer-accessibility)
+- [Custom Composables (`app/composables/`)](#custom-composables-appcomposables)
+  - [Creating Composables](#creating-composables)
+  - [Using Composables](#using-composables)
+  - [File Scanning Rules](#file-scanning-rules)
+- [Utilities (`app/utils/`)](#utilities-apputils)
+- [Server Utils (`server/utils/`)](#server-utils-serverutils)
+- [Shared Utilities (`shared/`)](#shared-utilities-shared)
+- [Third-party Package Imports](#third-party-package-imports)
+- [Explicit Imports](#explicit-imports)
+- [Composable Context Rules](#composable-context-rules)
+- [Disabling Auto-imports](#disabling-auto-imports)
+<!-- /toc -->
+
 Nuxt automatically imports Vue APIs, Nuxt composables, and your custom composables/utilities.
 
 ## Built-in Auto-imports
@@ -59,12 +79,39 @@ const cookie = useCookie('token')
 useHead({ title: 'My Page' })
 useSeoMeta({ description: 'Page description' })
 
+// Accessibility — announce content to screen readers
+const { polite, assertive } = useAnnouncer() // needs <NuxtAnnouncer> (Nuxt 4.4+)
+const { set } = useRouteAnnouncer()           // automatic on navigation
+
 // Request helpers (SSR)
 const headers = useRequestHeaders()
 const event = useRequestEvent()
 const url = useRequestURL()
 </script>
 ```
+
+> **Nuxt 4 / Nitro:** in server routes, `useRuntimeConfig()` is called without the `event` argument.
+
+### useAnnouncer (Accessibility)
+
+Manually announce dynamic content (form validation, toasts, loading) to screen readers. Requires `<NuxtAnnouncer>` in your app. Available in Nuxt 4.4.2+.
+
+```vue
+<script setup lang="ts">
+const { polite, assertive } = useAnnouncer()
+
+async function submit() {
+  try {
+    await $fetch('/api/contact', { method: 'POST', body: form })
+    polite('Message sent successfully')   // waits for screen reader silence
+  } catch {
+    assertive('Error: failed to send')    // interrupts immediately
+  }
+}
+</script>
+```
+
+Use `useRouteAnnouncer` (with `<NuxtRouteAnnouncer>`) instead for automatic route-change announcements based on the page `<title>`.
 
 ## Custom Composables (`app/composables/`)
 
@@ -192,6 +239,25 @@ export default defineEventHandler(() => {
 })
 ```
 
+## Shared Utilities (`shared/`)
+
+Code auto-imported in **both** the Vue app and the Nitro server (Nuxt 3.14+). Only `shared/utils/` and `shared/types/` top-level files are auto-imported. Must not import Vue or Nitro code.
+
+```ts
+// shared/utils/capitalize.ts
+export function capitalize(input: string) {
+  return input ? input[0].toUpperCase() + input.slice(1) : ''
+}
+```
+
+```ts
+// Auto-imported in app components AND server/api/*
+const title = capitalize('hello')
+
+// Non-scanned files: import via the #shared alias
+import lower from '#shared/formatters/lower'
+```
+
 ## Third-party Package Imports
 
 ```ts
@@ -270,7 +336,9 @@ export default defineNuxtConfig({
 
 <!-- 
 Source references:
-- https://nuxt.com/docs/guide/concepts/auto-imports
-- https://nuxt.com/docs/directory-structure/app/composables
-- https://nuxt.com/docs/directory-structure/app/utils
+- https://nuxt.com/docs/4.x/guide/concepts/auto-imports
+- https://nuxt.com/docs/4.x/directory-structure/app/composables
+- https://nuxt.com/docs/4.x/directory-structure/app/utils
+- https://nuxt.com/docs/4.x/directory-structure/shared
+- https://nuxt.com/docs/4.x/api/composables/use-announcer
 -->

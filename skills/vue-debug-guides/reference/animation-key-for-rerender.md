@@ -8,6 +8,20 @@ tags: [vue3, animation, key, autoanimate, rerender, dom]
 
 # Use Key Attribute to Force Re-render Animations
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Why This Works](#why-this-works)
+- [Common Use Cases](#common-use-cases)
+  - [Animating Text Content Changes](#animating-text-content-changes)
+  - [Animating Dynamic Components](#animating-dynamic-components)
+  - [Animating Route Transitions](#animating-route-transitions)
+- [With Vue's Built-in Transition](#with-vues-built-in-transition)
+- [Caution: Performance Implications](#caution-performance-implications)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Vue optimizes performance by reusing DOM elements when possible. However, this optimization can prevent animation libraries (like AutoAnimate) from detecting changes, because the element is updated in place rather than re-created. Adding a `:key` attribute forces Vue to treat changed elements as new, triggering proper animations.
 
 ## Task Checklist
@@ -19,6 +33,16 @@ tags: [vue3, animation, key, autoanimate, rerender, dom]
 
 **Problematic Code:**
 ```vue
+<script setup>
+import { ref } from 'vue'
+
+const message = ref('Hello')
+const imageUrl = ref('/images/photo1.jpg')
+
+// Changing these won't trigger animations because
+// Vue updates the existing elements rather than replacing them
+</script>
+
 <template>
   <!-- BAD: Text changes but no animation occurs -->
   <div v-auto-animate>
@@ -33,20 +57,22 @@ tags: [vue3, animation, key, autoanimate, rerender, dom]
   <!-- BAD: Route changes don't animate -->
   <router-view v-auto-animate />  <!-- No key -->
 </template>
+```
 
+**Correct Code:**
+```vue
 <script setup>
 import { ref } from 'vue'
 
 const message = ref('Hello')
 const imageUrl = ref('/images/photo1.jpg')
 
-// Changing these won't trigger animations because
-// Vue updates the existing elements rather than replacing them
+// Now changing these will trigger animations
+function updateMessage() {
+  message.value = 'World'  // Triggers enter animation for new <p>
+}
 </script>
-```
 
-**Correct Code:**
-```vue
 <template>
   <!-- GOOD: Key forces re-render, triggering animation -->
   <div v-auto-animate>
@@ -61,18 +87,6 @@ const imageUrl = ref('/images/photo1.jpg')
   <!-- GOOD: Route changes animate properly -->
   <router-view :key="$route.fullPath" v-auto-animate />
 </template>
-
-<script setup>
-import { ref } from 'vue'
-
-const message = ref('Hello')
-const imageUrl = ref('/images/photo1.jpg')
-
-// Now changing these will trigger animations
-function updateMessage() {
-  message.value = 'World'  // Triggers enter animation for new <p>
-}
-</script>
 ```
 
 ## Why This Works

@@ -8,6 +8,14 @@ tags: [vue3, vue2, lifecycle, updated, performance, optimization, reactivity]
 
 # Avoid Expensive Operations in Updated Hook
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Valid Use Cases for Updated Hook](#valid-use-cases-for-updated-hook)
+- [Prefer Computed Properties for Derived Data](#prefer-computed-properties-for-derived-data)
+<!-- /toc -->
+
 **Impact: MEDIUM** - The `updated` hook runs after every reactive state change that causes a re-render. Placing expensive operations, API calls, or state mutations here can cause severe performance degradation, infinite loops, and dropped frames below the optimal 60fps threshold.
 
 Use `updated`/`onUpdated` sparingly for post-DOM-update operations that cannot be handled by watchers or computed properties. For most reactive data handling, prefer watchers (`watch`/`watchEffect`) which provide more control over what triggers the callback.

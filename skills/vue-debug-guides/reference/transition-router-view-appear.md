@@ -8,6 +8,17 @@ tags: [vue3, transition, vue-router, appear, initial-load, navigation]
 
 # RouterView Transitions Always Apply Despite Missing appear Prop
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Why This Happens](#why-this-happens)
+- [If You Want to Disable Initial Animation](#if-you-want-to-disable-initial-animation)
+- [Alternative: Use CSS to Skip First Animation](#alternative-use-css-to-skip-first-animation)
+- [Standard RouterView Transition Pattern](#standard-routerview-transition-pattern)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: LOW** - When using `<Transition>` with Vue Router's `<RouterView>`, the enter transition animation runs on initial page load even if you haven't added the `appear` prop. This differs from normal Transition behavior where `appear` is required for initial render animations. This happens because Vue Router's navigations are asynchronous, causing the component to mount after the initial render.
 
 ## Task Checklist
@@ -67,14 +78,6 @@ Since the component wasn't present in the initial render and is "inserted" after
 ## If You Want to Disable Initial Animation
 
 ```vue
-<template>
-  <RouterView v-slot="{ Component }">
-    <Transition :name="isInitialLoad ? '' : 'fade'" mode="out-in">
-      <component :is="Component" />
-    </Transition>
-  </RouterView>
-</template>
-
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
@@ -90,19 +93,19 @@ router.isReady().then(() => {
   }, 0)
 })
 </script>
+
+<template>
+  <RouterView v-slot="{ Component }">
+    <Transition :name="isInitialLoad ? '' : 'fade'" mode="out-in">
+      <component :is="Component" />
+    </Transition>
+  </RouterView>
+</template>
 ```
 
 ## Alternative: Use CSS to Skip First Animation
 
 ```vue
-<template>
-  <RouterView v-slot="{ Component }">
-    <Transition name="fade" mode="out-in">
-      <component :is="Component" :class="{ 'skip-initial': isInitialLoad }" />
-    </Transition>
-  </RouterView>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
@@ -114,6 +117,14 @@ router.isReady().then(() => {
   isInitialLoad.value = false
 })
 </script>
+
+<template>
+  <RouterView v-slot="{ Component }">
+    <Transition name="fade" mode="out-in">
+      <component :is="Component" :class="{ 'skip-initial': isInitialLoad }" />
+    </Transition>
+  </RouterView>
+</template>
 
 <style>
 .fade-enter-active,

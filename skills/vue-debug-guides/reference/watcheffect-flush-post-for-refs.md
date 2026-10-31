@@ -8,6 +8,15 @@ tags: [vue3, watchEffect, template-refs, flush, dom-timing]
 
 # Use flush post for watchEffect with Template Refs
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Flush Options Explained](#flush-options-explained)
+- [When to Use Each Flush Mode](#when-to-use-each-flush-mode)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - By default, `watchEffect` runs before the DOM is updated. When watching template refs, this means the effect may run with stale or null ref values. Use `flush: 'post'` to ensure the effect runs after DOM updates when refs are current.
 
 This timing issue is particularly confusing because the watcher runs, but the ref doesn't yet reflect the current DOM state.

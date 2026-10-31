@@ -5,6 +5,24 @@ description: Account fetching, decoding, batch operations, PDA derivation, subsc
 
 # Solana Kit Accounts Reference
 
+<!-- toc -->
+## Contents
+
+- [Fetch Single Account](#fetch-single-account)
+  - [Check Existence Without Throwing](#check-existence-without-throwing)
+- [Fetch Multiple Accounts](#fetch-multiple-accounts)
+- [Typed Account Fetching (Codama)](#typed-account-fetching-codama)
+- [Account Decoding](#account-decoding)
+  - [With Codama Decoder](#with-codama-decoder)
+  - [With Custom Codec](#with-custom-codec)
+- [PDA Derivation](#pda-derivation)
+  - [Custom PDA](#custom-pda)
+- [Account Subscriptions](#account-subscriptions)
+- [Token Account Queries](#token-account-queries)
+- [Program Account Queries](#program-account-queries)
+- [Account Existence Pattern](#account-existence-pattern)
+<!-- /toc -->
+
 ## Fetch Single Account
 
 ```ts

@@ -4,6 +4,15 @@ category: '@Integrations'
 
 # useIDBKeyval
 
+<!-- toc -->
+## Contents
+
+- [Install idb-keyval as a peer dependency](#install-idb-keyval-as-a-peer-dependency)
+- [Usage](#usage)
+- [Cross-tab syncing](#cross-tab-syncing)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Wrapper for [`idb-keyval`](https://www.npmjs.com/package/idb-keyval).
 
 ## Install idb-keyval as a peer dependency
@@ -37,6 +46,15 @@ console.log('IDB transaction finished!')
 storedObject.value = null
 ```
 
+## Cross-tab syncing
+
+Changes are automatically synced across browser tabs using the [`BroadcastChannel` API](https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel). This is enabled by default and can be disabled via the `listenToStorageChanges` option.
+
+```ts
+// disable cross-tab syncing
+const { data } = useIDBKeyval('my-key', 'default', { listenToStorageChanges: false })
+```
+
 ## Type Declarations
 
 ```ts
@@ -44,7 +62,8 @@ interface Serializer<T> {
   read: (raw: unknown) => T
   write: (value: T) => unknown
 }
-export interface UseIDBOptions<T> extends ConfigurableFlush {
+export interface UseIDBOptions<T>
+  extends ConfigurableFlush, ConfigurableWindow {
   /**
    * Watch for deep changes
    *
@@ -73,10 +92,18 @@ export interface UseIDBOptions<T> extends ConfigurableFlush {
    * Custom data serialization
    */
   serializer?: Serializer<T>
+  /**
+   * Listen to storage changes from other tabs via BroadcastChannel,
+   * useful for multiple tabs applications
+   *
+   * @default true
+   */
+  listenToStorageChanges?: boolean
 }
 export interface UseIDBKeyvalReturn<T> {
   data: RemovableRef<T>
   isFinished: ShallowRef<boolean>
+  isSupported: ComputedRef<boolean>
   set: (value: T) => Promise<void>
 }
 /**

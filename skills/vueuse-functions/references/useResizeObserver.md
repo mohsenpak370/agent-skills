@@ -4,6 +4,14 @@ category: Elements
 
 # useResizeObserver
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Directive Usage](#directive-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reports changes to the dimensions of an Element's content or the border-box
 
 ## Usage
@@ -98,10 +106,7 @@ export interface UseResizeObserverReturn extends Supportable {
  * @param options
  */
 export declare function useResizeObserver(
-  target:
-    | MaybeComputedElementRef
-    | MaybeComputedElementRef[]
-    | MaybeRefOrGetter<MaybeElement[]>,
+  target: MaybeComputedElementRefOrArray,
   callback: globalThis.ResizeObserverCallback,
   options?: UseResizeObserverOptions,
 ): UseResizeObserverReturn

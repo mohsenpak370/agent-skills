@@ -4,6 +4,15 @@ category: Utilities
 
 # useStepper
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Steps as array](#steps-as-array)
+  - [Steps as object](#steps-as-object)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Provides helpers for building a multi-step wizard interface.
 
 ## Usage
@@ -126,6 +135,13 @@ export interface UseStepperReturn<StepName, Steps, Step> {
   /** Checks if the current step is after the given step. */
   isAfter: (step: StepName) => boolean
 }
+/**
+ * Provides helpers for building a multi-step wizard interface.
+ *
+ * @see https://vueuse.org/useStepper
+ *
+ * @__NO_SIDE_EFFECTS__
+ */
 export declare function useStepper<T extends string | number>(
   steps: MaybeRef<T[]>,
   initialStep?: T,

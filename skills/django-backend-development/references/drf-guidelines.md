@@ -1,5 +1,33 @@
 # Django REST Framework Best Practices
 
+<!-- toc -->
+## Contents
+
+- [Serializers](#serializers)
+  - [ModelSerializer Basics](#modelserializer-basics)
+  - [Nested Serializers](#nested-serializers)
+  - [Custom Fields and Validation](#custom-fields-and-validation)
+  - [Write-Only and Read-Only Fields](#write-only-and-read-only-fields)
+- [ViewSets](#viewsets)
+  - [ModelViewSet](#modelviewset)
+  - [ReadOnlyModelViewSet](#readonlymodelviewset)
+  - [APIView for Custom Logic](#apiview-for-custom-logic)
+- [Permissions](#permissions)
+  - [Built-in Permissions](#built-in-permissions)
+  - [Custom Permissions](#custom-permissions)
+  - [Per-Action Permissions](#per-action-permissions)
+- [Authentication](#authentication)
+  - [Token Authentication](#token-authentication)
+- [Pagination](#pagination)
+- [Filtering, Searching, Ordering](#filtering-searching-ordering)
+  - [Advanced Filtering](#advanced-filtering)
+- [Throttling (Rate Limiting)](#throttling-rate-limiting)
+- [Versioning](#versioning)
+- [Error Handling](#error-handling)
+- [Testing DRF APIs](#testing-drf-apis)
+- [DRF Best Practices Checklist](#drf-best-practices-checklist)
+<!-- /toc -->
+
 ## Serializers
 
 ### ModelSerializer Basics

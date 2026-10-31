@@ -1,5 +1,18 @@
 # Use Global Properties Sparingly in Plugins
 
+<!-- toc -->
+## Contents
+
+- [Rule](#rule)
+- [Why This Matters](#why-this-matters)
+- [Bad Practice](#bad-practice)
+- [Good Practice](#good-practice)
+- [Naming Conventions](#naming-conventions)
+- [Auditing Global Properties](#auditing-global-properties)
+- [When Global Properties Are Acceptable](#when-global-properties-are-acceptable)
+- [References](#references)
+<!-- /toc -->
+
 ## Rule
 
 When using `app.config.globalProperties` in Vue plugins, use them sparingly and with clear naming conventions. Excessive global properties lead to confusion, naming conflicts, and debugging difficulties.

@@ -4,6 +4,14 @@ category: '@Firebase'
 
 # useAuth
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Return Values](#return-values)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive [Firebase Auth](https://firebase.google.com/docs/auth) binding. It provides a reactive `user` and `isAuthenticated` so you
 can easily react to changes in the users' authentication status.
 

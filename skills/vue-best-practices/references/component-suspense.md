@@ -8,6 +8,19 @@ tags: [vue3, suspense, async-components, async-setup, loading, fallback, router,
 
 # Suspense Component Best Practices
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Single Root in Default and Fallback Slots](#single-root-in-default-and-fallback-slots)
+- [Fallback Timing on Reverts (`timeout`)](#fallback-timing-on-reverts-timeout)
+- [Pending State Only Re-triggers on Root Replacement](#pending-state-only-re-triggers-on-root-replacement)
+- [Use `suspensible` for Nested Suspense (Vue 3.3+)](#use-suspensible-for-nested-suspense-vue-33)
+- [Track Loading with Suspense Events](#track-loading-with-suspense-events)
+- [Recommended Nesting with RouterView, Transition, KeepAlive](#recommended-nesting-with-routerview-transition-keepalive)
+- [Treat Suspense Cautiously in Production](#treat-suspense-cautiously-in-production)
+<!-- /toc -->
+
 **Impact: MEDIUM** - `<Suspense>` coordinates async dependencies (async components or async setup) and renders a fallback while they resolve. Misconfiguration leads to missing loading states, empty renders, or subtle UX bugs.
 
 ## Task List

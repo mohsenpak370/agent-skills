@@ -8,6 +8,19 @@ tags: [vue3, animation, css, class-binding, state]
 
 # Use Class-based Animations for Non-Enter/Leave Effects
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Basic Pattern](#basic-pattern)
+- [Common Animation Patterns](#common-animation-patterns)
+  - [Pulse on Success](#pulse-on-success)
+  - [Highlight on Change](#highlight-on-change)
+  - [Bounce Attention](#bounce-attention)
+- [Using animationend Event](#using-animationend-event)
+- [Composable for Reusable Animations](#composable-for-reusable-animations)
+<!-- /toc -->
+
 **Impact: LOW** - For animations on elements that are not entering or leaving the DOM, use CSS class-based animations triggered by Vue's reactive state. This is simpler than `<Transition>` and more appropriate for feedback animations like shake, pulse, or highlight effects.
 
 ## Task List
@@ -31,13 +44,6 @@ tags: [vue3, animation, css, class-binding, state]
 ## Basic Pattern
 
 ```vue
-<template>
-  <div :class="{ shake: showError }">
-    <button @click="submitForm">Submit</button>
-    <span v-if="showError">This feature is disabled!</span>
-  </div>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 
@@ -55,6 +61,13 @@ function submitForm() {
   }
 }
 </script>
+
+<template>
+  <div :class="{ shake: showError }">
+    <button @click="submitForm">Submit</button>
+    <span v-if="showError">This feature is disabled!</span>
+  </div>
+</template>
 
 <style>
 .shake {
@@ -76,15 +89,6 @@ function submitForm() {
 ### Pulse on Success
 
 ```vue
-<template>
-  <button
-    @click="save"
-    :class="{ pulse: saved }"
-  >
-    {{ saved ? 'Saved!' : 'Save' }}
-  </button>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 
@@ -96,6 +100,15 @@ async function save() {
   setTimeout(() => saved.value = false, 1000)
 }
 </script>
+
+<template>
+  <button
+    @click="save"
+    :class="{ pulse: saved }"
+  >
+    {{ saved ? 'Saved!' : 'Save' }}
+  </button>
+</template>
 
 <style>
 .pulse {
@@ -112,14 +125,6 @@ async function save() {
 ### Highlight on Change
 
 ```vue
-<template>
-  <div
-    :class="{ highlight: justUpdated }"
-  >
-    Value: {{ value }}
-  </div>
-</template>
-
 <script setup>
 import { ref, watch } from 'vue'
 
@@ -131,6 +136,14 @@ watch(value, () => {
   setTimeout(() => justUpdated.value = false, 1000)
 })
 </script>
+
+<template>
+  <div
+    :class="{ highlight: justUpdated }"
+  >
+    Value: {{ value }}
+  </div>
+</template>
 
 <style>
 .highlight {
@@ -147,15 +160,6 @@ watch(value, () => {
 ### Bounce Attention
 
 ```vue
-<template>
-  <div
-    :class="{ bounce: needsAttention }"
-    @animationend="needsAttention = false"
-  >
-    <BellIcon />
-  </div>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 
@@ -166,6 +170,15 @@ function notifyUser() {
   // No setTimeout needed - using animationend event
 }
 </script>
+
+<template>
+  <div
+    :class="{ bounce: needsAttention }"
+    @animationend="needsAttention = false"
+  >
+    <BellIcon />
+  </div>
+</template>
 
 <style>
 .bounce {
@@ -184,15 +197,6 @@ function notifyUser() {
 Instead of `setTimeout`, use the `animationend` event for cleaner code:
 
 ```vue
-<template>
-  <div
-    :class="{ animate: isAnimating }"
-    @animationend="isAnimating = false"
-  >
-    Content
-  </div>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 
@@ -203,6 +207,15 @@ function triggerAnimation() {
   // Class is automatically removed when animation ends
 }
 </script>
+
+<template>
+  <div
+    :class="{ animate: isAnimating }"
+    @animationend="isAnimating = false"
+  >
+    Content
+  </div>
+</template>
 ```
 
 ## Composable for Reusable Animations

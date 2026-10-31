@@ -8,6 +8,15 @@ tags: [vue3, composables, composition-api, side-effects, provide-inject, global-
 
 # Avoid Hidden Side Effects in Composables
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Acceptable Side Effects (With Documentation)](#acceptable-side-effects-with-documentation)
+- [Pattern: Dependency Injection for Flexibility](#pattern-dependency-injection-for-flexibility)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Composables should encapsulate stateful logic, not hide side effects that affect things outside their scope. Hidden side effects like modifying global state, using provide/inject internally, or manipulating the DOM directly make composables unpredictable and hard to debug.
 
 When a composable has unexpected side effects, consumers can't reason about what calling it will do. This leads to bugs that are difficult to trace and composables that can't be safely reused.

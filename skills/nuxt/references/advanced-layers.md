@@ -5,6 +5,31 @@ description: Extending Nuxt applications with layers for code sharing and reusab
 
 # Nuxt Layers
 
+<!-- toc -->
+## Contents
+
+- [Using Layers](#using-layers)
+  - [From npm Package](#from-npm-package)
+  - [From Git Repository](#from-git-repository)
+  - [From Local Directory](#from-local-directory)
+  - [Auto-scanned Layers](#auto-scanned-layers)
+- [Creating a Layer](#creating-a-layer)
+  - [Layer nuxt.config.ts](#layer-nuxtconfigts)
+  - [Layer Components](#layer-components)
+  - [Layer Composables](#layer-composables)
+- [Layer Priority](#layer-priority)
+- [Layer Aliases](#layer-aliases)
+- [Publishing Layers](#publishing-layers)
+  - [As npm Package](#as-npm-package)
+  - [Private Layers](#private-layers)
+- [Layer Best Practices](#layer-best-practices)
+  - [Use Resolved Paths](#use-resolved-paths)
+  - [Install Dependencies](#install-dependencies)
+  - [Disable Layer Modules](#disable-layer-modules)
+- [Starter Template](#starter-template)
+- [Example: Theme Layer](#example-theme-layer)
+<!-- /toc -->
+
 Layers allow sharing and reusing partial Nuxt applications across projects. They can include components, composables, pages, layouts, and configuration.
 
 ## Using Layers

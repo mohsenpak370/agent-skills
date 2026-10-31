@@ -1,5 +1,19 @@
 # Async Components with keep-alive Ref Issues
 
+<!-- toc -->
+## Contents
+
+- [Rule](#rule)
+- [Why This Matters](#why-this-matters)
+- [Problem Scenario](#problem-scenario)
+- [Workarounds](#workarounds)
+  - [Option 1: Use onActivated to re-establish ref access](#option-1-use-onactivated-to-re-establish-ref-access)
+  - [Option 2: Avoid mixing all three patterns](#option-2-avoid-mixing-all-three-patterns)
+  - [Option 3: Use provide/inject instead of refs](#option-3-use-provideinject-instead-of-refs)
+- [Key Points](#key-points)
+- [References](#references)
+<!-- /toc -->
+
 ## Rule
 
 When using `<keep-alive>`, `<component>`, and `defineAsyncComponent` together, be aware that template refs can become undefined when the component is re-activated after being deactivated.

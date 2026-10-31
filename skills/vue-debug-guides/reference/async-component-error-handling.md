@@ -1,5 +1,18 @@
 # Async Component Error Handling
 
+<!-- toc -->
+## Contents
+
+- [Rule](#rule)
+- [Why This Matters](#why-this-matters)
+- [Bad Code](#bad-code)
+- [Good Code](#good-code)
+- [onError Callback Parameters](#onerror-callback-parameters)
+- [Key Points](#key-points)
+- [SSR Warning](#ssr-warning)
+- [References](#references)
+<!-- /toc -->
+
 ## Rule
 
 Always configure error handling for async components using `errorComponent` and/or `onError` callback. Without proper error handling, failed component loads can leave the UI in an undefined state with no user feedback.

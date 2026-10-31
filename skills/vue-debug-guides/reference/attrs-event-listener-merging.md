@@ -1,5 +1,21 @@
 # Fallthrough Event Listeners Are Additive
 
+<!-- toc -->
+## Contents
+
+- [Rule](#rule)
+- [Why This Matters](#why-this-matters)
+- [Bad Code](#bad-code)
+- [Good Code](#good-code)
+  - [Option 1: Prevent fallthrough with inheritAttrs: false](#option-1-prevent-fallthrough-with-inheritattrs-false)
+  - [Option 2: Document the additive behavior](#option-2-document-the-additive-behavior)
+  - [Option 3: Use stopPropagation if needed](#option-3-use-stoppropagation-if-needed)
+- [Using Additive Behavior Intentionally](#using-additive-behavior-intentionally)
+- [Execution Order](#execution-order)
+- [Best Practices](#best-practices)
+- [References](#references)
+<!-- /toc -->
+
 ## Rule
 
 When an event listener is passed to a component as a fallthrough attribute, it is added to the root element's existing listeners of the same type - both will trigger. This is different from props where values are replaced. Be aware that both the component's internal handler and the parent's handler will execute.
@@ -15,12 +31,6 @@ When an event listener is passed to a component as a fallthrough attribute, it i
 
 ```vue
 <!-- BaseButton.vue - Potential double-action bug -->
-<template>
-  <button @click="internalClick">
-    <slot />
-  </button>
-</template>
-
 <script setup>
 const emit = defineEmits(['action'])
 
@@ -31,11 +41,13 @@ function internalClick() {
 }
 </script>
 
-<!-- Parent.vue -->
 <template>
-  <BaseButton @click="parentClick">Submit</BaseButton>
+  <button @click="internalClick">
+    <slot />
+  </button>
 </template>
 
+<!-- Parent.vue -->
 <script setup>
 function parentClick() {
   // This ALSO runs (after internal)
@@ -43,6 +55,10 @@ function parentClick() {
   console.log('Parent click handler')
 }
 </script>
+
+<template>
+  <BaseButton @click="parentClick">Submit</BaseButton>
+</template>
 
 <!--
   RESULT: Both handlers fire!
@@ -144,15 +160,6 @@ The additive behavior can be useful for extending functionality:
 
 ```vue
 <!-- EnhancedButton.vue - Leveraging additive listeners -->
-<template>
-  <button
-    @click="trackClick"
-    @focus="trackFocus"
-  >
-    <slot />
-  </button>
-</template>
-
 <script setup>
 function trackClick() {
   analytics.track('button_click')
@@ -163,6 +170,15 @@ function trackFocus() {
   analytics.track('button_focus')
 }
 </script>
+
+<template>
+  <button
+    @click="trackClick"
+    @focus="trackFocus"
+  >
+    <slot />
+  </button>
+</template>
 
 <!-- Parent.vue -->
 <template>

@@ -5,6 +5,48 @@ description: Avoiding SSR context leaks, hydration mismatches, and proper compos
 
 # SSR Best Practices
 
+<!-- toc -->
+## Contents
+
+- [The "Nuxt Instance Unavailable" Error](#the-nuxt-instance-unavailable-error)
+  - [❌ Wrong: Composable Outside Setup](#-wrong-composable-outside-setup)
+  - [✅ Correct: Composable Inside Function](#-correct-composable-inside-function)
+  - [Valid Contexts for Composables](#valid-contexts-for-composables)
+- [Avoid State Leaks Between Requests](#avoid-state-leaks-between-requests)
+  - [❌ Wrong: Module-level State](#-wrong-module-level-state)
+  - [✅ Correct: Use useState](#-correct-use-usestate)
+  - [Why This Matters](#why-this-matters)
+- [Hydration Mismatch Prevention](#hydration-mismatch-prevention)
+  - [❌ Wrong: Browser APIs in Setup](#-wrong-browser-apis-in-setup)
+  - [✅ Correct: Use SSR-safe Alternatives](#-correct-use-ssr-safe-alternatives)
+  - [❌ Wrong: Random/Time-based Values](#-wrong-randomtime-based-values)
+  - [✅ Correct: Use useState for Consistency](#-correct-use-usestate-for-consistency)
+  - [❌ Wrong: Conditional Rendering on Client State](#-wrong-conditional-rendering-on-client-state)
+  - [✅ Correct: Use CSS or ClientOnly](#-correct-use-css-or-clientonly)
+- [Browser-only Code](#browser-only-code)
+  - [Use `import.meta.client`](#use-importmetaclient)
+  - [Use `onMounted` for DOM Access](#use-onmounted-for-dom-access)
+  - [Dynamic Imports for Browser Libraries](#dynamic-imports-for-browser-libraries)
+- [Server-only Code](#server-only-code)
+  - [Use `import.meta.server`](#use-importmetaserver)
+  - [Server Components](#server-components)
+- [Async Composable Patterns](#async-composable-patterns)
+  - [❌ Wrong: Await Before Composable](#-wrong-await-before-composable)
+  - [✅ Correct: Get Context First](#-correct-get-context-first)
+- [Plugin Best Practices](#plugin-best-practices)
+  - [Client-only Plugins](#client-only-plugins)
+  - [Server-only Plugins](#server-only-plugins)
+  - [Provide/Inject Pattern](#provideinject-pattern)
+- [Third-party Library Integration](#third-party-library-integration)
+  - [❌ Wrong: Import at Top Level](#-wrong-import-at-top-level)
+  - [✅ Correct: Dynamic Import](#-correct-dynamic-import)
+  - [Use ClientOnly Component](#use-clientonly-component)
+- [Debugging SSR Issues](#debugging-ssr-issues)
+  - [Check Rendering Context](#check-rendering-context)
+  - [Use Nuxt DevTools](#use-nuxt-devtools)
+  - [Common Error Messages](#common-error-messages)
+<!-- /toc -->
+
 Patterns for avoiding common SSR pitfalls: context leaks, hydration mismatches, and composable errors.
 
 ## The "Nuxt Instance Unavailable" Error

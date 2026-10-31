@@ -5,6 +5,26 @@ description: Data encoding and decoding patterns for numbers, strings, structs, 
 
 # Solana Kit Codecs Reference
 
+<!-- toc -->
+## Contents
+
+- [Direction](#direction)
+- [Codec Types](#codec-types)
+- [Number Codecs](#number-codecs)
+- [String Codecs](#string-codecs)
+- [Struct Codec](#struct-codec)
+- [Array & Tuple](#array--tuple)
+- [Enum](#enum)
+- [Discriminated Union](#discriminated-union)
+- [Boolean & Nullable](#boolean--nullable)
+- [Options (Rust Option)](#options-rust-option)
+- [Bytes](#bytes)
+- [Composition Helpers](#composition-helpers)
+- [Common Patterns](#common-patterns)
+  - [Account Decoder](#account-decoder)
+  - [Instruction Encoder](#instruction-encoder)
+<!-- /toc -->
+
 ## Direction
 
 - **`encode()`**: values → `Uint8Array`

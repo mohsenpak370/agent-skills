@@ -8,6 +8,16 @@ related:
 
 # useDark
 
+<!-- toc -->
+## Contents
+
+- [Basic Usage](#basic-usage)
+- [Behavior](#behavior)
+- [Configuration](#configuration)
+- [Component Usage](#component-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive dark mode with auto data persistence.
 
 <CourseLink href="https://vueschool.io/lessons/theming-with-vueuse-usedark-and-usecolormode?friend=vueuse">Learn useDark with this FREE video lesson from Vue School!</CourseLink>

@@ -8,6 +8,20 @@ tags: [vue3, animation, css, transition, style-binding, state, interactive]
 
 # State-driven Animations with CSS Transitions and Style Bindings
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Basic Pattern](#basic-pattern)
+- [Common Use Cases](#common-use-cases)
+  - [Following Mouse Position](#following-mouse-position)
+  - [Progress Animation](#progress-animation)
+  - [Scroll-based Animation](#scroll-based-animation)
+  - [Color Theme Transition](#color-theme-transition)
+- [Advanced: Numerical Tweening with Watchers](#advanced-numerical-tweening-with-watchers)
+- [Performance Considerations](#performance-considerations)
+<!-- /toc -->
+
 **Impact: LOW** - For responsive, interactive animations that react to user input or state changes, combine Vue's dynamic style bindings with CSS transitions. This creates smooth animations that interpolate values in real-time based on state.
 
 ## Task List
@@ -20,17 +34,6 @@ tags: [vue3, animation, css, transition, style-binding, state, interactive]
 ## Basic Pattern
 
 ```vue
-<template>
-  <div
-    @mousemove="onMousemove"
-    :style="{ backgroundColor: `hsl(${hue}, 80%, 50%)` }"
-    class="interactive-area"
-  >
-    <p>Move your mouse across this div...</p>
-    <p>Hue: {{ hue }}</p>
-  </div>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 
@@ -42,6 +45,17 @@ function onMousemove(e) {
   hue.value = Math.round((e.clientX - rect.left) / rect.width * 360)
 }
 </script>
+
+<template>
+  <div
+    @mousemove="onMousemove"
+    :style="{ backgroundColor: `hsl(${hue}, 80%, 50%)` }"
+    class="interactive-area"
+  >
+    <p>Move your mouse across this div...</p>
+    <p>Hue: {{ hue }}</p>
+  </div>
+</template>
 
 <style>
 .interactive-area {
@@ -60,6 +74,19 @@ function onMousemove(e) {
 ### Following Mouse Position
 
 ```vue
+<script setup>
+import { ref } from 'vue'
+
+const x = ref(0)
+const y = ref(0)
+
+function onMousemove(e) {
+  const rect = e.currentTarget.getBoundingClientRect()
+  x.value = e.clientX - rect.left
+  y.value = e.clientY - rect.top
+}
+</script>
+
 <template>
   <div
     class="container"
@@ -73,19 +100,6 @@ function onMousemove(e) {
     />
   </div>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-
-const x = ref(0)
-const y = ref(0)
-
-function onMousemove(e) {
-  const rect = e.currentTarget.getBoundingClientRect()
-  x.value = e.clientX - rect.left
-  y.value = e.clientY - rect.top
-}
-</script>
 
 <style>
 .container {
@@ -110,6 +124,12 @@ function onMousemove(e) {
 ### Progress Animation
 
 ```vue
+<script setup>
+import { ref } from 'vue'
+
+const progress = ref(0)
+</script>
+
 <template>
   <div class="progress-container">
     <div
@@ -124,12 +144,6 @@ function onMousemove(e) {
     max="100"
   />
 </template>
-
-<script setup>
-import { ref } from 'vue'
-
-const progress = ref(0)
-</script>
 
 <style>
 .progress-container {
@@ -150,18 +164,6 @@ const progress = ref(0)
 ### Scroll-based Animation
 
 ```vue
-<template>
-  <div
-    class="hero"
-    :style="{
-      opacity: heroOpacity,
-      transform: `translateY(${scrollOffset}px)`
-    }"
-  >
-    <h1>Scroll Down</h1>
-  </div>
-</template>
-
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 
@@ -188,6 +190,18 @@ onUnmounted(() => {
 })
 </script>
 
+<template>
+  <div
+    class="hero"
+    :style="{
+      opacity: heroOpacity,
+      transform: `translateY(${scrollOffset}px)`
+    }"
+  >
+    <h1>Scroll Down</h1>
+  </div>
+</template>
+
 <style>
 .hero {
   height: 100vh;
@@ -202,16 +216,6 @@ onUnmounted(() => {
 ### Color Theme Transition
 
 ```vue
-<template>
-  <div
-    class="app"
-    :style="themeStyles"
-  >
-    <button @click="toggleTheme">Toggle Theme</button>
-    <p>Current theme: {{ isDark ? 'Dark' : 'Light' }}</p>
-  </div>
-</template>
-
 <script setup>
 import { ref, computed } from 'vue'
 
@@ -229,6 +233,16 @@ function toggleTheme() {
 }
 </script>
 
+<template>
+  <div
+    class="app"
+    :style="themeStyles"
+  >
+    <button @click="toggleTheme">Toggle Theme</button>
+    <p>Current theme: {{ isDark ? 'Dark' : 'Light' }}</p>
+  </div>
+</template>
+
 <style>
 .app {
   min-height: 100vh;
@@ -242,13 +256,6 @@ function toggleTheme() {
 For smooth number animations (counters, stats), use watchers with animation libraries:
 
 ```vue
-<template>
-  <div>
-    <input v-model.number="targetNumber" type="number" />
-    <p class="counter">{{ displayNumber.toFixed(0) }}</p>
-  </div>
-</template>
-
 <script setup>
 import { computed, ref, reactive, watch } from 'vue'
 import gsap from 'gsap'
@@ -267,6 +274,13 @@ watch(targetNumber, (newValue) => {
   })
 })
 </script>
+
+<template>
+  <div>
+    <input v-model.number="targetNumber" type="number" />
+    <p class="counter">{{ displayNumber.toFixed(0) }}</p>
+  </div>
+</template>
 ```
 
 ## Performance Considerations

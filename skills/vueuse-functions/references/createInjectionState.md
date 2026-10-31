@@ -4,6 +4,15 @@ category: State
 
 # createInjectionState
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Provide a custom InjectionKey](#provide-a-custom-injectionkey)
+- [Provide a custom default value](#provide-a-custom-default-value)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Create global state that can be injected into components.
 
 ## Usage

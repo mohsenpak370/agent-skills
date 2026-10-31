@@ -4,6 +4,21 @@ category: Network
 
 # useWebSocket
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Return Values](#return-values)
+  - [Callbacks](#callbacks)
+  - [immediate](#immediate)
+  - [autoConnect](#autoconnect)
+  - [autoClose](#autoclose)
+  - [autoReconnect](#autoreconnect)
+  - [heartbeat](#heartbeat)
+  - [Sub-protocols](#sub-protocols)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/WebSocket) client.
 
 ## Usage
@@ -186,13 +201,6 @@ export interface UseWebSocketOptions {
          * Response message for the heartbeat, if undefined the message will be used
          */
         responseMessage?: MaybeRefOrGetter<WebSocketHeartbeatMessage>
-        /**
-         * Interval, in milliseconds
-         *
-         * @deprecated Please use `scheduler` option instead
-         * @default 1000
-         */
-        interval?: number
         /**
          * Heartbeat response timeout, in milliseconds
          *

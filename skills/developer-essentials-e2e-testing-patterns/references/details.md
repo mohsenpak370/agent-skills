@@ -1,5 +1,24 @@
 # e2e-testing-patterns — detailed patterns and worked examples
 
+<!-- toc -->
+## Contents
+
+- [Playwright Patterns](#playwright-patterns)
+  - [Setup and Configuration](#setup-and-configuration)
+  - [Pattern 1: Page Object Model](#pattern-1-page-object-model)
+  - [Pattern 2: Fixtures for Test Data](#pattern-2-fixtures-for-test-data)
+  - [Pattern 3: Waiting Strategies](#pattern-3-waiting-strategies)
+  - [Pattern 4: Network Mocking and Interception](#pattern-4-network-mocking-and-interception)
+- [Cypress Patterns](#cypress-patterns)
+  - [Setup and Configuration](#setup-and-configuration-1)
+  - [Pattern 1: Custom Commands](#pattern-1-custom-commands)
+  - [Pattern 2: Cypress Intercept](#pattern-2-cypress-intercept)
+- [Advanced Patterns](#advanced-patterns)
+  - [Pattern 1: Visual Regression Testing](#pattern-1-visual-regression-testing)
+  - [Pattern 2: Parallel Testing with Sharding](#pattern-2-parallel-testing-with-sharding)
+  - [Pattern 3: Accessibility Testing](#pattern-3-accessibility-testing)
+<!-- /toc -->
+
 ## Playwright Patterns
 
 ### Setup and Configuration
@@ -156,10 +175,12 @@ test("user can update profile", async ({ page, testUser }) => {
 // ❌ Bad: Fixed timeouts
 await page.waitForTimeout(3000); // Flaky!
 
-// ✅ Good: Wait for specific conditions
+// ❌ Bad: Discouraged in the Playwright API docs; use web assertions instead
 await page.waitForLoadState("networkidle");
-await page.waitForURL("/dashboard");
 await page.waitForSelector('[data-testid="user-profile"]');
+
+// ✅ Good: Wait for specific conditions
+await page.waitForURL("/dashboard");
 
 // ✅ Better: Auto-waiting with assertions
 await expect(page.getByText("Welcome")).toBeVisible();
@@ -178,7 +199,6 @@ expect(data.users).toHaveLength(10);
 // Wait for multiple conditions
 await Promise.all([
   page.waitForURL("/success"),
-  page.waitForLoadState("networkidle"),
   expect(page.getByText("Payment successful")).toBeVisible(),
 ]);
 ```
@@ -320,7 +340,7 @@ cy.intercept("GET", "/api/users", (req) => {
 // Simulate slow network
 cy.intercept("GET", "/api/data", (req) => {
   req.reply((res) => {
-    res.delay(3000); // 3 second delay
+    res.setDelay(3000); // 3 second delay (renamed from res.delay in Cypress 7)
     res.send();
   });
 });
@@ -364,24 +384,13 @@ test("button in all states", async ({ page }) => {
 
 ```typescript
 // playwright.config.ts
+// `shard` is not a project option; pick the shard per CI job with --shard.
 export default defineConfig({
-  projects: [
-    {
-      name: "shard-1",
-      use: { ...devices["Desktop Chrome"] },
-      grepInvert: /@slow/,
-      shard: { current: 1, total: 4 },
-    },
-    {
-      name: "shard-2",
-      use: { ...devices["Desktop Chrome"] },
-      shard: { current: 2, total: 4 },
-    },
-    // ... more shards
-  ],
+  fullyParallel: true, // balance shards per test instead of per file
+  projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
 });
 
-// Run in CI
+// Run in CI, one command per job
 // npx playwright test --shard=1/4
 // npx playwright test --shard=2/4
 ```

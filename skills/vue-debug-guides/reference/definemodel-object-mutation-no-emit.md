@@ -8,6 +8,16 @@ tags: [vue3, v-model, defineModel, objects, reactivity, two-way-binding]
 
 # defineModel Object Properties Must Be Replaced, Not Mutated
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Deep Nesting Requires Full Path Replacement](#deep-nesting-requires-full-path-replacement)
+- [Race Condition Warning with Spread Operator](#race-condition-warning-with-spread-operator)
+- [Alternative: VueUse's useVModel with Deep Option](#alternative-vueuses-usevmodel-with-deep-option)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - When using `defineModel()` with objects or arrays, directly mutating nested properties like `model.value.prop = x` does NOT emit the `update:modelValue` event. The parent component never receives the change notification, causing silent sync failures.
 
 This happens because Vue only detects when the `model.value` reference itself changes, not when properties of the object are mutated in place.

@@ -1,6 +1,23 @@
 # Component Selection
 
-Decision matrices for choosing the right component. When in doubt, use the MCP `search_components` tool.
+<!-- toc -->
+## Contents
+
+- [Overlays](#overlays)
+  - [Rules](#rules)
+- [Navigation](#navigation)
+  - [Rules](#rules-1)
+- [Inputs](#inputs)
+  - [Rules](#rules-2)
+- [Feedback](#feedback)
+  - [Rules](#rules-3)
+- [Markdown](#markdown)
+  - [Rules](#rules-4)
+- [Layout containers](#layout-containers)
+  - [Rules](#rules-5)
+<!-- /toc -->
+
+Decision matrices for choosing the right component. When in doubt, use the MCP `search-components` tool.
 
 ## Overlays
 
@@ -16,7 +33,7 @@ Decision matrices for choosing the right component. When in doubt, use the MCP `
 - Use `UModal` for destructive confirmations ("Are you sure you want to delete?")
 - Use `USlideover` for detail views in dashboards (email preview, user profile)
 - Use `UDrawer` for mobile navigation or action sheets
-- Modal and Slideover support `mode="drawer"` for automatic mobile drawer behavior
+- Use `UDashboardSidebar` with `mode="drawer"` for a drawer-based mobile menu; `UModal` and `USlideover` don't expose a `mode` prop
 - For programmatic overlays, use `useOverlay()` instead of `v-model:open`
 - Never put interactive content (buttons, links) inside `UTooltip`
 
@@ -76,6 +93,7 @@ Decision matrices for choosing the right component. When in doubt, use the MCP `
 | App-wide announcement | `UBanner` | Sticky top bar, dismissible |
 | Loading state | `USkeleton` | Placeholder shimmer while loading |
 | Progress indicator | `UProgress` | Determinate or indeterminate progress |
+| Breakdown of a total | `UProgressGroup` | One bar split into colored segments that add up to `max` |
 
 ### Rules
 - Use `useToast()` for action feedback: "Item saved", "Email sent", "Error occurred"
@@ -114,6 +132,7 @@ When rendering Markdown (for instance with Comark), **prefer Prose components** 
 | Centered content wrapper | `UContainer` | Max-width container |
 | Collapsible section | `UCollapsible` | Animated expand/collapse |
 | Accordion (multiple collapsibles) | `UAccordion` | FAQ, grouped collapsible content |
+| Resizable side-by-side panes | `USplitter` | IDE-style layouts, resizable sidebars |
 
 ### Rules
 - Don't overuse `UCard` — plain content with spacing is often better than wrapping everything in cards

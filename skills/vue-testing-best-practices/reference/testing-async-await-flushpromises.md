@@ -8,6 +8,19 @@ tags: [vue3, testing, async, flushPromises, nextTick, vitest, vue-test-utils, ra
 
 # Properly Handle Async Updates with nextTick and flushPromises
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [When to Use Each Method](#when-to-use-each-method)
+  - [`await trigger()` / `await setValue()` - User Interactions](#await-trigger--await-setvalue---user-interactions)
+  - [`await nextTick()` - Programmatic Reactive Updates](#await-nexttick---programmatic-reactive-updates)
+  - [`await flushPromises()` - External Async Operations](#await-flushpromises---external-async-operations)
+- [Common Pattern: Combining Methods](#common-pattern-combining-methods)
+- [Testing with MSW or Mock APIs](#testing-with-msw-or-mock-apis)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Vue updates the DOM asynchronously. Without properly awaiting these updates, tests may assert against stale DOM state, causing intermittent failures and false negatives.
 
 Use `await` with triggers and `setValue`, use `nextTick` for reactive updates, and use `flushPromises` for external async operations like API calls.

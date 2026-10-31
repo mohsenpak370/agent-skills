@@ -5,6 +5,25 @@ description: Python resource management with context managers, cleanup patterns,
 
 # Python Resource Management
 
+<!-- toc -->
+## Contents
+
+- [When to Use This Skill](#when-to-use-this-skill)
+- [Core Concepts](#core-concepts)
+  - [1. Context Managers](#1-context-managers)
+  - [2. Protocol Methods](#2-protocol-methods)
+  - [3. Unconditional Cleanup](#3-unconditional-cleanup)
+  - [4. Exception Handling](#4-exception-handling)
+- [Quick Start](#quick-start)
+- [Fundamental Patterns](#fundamental-patterns)
+  - [Pattern 1: Class-Based Context Manager](#pattern-1-class-based-context-manager)
+  - [Pattern 2: Async Context Manager](#pattern-2-async-context-manager)
+  - [Pattern 3: Using @contextmanager Decorator](#pattern-3-using-contextmanager-decorator)
+  - [Pattern 4: Unconditional Resource Release](#pattern-4-unconditional-resource-release)
+- [Detailed worked examples and patterns](#detailed-worked-examples-and-patterns)
+- [Best Practices Summary](#best-practices-summary)
+<!-- /toc -->
+
 Manage resources deterministically using context managers. Resources like database connections, file handles, and network sockets should be released reliably, even when exceptions occur.
 
 ## When to Use This Skill
@@ -177,7 +196,7 @@ async def database_transaction(conn: AsyncConnection):
     try:
         yield conn
         await conn.execute("COMMIT")
-    except Exception:
+    except BaseException:  # also roll back on asyncio.CancelledError
         await conn.execute("ROLLBACK")
         raise
 

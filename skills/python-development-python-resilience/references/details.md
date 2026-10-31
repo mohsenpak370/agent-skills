@@ -1,5 +1,16 @@
 # python-resilience — detailed worked examples
 
+<!-- toc -->
+## Contents
+
+- [Advanced Patterns](#advanced-patterns)
+  - [Pattern 5: Logging Retry Attempts](#pattern-5-logging-retry-attempts)
+  - [Pattern 6: Timeout Decorator](#pattern-6-timeout-decorator)
+  - [Pattern 7: Cross-Cutting Concerns via Decorators](#pattern-7-cross-cutting-concerns-via-decorators)
+  - [Pattern 8: Dependency Injection for Testability](#pattern-8-dependency-injection-for-testability)
+  - [Pattern 9: Fail-Safe Defaults](#pattern-9-fail-safe-defaults)
+<!-- /toc -->
+
 ## Advanced Patterns
 
 ### Pattern 5: Logging Retry Attempts

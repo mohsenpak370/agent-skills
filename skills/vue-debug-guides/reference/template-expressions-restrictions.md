@@ -8,6 +8,14 @@ tags: [vue3, template, expressions, interpolation, syntax]
 
 # Template Expressions Must Be Single Expressions
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Use Directives for Control Flow](#use-directives-for-control-flow)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Vue templates only support single JavaScript expressions, not statements. Using variable declarations, if statements, or multiple statements will cause template compilation errors.
 
 Template interpolation `{{ }}` and directive bindings evaluate JavaScript expressions that produce a value. Statements like `if`, `for`, variable declarations, or multi-line code blocks are not allowed.
@@ -43,6 +51,28 @@ Template interpolation `{{ }}` and directive bindings evaluate JavaScript expres
 
 **Correct:**
 ```vue
+<script setup>
+import { ref, computed } from 'vue'
+
+const ok = ref(true)
+const message = ref('Hello')
+const user = ref({ name: 'Alice' })
+const score = ref(85)
+
+// Move complex logic to computed properties
+const greeting = computed(() => {
+  if (user.value) {
+    return `Welcome back, ${user.value.name}!`
+  }
+  return 'Hello, Guest!'
+})
+
+// Or use methods for reusable logic
+function formatDate(date) {
+  return new Date(date).toLocaleDateString()
+}
+</script>
+
 <template>
   <!-- OK: Simple expressions -->
   <p>{{ message }}</p>
@@ -67,28 +97,6 @@ Template interpolation `{{ }}` and directive bindings evaluate JavaScript expres
   <!-- OK: Object/array expressions -->
   <p>{{ { name: 'Vue', version: 3 } }}</p>
 </template>
-
-<script setup>
-import { ref, computed } from 'vue'
-
-const ok = ref(true)
-const message = ref('Hello')
-const user = ref({ name: 'Alice' })
-const score = ref(85)
-
-// Move complex logic to computed properties
-const greeting = computed(() => {
-  if (user.value) {
-    return `Welcome back, ${user.value.name}!`
-  }
-  return 'Hello, Guest!'
-})
-
-// Or use methods for reusable logic
-function formatDate(date) {
-  return new Date(date).toLocaleDateString()
-}
-</script>
 ```
 
 ## Use Directives for Control Flow

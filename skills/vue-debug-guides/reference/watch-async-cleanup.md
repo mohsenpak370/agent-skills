@@ -8,6 +8,17 @@ tags: [vue3, watch, watchers, async, cleanup, race-condition, abort]
 
 # Clean Up Async Operations in Watchers to Prevent Race Conditions
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Using onCleanup Parameter](#using-oncleanup-parameter)
+- [Cleanup with Timeouts](#cleanup-with-timeouts)
+- [Invalidation Flag Pattern](#invalidation-flag-pattern)
+- [watchEffect Cleanup](#watcheffect-cleanup)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - When a watched value changes rapidly, multiple async operations run concurrently. Without cleanup, a slow earlier request can complete after a faster later request, overwriting current data with stale results.
 
 Always use `onWatcherCleanup` or the `onCleanup` callback parameter to cancel pending async operations when the watcher re-runs or the component unmounts.

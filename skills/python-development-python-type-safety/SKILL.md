@@ -5,6 +5,25 @@ description: Python type safety with type hints, generics, protocols, and strict
 
 # Python Type Safety
 
+<!-- toc -->
+## Contents
+
+- [When to Use This Skill](#when-to-use-this-skill)
+- [Core Concepts](#core-concepts)
+  - [1. Type Annotations](#1-type-annotations)
+  - [2. Generics](#2-generics)
+  - [3. Protocols](#3-protocols)
+  - [4. Type Narrowing](#4-type-narrowing)
+- [Quick Start](#quick-start)
+- [Fundamental Patterns](#fundamental-patterns)
+  - [Pattern 1: Annotate All Public Signatures](#pattern-1-annotate-all-public-signatures)
+  - [Pattern 2: Use Modern Union Syntax](#pattern-2-use-modern-union-syntax)
+  - [Pattern 3: Type Narrowing with Guards](#pattern-3-type-narrowing-with-guards)
+  - [Pattern 4: Generic Classes](#pattern-4-generic-classes)
+- [Detailed worked examples and patterns](#detailed-worked-examples-and-patterns)
+- [Best Practices Summary](#best-practices-summary)
+<!-- /toc -->
+
 Leverage Python's type system to catch errors at static analysis time. Type annotations serve as enforced documentation that tooling validates automatically.
 
 ## When to Use This Skill

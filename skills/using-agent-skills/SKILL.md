@@ -1,9 +1,27 @@
 ---
 name: using-agent-skills
-description: Discovers and invokes agent skills. Use when starting a session or when you need to discover which skill applies to the current task. This is the meta-skill that governs how all other skills are discovered and invoked.
+description: Discovers and invokes agent skills. Use when starting a session, or when you need to decide which skill or workflow applies to the piece of work at hand. This is the meta-skill that governs how all other skills are discovered and invoked.
 ---
 
 # Using Agent Skills
+
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [Skill Discovery](#skill-discovery)
+- [Core Operating Behaviors](#core-operating-behaviors)
+  - [1. Surface Assumptions](#1-surface-assumptions)
+  - [2. Manage Confusion Actively](#2-manage-confusion-actively)
+  - [3. Push Back When Warranted](#3-push-back-when-warranted)
+  - [4. Enforce Simplicity](#4-enforce-simplicity)
+  - [5. Maintain Scope Discipline](#5-maintain-scope-discipline)
+  - [6. Verify, Don't Assume](#6-verify-dont-assume)
+- [Failure Modes to Avoid](#failure-modes-to-avoid)
+- [Skill Rules](#skill-rules)
+- [Lifecycle Sequence](#lifecycle-sequence)
+- [Quick Reference](#quick-reference)
+<!-- /toc -->
 
 ## Overview
 
@@ -19,6 +37,7 @@ Task arrives
     ├── Don't know what you want yet? ──────→ interview-me
     ├── Have a rough concept, need variants? → idea-refine
     ├── New project/feature/change? ──→ spec-driven-development
+    ├── No quality bar written down? ──→ constraint-driven-development
     ├── Have a spec, need tasks? ──────→ planning-and-task-breakdown
     ├── Implementing code? ────────────→ incremental-implementation
     │   ├── UI work? ─────────────────→ frontend-ui-engineering
@@ -109,6 +128,8 @@ Your job is surgical precision, not unsolicited renovation.
 ### 6. Verify, Don't Assume
 
 Every skill includes a verification step. A task is not complete until verification passes. "Seems right" is never sufficient — there must be evidence (passing tests, build output, runtime data).
+
+Per-skill verification is the local check. The project-wide bar that applies to *every* change, regardless of which skill is active, is the Definition of Done: tests pass, no regressions, behavior verified at runtime, docs updated. See `../../references/definition-of-done.md`. It complements each task's acceptance criteria rather than replacing them.
 
 ## Failure Modes to Avoid
 

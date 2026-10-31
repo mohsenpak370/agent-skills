@@ -8,6 +8,21 @@ tags: [vue3, typescript, events, dom-events, composition-api]
 
 # Always Explicitly Type Event Handlers
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Problem](#the-problem)
+- [The Solution](#the-solution)
+- [Common Event Types](#common-event-types)
+- [Element-Specific Type Assertions](#element-specific-type-assertions)
+- [Inline Event Handler Pattern](#inline-event-handler-pattern)
+- [Generic Handler Pattern](#generic-handler-pattern)
+- [Vue Component Events](#vue-component-events)
+- [Avoiding currentTarget vs target Confusion](#avoiding-currenttarget-vs-target-confusion)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Native DOM event handlers in Vue components have implicit `any` type for the `event` parameter. In TypeScript strict mode, this causes errors. You must explicitly type event parameters and use type assertions for `event.target`.
 
 ## Task Checklist

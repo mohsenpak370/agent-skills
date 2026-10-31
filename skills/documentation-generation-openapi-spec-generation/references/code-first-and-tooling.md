@@ -1,5 +1,14 @@
 # OpenAPI Code-First Generation and Tooling
 
+<!-- toc -->
+## Contents
+
+- [Template 2: Code-First Generation (Python/FastAPI)](#template-2-code-first-generation-pythonfastapi)
+- [Template 3: Code-First (TypeScript/Express with tsoa)](#template-3-code-first-typescriptexpress-with-tsoa)
+- [Template 4: Validation & Linting](#template-4-validation--linting)
+- [SDK Generation](#sdk-generation)
+<!-- /toc -->
+
 Advanced patterns for generating OpenAPI specs from code (Python/FastAPI, TypeScript/tsoa), validation, linting, and SDK generation.
 
 ## Template 2: Code-First Generation (Python/FastAPI)

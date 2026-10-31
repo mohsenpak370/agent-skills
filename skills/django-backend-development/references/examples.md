@@ -1,5 +1,14 @@
 # Django Backend Development - Examples
 
+<!-- toc -->
+## Contents
+
+- [Example 1: Model Design with Custom Manager](#example-1-model-design-with-custom-manager)
+- [Example 2: Query Optimization (N+1 Problem)](#example-2-query-optimization-n1-problem)
+- [Example 3: Django REST Framework API Endpoint](#example-3-django-rest-framework-api-endpoint)
+- [Example 4: Writing Django Tests](#example-4-writing-django-tests)
+<!-- /toc -->
+
 Practical examples demonstrating Django best practices for common development scenarios.
 
 ## Example 1: Model Design with Custom Manager

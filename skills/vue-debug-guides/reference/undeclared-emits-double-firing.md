@@ -8,6 +8,21 @@ tags: [vue3, emits, defineEmits, events, native-events, fallthrough]
 
 # Undeclared Emits Cause Double Event Firing
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Problem](#the-problem)
+- [The Solution](#the-solution)
+- [Options API Version](#options-api-version)
+- [Common Scenarios](#common-scenarios)
+  - [Wrapping Form Inputs](#wrapping-form-inputs)
+  - [Wrapper Components](#wrapper-components)
+- [Alternative: Don't Re-emit, Let It Fall Through](#alternative-dont-re-emit-let-it-fall-through)
+- [Debugging Double Firing](#debugging-double-firing)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - When a component re-emits a native DOM event (like `click`) without declaring it in `emits`, the event can fire twice. This happens because undeclared event listeners become part of `$attrs` and fall through to the root element, where they listen for native events while your `emit()` call also fires.
 
 This is a common bug when wrapping native elements or migrating from Vue 2 to Vue 3.
@@ -39,16 +54,16 @@ This is a common bug when wrapping native elements or migrating from Vue 2 to Vu
 
 ```vue
 <!-- Parent.vue -->
-<template>
-  <!-- This handler fires TWICE on each click! -->
-  <MyButton @click="handleClick">Click me</MyButton>
-</template>
-
 <script setup>
 function handleClick() {
   console.log('clicked') // Logs twice!
 }
 </script>
+
+<template>
+  <!-- This handler fires TWICE on each click! -->
+  <MyButton @click="handleClick">Click me</MyButton>
+</template>
 ```
 
 **What happens:**

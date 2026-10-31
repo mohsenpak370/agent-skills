@@ -8,6 +8,16 @@ tags: [vue3, teleport, modal, overlay, positioning, responsive]
 
 # Teleport Component Best Practices
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Teleport Overlays Out of Transformed Containers](#teleport-overlays-out-of-transformed-containers)
+- [Responsive Layouts with `disabled`](#responsive-layouts-with-disabled)
+- [Logical Hierarchy Is Preserved](#logical-hierarchy-is-preserved)
+- [Multiple Teleports to the Same Target](#multiple-teleports-to-the-same-target)
+<!-- /toc -->
+
 **Impact: MEDIUM** - `<Teleport>` renders part of a component's template in a different place in the DOM while preserving the Vue component hierarchy. Use it for overlays (modals, toasts, tooltips) or any UI that must escape stacking contexts, overflow, or fixed positioning constraints.
 
 ## Task List

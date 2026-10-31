@@ -1,5 +1,43 @@
 # GraphQL Schema Design Patterns
 
+<!-- toc -->
+## Contents
+
+- [Schema Organization](#schema-organization)
+  - [Modular Schema Structure](#modular-schema-structure)
+- [Type Design Patterns](#type-design-patterns)
+  - [1. Non-Null Types](#1-non-null-types)
+  - [2. Interfaces for Polymorphism](#2-interfaces-for-polymorphism)
+  - [3. Unions for Heterogeneous Results](#3-unions-for-heterogeneous-results)
+  - [4. Input Types](#4-input-types)
+- [Pagination Patterns](#pagination-patterns)
+  - [Relay Cursor Pagination (Recommended)](#relay-cursor-pagination-recommended)
+  - [Offset Pagination (Simpler)](#offset-pagination-simpler)
+- [Mutation Design Patterns](#mutation-design-patterns)
+  - [1. Input/Payload Pattern](#1-inputpayload-pattern)
+  - [2. Optimistic Response Support](#2-optimistic-response-support)
+  - [3. Batch Mutations](#3-batch-mutations)
+- [Field Design](#field-design)
+  - [Arguments and Filtering](#arguments-and-filtering)
+  - [Computed Fields](#computed-fields)
+- [Subscriptions](#subscriptions)
+- [Custom Scalars](#custom-scalars)
+- [Directives](#directives)
+  - [Built-in Directives](#built-in-directives)
+  - [Custom Directives](#custom-directives)
+- [Error Handling](#error-handling)
+  - [Union Error Pattern](#union-error-pattern)
+  - [Errors in Payload](#errors-in-payload)
+- [N+1 Query Problem Solutions](#n1-query-problem-solutions)
+  - [DataLoader Pattern](#dataloader-pattern)
+  - [Query Depth Limiting](#query-depth-limiting)
+  - [Query Complexity Analysis](#query-complexity-analysis)
+- [Schema Versioning](#schema-versioning)
+  - [Field Deprecation](#field-deprecation)
+  - [Schema Evolution](#schema-evolution)
+- [Best Practices Summary](#best-practices-summary)
+<!-- /toc -->
+
 ## Schema Organization
 
 ### Modular Schema Structure
@@ -381,8 +419,8 @@ type User {
   email: String! @deprecated(reason: "Use emails field instead")
   emails: [String!]!
 
-  # Conditional inclusion
-  privateData: PrivateData @include(if: $isOwner)
+  # Owner-only data: check authorization in the resolver
+  privateData: PrivateData
 }
 
 # Query
@@ -524,14 +562,20 @@ def depth_limit_validator(max_depth: int):
 
 ```python
 def complexity_limit_validator(max_complexity: int):
+    # Checks each field's cost. A limit on the whole query needs a pass that
+    # sums these costs over the full document before execution.
     def calculate_complexity(node):
         # Each field = 1, lists multiply
         complexity = 1
         if is_list_field(node):
             complexity *= get_list_size_arg(node)
+        if complexity > max_complexity:
+            raise GraphQLError(
+                f"Query complexity {complexity} exceeds maximum {max_complexity}"
+            )
         return complexity
 
-    return validate_complexity
+    return calculate_complexity
 ```
 
 ## Schema Versioning

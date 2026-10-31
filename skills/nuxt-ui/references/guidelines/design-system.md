@@ -1,5 +1,38 @@
 # Design System
 
+<!-- toc -->
+## Contents
+
+- [Semantic colors](#semantic-colors)
+  - [Choosing colors for components](#choosing-colors-for-components)
+  - [Configuring colors](#configuring-colors)
+  - [Adding custom brand colors](#adding-custom-brand-colors)
+  - [Extending with new semantic color names](#extending-with-new-semantic-color-names)
+- [Semantic utility classes](#semantic-utility-classes)
+  - [Text](#text)
+  - [Backgrounds](#backgrounds)
+  - [Borders](#borders)
+- [Variants](#variants)
+  - [Rules](#rules)
+- [Customizing components](#customizing-components)
+  - [`ui` prop](#ui-prop)
+  - [`class` prop](#class-prop)
+  - [Finding slot names](#finding-slot-names)
+  - [Global config](#global-config)
+  - [Replace instead of merge](#replace-instead-of-merge)
+  - [Theme component](#theme-component)
+  - [Global `defaultVariants`](#global-defaultvariants)
+  - [`theme.transitions`](#themetransitions)
+  - [`theme.prefix`](#themeprefix)
+  - [Tree-shaking with `experimental.componentDetection`](#tree-shaking-with-experimentalcomponentdetection)
+- [CSS `@theme` customization](#css-theme-customization)
+  - [Fonts](#fonts)
+  - [Breakpoints](#breakpoints)
+- [CSS variables](#css-variables)
+  - [Color shade overrides](#color-shade-overrides)
+  - [Black/white as primary](#blackwhite-as-primary)
+<!-- /toc -->
+
 ## Semantic colors
 
 Nuxt UI uses 7 semantic colors. Never use raw Tailwind palette colors in components — always use these semantic names.
@@ -207,7 +240,9 @@ Tailwind Variants uses `tailwind-merge` under the hood — conflicting classes a
 
 ### Replace instead of merge
 
-Classes from the `ui` prop, the `class` prop, and global config are merged onto the component defaults. To replace a slot's defaults entirely instead, set it to a function in the `ui` prop or global config. It receives the resolved default classes as its argument, so you can reuse part of them.
+Classes from the `ui` prop, the `class` prop, and global config are merged onto the component defaults. To replace them instead, set the slot to a function, which receives the default classes as its argument so you can reuse part of them.
+
+In global config it replaces the slot's own classes, so `variants` and `compoundVariants` still apply on top. In the `ui` and `class` props it runs after the variants, so it replaces the resolved classes, variants included.
 
 ```vue
 <UButton :ui="{ label: () => 'text-base font-bold' }" />
@@ -231,7 +266,7 @@ export default defineAppConfig({
 Override theme for a section of the component tree without affecting the rest of the app. Renders no DOM element — uses `provide`/`inject`:
 
 ```vue
-<UTheme :ui="{ button: { slots: { base: 'rounded-full' } } }">
+<UTheme :ui="{ button: { base: 'rounded-full' } }">
   <UButton label="Rounded" />
   <UButton label="Also rounded" />
 </UTheme>
@@ -309,7 +344,7 @@ export default defineNuxtConfig({
 For dynamic components (e.g., `<component :is="...">`), pass an array of component names to guarantee they're included:
 
 ```ts
-componentDetection: ['Modal', 'Dropdown', 'Popover']
+componentDetection: ['Modal', 'DropdownMenu', 'Popover']
 ```
 
 ## CSS `@theme` customization

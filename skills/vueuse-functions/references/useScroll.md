@@ -4,6 +4,18 @@ category: Sensors
 
 # useScroll
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [With offsets](#with-offsets)
+  - [Setting scroll position](#setting-scroll-position)
+  - [Smooth scrolling](#smooth-scrolling)
+  - [Recalculate scroll state](#recalculate-scroll-state)
+- [Directive Usage](#directive-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive scroll position and state.
 
 ## Usage

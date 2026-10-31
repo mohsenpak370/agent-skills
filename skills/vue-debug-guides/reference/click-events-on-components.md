@@ -8,6 +8,17 @@ tags: [vue3, events, components, emit, click, migration]
 
 # Click Events on Custom Components Require Emit or Fallthrough
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Component Events Don't Bubble](#component-events-dont-bubble)
+- [Vue 3 Native Event Behavior](#vue-3-native-event-behavior)
+- [Composition API Emit Pattern](#composition-api-emit-pattern)
+- [Migration from Vue 2](#migration-from-vue-2)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Unlike native HTML elements, custom Vue components don't automatically forward native DOM events like `click`. You must either emit the event explicitly, rely on attribute fallthrough to a single root element, or use the `.native` modifier (Vue 2 only, removed in Vue 3). This is a common source of confusion and migration issues.
 
 ## Task Checklist
@@ -49,15 +60,15 @@ tags: [vue3, events, components, emit, click, migration]
 ```html
 <!-- CORRECT: Child component emits the click event -->
 <!-- MyButton.vue -->
+<script setup>
+defineEmits(['click'])
+</script>
+
 <template>
   <button @click="$emit('click', $event)">
     <slot></slot>
   </button>
 </template>
-
-<script setup>
-defineEmits(['click'])
-</script>
 
 <!-- Parent.vue -->
 <template>
@@ -84,18 +95,18 @@ defineEmits(['click'])
 ```html
 <!-- CORRECT: Multi-root component with explicit $attrs binding -->
 <!-- MyButton.vue -->
+<script setup>
+defineOptions({
+  inheritAttrs: false
+})
+</script>
+
 <template>
   <span>Icon</span>
   <button v-bind="$attrs">
     <slot></slot>
   </button>
 </template>
-
-<script setup>
-defineOptions({
-  inheritAttrs: false
-})
-</script>
 ```
 
 ## Component Events Don't Bubble

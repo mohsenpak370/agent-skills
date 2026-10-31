@@ -4,6 +4,18 @@ category: Browser
 
 # useEventListener
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Default Target](#default-target)
+  - [Reactive Target](#reactive-target)
+  - [Multiple Events](#multiple-events)
+  - [Multiple Targets](#multiple-targets)
+  - [Cleanup](#cleanup)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Use EventListener with ease. Register using [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) on mounted, and [removeEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener) automatically on unmounted.
 
 ## Usage

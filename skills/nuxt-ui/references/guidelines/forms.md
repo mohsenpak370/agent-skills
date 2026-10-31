@@ -1,5 +1,27 @@
 # Forms
 
+<!-- toc -->
+## Contents
+
+- [Basic pattern](#basic-pattern)
+- [Key rules](#key-rules)
+- [UFormField props](#uformfield-props)
+- [Field layout patterns](#field-layout-patterns)
+  - [Vertical stack (default)](#vertical-stack-default)
+  - [Inline fields with UFieldGroup](#inline-fields-with-ufieldgroup)
+  - [Grid layout](#grid-layout)
+- [Common field patterns](#common-field-patterns)
+  - [Select](#select)
+  - [Checkbox](#checkbox)
+  - [Radio group](#radio-group)
+  - [Switch](#switch)
+  - [Textarea](#textarea)
+  - [File upload](#file-upload)
+  - [Date](#date)
+- [Programmatic validation](#programmatic-validation)
+- [Form in a modal](#form-in-a-modal)
+<!-- /toc -->
+
 ## Basic pattern
 
 Nuxt UI forms use `UForm` + `UFormField` + Standard Schema validation (Zod, Valibot, Yup, or Joi).
@@ -181,14 +203,14 @@ function onSubmit(event: FormSubmitEvent<Schema>) {
 const form = useTemplateRef('form')
 
 async function validateAndSubmit() {
-  const result = await form.value?.validate()
+  const result = await form.value?.validate({ silent: true })
   if (result) {
     // valid — submit
   }
 }
 
 async function validateEmail() {
-  await form.value?.validate({ name: 'email' })
+  await form.value?.validate({ name: 'email', silent: true })
 }
 
 function setServerError() {
@@ -198,7 +220,7 @@ function setServerError() {
 }
 
 function resetErrors() {
-  form.value?.clearErrors()
+  form.value?.clear()
 }
 </script>
 
@@ -208,6 +230,8 @@ function resetErrors() {
   </UForm>
 </template>
 ```
+
+By default, `validate()` throws a `FormValidationException` when validation fails. Pass `{ silent: true }` when you want it to return `false` instead. Use `clear()` to remove validation errors.
 
 ## Form in a modal
 

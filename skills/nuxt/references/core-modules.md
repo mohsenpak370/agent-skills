@@ -5,6 +5,23 @@ description: Creating and using Nuxt modules to extend framework functionality
 
 # Nuxt Modules
 
+<!-- toc -->
+## Contents
+
+- [Using Modules](#using-modules)
+- [Creating Modules](#creating-modules)
+  - [Basic Module](#basic-module)
+  - [Adding Components](#adding-components)
+  - [Adding Composables](#adding-composables)
+  - [Adding Plugins](#adding-plugins)
+  - [Adding Server Routes](#adding-server-routes)
+  - [Extending Config](#extending-config)
+- [Module Hooks](#module-hooks)
+- [Module Options](#module-options)
+- [Local Modules](#local-modules)
+- [Module Dependencies](#module-dependencies)
+<!-- /toc -->
+
 Modules extend Nuxt's core functionality. They run at build time and can add components, composables, plugins, and configuration.
 
 ## Using Modules
@@ -288,5 +305,7 @@ export default defineNuxtModule({
 Source references:
 - https://nuxt.com/docs/guide/modules
 - https://nuxt.com/docs/guide/modules/module-anatomy
+- https://nuxt.com/docs/guide/modules/module-dependencies
+- https://nuxt.com/docs/guide/modules/server-compatibility
 - https://nuxt.com/docs/api/kit
 -->

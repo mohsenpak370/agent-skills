@@ -8,6 +8,16 @@ tags: [vue3, teleport, ssr, nuxt, hydration]
 
 # Handle Teleport SSR Hydration Carefully
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [SSR with Multiple Teleports](#ssr-with-multiple-teleports)
+- [Element Plus and UI Library SSR](#element-plus-and-ui-library-ssr)
+- [Known Vue Issues](#known-vue-issues)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Teleports require special handling during SSR. The teleported content is not part of the server-rendered HTML string, causing hydration mismatches that can break the application or cause content to disappear.
 
 This is a critical issue for Nuxt, Quasar SSR, and custom Vue SSR setups.
@@ -57,17 +67,6 @@ server rendered element contains fewer child nodes than client vdom.
 
 **Solution 2 - Manual Client Detection:**
 ```vue
-<template>
-  <button @click="showModal = true">Open Modal</button>
-
-  <!-- Only render after component mounts on client -->
-  <Teleport v-if="isMounted" to="body">
-    <div v-if="showModal" class="modal">
-      Modal content
-    </div>
-  </Teleport>
-</template>
-
 <script setup>
 import { ref, onMounted } from 'vue'
 
@@ -78,6 +77,17 @@ onMounted(() => {
   isMounted.value = true
 })
 </script>
+
+<template>
+  <button @click="showModal = true">Open Modal</button>
+
+  <!-- Only render after component mounts on client -->
+  <Teleport v-if="isMounted" to="body">
+    <div v-if="showModal" class="modal">
+      Modal content
+    </div>
+  </Teleport>
+</template>
 ```
 
 **Solution 3 - Vue 3.5+ data-allow-mismatch:**

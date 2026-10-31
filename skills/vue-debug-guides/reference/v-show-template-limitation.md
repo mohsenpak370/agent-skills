@@ -8,6 +8,15 @@ tags: [vue3, conditional-rendering, v-show, template, limitations]
 
 # v-show Does Not Work on template or With v-else
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Why This Limitation Exists](#why-this-limitation-exists)
+- [When to Choose Each](#when-to-choose-each)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - `v-show` cannot be used on `<template>` elements because templates don't render to the DOM (so there's nothing to apply `display: none` to). Additionally, `v-show` does not support `v-else`. Using these incorrectly results in elements that are always visible or else branches that never work.
 
 ## Task Checklist

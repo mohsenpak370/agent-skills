@@ -1,5 +1,18 @@
 # Nuxt 4 + Tailwind CSS 4 Reference
 
+<!-- toc -->
+## Contents
+
+- [File Structure](#file-structure)
+- [Component Patterns](#component-patterns)
+- [Focused Components](#focused-components)
+- [Data Fetching](#data-fetching)
+- [State and SSR](#state-and-ssr)
+- [Tailwind CSS 4](#tailwind-css-4)
+- [Tailwind Class Patterns](#tailwind-class-patterns)
+- [Nuxt Verification](#nuxt-verification)
+<!-- /toc -->
+
 Use this reference when working in Nuxt 4, Vue single-file components, server routes, composables, layouts, pages, or Tailwind CSS 4.
 
 ## File Structure

@@ -8,6 +8,19 @@ tags: [vue3, attrs, fallthrough-attributes, composition-api, reactivity]
 
 # Component Fallthrough Attributes Best Practices
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Access Attribute and Listener Keys Correctly](#access-attribute-and-listener-keys-correctly)
+  - [Naming Reference](#naming-reference)
+- [`useAttrs()` Is Not Reactive](#useattrs-is-not-reactive)
+- [Common Patterns](#common-patterns)
+  - [Check for optional attrs safely](#check-for-optional-attrs-safely)
+  - [Forward listeners after internal logic](#forward-listeners-after-internal-logic)
+- [TypeScript Notes](#typescript-notes)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Fallthrough attributes are straightforward once you follow Vue's conventions: hyphenated names use bracket notation, listener keys are camelCase `onX`, and `useAttrs()` is current-but-not-reactive.
 
 ## Task List

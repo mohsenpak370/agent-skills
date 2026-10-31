@@ -8,6 +8,19 @@ tags: [vue3, transition-group, animation, performance, list, css-framework]
 
 # TransitionGroup Performance with Large Lists and CSS Frameworks
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Performance Optimization Strategies](#performance-optimization-strategies)
+  - [1. Skip Animations for Bulk Operations](#1-skip-animations-for-bulk-operations)
+  - [2. Virtual Scrolling for Large Lists](#2-virtual-scrolling-for-large-lists)
+  - [3. Reduce CSS Complexity During Transitions](#3-reduce-css-complexity-during-transitions)
+  - [4. Use CSS content-visibility](#4-use-css-content-visibility)
+- [When to Avoid TransitionGroup](#when-to-avoid-transitiongroup)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Vue's `<TransitionGroup>` can experience significant DOM update lag when animating list changes, particularly when:
 - Using CSS frameworks (Tailwind, Bootstrap, etc.)
 - Performing array operations like `slice()` that change multiple items
@@ -25,6 +38,17 @@ Without TransitionGroup, DOM updates occur instantly. With it, there can be noti
 
 **Problematic Pattern:**
 ```vue
+<script setup>
+import { ref } from 'vue'
+
+const items = ref([/* many items */])
+
+// Operations like slice can cause visible lag
+function removeItems() {
+  items.value = items.value.slice(5)  // May lag with TransitionGroup
+}
+</script>
+
 <template>
   <!-- Potentially slow with large lists or complex CSS -->
   <TransitionGroup name="list" tag="ul">
@@ -40,17 +64,6 @@ Without TransitionGroup, DOM updates occur instantly. With it, there can be noti
   </TransitionGroup>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-
-const items = ref([/* many items */])
-
-// Operations like slice can cause visible lag
-function removeItems() {
-  items.value = items.value.slice(5)  // May lag with TransitionGroup
-}
-</script>
-
 <style>
 .list-move,
 .list-enter-active,
@@ -62,6 +75,15 @@ function removeItems() {
 
 **Optimized Approach:**
 ```vue
+<script setup>
+import { ref, computed } from 'vue'
+
+const items = ref([/* items */])
+
+// For large batch operations, consider disabling animations temporarily
+const isAnimating = ref(true)
+</script>
+
 <template>
   <!-- Simpler classes, shorter transitions -->
   <TransitionGroup name="list" tag="ul" class="relative">
@@ -74,15 +96,6 @@ function removeItems() {
     </li>
   </TransitionGroup>
 </template>
-
-<script setup>
-import { ref, computed } from 'vue'
-
-const items = ref([/* items */])
-
-// For large batch operations, consider disabling animations temporarily
-const isAnimating = ref(true)
-</script>
 
 <style>
 /* Keep transition CSS simple and specific */
@@ -124,17 +137,6 @@ const isAnimating = ref(true)
 ### 1. Skip Animations for Bulk Operations
 
 ```vue
-<template>
-  <TransitionGroup v-if="animationsEnabled" name="list" tag="ul">
-    <li v-for="item in items" :key="item.id">{{ item.name }}</li>
-  </TransitionGroup>
-
-  <!-- Instant update without animations -->
-  <ul v-else>
-    <li v-for="item in items" :key="item.id">{{ item.name }}</li>
-  </ul>
-</template>
-
 <script setup>
 import { ref, nextTick } from 'vue'
 
@@ -148,11 +150,26 @@ async function bulkUpdate(newItems) {
   animationsEnabled.value = true
 }
 </script>
+
+<template>
+  <TransitionGroup v-if="animationsEnabled" name="list" tag="ul">
+    <li v-for="item in items" :key="item.id">{{ item.name }}</li>
+  </TransitionGroup>
+
+  <!-- Instant update without animations -->
+  <ul v-else>
+    <li v-for="item in items" :key="item.id">{{ item.name }}</li>
+  </ul>
+</template>
 ```
 
 ### 2. Virtual Scrolling for Large Lists
 
 ```vue
+<script setup>
+import { RecycleScroller } from 'vue-virtual-scroller'
+</script>
+
 <template>
   <!-- Use a virtual list library for large datasets -->
   <RecycleScroller
@@ -164,10 +181,6 @@ async function bulkUpdate(newItems) {
     <div class="list-item">{{ item.name }}</div>
   </RecycleScroller>
 </template>
-
-<script setup>
-import { RecycleScroller } from 'vue-virtual-scroller'
-</script>
 ```
 
 ### 3. Reduce CSS Complexity During Transitions

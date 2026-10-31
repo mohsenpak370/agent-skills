@@ -8,6 +8,16 @@ related:
 
 # useColorMode
 
+<!-- toc -->
+## Contents
+
+- [Basic Usage](#basic-usage)
+- [Config](#config)
+- [Advanced Usage](#advanced-usage)
+- [Component Usage](#component-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive color mode (dark / light / customs) with auto data persistence.
 
 ## Basic Usage

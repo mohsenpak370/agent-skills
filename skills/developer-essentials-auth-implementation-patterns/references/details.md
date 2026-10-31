@@ -1,5 +1,24 @@
 # auth-implementation-patterns — detailed patterns and worked examples
 
+<!-- toc -->
+## Contents
+
+- [JWT Authentication](#jwt-authentication)
+  - [Pattern 1: JWT Implementation](#pattern-1-jwt-implementation)
+  - [Pattern 2: Refresh Token Flow](#pattern-2-refresh-token-flow)
+- [Session-Based Authentication](#session-based-authentication)
+  - [Pattern 1: Express Session](#pattern-1-express-session)
+- [OAuth2 / Social Login](#oauth2--social-login)
+  - [Pattern 1: OAuth2 with Passport.js](#pattern-1-oauth2-with-passportjs)
+- [Authorization Patterns](#authorization-patterns)
+  - [Pattern 1: Role-Based Access Control (RBAC)](#pattern-1-role-based-access-control-rbac)
+  - [Pattern 2: Permission-Based Access Control](#pattern-2-permission-based-access-control)
+  - [Pattern 3: Resource Ownership](#pattern-3-resource-ownership)
+- [Security Best Practices](#security-best-practices)
+  - [Pattern 1: Password Security](#pattern-1-password-security)
+  - [Pattern 2: Rate Limiting](#pattern-2-rate-limiting)
+<!-- /toc -->
+
 ## JWT Authentication
 
 ### Pattern 1: JWT Implementation
@@ -49,14 +68,17 @@ function verifyToken(token: string): JWTPayload {
   }
 }
 
-// Middleware
+// Middleware: read the Bearer header, or the access_token cookie that the
+// OAuth callback sets (req.cookies needs the cookie-parser middleware)
 function authenticate(req: Request, res: Response, next: NextFunction) {
   const authHeader = req.headers.authorization;
-  if (!authHeader?.startsWith("Bearer ")) {
+  const token = authHeader?.startsWith("Bearer ")
+    ? authHeader.substring(7)
+    : req.cookies?.access_token;
+  if (!token) {
     return res.status(401).json({ error: "No token provided" });
   }
 
-  const token = authHeader.substring(7);
   try {
     const payload = verifyToken(token);
     req.user = payload; // Attach user to request
@@ -293,10 +315,15 @@ app.get(
   (req, res) => {
     // Generate JWT
     const tokens = generateTokens(req.user.id, req.user.email, req.user.role);
-    // Redirect to frontend with token
-    res.redirect(
-      `${process.env.FRONTEND_URL}/auth/callback?token=${tokens.accessToken}`,
-    );
+    // Send the token in an HttpOnly cookie, not in the URL: query strings
+    // end up in browser history, server logs, and Referer headers
+    res.cookie("access_token", tokens.accessToken, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax", // Allows the cookie on the top-level redirect back from Google
+      maxAge: 15 * 60 * 1000, // Matches the 15m token lifetime
+    });
+    res.redirect(`${process.env.FRONTEND_URL}/auth/callback`);
   },
 );
 ```
@@ -409,7 +436,7 @@ app.get(
 
 ```typescript
 // Check if user owns resource
-async function requireOwnership(
+function requireOwnership(
   resourceType: "post" | "comment",
   resourceIdParam: string = "id",
 ) {

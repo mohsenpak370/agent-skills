@@ -1,5 +1,18 @@
 # Tailwind CSS Dynamic Class Generation
 
+<!-- toc -->
+## Contents
+
+- [Rule](#rule)
+- [Why This Matters](#why-this-matters)
+- [Bad Code](#bad-code)
+- [Good Code](#good-code)
+- [Using Conditional Objects](#using-conditional-objects)
+- [Safelist for Truly Dynamic Classes](#safelist-for-truly-dynamic-classes)
+- [Alternative: CSS Custom Properties](#alternative-css-custom-properties)
+- [References](#references)
+<!-- /toc -->
+
 ## Rule
 
 Never construct Tailwind CSS class names dynamically using string concatenation or template literals. Tailwind's build process cannot detect dynamically generated class names, causing styles to be missing in production.

@@ -1,5 +1,28 @@
 # Django Security Checklist
 
+<!-- toc -->
+## Contents
+
+- [OWASP Top 10 & Django](#owasp-top-10--django)
+  - [1. SQL Injection](#1-sql-injection)
+  - [2. Cross-Site Scripting (XSS)](#2-cross-site-scripting-xss)
+  - [3. Cross-Site Request Forgery (CSRF)](#3-cross-site-request-forgery-csrf)
+  - [4. Broken Authentication](#4-broken-authentication)
+  - [5. Broken Access Control](#5-broken-access-control)
+  - [6. Security Misconfiguration](#6-security-misconfiguration)
+  - [7. Sensitive Data Exposure](#7-sensitive-data-exposure)
+  - [8. Insecure Deserialization](#8-insecure-deserialization)
+  - [9. Using Components with Known Vulnerabilities](#9-using-components-with-known-vulnerabilities)
+  - [10. Insufficient Logging & Monitoring](#10-insufficient-logging--monitoring)
+- [Additional Django Security](#additional-django-security)
+  - [Clickjacking Protection](#clickjacking-protection)
+  - [Host Header Validation](#host-header-validation)
+  - [File Upload Security](#file-upload-security)
+  - [Rate Limiting](#rate-limiting)
+- [Security Checklist](#security-checklist)
+- [Useful Django Management Commands](#useful-django-management-commands)
+<!-- /toc -->
+
 Django is secure by default, but you must configure it correctly and avoid common pitfalls.
 
 ## OWASP Top 10 & Django

@@ -5,6 +5,16 @@ alias: ignorableWatch
 
 # watchIgnorable
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [WatchOptionFlush timing](#watchoptionflush-timing)
+- [`ignorePrevAsyncUpdates`](#ignoreprevasyncupdates)
+- [Recommended Readings](#recommended-readings)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Ignorable watch
 
 ## Usage
@@ -79,7 +89,7 @@ await nextTick() // logs: Changed to after!
 
 ## Recommended Readings
 
-- [Ignorable Watch](https://patak.dev/vue/ignorable-watch.html) - by [@patak-dev](https://github.com/patak-dev)
+- [Ignorable Watch](https://patak.dev/vue/ignorable-watch.html) - by [@patak-cat](https://github.com/patak-cat)
 
 ## Type Declarations
 

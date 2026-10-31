@@ -8,6 +8,17 @@ tags: [vue3, props, script-setup, defineProps, compiler]
 
 # defineProps Cannot Access Variables from script setup
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Pattern: Import from External File](#pattern-import-from-external-file)
+- [Pattern: Dual Script Blocks](#pattern-dual-script-blocks)
+- [TypeScript: External Type Definitions](#typescript-external-type-definitions)
+- [Why This Happens](#why-this-happens)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Code inside the `defineProps()` argument cannot access other variables declared in `<script setup>`. The entire expression is moved to an outer function scope when compiled, making local variables inaccessible.
 
 This commonly surprises developers trying to use imported constants or computed validation logic.

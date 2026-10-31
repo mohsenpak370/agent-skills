@@ -4,6 +4,20 @@ category: Sensors
 
 # onClickOutside
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Return Value](#return-value)
+  - [Controls](#controls)
+  - [Ignore Elements](#ignore-elements)
+  - [Capture Phase](#capture-phase)
+  - [Detect Iframe Clicks](#detect-iframe-clicks)
+- [Component Usage](#component-usage)
+- [Directive Usage](#directive-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Listen for clicks outside of an element. Useful for modals or dropdowns.
 
 ## Usage

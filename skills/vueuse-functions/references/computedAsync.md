@@ -5,6 +5,19 @@ alias: asyncComputed
 
 # computedAsync
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Evaluation State](#evaluation-state)
+  - [onCancel](#oncancel)
+  - [Lazy](#lazy)
+  - [Error Handling](#error-handling)
+  - [Shallow Ref](#shallow-ref)
+- [Caveats](#caveats)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Computed for async functions.
 
 ## Usage

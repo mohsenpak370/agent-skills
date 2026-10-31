@@ -31,7 +31,7 @@ For Vue and Nuxt work:
 
 - Use `nuxt` for Nuxt apps, server routes, middleware, `useFetch`,
   `useAsyncData`, Nitro, file-based routing, modules, layers, or hybrid
-  rendering. The `nuxt` skill is based on Nuxt 3.x but can guide Nuxt 4 work
+  rendering. The `nuxt` skill is based on Nuxt 5.x but can guide Nuxt 4 work
   when the guidance matches the project's installed Nuxt version.
 - Use `nuxt-ui` only when `@nuxt/ui` / Nuxt UI is installed in the project, or
   when the user explicitly asks to add, install, configure, theme, or use Nuxt
@@ -113,12 +113,29 @@ For backend, Python, and Django work:
   authorization, sessions, OAuth, JWT, RBAC, resource ownership, and securing
   APIs. Use `security-and-hardening` alongside it for security-sensitive changes.
 
+For Rust work:
+
+- Use `rust-best-practices` for writing, reviewing, or refactoring Rust code:
+  ownership and borrowing, error handling, async and concurrency, API design,
+  memory and performance, serde, macros, testing, linting, and Rust 2024 edition
+  changes. Load only the `rules/` files that match the task.
+- Use `rust-unsafe-checker` alongside it whenever code contains `unsafe`, raw
+  pointers, `transmute`, unions, `MaybeUninit`, `#[repr(C)]` layouts, FFI, or
+  manual `Send`/`Sync` impls. Its rules predate the 2024 edition, so follow
+  `rust-best-practices` for edition-specific `unsafe` syntax.
+- Use `debugging-and-error-recovery` alongside them for compiler errors or
+  failing tests, and `performance-optimization` for measured performance work.
+
 For Solana and Web3 work:
 
 - Use `solana-dev` for Solana dApps, wallet connection and signing flows,
   transaction building, Anchor or Pinocchio programs, PDAs, CPIs, SPL Token,
   Token-2022, Codama client generation, LiteSVM, Mollusk, Surfpool, devnet or
   mainnet JSON-RPC lookups, and Anchor or Solana CLI version issues.
+- Use `rust-best-practices` alongside it when writing or reviewing Anchor or
+  Pinocchio program code, and `rust-unsafe-checker` for Pinocchio or any program
+  code that uses `unsafe`, raw pointers, or zero-copy account layouts. Let
+  `solana-dev` decide Solana-specific patterns and toolchain versions.
 - Use `vue-solana` alongside `solana-dev` when the Solana work is specifically
   in a Vue or Nuxt app using the Vue Solana packages.
 - Use `frontend-ui-engineering` alongside it when Solana work includes
@@ -156,6 +173,8 @@ For broader engineering work, select the matching lifecycle or specialty skill:
 - SAST setup: `security-scanning-sast-configuration`
 - Security requirements from threats: `security-scanning-security-requirement-extraction`
 - Threat-to-control mapping: `security-scanning-threat-mitigation-mapping`
+- Rust code: `rust-best-practices`
+- Unsafe Rust or FFI: `rust-unsafe-checker`
 - Solana dApps, programs, wallet flows, or on-chain lookups: `solana-dev`
 - Shipping or launch work: `shipping-and-launch`
 

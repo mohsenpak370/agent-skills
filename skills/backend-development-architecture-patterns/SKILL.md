@@ -5,6 +5,27 @@ description: Implement proven backend architecture patterns including Clean Arch
 
 # Architecture Patterns
 
+<!-- toc -->
+## Contents
+
+- [When to Use This Skill](#when-to-use-this-skill)
+- [Core Concepts](#core-concepts)
+  - [1. Clean Architecture (Uncle Bob)](#1-clean-architecture-uncle-bob)
+  - [2. Hexagonal Architecture (Ports and Adapters)](#2-hexagonal-architecture-ports-and-adapters)
+  - [3. Domain-Driven Design (DDD)](#3-domain-driven-design-ddd)
+- [Detailed patterns and worked examples](#detailed-patterns-and-worked-examples)
+- [Testing — In-Memory Adapters](#testing--in-memory-adapters)
+- [Troubleshooting](#troubleshooting)
+  - [Use case tests require a running database](#use-case-tests-require-a-running-database)
+  - [Circular imports between layers](#circular-imports-between-layers)
+  - [Framework decorators appearing in domain entities](#framework-decorators-appearing-in-domain-entities)
+  - [All logic ending up in controllers](#all-logic-ending-up-in-controllers)
+  - [Value objects raising errors too late](#value-objects-raising-errors-too-late)
+  - [Context bleed across bounded contexts](#context-bleed-across-bounded-contexts)
+- [Advanced Patterns](#advanced-patterns)
+- [Related Skills](#related-skills)
+<!-- /toc -->
+
 Master proven backend architecture patterns including Clean Architecture, Hexagonal Architecture, and Domain-Driven Design to build maintainable, testable, and scalable systems.
 
 **Given:** a service boundary or module to architect.

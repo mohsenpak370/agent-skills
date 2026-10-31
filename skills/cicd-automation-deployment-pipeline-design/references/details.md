@@ -1,5 +1,36 @@
 # cicd-automation-deployment-pipeline-design - detailed patterns and worked examples
 
+<!-- toc -->
+## Contents
+
+- [Pipeline Stages](#pipeline-stages)
+  - [Standard Pipeline Flow](#standard-pipeline-flow)
+  - [Detailed Stage Breakdown](#detailed-stage-breakdown)
+- [Approval Gate Patterns](#approval-gate-patterns)
+  - [Pattern 1: Manual Approval (GitHub Actions)](#pattern-1-manual-approval-github-actions)
+  - [Pattern 2: Time-Based Approval (GitLab CI)](#pattern-2-time-based-approval-gitlab-ci)
+  - [Pattern 3: Multi-Approver (Azure Pipelines)](#pattern-3-multi-approver-azure-pipelines)
+  - [Pattern 4: Automated Metric Gate](#pattern-4-automated-metric-gate)
+- [Deployment Strategies](#deployment-strategies)
+  - [Decision Table](#decision-table)
+  - [1. Rolling Deployment](#1-rolling-deployment)
+  - [2. Blue-Green Deployment](#2-blue-green-deployment)
+  - [3. Canary Deployment (Argo Rollouts)](#3-canary-deployment-argo-rollouts)
+  - [4. Feature Flags](#4-feature-flags)
+- [Pipeline Orchestration](#pipeline-orchestration)
+  - [Multi-Stage Pipeline Example (GitHub Actions)](#multi-stage-pipeline-example-github-actions)
+- [Health Checks](#health-checks)
+  - [Shallow vs Deep Health Endpoints](#shallow-vs-deep-health-endpoints)
+  - [Post-Deployment Verification Script](#post-deployment-verification-script)
+- [Rollback Strategies](#rollback-strategies)
+  - [Automated Rollback in Pipeline](#automated-rollback-in-pipeline)
+  - [Manual Rollback Commands](#manual-rollback-commands)
+- [Monitoring and Metrics](#monitoring-and-metrics)
+  - [Key DORA Metrics to Track](#key-dora-metrics-to-track)
+  - [Post-Deployment Metric Verification](#post-deployment-metric-verification)
+- [Pipeline Best Practices](#pipeline-best-practices)
+<!-- /toc -->
+
 ## Pipeline Stages
 
 ### Standard Pipeline Flow

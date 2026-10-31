@@ -8,6 +8,15 @@ tags: [vue3, events, modifiers, v-on, click, form]
 
 # Event Modifier Order Matters
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [How Modifier Order Works](#how-modifier-order-works)
+- [Common Modifier Combinations](#common-modifier-combinations)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - When chaining event modifiers, the order determines behavior because Vue generates code in the same sequence. Using `.prevent.self` vs `.self.prevent` produces different results that can cause subtle bugs in event handling.
 
 ## Task Checklist

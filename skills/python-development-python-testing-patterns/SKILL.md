@@ -5,6 +5,26 @@ description: Implement comprehensive testing strategies with pytest, fixtures, m
 
 # Python Testing Patterns
 
+<!-- toc -->
+## Contents
+
+- [When to Use This Skill](#when-to-use-this-skill)
+- [Core Concepts](#core-concepts)
+  - [1. Test Types](#1-test-types)
+  - [2. Test Structure (AAA Pattern)](#2-test-structure-aaa-pattern)
+  - [3. Test Coverage](#3-test-coverage)
+  - [4. Test Isolation](#4-test-isolation)
+- [Quick Start](#quick-start)
+- [Detailed patterns and worked examples](#detailed-patterns-and-worked-examples)
+- [Testing Best Practices](#testing-best-practices)
+  - [Test Organization](#test-organization)
+  - [Test Naming Convention](#test-naming-convention)
+  - [Testing Retry Behavior](#testing-retry-behavior)
+  - [Mocking Time with Freezegun](#mocking-time-with-freezegun)
+  - [Test Markers](#test-markers)
+  - [Coverage Reporting](#coverage-reporting)
+<!-- /toc -->
+
 Comprehensive guide to implementing robust testing strategies in Python using pytest, fixtures, mocking, parameterization, and test-driven development practices.
 
 ## When to Use This Skill

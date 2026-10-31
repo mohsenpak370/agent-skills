@@ -8,6 +8,15 @@ tags: [vue3, conditional-rendering, v-if, null-check, defensive-programming]
 
 # Check for Null/Undefined Before Accessing Properties in v-if
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Using Computed Properties for Complex Checks](#using-computed-properties-for-complex-checks)
+- [Common Async Data Pattern](#common-async-data-pattern)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Accessing properties on null or undefined objects in `v-if` conditions causes "Cannot read property of undefined" runtime errors. This commonly occurs when data is loaded asynchronously or when optional object properties are accessed without null checks.
 
 ## Task Checklist

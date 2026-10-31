@@ -5,6 +5,31 @@ description: Python project organization, module architecture, and public API de
 
 # Python Project Structure & Module Architecture
 
+<!-- toc -->
+## Contents
+
+- [When to Use This Skill](#when-to-use-this-skill)
+- [Core Concepts](#core-concepts)
+  - [1. Module Cohesion](#1-module-cohesion)
+  - [2. Explicit Interfaces](#2-explicit-interfaces)
+  - [3. Flat Hierarchies](#3-flat-hierarchies)
+  - [4. Consistent Conventions](#4-consistent-conventions)
+- [Quick Start](#quick-start)
+- [Fundamental Patterns](#fundamental-patterns)
+  - [Pattern 1: One Concept Per File](#pattern-1-one-concept-per-file)
+  - [Pattern 2: Explicit Public APIs with `__all__`](#pattern-2-explicit-public-apis-with-__all__)
+  - [Pattern 3: Flat Directory Structure](#pattern-3-flat-directory-structure)
+  - [Pattern 4: Test File Organization](#pattern-4-test-file-organization)
+- [Advanced Patterns](#advanced-patterns)
+  - [Pattern 5: Package Initialization](#pattern-5-package-initialization)
+  - [Pattern 6: Layered Architecture](#pattern-6-layered-architecture)
+  - [Pattern 7: Domain-Driven Structure](#pattern-7-domain-driven-structure)
+- [File and Module Naming](#file-and-module-naming)
+  - [Conventions](#conventions)
+  - [Import Style](#import-style)
+- [Best Practices Summary](#best-practices-summary)
+<!-- /toc -->
+
 Design well-organized Python projects with clear module boundaries, explicit public interfaces, and maintainable directory structures. Good organization makes code discoverable and changes predictable.
 
 ## When to Use This Skill

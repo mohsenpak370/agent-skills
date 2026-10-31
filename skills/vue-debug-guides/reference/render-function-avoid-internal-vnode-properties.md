@@ -8,6 +8,16 @@ tags: [vue3, render-function, vnode, internal-api]
 
 # Do Not Rely on Internal VNode Properties
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Documented VNode Properties](#documented-vnode-properties)
+- [Safe VNode Inspection Patterns](#safe-vnode-inspection-patterns)
+- [Why This Matters](#why-this-matters)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - The `VNode` interface contains many internal properties used by Vue's rendering system. Relying on any properties other than the documented public ones will cause your code to break when Vue's internal implementation changes.
 
 Only use the documented vnode properties: `type`, `props`, `children`, and `key`. All other properties are internal implementation details that may change without notice between Vue versions.

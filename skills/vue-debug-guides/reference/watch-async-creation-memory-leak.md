@@ -8,6 +8,16 @@ tags: [vue3, watch, watchers, async, memory-leak, lifecycle, cleanup]
 
 # Watchers Created Asynchronously Must Be Manually Stopped
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Preferred Pattern: Conditional Watch Logic](#preferred-pattern-conditional-watch-logic)
+- [Using watchEffect with Conditional Logic](#using-watcheffect-with-conditional-logic)
+- [Tracking Multiple Async Watchers](#tracking-multiple-async-watchers)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Watchers created inside async callbacks (setTimeout, Promise.then, async/await) are not automatically bound to the component instance. They continue running after the component unmounts, causing memory leaks and errors.
 
 Always manually stop watchers that are created asynchronously, or restructure your code to create watchers synchronously with conditional logic.

@@ -4,6 +4,18 @@ category: Elements
 
 # useDraggable
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Return Values](#return-values)
+  - [Options](#options)
+  - [Prevent Default](#prevent-default)
+  - [Container Bounds](#container-bounds)
+- [Component Usage](#component-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Make elements draggable.
 
 ## Usage

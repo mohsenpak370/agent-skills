@@ -8,6 +8,18 @@ tags: [vue3, component-registration, local-registration, scope, nested-component
 
 # Locally Registered Components Are Not Available in Descendants
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Common Scenarios](#common-scenarios)
+  - [Scenario 1: Deeply Nested Components](#scenario-1-deeply-nested-components)
+  - [Scenario 2: Slot Content with Components](#scenario-2-slot-content-with-components)
+  - [Scenario 3: Dynamic Components](#scenario-3-dynamic-components)
+- [Why This Design?](#why-this-design)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Locally registered components are only available in the component where they are registered, NOT in its child or descendant components. This is a common source of "Unknown component" or "Failed to resolve component" errors when developers expect a component registered in a parent to be available in children.
 
 ## Task Checklist

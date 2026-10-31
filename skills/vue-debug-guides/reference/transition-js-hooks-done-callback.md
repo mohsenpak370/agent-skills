@@ -8,6 +8,17 @@ tags: [vue3, transition, javascript, animation, hooks, gsap, done-callback]
 
 # JavaScript Transition Hooks Require done() Callback with css="false"
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Why Use `:css="false"`?](#why-use-cssfalse)
+- [Complete JavaScript Transition Example](#complete-javascript-transition-example)
+- [Using Web Animations API](#using-web-animations-api)
+- [Common Mistakes](#common-mistakes)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - When using JavaScript-only transitions (with `:css="false"`), the `@enter` and `@leave` hooks **must** call the `done()` callback to signal when the animation completes. Without calling `done()`, Vue considers the transition finished immediately, causing elements to appear/disappear without animation.
 
 This is especially important when using animation libraries like GSAP, Anime.js, or the Web Animations API.
@@ -21,13 +32,6 @@ This is especially important when using animation libraries like GSAP, Anime.js,
 
 **Problematic Code:**
 ```vue
-<template>
-  <!-- BAD: No done() callback - animation is skipped! -->
-  <Transition :css="false" @enter="onEnter" @leave="onLeave">
-    <div v-if="show" class="box">Content</div>
-  </Transition>
-</template>
-
 <script setup>
 import gsap from 'gsap'
 
@@ -50,17 +54,17 @@ function onLeave(el) {
   // Missing done() call - element removed immediately!
 }
 </script>
-```
 
-**Correct Code:**
-```vue
 <template>
-  <!-- GOOD: done() callback signals animation completion -->
+  <!-- BAD: No done() callback - animation is skipped! -->
   <Transition :css="false" @enter="onEnter" @leave="onLeave">
     <div v-if="show" class="box">Content</div>
   </Transition>
 </template>
+```
 
+**Correct Code:**
+```vue
 <script setup>
 import gsap from 'gsap'
 
@@ -82,6 +86,13 @@ function onLeave(el, done) {
   })
 }
 </script>
+
+<template>
+  <!-- GOOD: done() callback signals animation completion -->
+  <Transition :css="false" @enter="onEnter" @leave="onLeave">
+    <div v-if="show" class="box">Content</div>
+  </Transition>
+</template>
 ```
 
 ## Why Use `:css="false"`?
@@ -108,22 +119,6 @@ function onLeave(el, done) {
 ## Complete JavaScript Transition Example
 
 ```vue
-<template>
-  <Transition
-    :css="false"
-    @before-enter="onBeforeEnter"
-    @enter="onEnter"
-    @after-enter="onAfterEnter"
-    @enter-cancelled="onEnterCancelled"
-    @before-leave="onBeforeLeave"
-    @leave="onLeave"
-    @after-leave="onAfterLeave"
-    @leave-cancelled="onLeaveCancelled"
-  >
-    <div v-if="show" class="animated-box">Content</div>
-  </Transition>
-</template>
-
 <script setup>
 import gsap from 'gsap'
 import { ref } from 'vue'
@@ -187,6 +182,22 @@ function onLeaveCancelled() {
   }
 }
 </script>
+
+<template>
+  <Transition
+    :css="false"
+    @before-enter="onBeforeEnter"
+    @enter="onEnter"
+    @after-enter="onAfterEnter"
+    @enter-cancelled="onEnterCancelled"
+    @before-leave="onBeforeLeave"
+    @leave="onLeave"
+    @after-leave="onAfterLeave"
+    @leave-cancelled="onLeaveCancelled"
+  >
+    <div v-if="show" class="animated-box">Content</div>
+  </Transition>
+</template>
 ```
 
 ## Using Web Animations API

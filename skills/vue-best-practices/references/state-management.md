@@ -8,6 +8,16 @@ tags: [vue3, state-management, pinia, composables, ssr, vueuse]
 
 # State Management Strategy
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Choose the Lightest Store Approach](#choose-the-lightest-store-approach)
+- [Avoid Exporting Mutable Module State](#avoid-exporting-mutable-module-state)
+- [Do Not Use Runtime Singletons in SSR](#do-not-use-runtime-singletons-in-ssr)
+- [Use `createGlobalState` for Small SPA Global State](#use-createglobalstate-for-small-spa-global-state)
+<!-- /toc -->
+
 **Impact: HIGH** - Use the lightest state solution that fits your app architecture. SPA-only apps can use lightweight global composables, while SSR/Nuxt apps should default to Pinia for request-safe isolation and predictable tooling.
 
 ## Task List

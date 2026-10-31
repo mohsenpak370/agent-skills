@@ -8,6 +8,17 @@ tags: [vue3, events, keyboard, modifiers, keyup, shortcuts]
 
 # System Modifier Keys Must Be Held During keyup Events
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [How System Modifiers Work with keyup](#how-system-modifiers-work-with-keyup)
+- [System Modifier Keys](#system-modifier-keys)
+- [The .exact Modifier](#the-exact-modifier)
+- [Best Practice: Prefer keydown for Shortcuts](#best-practice-prefer-keydown-for-shortcuts)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - When using system modifier keys (`.ctrl`, `.alt`, `.shift`, `.meta`) with `keyup` events, the modifier must still be pressed when the other key is released. Releasing the modifier key first will not trigger the event, causing keyboard shortcuts to appear broken.
 
 ## Task Checklist
@@ -40,18 +51,18 @@ tags: [vue3, events, keyboard, modifiers, keyup, shortcuts]
 **Correct:**
 ```html
 <!-- CORRECT: User must hold Ctrl while releasing another key -->
-<template>
-  <input @keyup.ctrl.s="saveDocument" />
-  <!-- User presses Ctrl+S, then releases S while holding Ctrl -->
-  <!-- Event fires correctly -->
-</template>
-
 <script setup>
 function saveDocument(event) {
   event.preventDefault()
   // Save logic here
 }
 </script>
+
+<template>
+  <input @keyup.ctrl.s="saveDocument" />
+  <!-- User presses Ctrl+S, then releases S while holding Ctrl -->
+  <!-- Event fires correctly -->
+</template>
 ```
 
 ```html

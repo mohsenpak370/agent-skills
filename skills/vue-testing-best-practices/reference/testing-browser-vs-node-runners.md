@@ -8,6 +8,23 @@ tags: [vue3, testing, component-testing, vitest, browser, jsdom]
 
 # Choose Browser-Based Runner for Style and DOM Event Testing
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [When to Use Each Approach](#when-to-use-each-approach)
+  - [Node-Based Runner (Vitest + happy-dom/jsdom)](#node-based-runner-vitest--happy-domjsdom)
+  - [Vitest Browser Mode](#vitest-browser-mode)
+- [Vitest Browser Mode Setup](#vitest-browser-mode-setup)
+- [Examples: What Each Runner Can/Cannot Test](#examples-what-each-runner-cancannot-test)
+  - [Styles - Browser Required](#styles---browser-required)
+  - [Computed CSS Styles - Browser Required](#computed-css-styles---browser-required)
+  - [Native Events - Browser Required](#native-events---browser-required)
+- [Recommended Testing Strategy](#recommended-testing-strategy)
+  - [Directory Structure](#directory-structure)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Node-based test runners (Vitest with jsdom/happy-dom) simulate the DOM but cannot test real CSS rendering, native browser events, cookies, computed styles, or cross-browser behavior. Use browser-based runners when these matter.
 
 Use Vitest for most component tests (fast), but use Vitest Browser Mode when testing visual/DOM-dependent features.

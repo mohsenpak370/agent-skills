@@ -1,5 +1,18 @@
 # React UI Reference
 
+<!-- toc -->
+## Contents
+
+- [File Structure](#file-structure)
+- [Focused Components](#focused-components)
+- [Data and Presentation](#data-and-presentation)
+- [State Management](#state-management)
+- [Accessibility Examples](#accessibility-examples)
+- [Empty States](#empty-states)
+- [Loading and Optimistic Updates](#loading-and-optimistic-updates)
+- [React Verification](#react-verification)
+<!-- /toc -->
+
 Use this reference when working in React, TSX, React Query, SWR, Zustand, Redux, or similar React application code.
 
 ## File Structure
@@ -38,19 +51,19 @@ Keep components focused. If a component handles fetching, mutation, routing, lay
 
 ```tsx
 export function TaskListContainer() {
-  const { tasks, isLoading, error, refetch } = useTasks();
+  const { tasks, isLoading, error, refetch, toggleTask, deleteTask } = useTasks();
 
   if (isLoading) return <TaskListSkeleton />;
   if (error) return <ErrorState message="Failed to load tasks" retry={refetch} />;
   if (tasks.length === 0) return <EmptyState message="No tasks yet" />;
 
-  return <TaskList tasks={tasks} />;
+  return <TaskList tasks={tasks} onToggle={toggleTask} onDelete={deleteTask} />;
 }
 
-export function TaskList({ tasks }: { tasks: Task[] }) {
+export function TaskList({ tasks, onToggle, onDelete }: { tasks: Task[] } & Pick<TaskItemProps, 'onToggle' | 'onDelete'>) {
   return (
     <ul role="list" className="divide-y">
-      {tasks.map((task) => <TaskItem key={task.id} task={task} />)}
+      {tasks.map((task) => <TaskItem key={task.id} task={task} onToggle={onToggle} onDelete={onDelete} />)}
     </ul>
   );
 }
@@ -118,7 +131,7 @@ function Dialog({ isOpen, onClose }: DialogProps) {
 ## Empty States
 
 ```tsx
-function TaskList({ tasks }: { tasks: Task[] }) {
+function TaskList({ tasks, onCreateTask }: { tasks: Task[]; onCreateTask: () => void }) {
   if (tasks.length === 0) {
     return (
       <div role="status" className="py-12 text-center">
@@ -139,7 +152,7 @@ function TaskList({ tasks }: { tasks: Task[] }) {
 ```tsx
 function TaskListSkeleton() {
   return (
-    <div className="space-y-3" aria-busy="true" aria-label="Loading tasks">
+    <div className="space-y-3" role="status" aria-busy="true" aria-label="Loading tasks">
       {Array.from({ length: 3 }).map((_, i) => (
         <div key={i} className="h-12 animate-pulse rounded bg-muted" />
       ))}

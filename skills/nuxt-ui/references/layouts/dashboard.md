@@ -1,5 +1,25 @@
 # Dashboard Layout
 
+<!-- toc -->
+## Contents
+
+- [When to use](#when-to-use)
+- [Component tree](#component-tree)
+- [Layout](#layout)
+- [Page](#page)
+  - [Common mistakes](#common-mistakes)
+- [Key components](#key-components)
+  - [DashboardGroup](#dashboardgroup)
+  - [DashboardSidebar](#dashboardsidebar)
+  - [DashboardPanel](#dashboardpanel)
+  - [DashboardNavbar / DashboardToolbar](#dashboardnavbar--dashboardtoolbar)
+  - [UNavigationMenu in sidebar](#unavigationmenu-in-sidebar)
+- [Multi-panel (list-detail)](#multi-panel-list-detail)
+- [With toolbar](#with-toolbar)
+- [With search](#with-search)
+- [Right sidebar](#right-sidebar)
+<!-- /toc -->
+
 Build admin interfaces with resizable sidebars, multi-panel layouts, and toolbars.
 
 ## When to use
@@ -123,7 +143,8 @@ Root wrapper. Manages sidebar state and persistence.
 
 | Prop | Default | Purpose |
 |---|---|---|
-| `storage` | `'cookie'` | `'cookie'`, `'localStorage'`, `false` |
+| `storage` | `'cookie'` | `'cookie'` or `'local'` |
+| `persistent` | `true` | Set to `false` to stop saving sizes |
 | `storage-key` | `'dashboard'` | Storage key name |
 
 ### DashboardSidebar
@@ -145,7 +166,7 @@ Content panel with `#header`, `#body` (scrollable), `#footer`, and `#default` (r
 
 ### DashboardNavbar / DashboardToolbar
 
-Navbar: `#leading`, `#left`, `#default`, `#right` slots + `title` prop. Use `UDashboardSidebarCollapse` in `#leading` to toggle sidebar on mobile.
+Navbar: `#leading`, `#left`, `#default`, `#right` slots + `title` prop. Use `UDashboardSidebarCollapse` in `#leading` to collapse the sidebar on desktop. The navbar already renders a mobile toggle, customized with its `toggle` prop.
 Toolbar: same slots, sits below navbar for filters/actions.
 
 ### UNavigationMenu in sidebar

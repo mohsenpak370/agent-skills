@@ -5,6 +5,28 @@ description: Python code style, linting, formatting, naming conventions, and doc
 
 # Python Code Style & Documentation
 
+<!-- toc -->
+## Contents
+
+- [When to Use This Skill](#when-to-use-this-skill)
+- [Core Concepts](#core-concepts)
+  - [1. Automated Formatting](#1-automated-formatting)
+  - [2. Consistent Naming](#2-consistent-naming)
+  - [3. Documentation as Code](#3-documentation-as-code)
+  - [4. Type Annotations](#4-type-annotations)
+- [Quick Start](#quick-start)
+- [Fundamental Patterns](#fundamental-patterns)
+  - [Pattern 1: Modern Python Tooling](#pattern-1-modern-python-tooling)
+  - [Pattern 2: Type Checking Configuration](#pattern-2-type-checking-configuration)
+  - [Pattern 3: Naming Conventions](#pattern-3-naming-conventions)
+  - [Pattern 4: Import Organization](#pattern-4-import-organization)
+- [Advanced Patterns](#advanced-patterns)
+  - [Pattern 5: Google-Style Docstrings](#pattern-5-google-style-docstrings)
+  - [Pattern 6: Line Length and Formatting](#pattern-6-line-length-and-formatting)
+  - [Pattern 7: Project Documentation](#pattern-7-project-documentation)
+- [Best Practices Summary](#best-practices-summary)
+<!-- /toc -->
+
 Consistent code style and clear documentation make codebases maintainable and collaborative. This skill covers modern Python tooling, naming conventions, and documentation standards.
 
 ## When to Use This Skill

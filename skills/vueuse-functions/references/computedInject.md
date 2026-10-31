@@ -4,6 +4,16 @@ category: Component
 
 # computedInject
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Default Value](#default-value)
+  - [Factory Default](#factory-default)
+  - [Writable Computed](#writable-computed)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Combine `computed` and `inject`. Useful for creating a computed property based on an injected value.
 
 ## Usage

@@ -1,5 +1,15 @@
 # Overlays
 
+<!-- toc -->
+## Contents
+
+- [Confirmation dialog](#confirmation-dialog)
+- [Programmatic confirmation (useOverlay)](#programmatic-confirmation-useoverlay)
+- [Form in a slideover](#form-in-a-slideover)
+- [Command palette](#command-palette)
+- [Drawer (bottom sheet)](#drawer-bottom-sheet)
+<!-- /toc -->
+
 Patterns for modals, slideovers, drawers, and command palettes.
 
 ## Confirmation dialog
@@ -144,7 +154,11 @@ const groups = [{
 <template>
   <UButton label="Search..." icon="i-lucide-search" color="neutral" variant="outline" @click="isOpen = true" />
 
-  <UCommandPalette v-model:open="isOpen" :groups="groups" placeholder="Type a command or search..." />
+  <UModal v-model:open="isOpen">
+    <template #content>
+      <UCommandPalette :groups="groups" placeholder="Type a command or search..." close @update:open="isOpen = $event" />
+    </template>
+  </UModal>
 </template>
 ```
 

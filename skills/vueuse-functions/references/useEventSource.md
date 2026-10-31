@@ -4,6 +4,18 @@ category: Network
 
 # useEventSource
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Named Events](#named-events)
+  - [immediate](#immediate)
+  - [autoConnect](#autoconnect)
+  - [Auto Reconnection on Errors](#auto-reconnection-on-errors)
+  - [Data Serialization](#data-serialization)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 An [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource) or [Server-Sent-Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) instance opens a persistent connection to an HTTP server, which sends events in text/event-stream format.
 
 ## Usage

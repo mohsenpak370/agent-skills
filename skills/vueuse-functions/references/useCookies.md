@@ -4,6 +4,20 @@ category: '@Integrations'
 
 # useCookies
 
+<!-- toc -->
+## Contents
+
+- [Install](#install)
+- [Usage](#usage)
+  - [Common usage](#common-usage)
+- [Options](#options)
+  - [`dependencies` (optional)](#dependencies-optional)
+  - [`options` (optional)](#options-optional)
+  - [`cookies` (optional)](#cookies-optional)
+- [`createCookies([req])`](#createcookiesreq)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Wrapper for [`universal-cookie`](https://www.npmjs.com/package/universal-cookie).
 
 ::: tip

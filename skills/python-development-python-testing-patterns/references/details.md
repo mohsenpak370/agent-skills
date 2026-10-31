@@ -1,5 +1,19 @@
 # python-testing-patterns — detailed patterns and worked examples
 
+<!-- toc -->
+## Contents
+
+- [Fundamental Patterns](#fundamental-patterns)
+  - [Pattern 1: Basic pytest Tests](#pattern-1-basic-pytest-tests)
+  - [Pattern 2: Fixtures for Setup and Teardown](#pattern-2-fixtures-for-setup-and-teardown)
+  - [Pattern 3: Parameterized Tests](#pattern-3-parameterized-tests)
+  - [Pattern 4: Mocking with unittest.mock](#pattern-4-mocking-with-unittestmock)
+  - [Pattern 5: Testing Exceptions](#pattern-5-testing-exceptions)
+- [Test Design Principles](#test-design-principles)
+  - [One Behavior Per Test](#one-behavior-per-test)
+  - [Test Error Paths](#test-error-paths)
+<!-- /toc -->
+
 ## Fundamental Patterns
 
 ### Pattern 1: Basic pytest Tests
@@ -146,7 +160,8 @@ import pytest
 
 def is_valid_email(email: str) -> bool:
     """Check if email is valid."""
-    return "@" in email and "." in email.split("@")[1]
+    local, sep, domain = email.partition("@")
+    return bool(local) and bool(sep) and "." in domain and "@" not in domain
 
 
 @pytest.mark.parametrize("email,expected", [
@@ -300,7 +315,7 @@ def test_exception_info():
     assert "invalid literal" in str(exc_info.value)
 ```
 
-For advanced patterns including async testing, monkeypatching, temporary files, conftest setup, property-based testing, database testing, CI/CD integration, and configuration files, see [references/advanced-patterns.md](references/advanced-patterns.md)
+For advanced patterns including async testing, monkeypatching, temporary files, conftest setup, property-based testing, database testing, CI/CD integration, and configuration files, see [references/advanced-patterns.md](./advanced-patterns.md)
 
 ## Test Design Principles
 

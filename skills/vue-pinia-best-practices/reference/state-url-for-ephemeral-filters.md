@@ -8,6 +8,20 @@ tags: [vue3, state-management, url, router, filters, ux, vue-router]
 
 # Use URL State for Shareable Filters Instead of Stores
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Problem: Store-Only State](#the-problem-store-only-state)
+- [The Solution: URL-Based State](#the-solution-url-based-state)
+- [Using VueUse for Cleaner Code](#using-vueuse-for-cleaner-code)
+- [Hybrid Approach: URL + Store](#hybrid-approach-url--store)
+- [What Goes in URL vs Store](#what-goes-in-url-vs-store)
+- [Benefits of URL State](#benefits-of-url-state)
+- [Clean URL Best Practices](#clean-url-best-practices)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Storing ephemeral UI state like filters, search queries, pagination, and sorting only in Pinia or component state means users lose that state on page refresh and cannot share links to specific filtered views. This hurts user experience and SEO.
 
 For state that represents a "view" of data, use URL query parameters instead of or alongside stores.

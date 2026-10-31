@@ -1,5 +1,22 @@
 # Proper TypeScript Type Augmentation for Plugins
 
+<!-- toc -->
+## Contents
+
+- [Rule](#rule)
+- [Why This Matters](#why-this-matters)
+- [Critical Rule: Module Syntax Required](#critical-rule-module-syntax-required)
+- [Complete Plugin Type Augmentation Example](#complete-plugin-type-augmentation-example)
+- [Alternative: Augment @vue/runtime-core](#alternative-augment-vueruntime-core)
+- [Ensure tsconfig.json Includes the Declaration File](#ensure-tsconfigjson-includes-the-declaration-file)
+- [For Library Authors: package.json Types Field](#for-library-authors-packagejson-types-field)
+- [Common Errors and Solutions](#common-errors-and-solutions)
+  - [Error: Property '$xyz' does not exist on type](#error-property-xyz-does-not-exist-on-type)
+  - [Error: Types work in some components but not others](#error-types-work-in-some-components-but-not-others)
+  - [Error in Options API but not Composition API](#error-in-options-api-but-not-composition-api)
+- [References](#references)
+<!-- /toc -->
+
 ## Rule
 
 When creating Vue plugins that add global properties, you MUST properly augment TypeScript types. The augmentation file MUST contain at least one top-level `import` or `export` statement to be treated as a module.

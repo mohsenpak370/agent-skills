@@ -8,6 +8,17 @@ tags: [vue3, component-registration, vite, dynamic-import, migration, webpack]
 
 # Use import.meta.glob for Dynamic Component Registration in Vite
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Lazy Loading with Async Components](#lazy-loading-with-async-components)
+- [Glob Pattern Examples](#glob-pattern-examples)
+- [TypeScript Support](#typescript-support)
+- [Migration Checklist (Webpack to Vite)](#migration-checklist-webpack-to-vite)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - When migrating from Webpack to Vite or starting a new Vite project, the `require.context` pattern for dynamically registering components won't work. Vite uses `import.meta.glob` instead. Using the wrong approach will cause build errors or runtime failures.
 
 ## Task Checklist

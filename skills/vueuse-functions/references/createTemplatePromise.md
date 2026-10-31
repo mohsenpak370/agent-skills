@@ -5,6 +5,20 @@ outline: deep
 
 # createTemplatePromise
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Features](#features)
+- [Usage](#usage-1)
+  - [Passing Arguments](#passing-arguments)
+  - [Singleton Mode](#singleton-mode)
+  - [Transition](#transition)
+  - [Slot Props](#slot-props)
+- [Motivation](#motivation)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Template as Promise. Useful for constructing custom Dialogs, Modals, Toasts, etc.
 
 ## Usage

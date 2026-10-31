@@ -5,6 +5,22 @@ variants: onKeyDown, onKeyUp, onKeyPressed
 
 # onKeyStroke
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Return Value](#return-value)
+  - [Listen To Multiple Keys](#listen-to-multiple-keys)
+  - [Custom Key Predicate](#custom-key-predicate)
+  - [Custom Event Target](#custom-event-target)
+  - [Ignore Repeated Events](#ignore-repeated-events)
+  - [Passive Mode](#passive-mode)
+- [Directive Usage](#directive-usage)
+  - [Custom Keyboard Event](#custom-keyboard-event)
+- [Shorthands](#shorthands)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Listen for keyboard keystrokes. By default, listens on `keydown` events on `window`.
 
 ## Usage

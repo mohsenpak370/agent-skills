@@ -8,6 +8,21 @@ tags: [vue3, typescript, template-refs, lifecycle, null-safety]
 
 # Template Refs Are Null Until Mounted
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Problem](#the-problem)
+- [The Solution](#the-solution)
+- [Vue 3.5+: useTemplateRef](#vue-35-usetemplateref)
+- [Handling v-if Scenarios](#handling-v-if-scenarios)
+- [Component Refs](#component-refs)
+- [Multiple Refs with v-for](#multiple-refs-with-v-for)
+- [Async Operations and Refs](#async-operations-and-refs)
+- [Type Guard Pattern](#type-guard-pattern)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Template refs have an initial value of `null` and remain null until the component mounts. They can also become null again if the referenced element is removed by `v-if`. Always account for this in TypeScript with union types and optional chaining.
 
 ## Task Checklist

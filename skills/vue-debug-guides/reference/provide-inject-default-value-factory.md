@@ -8,6 +8,24 @@ tags: [vue3, provide-inject, composition-api, memory, shared-state]
 
 # Use Factory Functions for Non-Primitive Inject Default Values
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Gotcha: Shared Default References](#the-gotcha-shared-default-references)
+- [API Explanation](#api-explanation)
+- [Examples](#examples)
+  - [Primitive Defaults (No Factory Needed)](#primitive-defaults-no-factory-needed)
+  - [Object Defaults (Factory Required)](#object-defaults-factory-required)
+  - [Array Defaults (Factory Required)](#array-defaults-factory-required)
+  - [Class Instance Defaults (Factory Required)](#class-instance-defaults-factory-required)
+- [Options API Syntax](#options-api-syntax)
+- [Real-World Example: Form Context](#real-world-example-form-context)
+- [TypeScript: Typing Factory Defaults](#typescript-typing-factory-defaults)
+- [Common Mistake in Testing](#common-mistake-in-testing)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - When providing default values for `inject()`, using an object literal creates a single shared reference. All components using that default will share the same object, leading to unexpected state sharing and bugs.
 
 ## Task Checklist

@@ -4,6 +4,15 @@ category: Utilities
 
 # useMemoize
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Resolving cache key](#resolving-cache-key)
+  - [Customize cache mechanism](#customize-cache-mechanism)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Cache results of functions depending on arguments and keep it reactive. It can also be used for asynchronous functions and will reuse existing promises to avoid fetching the same data at the same time.
 
 ::: tip

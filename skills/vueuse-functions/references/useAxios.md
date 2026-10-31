@@ -4,6 +4,20 @@ category: '@Integrations'
 
 # useAxios
 
+<!-- toc -->
+## Contents
+
+- [Install](#install)
+- [Usage](#usage)
+  - [Return Values](#return-values)
+  - [With Axios Instance](#with-axios-instance)
+  - [With Config Options](#with-config-options)
+  - [Manual Execution](#manual-execution)
+  - [Awaiting Results](#awaiting-results)
+  - [Options](#options)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Wrapper for [`axios`](https://github.com/axios/axios).
 
 ## Install
@@ -245,8 +259,7 @@ export interface UseAxiosOptionsWithInitialData<
   initialData: T
 }
 export type UseAxiosOptions<T = any> =
-  | UseAxiosOptionsBase<T>
-  | UseAxiosOptionsWithInitialData<T>
+  UseAxiosOptionsBase<T> | UseAxiosOptionsWithInitialData<T>
 export declare function useAxios<
   T = any,
   R = AxiosResponse<T>,

@@ -8,6 +8,16 @@ tags: [vue3, watchEffect, watchers, async, await, dependency-tracking]
 
 # watchEffect Only Tracks Dependencies Before First Await
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Pattern: Extract Dependencies First](#pattern-extract-dependencies-first)
+- [When to Use watch Instead](#when-to-use-watch-instead)
+- [Debugging Untracked Dependencies](#debugging-untracked-dependencies)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - `watchEffect` automatically tracks reactive dependencies, but only during synchronous execution. Any reactive properties accessed after the first `await` statement will NOT be tracked, and changes to them won't trigger the watcher.
 
 For async operations, either access all dependencies before the await, or use `watch` with explicit dependencies.

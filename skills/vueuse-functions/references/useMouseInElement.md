@@ -4,6 +4,15 @@ category: Elements
 
 # useMouseInElement
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Component Usage](#component-usage)
+- [Directive Usage](#directive-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive mouse position related to an element
 
 ## Usage

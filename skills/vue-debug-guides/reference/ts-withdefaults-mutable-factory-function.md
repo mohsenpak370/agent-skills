@@ -8,6 +8,19 @@ tags: [vue3, typescript, props, withDefaults, mutable-types]
 
 # Wrap Mutable Default Values in Factory Functions
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Problem: Shared Mutable References](#the-problem-shared-mutable-references)
+- [The Solution: Factory Functions](#the-solution-factory-functions)
+- [When Factory Functions Are Required](#when-factory-functions-are-required)
+- [Complete Example](#complete-example)
+- [Vue 3.5+ Reactive Props Destructure](#vue-35-reactive-props-destructure)
+- [Common Bug Pattern](#common-bug-pattern)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - When using `withDefaults()` with type-based props declaration, default values for mutable types (arrays and objects) MUST be wrapped in factory functions. Without this, all component instances share the same reference, causing bugs where modifying the prop in one instance affects all others.
 
 ## Task Checklist
@@ -36,16 +49,16 @@ const props = withDefaults(defineProps<Props>(), {
 
 When you have multiple instances of this component:
 ```vue
+<script setup>
+// If comp1 modifies its items, comp2's items change too!
+comp1.value.items.push('new item')  // comp2 also has 'new item' now
+</script>
+
 <template>
   <!-- Both share the SAME items array! -->
   <MyComponent ref="comp1" />
   <MyComponent ref="comp2" />
 </template>
-
-<script setup>
-// If comp1 modifies its items, comp2's items change too!
-comp1.value.items.push('new item')  // comp2 also has 'new item' now
-</script>
 ```
 
 ## The Solution: Factory Functions

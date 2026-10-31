@@ -1,8 +1,17 @@
 ---
 category: Time
+utils: formatTimeAgoIntl
 ---
 
 # useTimeAgoIntl
+
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Non-Reactivity Usage](#non-reactivity-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
 
 Reactive time ago with i18n supported. Automatically update the time ago string when the time changes. Powered by `Intl.RelativeTimeFormat`.
 
@@ -70,13 +79,6 @@ export interface UseTimeAgoIntlOptions<Controls extends boolean>
    * @default false
    */
   controls?: Controls
-  /**
-   * Update interval in milliseconds, set 0 to disable auto update
-   *
-   * @deprecated Please use `scheduler` option instead
-   * @default 30_000
-   */
-  updateInterval?: number
 }
 type UseTimeAgoReturn<Controls extends boolean = false> = Controls extends true
   ? {

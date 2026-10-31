@@ -4,6 +4,16 @@ category: Utilities
 
 # useConfirmDialog
 
+<!-- toc -->
+## Contents
+
+- [Functions and hooks](#functions-and-hooks)
+- [Basic Usage](#basic-usage)
+  - [Using hooks](#using-hooks)
+  - [Promise](#promise)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Creates event hooks to support modals and confirmation dialog chains.
 
 Functions can be used on the template, and hooks are a handy skeleton for the business logic of modals dialog or other actions that require user confirmation.

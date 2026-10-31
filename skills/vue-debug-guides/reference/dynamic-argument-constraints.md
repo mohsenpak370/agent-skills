@@ -8,6 +8,16 @@ tags: [vue3, template, directives, v-bind, v-on, dynamic-arguments]
 
 # Dynamic Directive Arguments Have Syntax Constraints
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [In-DOM Template Workaround](#in-dom-template-workaround)
+- [SFC vs In-DOM Templates](#sfc-vs-in-dom-templates)
+- [Valid Dynamic Argument Values](#valid-dynamic-argument-values)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Dynamic directive arguments (e.g., `:[attributeName]`, `@[eventName]`) have value and syntax constraints that can cause silent failures. In-DOM templates also have case sensitivity issues with browsers lowercasing attribute names.
 
 Dynamic arguments allow runtime determination of which attribute or event to bind, but they have restrictions that differ from static arguments.
@@ -22,6 +32,12 @@ Dynamic arguments allow runtime determination of which attribute or event to bin
 
 **Incorrect:**
 ```vue
+<script setup>
+// If component expects someAttr but browser lowercases to someattr
+// the binding silently fails
+const someAttr = 'href'
+</script>
+
 <template>
   <!-- ERROR: Spaces and quotes not allowed in dynamic arguments -->
   <a :[' foo' + bar]="value">Link</a>
@@ -35,33 +51,10 @@ Dynamic arguments allow runtime determination of which attribute or event to bin
   <!-- This becomes :[someattr] which won't match someAttr -->
   <a :[someAttr]="url">Link</a>
 </template>
-
-<script setup>
-// If component expects someAttr but browser lowercases to someattr
-// the binding silently fails
-const someAttr = 'href'
-</script>
 ```
 
 **Correct:**
 ```vue
-<template>
-  <!-- OK: Simple variable reference -->
-  <a :[attributeName]="url">Link</a>
-
-  <!-- OK: Use computed property for complex expressions -->
-  <a :[dynamicAttr]="value">Link</a>
-
-  <!-- OK: null removes the binding -->
-  <button :[disabledAttr]="isDisabled">Submit</button>
-
-  <!-- OK: Dynamic event names -->
-  <button @[eventName]="handler">Click</button>
-
-  <!-- OK: In SFCs, case is preserved -->
-  <a :[someAttr]="url">Link</a>
-</template>
-
 <script setup>
 import { ref, computed } from 'vue'
 
@@ -86,6 +79,23 @@ function handler() {
   console.log('Event triggered')
 }
 </script>
+
+<template>
+  <!-- OK: Simple variable reference -->
+  <a :[attributeName]="url">Link</a>
+
+  <!-- OK: Use computed property for complex expressions -->
+  <a :[dynamicAttr]="value">Link</a>
+
+  <!-- OK: null removes the binding -->
+  <button :[disabledAttr]="isDisabled">Submit</button>
+
+  <!-- OK: Dynamic event names -->
+  <button @[eventName]="handler">Click</button>
+
+  <!-- OK: In SFCs, case is preserved -->
+  <a :[someAttr]="url">Link</a>
+</template>
 ```
 
 ## In-DOM Template Workaround

@@ -4,6 +4,18 @@ category: Browser
 
 # useGamepad
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Gamepad Updates](#gamepad-updates)
+  - [Gamepad Connect & Disconnect Events](#gamepad-connect--disconnect-events)
+  - [Vibration](#vibration)
+  - [Mappings](#mappings)
+  - [SSR Compatibility](#ssr-compatibility)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Provides reactive bindings for the [Gamepad API](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API).
 
 ## Usage

@@ -8,6 +8,22 @@ tags: [vue3, emits, defineEmits, component-events, typescript, documentation]
 
 # Always Declare Emits for Documentation and Validation
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Warning](#the-warning)
+- [Basic Declaration](#basic-declaration)
+- [TypeScript Typed Emits](#typescript-typed-emits)
+- [Event Validation](#event-validation)
+- [Benefits of Declaring Emits](#benefits-of-declaring-emits)
+  - [1. Fallthrough Attribute Separation](#1-fallthrough-attribute-separation)
+  - [2. Self-Documentation](#2-self-documentation)
+  - [3. IDE Support](#3-ide-support)
+- [$emit in Template vs emit in Script](#emit-in-template-vs-emit-in-script)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Declaring emitted events with `defineEmits()` or the `emits` option is technically optional, but strongly recommended. Without declarations, Vue shows runtime warnings, TypeScript can't infer event types, and you lose the ability to validate event payloads.
 
 Declared emits also serve as self-documentation, making it immediately clear what events a component can emit.

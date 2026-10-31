@@ -8,6 +8,18 @@ tags: [vue3, defineEmits, script-setup, macros, composition-api]
 
 # defineEmits Must Be Used at Top Level of script setup
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Problem](#the-problem)
+- [Correct Usage](#correct-usage)
+- [Why This Restriction Exists](#why-this-restriction-exists)
+- [Using emit in Composables](#using-emit-in-composables)
+- [ESLint Rule](#eslint-rule)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - The `defineEmits()` macro can only be used directly within `<script setup>` at the top level. It cannot be placed inside functions, conditionals, or any other nested scope. Vue's compiler hoists these macros to module scope during compilation.
 
 This applies to all Vue macros: `defineProps`, `defineEmits`, `defineExpose`, `defineOptions`, and `defineSlots`.

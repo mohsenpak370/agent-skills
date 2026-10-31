@@ -5,6 +5,33 @@ description: Automates CI/CD pipeline setup. Use when setting up or modifying bu
 
 # CI/CD and Automation
 
+<!-- toc -->
+## Contents
+
+- [Overview](#overview)
+- [When to Use](#when-to-use)
+- [The Quality Gate Pipeline](#the-quality-gate-pipeline)
+- [GitHub Actions Configuration](#github-actions-configuration)
+  - [Basic CI Pipeline](#basic-ci-pipeline)
+  - [With Database Integration Tests](#with-database-integration-tests)
+  - [E2E Tests](#e2e-tests)
+- [Feeding CI Failures Back to Agents](#feeding-ci-failures-back-to-agents)
+- [Deployment Strategies](#deployment-strategies)
+  - [Preview Deployments](#preview-deployments)
+  - [Feature Flags](#feature-flags)
+  - [Staged Rollouts](#staged-rollouts)
+  - [Rollback Plan](#rollback-plan)
+- [Environment Management](#environment-management)
+- [Automation Beyond CI](#automation-beyond-ci)
+  - [Dependabot / Renovate](#dependabot--renovate)
+  - [Build Cop Role](#build-cop-role)
+  - [PR Checks](#pr-checks)
+- [CI Optimization](#ci-optimization)
+- [Common Rationalizations](#common-rationalizations)
+- [Red Flags](#red-flags)
+- [Verification](#verification)
+<!-- /toc -->
+
 ## Overview
 
 Automate quality gates so that no change reaches production without passing tests, lint, type checking, and build. CI/CD is the enforcement mechanism for every other skill — it catches what humans and agents miss, and it does so consistently on every single change.
@@ -184,7 +211,7 @@ Agent fixes → pushes → CI runs again
 **Key patterns:**
 
 ```
-Lint failure → Agent runs `npm run lint --fix` and commits
+Lint failure → Agent runs `npm run lint -- --fix` and commits
 Type error  → Agent reads the error location and fixes the type
 Test failure → Agent follows debugging-and-error-recovery skill
 Build error → Agent checks config and dependencies
@@ -263,9 +290,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Rollback deployment
+        env:
+          VERSION: ${{ inputs.version }}
         run: |
-          # Deploy the specified previous version
-          npx vercel rollback ${{ inputs.version }}
+          # Deploy the specified previous version. Pass the input through env,
+          # never interpolate it into the script (shell injection).
+          npx vercel rollback "$VERSION"
 ```
 
 ## Environment Management
@@ -313,7 +343,7 @@ When the pipeline exceeds 10 minutes, apply these strategies in order of impact:
 ```
 Slow CI pipeline?
 ├── Cache dependencies
-│   └── Use actions/cache or setup-node cache option for node_modules
+│   └── Use the setup-node cache option (or actions/cache) for the package manager cache, not node_modules
 ├── Run jobs in parallel
 │   └── Split lint, typecheck, test, build into separate parallel jobs
 ├── Only run what changed

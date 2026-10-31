@@ -1,5 +1,19 @@
 # python-type-safety — detailed worked examples
 
+<!-- toc -->
+## Contents
+
+- [Advanced Patterns](#advanced-patterns)
+  - [Pattern 5: Generic Repository](#pattern-5-generic-repository)
+  - [Pattern 6: TypeVar with Bounds](#pattern-6-typevar-with-bounds)
+  - [Pattern 7: Protocols for Structural Typing](#pattern-7-protocols-for-structural-typing)
+  - [Pattern 8: Common Protocol Patterns](#pattern-8-common-protocol-patterns)
+  - [Pattern 9: Type Aliases](#pattern-9-type-aliases)
+  - [Pattern 10: Callable Types](#pattern-10-callable-types)
+- [Configuration](#configuration)
+  - [Strict Mode Checklist](#strict-mode-checklist)
+<!-- /toc -->
+
 ## Advanced Patterns
 
 ### Pattern 5: Generic Repository

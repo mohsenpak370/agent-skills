@@ -4,6 +4,17 @@ category: '@Firebase'
 
 # useFirestore
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Return Value](#return-value)
+  - [Options](#options)
+  - [Error Handling](#error-handling)
+- [Share across instances](#share-across-instances)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive [Firestore](https://firebase.google.com/docs/firestore) binding. Making it straightforward to **always keep your local data in sync** with remotes databases.
 
 ## Usage

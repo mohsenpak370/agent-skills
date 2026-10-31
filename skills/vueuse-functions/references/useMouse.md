@@ -4,6 +4,15 @@ category: Sensors
 
 # useMouse
 
+<!-- toc -->
+## Contents
+
+- [Basic Usage](#basic-usage)
+- [Custom Extractor](#custom-extractor)
+- [Component Usage](#component-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive mouse position
 
 ## Basic Usage

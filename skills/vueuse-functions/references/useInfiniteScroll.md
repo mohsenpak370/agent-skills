@@ -4,6 +4,15 @@ category: Sensors
 
 # useInfiniteScroll
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Direction](#direction)
+- [Directive Usage](#directive-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Infinite scrolling of the element.
 
 ## Usage
@@ -105,12 +114,7 @@ function canLoadMore() {
 
 ```ts
 type InfiniteScrollElement =
-  | HTMLElement
-  | SVGElement
-  | Window
-  | Document
-  | null
-  | undefined
+  HTMLElement | SVGElement | Window | Document | null | undefined
 export interface UseInfiniteScrollOptions<
   T extends InfiniteScrollElement = InfiniteScrollElement,
 > extends UseScrollOptions {

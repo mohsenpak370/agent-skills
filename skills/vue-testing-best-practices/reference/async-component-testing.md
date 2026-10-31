@@ -8,6 +8,17 @@ tags: [vue3, testing, async, defineAsyncComponent, flushPromises, vitest]
 
 # Use flushPromises for Testing Async Components
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Testing with Suspense](#testing-with-suspense)
+- [Testing Error States](#testing-error-states)
+- [Utilities Reference](#utilities-reference)
+- [Dynamic Import Handling](#dynamic-import-handling)
+- [References](#references)
+<!-- /toc -->
+
 **Impact: HIGH** - When testing async components created with `defineAsyncComponent`, you must use `await flushPromises()` to ensure the component has loaded before making assertions. Vue updates asynchronously, so tests that don't account for this will make assertions before the component has rendered.
 
 ## Task Checklist

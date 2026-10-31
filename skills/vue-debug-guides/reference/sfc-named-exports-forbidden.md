@@ -8,6 +8,17 @@ tags: [vue3, sfc, export, script-block, composition-api]
 
 # SFC Script Block Must Use Default Export Only
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Exporting Types Alongside Script Setup](#exporting-types-alongside-script-setup)
+- [Sharing Utilities Across Components](#sharing-utilities-across-components)
+- [Why This Restriction Exists](#why-this-restriction-exists)
+- [Common Mistake: Reusing Code via SFC Exports](#common-mistake-reusing-code-via-sfc-exports)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Vue Single-File Components expect exactly one default export from the `<script>` block. Using named exports for your component will cause build failures or runtime errors because Vue's tooling is designed to process a single default-exported component definition per `.vue` file.
 
 ## Task Checklist

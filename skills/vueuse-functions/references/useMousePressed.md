@@ -4,6 +4,14 @@ category: Sensors
 
 # useMousePressed
 
+<!-- toc -->
+## Contents
+
+- [Basic Usage](#basic-usage)
+- [Component Usage](#component-usage)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive mouse pressing state. Triggered by `mousedown` `touchstart` on target element and released by `mouseup` `mouseleave` `touchend` `touchcancel` on window.
 
 ## Basic Usage

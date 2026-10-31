@@ -4,6 +4,17 @@ category: Utilities
 
 # useAsyncQueue
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Result State](#result-state)
+  - [Interrupt on Failure](#interrupt-on-failure)
+  - [Callbacks](#callbacks)
+  - [Abort Signal](#abort-signal)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Executes each asynchronous task sequentially and passes the current task result to the next task.
 
 ## Usage

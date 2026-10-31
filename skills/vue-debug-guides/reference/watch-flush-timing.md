@@ -8,6 +8,17 @@ tags: [vue3, watch, watchers, flush, DOM, timing, post]
 
 # Use flush: 'post' When Accessing Updated DOM in Watchers
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Flush Timing Options](#flush-timing-options)
+- [When to Use Each Flush Timing](#when-to-use-each-flush-timing)
+- [Sync Watcher Warning](#sync-watcher-warning)
+- [Practical Example: Auto-scroll](#practical-example-auto-scroll)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - By default, watcher callbacks run before the component's DOM is updated. If you access the DOM in a watcher callback, you'll see the pre-update state. Use `flush: 'post'` or `watchPostEffect` when you need to access the updated DOM.
 
 ## Task Checklist

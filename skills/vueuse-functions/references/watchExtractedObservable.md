@@ -4,6 +4,15 @@ category: '@RxJS'
 
 # watchExtractedObservable
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Subscription Options](#subscription-options)
+- [Return Value](#return-value)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Watch the values of an RxJS [`Observable`](https://rxjs.dev/guide/observable) as extracted from one or more composables.
 
 Automatically unsubscribe on observable change, and automatically unsubscribe from it when the component is unmounted.

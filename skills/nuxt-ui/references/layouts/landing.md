@@ -1,5 +1,19 @@
 # Landing Page Layout
 
+<!-- toc -->
+## Contents
+
+- [When to use](#when-to-use)
+- [App shell](#app-shell)
+  - [Common mistakes](#common-mistakes)
+- [Landing page](#landing-page)
+- [Key components](#key-components)
+- [Variations](#variations)
+  - [Alternating feature sections](#alternating-feature-sections)
+  - [Blog listing](#blog-listing)
+  - [Changelog](#changelog)
+<!-- /toc -->
+
 Build public-facing pages — landing, blog, changelog, pricing — using the Header + Main + Footer shell with Page components.
 
 ## When to use

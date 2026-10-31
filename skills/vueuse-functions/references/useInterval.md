@@ -4,6 +4,17 @@ category: Animation
 
 # useInterval
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [With Controls](#with-controls)
+  - [Options](#options)
+  - [Reactive Interval](#reactive-interval)
+  - [Callback on Every Interval](#callback-on-every-interval)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive counter that increases on every interval.
 
 ## Usage
@@ -92,8 +103,7 @@ export interface UseIntervalControls {
   reset: () => void
 }
 export type UseIntervalReturn =
-  | Readonly<ShallowRef<number>>
-  | Readonly<UseIntervalControls & Pausable>
+  Readonly<ShallowRef<number>> | Readonly<UseIntervalControls & Pausable>
 /**
  * Reactive counter increases on every interval
  *

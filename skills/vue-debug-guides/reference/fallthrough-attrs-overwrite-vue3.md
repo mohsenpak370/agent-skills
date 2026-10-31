@@ -1,5 +1,21 @@
 # Fallthrough Attributes Overwrite Explicit Attributes in Vue 3
 
+<!-- toc -->
+## Contents
+
+- [Rule](#rule)
+- [Why This Matters](#why-this-matters)
+- [Bad Code](#bad-code)
+  - [Another common case with data attributes](#another-common-case-with-data-attributes)
+- [Good Code](#good-code)
+  - [Option 1: Control attribute order with inheritAttrs: false](#option-1-control-attribute-order-with-inheritattrs-false)
+  - [Option 2: Exclude specific attrs from fallthrough](#option-2-exclude-specific-attrs-from-fallthrough)
+  - [Option 3: For wrapper components, declare as prop](#option-3-for-wrapper-components-declare-as-prop)
+- [Class and Style Are Special](#class-and-style-are-special)
+- [Vue 2 to Vue 3 Migration Checklist](#vue-2-to-vue-3-migration-checklist)
+- [References](#references)
+<!-- /toc -->
+
 ## Rule
 
 In Vue 3, fallthrough attributes overwrite explicitly set attributes on the root element (except `class` and `style` which are merged). This is a breaking change from Vue 2. To preserve explicit attribute values, use `inheritAttrs: false` and manually bind `$attrs` before the explicit attribute.

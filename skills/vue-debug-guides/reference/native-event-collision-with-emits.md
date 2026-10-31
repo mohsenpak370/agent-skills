@@ -8,6 +8,18 @@ tags: [vue3, emits, native-events, click, event-collision]
 
 # Declaring Native Event Names in Emits Blocks Native Listeners
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Problem](#the-problem)
+- [The Solution](#the-solution)
+- [Native Events Affected](#native-events-affected)
+- [When This Is Intentional](#when-this-is-intentional)
+- [Debugging Tips](#debugging-tips)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - When you declare a native DOM event name (like `click`, `input`, `focus`) in your component's `emits` option, listeners for that event will ONLY respond to your component's `emit()` calls. They will no longer respond to the actual native DOM events on the root element.
 
 This can cause unexpected behavior where clicks seem to stop working on your component.

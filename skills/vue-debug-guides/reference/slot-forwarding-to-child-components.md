@@ -8,6 +8,17 @@ tags: [vue3, slots, component-composition, wrapper-components, slot-forwarding]
 
 # Forward Slots to Child Components Correctly
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Handling Scoped Slots](#handling-scoped-slots)
+- [Alternative: Handling Undefined slotProps](#alternative-handling-undefined-slotprops)
+- [Forwarding Specific Slots Only](#forwarding-specific-slots-only)
+- [Common Mistakes](#common-mistakes)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - When creating wrapper components that enhance or extend other components, you need to forward slots from the parent to the wrapped child. Without proper slot forwarding, consumers of your wrapper cannot customize the inner component's slots.
 
 ## Task Checklist

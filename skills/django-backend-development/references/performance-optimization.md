@@ -1,5 +1,41 @@
 # Django Performance Optimization
 
+<!-- toc -->
+## Contents
+
+- [Database Query Optimization](#database-query-optimization)
+  - [Avoid N+1 Queries (Most Important!)](#avoid-n1-queries-most-important)
+  - [Use only() and defer()](#use-only-and-defer)
+  - [Database Indexes](#database-indexes)
+  - [Bulk Operations](#bulk-operations)
+  - [Query Profiling](#query-profiling)
+- [Caching](#caching)
+  - [Cache Framework Setup](#cache-framework-setup)
+  - [Low-Level Cache API](#low-level-cache-api)
+  - [Per-View Cache](#per-view-cache)
+  - [Template Fragment Caching](#template-fragment-caching)
+  - [Caching Patterns](#caching-patterns)
+- [Database Connection Pooling](#database-connection-pooling)
+  - [Using pgbouncer (PostgreSQL)](#using-pgbouncer-postgresql)
+  - [Django-DB-Pool](#django-db-pool)
+- [Static File Optimization](#static-file-optimization)
+  - [Compression and Minification](#compression-and-minification)
+  - [CDN for Static Files](#cdn-for-static-files)
+- [Background Tasks with Celery](#background-tasks-with-celery)
+- [Pagination](#pagination)
+- [Middleware Optimization](#middleware-optimization)
+- [Template Optimization](#template-optimization)
+  - [Use Template Fragment Caching](#use-template-fragment-caching)
+  - [Avoid Logic in Templates](#avoid-logic-in-templates)
+- [Profiling and Monitoring](#profiling-and-monitoring)
+  - [Django Debug Toolbar](#django-debug-toolbar)
+  - [Django Silk (Production Profiling)](#django-silk-production-profiling)
+  - [Custom Performance Logging](#custom-performance-logging)
+- [Database Optimization Checklist](#database-optimization-checklist)
+- [Caching Checklist](#caching-checklist)
+- [General Performance Checklist](#general-performance-checklist)
+<!-- /toc -->
+
 ## Database Query Optimization
 
 ### Avoid N+1 Queries (Most Important!)

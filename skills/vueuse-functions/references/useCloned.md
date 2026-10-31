@@ -4,6 +4,15 @@ category: Utilities
 
 # useCloned
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+- [Manual cloning](#manual-cloning)
+- [Custom Clone Function](#custom-clone-function)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive clone of a ref. By default, it use `JSON.parse(JSON.stringify())` to do the clone.
 
 ## Usage
@@ -97,6 +106,6 @@ export type CloneFn<F, T = F> = (x: F) => T
 export declare function cloneFnJSON<T>(source: T): T
 export declare function useCloned<T>(
   source: MaybeRefOrGetter<T>,
-  options?: UseClonedOptions,
+  options?: UseClonedOptions<T>,
 ): UseClonedReturn<T>
 ```

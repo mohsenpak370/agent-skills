@@ -8,6 +8,14 @@ tags: [vue3, composition-api, lifecycle, onMounted, onUnmounted, async, setup]
 
 # Register Lifecycle Hooks Synchronously During Setup
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Multiple Hooks Are Allowed](#multiple-hooks-are-allowed)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Lifecycle hooks registered asynchronously (e.g., inside setTimeout, after await) will never be called because Vue cannot associate them with the component instance. This leads to silent failures where expected initialization or cleanup code never runs.
 
 In Vue 3's Composition API, lifecycle hooks like `onMounted`, `onUnmounted`, `onUpdated`, etc. must be registered synchronously during component setup. The hook registration doesn't need to be lexically inside `setup()` or `<script setup>`, but the call stack must be synchronous and originate from within setup.

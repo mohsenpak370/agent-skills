@@ -8,6 +8,15 @@ tags: [vue3, v-if, v-for, conditional-rendering, list-rendering, eslint]
 
 # Never Use v-if and v-for on the Same Element
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Vue 2 vs Vue 3 Precedence Change](#vue-2-vs-vue-3-precedence-change)
+- [Why Computed Properties Are Better](#why-computed-properties-are-better)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Using `v-if` and `v-for` on the same element creates ambiguous precedence that differs between Vue 2 and Vue 3. In Vue 2, `v-for` had higher precedence; in Vue 3, `v-if` has higher precedence. This breaking change causes subtle bugs during migration and makes code intent unclear.
 
 The ESLint rule `vue/no-use-v-if-with-v-for` enforces this best practice.
@@ -53,12 +62,6 @@ The ESLint rule `vue/no-use-v-if-with-v-for` enforces this best practice.
 **Correct:**
 ```html
 <!-- CORRECT: Filter with computed property -->
-<template>
-  <li v-for="user in activeUsers" :key="user.id">
-    {{ user.name }}
-  </li>
-</template>
-
 <script setup>
 import { computed } from 'vue'
 
@@ -68,6 +71,12 @@ const activeUsers = computed(() =>
   props.users.filter(user => user.isActive)
 )
 </script>
+
+<template>
+  <li v-for="user in activeUsers" :key="user.id">
+    {{ user.name }}
+  </li>
+</template>
 ```
 
 ```html

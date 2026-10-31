@@ -5,6 +5,37 @@ description: Auto-imported components, lazy loading, and hydration strategies
 
 # Components Auto-imports
 
+<!-- toc -->
+## Contents
+
+- [Basic Auto-imports](#basic-auto-imports)
+- [Naming Conventions](#naming-conventions)
+  - [Nested Directory Names](#nested-directory-names)
+  - [Disable Path Prefix](#disable-path-prefix)
+  - [Grouping Directories](#grouping-directories)
+  - [`pattern` / `ignore` Globs](#pattern--ignore-globs)
+- [Lazy Loading](#lazy-loading)
+- [Lazy Hydration Strategies](#lazy-hydration-strategies)
+  - [`hydrate-on-visible`](#hydrate-on-visible)
+  - [`hydrate-on-idle`](#hydrate-on-idle)
+  - [`hydrate-on-interaction`](#hydrate-on-interaction)
+  - [`hydrate-on-media-query`](#hydrate-on-media-query)
+  - [`hydrate-after`](#hydrate-after)
+  - [`hydrate-when`](#hydrate-when)
+  - [`hydrate-never`](#hydrate-never)
+  - [Hydration Event](#hydration-event)
+- [Client/Server Components](#clientserver-components)
+  - [Client-only (`.client.vue`)](#client-only-clientvue)
+  - [Server-only (`.server.vue`)](#server-only-servervue)
+  - [Paired Components](#paired-components)
+- [Dynamic Components](#dynamic-components)
+- [Direct Imports](#direct-imports)
+- [Custom Directories](#custom-directories)
+- [Global Components](#global-components)
+- [Disabling Component Auto-imports](#disabling-component-auto-imports)
+- [Library Authors](#library-authors)
+<!-- /toc -->
+
 Nuxt automatically imports Vue components from `app/components/` directory.
 
 ## Basic Auto-imports
@@ -61,6 +92,27 @@ export default defineNuxtConfig({
 With `pathPrefix: false`:
 ```
 components/base/Button.vue → <Button />
+```
+
+### Grouping Directories
+
+Wrap a directory name in parentheses to group files without affecting the component name:
+
+```
+components/base/(foo)/Button.vue → <BaseButton />
+```
+
+### `pattern` / `ignore` Globs
+
+Each `components` dir entry accepts `pattern` and `ignore` globs to scan non-standard layouts (e.g. domain-driven structure). When `pattern` is set, the `extensions` option is ignored:
+
+```ts
+export default defineNuxtConfig({
+  components: [
+    // ~/domains/blog/components/PostCard.vue => <PostCard />
+    { path: '~/domains', pattern: '*/components/**', pathPrefix: false },
+  ],
+})
 ```
 
 ## Lazy Loading

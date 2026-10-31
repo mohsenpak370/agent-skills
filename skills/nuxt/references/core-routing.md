@@ -5,7 +5,35 @@ description: File-based routing, dynamic routes, navigation, and middleware in N
 
 # Routing
 
+<!-- toc -->
+## Contents
+
+- [Nuxt 5 Routing Defaults](#nuxt-5-routing-defaults)
+- [Basic Routing](#basic-routing)
+- [Dynamic Routes](#dynamic-routes)
+- [Navigation](#navigation)
+  - [NuxtLink Component](#nuxtlink-component)
+  - [Programmatic Navigation](#programmatic-navigation)
+- [Route Middleware](#route-middleware)
+  - [Named Middleware](#named-middleware)
+  - [Global Middleware](#global-middleware)
+  - [Inline Middleware](#inline-middleware)
+- [Page Meta](#page-meta)
+- [Route Validation](#route-validation)
+- [Layouts](#layouts)
+  - [Passing Props to Layouts (Nuxt 4.4+)](#passing-props-to-layouts-nuxt-44)
+- [Named Views](#named-views)
+- [Navigation Hooks](#navigation-hooks)
+<!-- /toc -->
+
 Nuxt uses file-system routing based on vue-router. Files in `app/pages/` automatically create routes.
+
+## Nuxt 5 Routing Defaults
+
+- **Case-sensitive matching** (`router.options.sensitive: true`) — `/About` no longer matches `pages/about.vue`. Match link casing to file names, or set `router: { options: { sensitive: false } }`.
+- **Typed pages on by default** (`experimental.typedPages`) — `useRoute`, `navigateTo`, `<NuxtLink :to>`, and `router.push` are type-checked against your real routes. Referencing a route that doesn't exist is a type error. Opt out with `experimental.typedPages: false`.
+- **Normalized page component names** — a page is named after its route, not its filename (`pages/foo/index.vue` → `foo`, not `index`). Update any `<KeepAlive :include>` filters to route names, or set `experimental.normalizePageNames: false`.
+- **Serializable page meta extracted at build time** — every JSON-serializable `definePageMeta()` property is written into the generated route record; only non-serializable values (functions, refs, spreads) resolve at runtime.
 
 ## Basic Routing
 
@@ -202,6 +230,50 @@ function enableAdmin() {
 </script>
 ```
 
+### Passing Props to Layouts (Nuxt 4.4+)
+
+Use the object syntax for `layout` to pass typed props to the layout component:
+
+```vue
+<!-- app/pages/dashboard.vue -->
+<script setup lang="ts">
+definePageMeta({
+  layout: { name: 'panel', props: { sidebar: true, title: 'Dashboard' } },
+})
+</script>
+```
+
+```vue
+<!-- app/layouts/panel.vue -->
+<script setup lang="ts">
+const props = defineProps<{ sidebar?: boolean, title?: string }>()
+</script>
+```
+
+Props are fully typed from the layout's `defineProps`. Also works dynamically: `setPageLayout('panel', { sidebar: true })`.
+
+## Named Views
+
+A route can render into multiple `<NuxtPage>` outlets. Add named view files with the `name@view.vue` convention next to the default route file:
+
+```
+pages/
+├── parent.vue
+└── parent/
+    ├── child.vue           → default <NuxtPage />
+    └── child@sidebar.vue   → <NuxtPage name="sidebar" />
+```
+
+```vue
+<!-- pages/parent.vue -->
+<template>
+  <NuxtPage />
+  <aside><NuxtPage name="sidebar" /></aside>
+</template>
+```
+
+`definePageMeta` is read from the default route file only.
+
 ## Navigation Hooks
 
 ```vue
@@ -223,4 +295,6 @@ Source references:
 - https://nuxt.com/docs/getting-started/routing
 - https://nuxt.com/docs/directory-structure/app/pages
 - https://nuxt.com/docs/directory-structure/app/middleware
+- https://nuxt.com/docs/api/utils/define-page-meta
+- https://nuxt.com/docs/getting-started/upgrade
 -->

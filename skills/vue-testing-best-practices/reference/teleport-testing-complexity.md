@@ -8,6 +8,15 @@ tags: [vue3, teleport, testing, vue-test-utils]
 
 # Teleported Content Requires Special Testing Approach
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Testing Vue Final Modal and UI Libraries](#testing-vue-final-modal-and-ui-libraries)
+- [E2E Testing (Cypress, Playwright)](#e2e-testing-cypress-playwright)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Vue Test Utils scopes queries to the mounted component. Teleported content renders outside the component's DOM tree, so `wrapper.find()` cannot locate it. This leads to failing tests and confusion.
 
 ## Task Checklist

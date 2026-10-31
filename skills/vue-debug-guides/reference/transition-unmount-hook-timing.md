@@ -8,6 +8,14 @@ tags: [vue3, lifecycle, transition, onUnmounted, unmounted, cleanup, race-condit
 
 # Unmount Hooks May Not Fire Inside Transitions During Fast Replacement
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Testing for This Issue](#testing-for-this-issue)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - When a component inside a `<transition>` is replaced by another component during the transition's loading phase, the unmount hooks (`onBeforeUnmount`, `onUnmounted`) may not be called even though the component is removed from the DOM. This can cause memory leaks and resource leaks from unclean side effects.
 
 This is a known edge case that occurs when the timing is specific - if a parent component with a child inside a transition is replaced while the child is still mounting. The child's mount hooks fire, but unmount hooks never do.

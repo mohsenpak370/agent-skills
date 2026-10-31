@@ -1,5 +1,17 @@
 # Editor Layout
 
+<!-- toc -->
+## Contents
+
+- [When to use](#when-to-use)
+- [Component tree](#component-tree)
+- [Basic editor](#basic-editor)
+- [Key components](#key-components)
+- [Toolbar modes](#toolbar-modes)
+- [Content types](#content-types)
+- [With document sidebar](#with-document-sidebar)
+<!-- /toc -->
+
 Build a rich text editor with toolbars, slash commands, mentions, and drag-and-drop.
 
 ## When to use

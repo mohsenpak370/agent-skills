@@ -1,5 +1,15 @@
 # Auth Forms
 
+<!-- toc -->
+## Contents
+
+- [UAuthForm (recommended)](#uauthform-recommended)
+  - [UAuthForm key props](#uauthform-key-props)
+  - [UAuthForm key slots](#uauthform-key-slots)
+- [Custom auth layout](#custom-auth-layout)
+- [Tips](#tips)
+<!-- /toc -->
+
 ## UAuthForm (recommended)
 
 `UAuthForm` provides a complete auth form with fields, providers, validation, and submit — no manual `UForm` + `UFormField` wiring needed. Wrap it in `UPageCard` for a polished look.

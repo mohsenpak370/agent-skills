@@ -5,6 +5,42 @@ description: Implement secure secrets management for CI/CD pipelines using Vault
 
 # Secrets Management
 
+<!-- toc -->
+## Contents
+
+- [Purpose](#purpose)
+- [When to Use](#when-to-use)
+- [Secrets Management Tools](#secrets-management-tools)
+  - [HashiCorp Vault](#hashicorp-vault)
+  - [AWS Secrets Manager](#aws-secrets-manager)
+  - [Azure Key Vault](#azure-key-vault)
+  - [Google Secret Manager](#google-secret-manager)
+- [HashiCorp Vault Integration](#hashicorp-vault-integration)
+  - [Setup Vault](#setup-vault)
+  - [GitHub Actions with Vault](#github-actions-with-vault)
+  - [GitLab CI with Vault](#gitlab-ci-with-vault)
+- [AWS Secrets Manager](#aws-secrets-manager-1)
+  - [Store Secret](#store-secret)
+  - [Retrieve in GitHub Actions](#retrieve-in-github-actions)
+  - [Terraform with AWS Secrets Manager](#terraform-with-aws-secrets-manager)
+- [GitHub Secrets](#github-secrets)
+  - [Organization/Repository Secrets](#organizationrepository-secrets)
+  - [Environment Secrets](#environment-secrets)
+- [GitLab CI/CD Variables](#gitlab-cicd-variables)
+  - [Project Variables](#project-variables)
+  - [Protected and Masked Variables](#protected-and-masked-variables)
+- [Best Practices](#best-practices)
+- [Secret Rotation](#secret-rotation)
+  - [Automated Rotation with AWS](#automated-rotation-with-aws)
+  - [Manual Rotation Process](#manual-rotation-process)
+- [External Secrets Operator](#external-secrets-operator)
+  - [Kubernetes Integration](#kubernetes-integration)
+- [Secret Scanning](#secret-scanning)
+  - [Pre-commit Hook](#pre-commit-hook)
+  - [CI/CD Secret Scanning](#cicd-secret-scanning)
+- [Related Skills](#related-skills)
+<!-- /toc -->
+
 Secure secrets management practices for CI/CD pipelines using Vault, AWS Secrets Manager, and other tools.
 
 ## Purpose
@@ -205,8 +241,9 @@ Use the inline GitHub secrets examples above as the reference pattern.
 ```yaml
 deploy:
   script:
-    - echo "Deploying with $API_KEY"
-    - echo "Database: $DATABASE_URL"
+    # Fail if a variable is missing, but never print its value
+    - test -n "$API_KEY" || { echo "API_KEY is not set"; exit 1; }
+    - test -n "$DATABASE_URL" || { echo "DATABASE_URL is not set"; exit 1; }
 ```
 
 ### Protected and Masked Variables

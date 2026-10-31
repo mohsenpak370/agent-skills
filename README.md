@@ -8,6 +8,8 @@ A curated collection of installable agent skills and routing instructions—buil
 - `skills/`: Installable agent skills.
 - `skills-lock.json`: Installed skill lockfile.
 - `opencode.json`: Local opencode config that loads skills from `skills/`.
+- `references/`: Shared checklists linked from several skills.
+- `scripts/generate-tocs.mjs`: Adds tables of contents to long skill files.
 
 ## Usage
 
@@ -101,9 +103,9 @@ For Vue and Nuxt work, Vue-specific skills may be loaded alongside
 existing design systems, and Vue-specific skills for framework correctness,
 composables, Pinia, testing, and debugging.
 
-Use `nuxt` for Nuxt 3 and Nuxt 4 routing, data fetching, server routes,
+Use `nuxt` for Nuxt 4 and Nuxt 5 routing, data fetching, server routes,
 middleware, Nitro, modules, layers, and rendering modes. The Nuxt skill is based
-on Nuxt 3.x, so verify version-specific features against the project's installed
+on Nuxt 5.x, so verify version-specific features against the project's installed
 Nuxt version.
 
 Use VueUse when an existing composable fits browser APIs, storage, sensors,
@@ -218,6 +220,8 @@ This repository currently includes skills for:
 - Python testing patterns
 - Python type safety
 - Python uv package management
+- Rust best practices
+- Rust unsafe code and FFI review
 - Security and hardening
 - SAST configuration
 - Security requirement extraction
@@ -251,6 +255,16 @@ Keep skill descriptions specific and action-oriented so agents can select the
 right skill automatically. If you add a new skill, place it under
 `skills/<skill-name>/SKILL.md` and include clear frontmatter with `name`
 and `description`.
+
+Markdown files in `skills/` and `references/` longer than 100 lines start with
+a generated `## Contents` section, so an agent previewing only the top of a file
+can still see everything it covers. Regenerate them after adding or updating a
+skill:
+
+```bash
+node scripts/generate-tocs.mjs          # add or refresh TOCs
+node scripts/generate-tocs.mjs --check  # list files whose TOC is missing or stale
+```
 
 Restart opencode after changing `AGENTS.md`, skill files, or references so new
 sessions pick up the updated instructions.

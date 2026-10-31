@@ -8,6 +8,17 @@ tags: [vue3, performance, virtual-list, large-data, dom, optimization]
 
 # Virtualize Large Lists to Avoid DOM Overload
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Recommended Libraries](#recommended-libraries)
+- [Using @tanstack/vue-virtual](#using-tanstackvue-virtual)
+- [Dynamic Heights with vue-virtual-scroller](#dynamic-heights-with-vue-virtual-scroller)
+- [Performance Comparison](#performance-comparison)
+- [When NOT to Virtualize](#when-not-to-virtualize)
+<!-- /toc -->
+
 **Impact: HIGH** - Rendering all items in a large list (hundreds or thousands) creates massive amounts of DOM nodes. Each node consumes memory, slows down initial render, and makes updates expensive. List virtualization only renders visible items, dramatically improving performance.
 
 Use a virtualization library when dealing with lists that could exceed 50-100 items, especially if items have complex content.
@@ -31,17 +42,6 @@ Use a virtualization library when dealing with lists that could exceed 50-100 it
 
 **BAD:**
 ```vue
-<template>
-  <!-- BAD: Renders ALL 10,000 items immediately -->
-  <div class="user-list">
-    <UserCard
-      v-for="user in users"
-      :key="user.id"
-      :user="user"
-    />
-  </div>
-</template>
-
 <script setup>
 import { ref, onMounted } from 'vue'
 import UserCard from './UserCard.vue'
@@ -53,23 +53,21 @@ onMounted(async () => {
   users.value = await fetchAllUsers()
 })
 </script>
+
+<template>
+  <!-- BAD: Renders ALL 10,000 items immediately -->
+  <div class="user-list">
+    <UserCard
+      v-for="user in users"
+      :key="user.id"
+      :user="user"
+    />
+  </div>
+</template>
 ```
 
 **GOOD:**
 ```vue
-<template>
-  <!-- GOOD: Only renders ~20 visible items at a time -->
-  <RecycleScroller
-    class="user-list"
-    :items="users"
-    :item-size="80"
-    key-field="id"
-    v-slot="{ item }"
-  >
-    <UserCard :user="item" />
-  </RecycleScroller>
-</template>
-
 <script setup>
 import { ref, onMounted } from 'vue'
 import { RecycleScroller } from 'vue-virtual-scroller'
@@ -84,6 +82,19 @@ onMounted(async () => {
 })
 </script>
 
+<template>
+  <!-- GOOD: Only renders ~20 visible items at a time -->
+  <RecycleScroller
+    class="user-list"
+    :items="users"
+    :item-size="80"
+    key-field="id"
+    v-slot="{ item }"
+  >
+    <UserCard :user="item" />
+  </RecycleScroller>
+</template>
+
 <style scoped>
 .user-list {
   height: 600px; /* Container must have fixed height */
@@ -94,6 +105,21 @@ onMounted(async () => {
 ## Using @tanstack/vue-virtual
 
 ```vue
+<script setup>
+import { ref } from 'vue'
+import { useVirtualizer } from '@tanstack/vue-virtual'
+
+const users = ref([/* 10,000 users */])
+const parentRef = ref(null)
+
+const rowVirtualizer = useVirtualizer({
+  count: users.value.length,
+  getScrollElement: () => parentRef.value,
+  estimateSize: () => 80,  // Estimated row height
+  overscan: 5  // Render 5 extra items above/below viewport
+})
+</script>
+
 <template>
   <div ref="parentRef" class="list-container">
     <div
@@ -120,21 +146,6 @@ onMounted(async () => {
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-import { useVirtualizer } from '@tanstack/vue-virtual'
-
-const users = ref([/* 10,000 users */])
-const parentRef = ref(null)
-
-const rowVirtualizer = useVirtualizer({
-  count: users.value.length,
-  getScrollElement: () => parentRef.value,
-  estimateSize: () => 80,  // Estimated row height
-  overscan: 5  // Render 5 extra items above/below viewport
-})
-</script>
-
 <style scoped>
 .list-container {
   height: 600px;
@@ -146,6 +157,10 @@ const rowVirtualizer = useVirtualizer({
 ## Dynamic Heights with vue-virtual-scroller
 
 ```vue
+<script setup>
+import { DynamicScroller, DynamicScrollerItem } from 'vue-virtual-scroller'
+</script>
+
 <template>
   <!-- For variable height items, use DynamicScroller -->
   <DynamicScroller
@@ -164,10 +179,6 @@ const rowVirtualizer = useVirtualizer({
     </template>
   </DynamicScroller>
 </template>
-
-<script setup>
-import { DynamicScroller, DynamicScrollerItem } from 'vue-virtual-scroller'
-</script>
 ```
 
 ## Performance Comparison

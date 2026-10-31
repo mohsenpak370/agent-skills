@@ -8,6 +8,19 @@ tags: [vue3, provide-inject, reactivity, composition-api, options-api]
 
 # Provide/Inject Values Are Not Reactive by Default
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Gotcha: Primitives Lose Reactivity](#the-gotcha-primitives-lose-reactivity)
+- [Options API: Use computed() for Reactivity](#options-api-use-computed-for-reactivity)
+- [Understanding Ref Behavior in Inject](#understanding-ref-behavior-in-inject)
+- [Providing Reactive Objects](#providing-reactive-objects)
+- [Common Mistake: Destructuring Breaks Reactivity](#common-mistake-destructuring-breaks-reactivity)
+- [Debugging Tip](#debugging-tip)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - A common misconception is that provide/inject automatically maintains reactivity. By default, provided primitive values are NOT reactive. If the provided value changes in the provider, injecting components will NOT be updated.
 
 ## Task Checklist

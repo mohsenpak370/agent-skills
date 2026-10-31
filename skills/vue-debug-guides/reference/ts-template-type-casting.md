@@ -8,6 +8,25 @@ tags: [typescript, templates, type-casting, union-types, script-setup]
 
 # Use Type Casting in Templates for Union Types
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Problem](#the-problem)
+- [Solution 1: Inline Type Casting](#solution-1-inline-type-casting)
+- [Solution 2: Computed Property (Preferred)](#solution-2-computed-property-preferred)
+- [Solution 3: Type Guard Function](#solution-3-type-guard-function)
+- [Common Use Cases](#common-use-cases)
+  - [API Response Data](#api-response-data)
+  - [Event Handlers with Event Types](#event-handlers-with-event-types)
+  - [Array Item Access](#array-item-access)
+- [When Type Casting is Needed](#when-type-casting-is-needed)
+- [Important Notes](#important-notes)
+  - [Template Type Checking Requirements](#template-type-checking-requirements)
+  - [Avoid Excessive Casting](#avoid-excessive-casting)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - When using `lang="ts"` in Vue Single File Components, template expressions get strict type checking. If a variable has a union type, you may need inline type casting to access type-specific methods or properties.
 
 ## Task Checklist

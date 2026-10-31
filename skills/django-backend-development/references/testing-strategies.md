@@ -1,5 +1,25 @@
 # Django Testing Strategies
 
+<!-- toc -->
+## Contents
+
+- [Test Organization](#test-organization)
+- [TestCase vs TransactionTestCase](#testcase-vs-transactiontestcase)
+- [pytest-django Setup](#pytest-django-setup)
+- [Model Testing](#model-testing)
+- [View Testing](#view-testing)
+- [API Testing (DRF)](#api-testing-drf)
+- [Fixtures and Factories](#fixtures-and-factories)
+- [Mocking External Services](#mocking-external-services)
+- [Testing Forms](#testing-forms)
+- [Coverage](#coverage)
+- [Performance Testing](#performance-testing)
+- [Advanced pytest Patterns](#advanced-pytest-patterns)
+- [Choosing Between Django TestCase and pytest-django](#choosing-between-django-testcase-and-pytest-django)
+- [Testing Best Practices Checklist](#testing-best-practices-checklist)
+- [Quick Reference](#quick-reference)
+<!-- /toc -->
+
 This guide covers testing Django applications using both Django's built-in `TestCase` and `pytest-django`. Both approaches are valid and widely used in production.
 
 **Quick comparison:**

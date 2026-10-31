@@ -8,6 +8,24 @@ tags: [vue3, sfc, scoped-css, styles, build-tools, performance, template, v-html
 
 # Single-File Component Structure, Styling, and Template Patterns
 
+<!-- toc -->
+## Contents
+
+- [Task List](#task-list)
+- [Colocate template, script, and styles](#colocate-template-script-and-styles)
+- [Use PascalCase for component names](#use-pascalcase-for-component-names)
+- [Best practices for `<style>` block in SFCs](#best-practices-for--block-in-sfcs)
+  - [Prefer component-scoped styles](#prefer-component-scoped-styles)
+  - [Use class selectors in scoped CSS](#use-class-selectors-in-scoped-css)
+- [Access DOM / component refs with `useTemplateRef()`](#access-dom--component-refs-with-usetemplateref)
+- [Use camelCase in `:style` bindings](#use-camelcase-in-style-bindings)
+- [Use `v-for` and `v-if` correctly](#use-v-for-and-v-if-correctly)
+  - [Always provide a stable `:key`](#always-provide-a-stable-key)
+  - [Avoid `v-if` and `v-for` on the same element](#avoid-v-if-and-v-for-on-the-same-element)
+- [Never render untrusted HTML with `v-html`](#never-render-untrusted-html-with-v-html)
+- [Choose `v-if` vs `v-show` by toggle behavior](#choose-v-if-vs-v-show-by-toggle-behavior)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Using SFCs with consistent structure and performant styling keeps components easier to maintain and avoids unnecessary render overhead.
 
 ## Task List

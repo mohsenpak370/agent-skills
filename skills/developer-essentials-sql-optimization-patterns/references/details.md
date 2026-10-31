@@ -1,5 +1,20 @@
 # sql-optimization-patterns — detailed patterns and worked examples
 
+<!-- toc -->
+## Contents
+
+- [Optimization Patterns](#optimization-patterns)
+  - [Pattern 1: Eliminate N+1 Queries](#pattern-1-eliminate-n1-queries)
+  - [Pattern 2: Optimize Pagination](#pattern-2-optimize-pagination)
+  - [Pattern 3: Aggregate Efficiently](#pattern-3-aggregate-efficiently)
+  - [Pattern 4: Subquery Optimization](#pattern-4-subquery-optimization)
+  - [Pattern 5: Batch Operations](#pattern-5-batch-operations)
+- [Advanced Techniques](#advanced-techniques)
+  - [Materialized Views](#materialized-views)
+  - [Partitioning](#partitioning)
+  - [Query Hints and Optimization](#query-hints-and-optimization)
+<!-- /toc -->
+
 ## Optimization Patterns
 
 ### Pattern 1: Eliminate N+1 Queries
@@ -238,7 +253,8 @@ CREATE INDEX idx_user_summary_spent ON user_order_summary(total_spent DESC);
 -- Refresh materialized view
 REFRESH MATERIALIZED VIEW user_order_summary;
 
--- Concurrent refresh (PostgreSQL)
+-- Concurrent refresh (PostgreSQL) requires a unique index on the view
+CREATE UNIQUE INDEX idx_user_summary_id ON user_order_summary(id);
 REFRESH MATERIALIZED VIEW CONCURRENTLY user_order_summary;
 
 -- Query materialized view (very fast)

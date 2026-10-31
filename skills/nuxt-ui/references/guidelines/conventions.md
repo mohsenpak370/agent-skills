@@ -1,5 +1,27 @@
 # Conventions
 
+<!-- toc -->
+## Contents
+
+- [Auto-registered modules](#auto-registered-modules)
+- [Content module integration](#content-module-integration)
+- [IDE setup](#ide-setup)
+- [UApp wrapper](#uapp-wrapper)
+- [Icons](#icons)
+  - [Default icon overrides](#default-icon-overrides)
+- [Slot patterns](#slot-patterns)
+- [Items arrays](#items-arrays)
+- [Composables](#composables)
+  - [useToast](#usetoast)
+  - [useOverlay](#useoverlay)
+  - [defineShortcuts](#defineshortcuts)
+  - [extractShortcuts](#extractshortcuts)
+  - [Internationalization (i18n)](#internationalization-i18n)
+- [Color mode](#color-mode)
+- [Official templates](#official-templates)
+- [Responsive patterns](#responsive-patterns)
+<!-- /toc -->
+
 Coding patterns specific to Nuxt UI.
 
 ## Auto-registered modules
@@ -172,7 +194,8 @@ const items = [
 ]
 ```
 
-Components supporting nested arrays: `UDropdownMenu`, `UContextMenu`, `UCommandPalette`, `UNavigationMenu`.
+Components supporting nested arrays: `UDropdownMenu`, `UContextMenu`, `UNavigationMenu`.
+`UCommandPalette` uses a `groups` prop instead, with an `items` array on each group.
 
 ## Composables
 
@@ -289,9 +312,9 @@ export default defineNuxtConfig({
   modules: ['@nuxt/ui', '@nuxtjs/i18n'],
   i18n: {
     locales: [
-      { code: 'en', name: 'English' },
-      { code: 'fr', name: 'Français' },
-      { code: 'ar', name: 'العربية' }
+      { code: 'en', language: 'en', name: 'English' },
+      { code: 'fr', language: 'fr', name: 'Français' },
+      { code: 'ar', language: 'ar', dir: 'rtl', name: 'العربية' }
     ]
   }
 })
@@ -299,26 +322,21 @@ export default defineNuxtConfig({
 
 ```vue
 <script setup lang="ts">
-import * as locales from '@nuxt/ui/locale'
+const head = useLocaleHead()
 
-const { locale } = useI18n()
-
-const lang = computed(() => locales[locale.value]?.code)
-const dir = computed(() => locales[locale.value]?.dir)
-
-useHead({
-  htmlAttrs: { lang, dir }
-})
+useHead(() => ({
+  htmlAttrs: head.value.htmlAttrs
+}))
 </script>
 
 <template>
-  <UApp :locale="locales[locale]">
+  <UApp>
     <NuxtPage />
   </UApp>
 </template>
 ```
 
-Each locale has a `dir` property (`'ltr'` or `'rtl'`). `UApp` uses it to set directionality on all components. Use `useHead` to propagate `lang` and `dir` to the `<html>` element.
+With `@nuxtjs/i18n` installed, `UApp` follows the current i18n locale and only bundles the Nuxt UI locales matching `i18n.locales`. Don't use `import * as locales from '@nuxt/ui/locale'`: it bundles every locale. Use `useLocaleHead` to propagate `lang` and `dir` to the `<html>` element.
 
 ## Color mode
 
@@ -356,15 +374,16 @@ const isDark = computed({
 Bootstrap a project from a template instead of starting from scratch:
 
 ```bash
-npx nuxi@latest init -t ui              # Starter
-npx nuxi@latest init -t ui/dashboard    # Dashboard
-npx nuxi@latest init -t ui/docs         # Docs (Nuxt Content)
-npx nuxi@latest init -t ui/landing      # Landing page
-npx nuxi@latest init -t ui/saas         # SaaS (landing + pricing + docs + blog)
-npx nuxi@latest init -t ui/chat         # AI chat (Vercel AI SDK)
-npx nuxi@latest init -t ui/editor       # Rich text editor
-npx nuxi@latest init -t ui/portfolio    # Portfolio
-npx nuxi@latest init -t ui/changelog    # Changelog
+npm create nuxt@latest -- -t ui            # Starter
+npm create nuxt@latest -- -t ui/dashboard  # Dashboard
+npm create nuxt@latest -- -t ui/docs       # Docs (Nuxt Content)
+npm create nuxt@latest -- -t ui/landing    # Landing page
+npm create nuxt@latest -- -t ui/saas       # SaaS (landing + pricing + docs + blog)
+npm create nuxt@latest -- -t ui/chat       # AI chat (Vercel AI SDK)
+npm create nuxt@latest -- -t ui/editor     # Rich text editor
+npm create nuxt@latest -- -t ui/portfolio  # Portfolio
+npm create nuxt@latest -- -t ui/changelog  # Changelog
+npm create nuxt@latest -- -t ui/calendar   # Calendar
 ```
 
 ## Responsive patterns

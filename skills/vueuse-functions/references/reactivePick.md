@@ -4,6 +4,16 @@ category: Reactivity
 
 # reactivePick
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Basic Usage](#basic-usage)
+  - [Predicate Usage](#predicate-usage)
+  - [Scenarios](#scenarios)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactively pick fields from a reactive object.
 
 ## Usage

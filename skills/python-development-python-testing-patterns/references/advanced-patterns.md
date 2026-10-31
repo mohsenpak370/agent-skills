@@ -1,5 +1,18 @@
 # Python Testing Patterns — Advanced Reference
 
+<!-- toc -->
+## Contents
+
+- [Pattern 6: Testing Async Code](#pattern-6-testing-async-code)
+- [Pattern 7: Monkeypatch for Testing](#pattern-7-monkeypatch-for-testing)
+- [Pattern 8: Temporary Files and Directories](#pattern-8-temporary-files-and-directories)
+- [Pattern 9: Custom Fixtures and Conftest](#pattern-9-custom-fixtures-and-conftest)
+- [Pattern 10: Property-Based Testing](#pattern-10-property-based-testing)
+- [Testing Database Code](#testing-database-code)
+- [CI/CD Integration](#cicd-integration)
+- [Configuration Files](#configuration-files)
+<!-- /toc -->
+
 Advanced testing patterns including async code, monkeypatching, temporary files, conftest setup, property-based testing, database testing, CI/CD integration, and configuration.
 
 ## Pattern 6: Testing Async Code

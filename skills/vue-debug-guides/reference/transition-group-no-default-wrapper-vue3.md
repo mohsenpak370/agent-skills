@@ -8,6 +8,18 @@ tags: [vue3, transition-group, migration, vue2, breaking-change, wrapper-element
 
 # TransitionGroup No Longer Renders Default Wrapper Element in Vue 3
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Migration Scenarios](#migration-scenarios)
+  - [Layout Depending on Wrapper](#layout-depending-on-wrapper)
+  - [Semantic HTML Lists](#semantic-html-lists)
+  - [When You Don't Need a Wrapper](#when-you-dont-need-a-wrapper)
+- [In-DOM Template Syntax](#in-dom-template-syntax)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - In Vue 2, `<transition-group>` always rendered a wrapper element (default `<span>`), but in Vue 3, it renders no wrapper element by default thanks to fragment support. This breaking change can cause layout issues and broken styles when migrating from Vue 2.
 
 If your code relies on the wrapper element for styling or layout, you must explicitly specify the `tag` prop in Vue 3.

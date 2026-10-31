@@ -8,6 +8,16 @@ tags: [vue3, watch, watchers, deep, oldValue, newValue, object-reference]
 
 # Deep Watch Callback Receives Same Object Reference for Old and New Values
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Manual Snapshot Pattern](#manual-snapshot-pattern)
+- [When Old and New Values Differ](#when-old-and-new-values-differ)
+- [Using Getter Returns New Object](#using-getter-returns-new-object)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - When using deep watchers on reactive objects, both `newValue` and `oldValue` in the callback point to the same object reference. They will always be equal for nested mutations because Vue doesn't clone the object before mutation.
 
 Don't rely on comparing `newValue` to `oldValue` in deep watchers for detecting what changed. Instead, track specific values or implement your own diffing.

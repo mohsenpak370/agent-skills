@@ -5,6 +5,23 @@ description: NuxtLink, NuxtPage, NuxtLayout, and other built-in Nuxt components
 
 # Built-in Components
 
+<!-- toc -->
+## Contents
+
+- [NuxtLink](#nuxtlink)
+- [NuxtPage](#nuxtpage)
+- [NuxtLayout](#nuxtlayout)
+- [NuxtLoadingIndicator](#nuxtloadingindicator)
+- [NuxtErrorBoundary](#nuxterrorboundary)
+- [ClientOnly](#clientonly)
+- [DevOnly](#devonly)
+- [NuxtIsland](#nuxtisland)
+- [NuxtImg and NuxtPicture](#nuxtimg-and-nuxtpicture)
+- [Teleport](#teleport)
+- [NuxtRouteAnnouncer](#nuxtrouteannouncer)
+- [NuxtAnnouncer](#nuxtannouncer)
+<!-- /toc -->
+
 Nuxt provides several built-in components for common functionality.
 
 ## NuxtLink
@@ -188,6 +205,8 @@ Server components (experimental):
 </template>
 ```
 
+Islands render in their own isolated Vue app keyed on props (for cacheability). `useRoute()` and other vue-router composables inside an island reflect the island's own request, **not** the current page — pass route info in via props or the `context` prop. Props/context are sent as GET query params (may appear in logs/CDN caches).
+
 ## NuxtImg and NuxtPicture
 
 Optimized images (requires `@nuxt/image` module):
@@ -243,7 +262,7 @@ For SSR, use `<ClientOnly>` with Teleport:
 
 ## NuxtRouteAnnouncer
 
-Accessibility: announces page changes to screen readers:
+Accessibility: automatically announces page changes (from the page `<title>`) to screen readers:
 
 ```vue
 <!-- app/app.vue -->
@@ -255,10 +274,35 @@ Accessibility: announces page changes to screen readers:
 </template>
 ```
 
+## NuxtAnnouncer
+
+Accessibility: a hidden live region for **manual** announcements of dynamic content (form validation, toasts, loading). Add it once, then drive it with the `useAnnouncer` composable (Nuxt 4.4.2+):
+
+```vue
+<!-- app/app.vue -->
+<template>
+  <NuxtAnnouncer />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
+</template>
+```
+
+```vue
+<script setup lang="ts">
+const { polite, assertive } = useAnnouncer()
+assertive('Error: form is invalid') // interrupts immediately
+</script>
+```
+
+Props: `politeness` (`polite` | `assertive` | `off`, default `polite`), `atomic` (default `true`). Use `<NuxtRouteAnnouncer>` for route changes, `<NuxtAnnouncer>` for everything else.
+
 <!-- 
 Source references:
-- https://nuxt.com/docs/api/components/nuxt-link
-- https://nuxt.com/docs/api/components/nuxt-page
-- https://nuxt.com/docs/api/components/nuxt-layout
-- https://nuxt.com/docs/api/components/client-only
+- https://nuxt.com/docs/4.x/api/components/nuxt-link
+- https://nuxt.com/docs/4.x/api/components/nuxt-page
+- https://nuxt.com/docs/4.x/api/components/nuxt-layout
+- https://nuxt.com/docs/4.x/api/components/client-only
+- https://nuxt.com/docs/4.x/api/components/nuxt-announcer
+- https://nuxt.com/docs/4.x/api/components/nuxt-island
 -->

@@ -8,6 +8,22 @@ tags: [vue3, testing, snapshot, vitest, vue-test-utils, anti-pattern]
 
 # Avoid Snapshot-Only Tests - They Don't Prove Correctness
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [When Snapshots ARE Useful](#when-snapshots-are-useful)
+  - [Regression Detection for Stable Components](#regression-detection-for-stable-components)
+  - [Inline Snapshots for Small Structures](#inline-snapshots-for-small-structures)
+  - [Complex SVG or Icon Output](#complex-svg-or-icon-output)
+- [Better Alternatives to Snapshots](#better-alternatives-to-snapshots)
+  - [Test Specific Elements](#test-specific-elements)
+  - [Test CSS Classes for Styling](#test-css-classes-for-styling)
+  - [Use Testing Library Queries](#use-testing-library-queries)
+- [Snapshot Anti-Patterns](#snapshot-anti-patterns)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - Snapshot tests only verify that HTML structure hasn't changed - they don't verify that the component works correctly. Relying exclusively on snapshots leads to false confidence and tests that break on any refactoring, even when functionality is preserved.
 
 Use snapshots sparingly for regression detection. Prefer behavioral assertions that test what the component does.

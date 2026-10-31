@@ -5,6 +5,17 @@ related: useManualRefHistory
 
 # useRefHistory
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Objects / arrays](#objects--arrays)
+  - [History Capacity](#history-capacity)
+  - [History WatchOptionFlush Timing](#history-watchoptionflush-timing)
+- [Recommended Readings](#recommended-readings)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Track the change history of a ref, also provides undo and redo functionality
 
 <CourseLink href="https://vueschool.io/lessons/ref-history-with-vueuse?friend=vueuse">Learn useRefHistory with this FREE video lesson from Vue School!</CourseLink>
@@ -200,7 +211,7 @@ Another option is to avoid mutating the original ref value using `arr.value = [.
 
 ## Recommended Readings
 
-- [History and Persistence](https://patak.dev/vue/history-and-persistence.html) - by [@patak-dev](https://github.com/patak-dev)
+- [History and Persistence](https://patak.dev/vue/history-and-persistence.html) - by [@patak-cat](https://github.com/patak-cat)
 
 ## Type Declarations
 

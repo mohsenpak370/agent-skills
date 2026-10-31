@@ -1,5 +1,14 @@
 # architecture-patterns — detailed patterns and worked examples
 
+<!-- toc -->
+## Contents
+
+- [Clean Architecture — Directory Structure](#clean-architecture--directory-structure)
+- [Clean Architecture — Core Implementation](#clean-architecture--core-implementation)
+- [Hexagonal Architecture — Ports and Adapters](#hexagonal-architecture--ports-and-adapters)
+- [DDD — Value Objects and Aggregates](#ddd--value-objects-and-aggregates)
+<!-- /toc -->
+
 ## Clean Architecture — Directory Structure
 
 ```

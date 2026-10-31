@@ -8,6 +8,14 @@ tags: [vue3, render-function, vnode, composition-api]
 
 # VNodes Must Be Unique in Render Functions
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Why VNodes Must Be Unique](#why-vnodes-must-be-unique)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Reusing the same vnode reference multiple times in a render function tree causes rendering bugs, where only one instance appears or updates behave unexpectedly.
 
 Every vnode in a component's render tree must be unique. You cannot use the same vnode object multiple times. If you need to render the same element multiple times, create each vnode separately using a factory function or by calling `h()` in a loop.

@@ -8,6 +8,23 @@ tags: [vue3, state-management, reactive, methods, templates, this-binding]
 
 # Include Parentheses When Calling Store Methods in Templates
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [The Problem](#the-problem)
+- [The Solution](#the-solution)
+- [Why This Happens](#why-this-happens)
+- [Alternative Solutions](#alternative-solutions)
+  - [1. Use Arrow Functions in the Template](#1-use-arrow-functions-in-the-template)
+  - [2. Bind Methods in the Store Definition](#2-bind-methods-in-the-store-definition)
+  - [3. Use Pinia (Recommended)](#3-use-pinia-recommended)
+  - [4. Wrap in a Local Function](#4-wrap-in-a-local-function)
+- [When This Matters](#when-this-matters)
+- [Quick Reference](#quick-reference)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: MEDIUM** - When calling methods on a reactive store object in Vue templates, you must include parentheses (even without arguments) to ensure the method is called with the correct `this` context. Without parentheses, `this` inside the method may not refer to the store.
 
 This is a subtle gotcha that can cause hard-to-debug issues with hand-rolled reactive stores.

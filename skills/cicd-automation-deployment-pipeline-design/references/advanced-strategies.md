@@ -1,5 +1,26 @@
 # Advanced Deployment Strategies Reference
 
+<!-- toc -->
+## Contents
+
+- [Platform-Specific Pipeline Configurations](#platform-specific-pipeline-configurations)
+  - [GitHub Actions — Full Production Pipeline with Reusable Workflows](#github-actions--full-production-pipeline-with-reusable-workflows)
+  - [GitLab CI — Multi-Environment Pipeline with Dynamic Environments](#gitlab-ci--multi-environment-pipeline-with-dynamic-environments)
+  - [Azure Pipelines — Multi-Stage with Approvals and Environments](#azure-pipelines--multi-stage-with-approvals-and-environments)
+- [Multi-Region Canary Promotion](#multi-region-canary-promotion)
+- [Advanced Argo Rollouts Patterns](#advanced-argo-rollouts-patterns)
+  - [Experiment-Based Canary (A/B Analysis)](#experiment-based-canary-ab-analysis)
+  - [Header-Based Canary (Internal Testing Before Traffic Split)](#header-based-canary-internal-testing-before-traffic-split)
+- [Database Migration Rollback Strategies](#database-migration-rollback-strategies)
+  - [Expand/Contract Pattern (Safe Schema Changes)](#expandcontract-pattern-safe-schema-changes)
+  - [Flyway with Undo Scripts](#flyway-with-undo-scripts)
+  - [Zero-Downtime Index Creation (PostgreSQL)](#zero-downtime-index-creation-postgresql)
+- [Blue-Green with Database (Full Example)](#blue-green-with-database-full-example)
+- [Deployment Freeze Automation](#deployment-freeze-automation)
+- [Notification Templates](#notification-templates)
+  - [Slack Deployment Notification](#slack-deployment-notification)
+<!-- /toc -->
+
 Extended configurations, platform-specific patterns, and advanced rollback strategies.
 Core patterns and decision tables live in [`../SKILL.md`](../SKILL.md).
 
@@ -556,6 +577,7 @@ Automatically block production deployments during freeze windows:
 ```python
 #!/usr/bin/env python3
 # scripts/check-freeze-window.py
+import os
 import sys
 from datetime import datetime, timezone
 
@@ -573,7 +595,7 @@ for fm, d_start, d_end, label in FREEZE_WINDOWS:
     if fm == month and d_start <= day <= d_end:
         print(f"BLOCKED: Deployment freeze active — {label}")
         print("Override with FORCE_DEPLOY=true environment variable if critical.")
-        if not os.environ.get("FORCE_DEPLOY"):
+        if os.environ.get("FORCE_DEPLOY") != "true":
             sys.exit(1)
 
 print("No active freeze window — deployment allowed.")

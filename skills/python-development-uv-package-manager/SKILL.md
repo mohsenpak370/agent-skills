@@ -5,6 +5,37 @@ description: Master the uv package manager for fast Python dependency management
 
 # UV Package Manager
 
+<!-- toc -->
+## Contents
+
+- [When to Use This Skill](#when-to-use-this-skill)
+- [Core Concepts](#core-concepts)
+  - [1. What is uv?](#1-what-is-uv)
+  - [2. Key Features](#2-key-features)
+  - [3. UV vs Traditional Tools](#3-uv-vs-traditional-tools)
+- [Installation](#installation)
+  - [Quick Install](#quick-install)
+  - [Verify Installation](#verify-installation)
+- [Quick Start](#quick-start)
+  - [Create a New Project](#create-a-new-project)
+  - [Install Dependencies](#install-dependencies)
+- [Virtual Environment Management](#virtual-environment-management)
+  - [Pattern 1: Creating Virtual Environments](#pattern-1-creating-virtual-environments)
+  - [Pattern 2: Activating Virtual Environments](#pattern-2-activating-virtual-environments)
+  - [Pattern 3: Using uv run](#pattern-3-using-uv-run)
+- [Package Management](#package-management)
+  - [Pattern 4: Adding Dependencies](#pattern-4-adding-dependencies)
+  - [Pattern 5: Removing Dependencies](#pattern-5-removing-dependencies)
+  - [Pattern 6: Upgrading Dependencies](#pattern-6-upgrading-dependencies)
+  - [Pattern 7: Locking Dependencies](#pattern-7-locking-dependencies)
+- [Python Version Management](#python-version-management)
+  - [Pattern 8: Installing Python Versions](#pattern-8-installing-python-versions)
+  - [Pattern 9: Setting Python Version](#pattern-9-setting-python-version)
+- [Project Configuration](#project-configuration)
+  - [Pattern 10: pyproject.toml with uv](#pattern-10-pyprojecttoml-with-uv)
+  - [Pattern 11: Using uv with Existing Projects](#pattern-11-using-uv-with-existing-projects)
+<!-- /toc -->
+
 Comprehensive guide to using uv, an extremely fast Python package installer and resolver written in Rust, for modern Python project management and dependency workflows.
 
 ## When to Use This Skill
@@ -54,21 +85,21 @@ Comprehensive guide to using uv, an extremely fast Python package installer and 
 ### Quick Install
 
 ```bash
-# macOS/Linux
-curl -LsSf https://astral.sh/uv/install.sh | sh
-
-# Windows (PowerShell)
-powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
-
-# Using pip (if you already have Python)
-pip install uv
-
-# Using Homebrew (macOS)
+# Using Homebrew (macOS or Linux)
 brew install uv
 
-# Using cargo (if you have Rust)
-cargo install --git https://github.com/astral-sh/uv uv
+# Using Cargo (if you have Rust)
+cargo install --locked uv
 ```
+
+On Windows, use WinGet:
+
+```powershell
+winget install --id=astral-sh.uv -e
+```
+
+Use the [official installation guide](https://docs.astral.sh/uv/getting-started/installation/)
+for other supported installation methods.
 
 ### Verify Installation
 

@@ -8,6 +8,16 @@ tags: [vue3, computed, arrays, mutation, sort, reverse]
 
 # Avoid Mutating Methods on Arrays in Computed Properties
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Mutating vs Non-Mutating Array Methods](#mutating-vs-non-mutating-array-methods)
+- [ES2023 Non-Mutating Alternatives](#es2023-non-mutating-alternatives)
+- [Deep Copy for Nested Arrays](#deep-copy-for-nested-arrays)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - JavaScript array methods like `reverse()`, `sort()`, `splice()`, `push()`, `pop()`, `shift()`, and `unshift()` mutate the original array. Using them directly on reactive arrays inside computed properties will modify your source data, causing unexpected side effects and bugs.
 
 ## Task Checklist

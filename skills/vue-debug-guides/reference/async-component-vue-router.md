@@ -1,5 +1,18 @@
 # Do Not Use defineAsyncComponent with Vue Router
 
+<!-- toc -->
+## Contents
+
+- [Rule](#rule)
+- [Why This Matters](#why-this-matters)
+- [Bad Code](#bad-code)
+- [Good Code](#good-code)
+- [Handling Loading States with Vue Router](#handling-loading-states-with-vue-router)
+- [When to Use defineAsyncComponent](#when-to-use-defineasynccomponent)
+- [Key Points](#key-points)
+- [References](#references)
+<!-- /toc -->
+
 ## Rule
 
 Never use `defineAsyncComponent` when configuring Vue Router route components. Vue Router has its own lazy loading mechanism using dynamic imports directly.

@@ -4,6 +4,22 @@ category: Network
 
 # useFetch
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [Basic Usage](#basic-usage)
+  - [Asynchronous Usage](#asynchronous-usage)
+  - [Refetching on URL change](#refetching-on-url-change)
+  - [Prevent request from firing immediately](#prevent-request-from-firing-immediately)
+  - [Aborting a request](#aborting-a-request)
+  - [Intercepting a request](#intercepting-a-request)
+  - [Setting the request method and return type](#setting-the-request-method-and-return-type)
+  - [Creating a Custom Instance](#creating-a-custom-instance)
+  - [Events](#events)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Reactive [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) provides the ability to abort requests, intercept requests before
 they are fired, automatically refetch requests when the url changes, and create your own `useFetch` with predefined options.
 

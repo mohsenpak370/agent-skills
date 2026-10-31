@@ -1,5 +1,18 @@
 # Advanced Architecture Patterns — Reference
 
+<!-- toc -->
+## Contents
+
+- [Full Multi-Service Project Structure](#full-multi-service-project-structure)
+- [Onion Architecture vs. Clean Architecture](#onion-architecture-vs-clean-architecture)
+- [Anti-Corruption Layer (ACL)](#anti-corruption-layer-acl)
+- [Context Map — Relationships Between Bounded Contexts](#context-map--relationships-between-bounded-contexts)
+- [Dependency Injection Wiring — Infrastructure Layer](#dependency-injection-wiring--infrastructure-layer)
+- [Aggregate Design Heuristics](#aggregate-design-heuristics)
+- [Domain Events — Publishing and Handling](#domain-events--publishing-and-handling)
+- [Detecting and Breaking Dependency Cycles](#detecting-and-breaking-dependency-cycles)
+<!-- /toc -->
+
 Deep-dive implementation examples for DDD bounded contexts, Onion Architecture, Anti-Corruption Layers, and full project structures. Referenced from SKILL.md.
 
 ---
@@ -338,8 +351,17 @@ class PostgresOutboxPublisher:
 
 
 # use_cases/place_order.py — aggregate saves, events are extracted and stored
+# For the outbox, the repository port takes the open connection:
+#   async def save(self, order: Order, conn) -> None
+# so the order row and the outbox rows commit in the same transaction.
 class PlaceOrderUseCase:
-    def __init__(self, order_repo: OrderRepository, event_publisher: PostgresOutboxPublisher):
+    def __init__(
+        self,
+        db: Database,
+        order_repo: OrderRepository,
+        event_publisher: PostgresOutboxPublisher,
+    ):
+        self.db = db
         self.orders = order_repo
         self.publisher = event_publisher
 

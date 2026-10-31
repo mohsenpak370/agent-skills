@@ -5,6 +5,22 @@ description: Universal rendering, client-side rendering, and hybrid rendering in
 
 # Rendering Modes
 
+<!-- toc -->
+## Contents
+
+- [Universal Rendering (Default)](#universal-rendering-default)
+- [Client-Side Rendering](#client-side-rendering)
+  - [SPA Loading Template](#spa-loading-template)
+- [Hybrid Rendering](#hybrid-rendering)
+  - [Route Rules Reference](#route-rules-reference)
+  - [Inline Route Rules](#inline-route-rules)
+- [Prerendering](#prerendering)
+  - [Nuxt 5: Payload Extraction & Error Pages](#nuxt-5-payload-extraction--error-pages)
+  - [Programmatic Prerendering](#programmatic-prerendering)
+- [Edge-Side Rendering](#edge-side-rendering)
+- [Conditional Rendering](#conditional-rendering)
+<!-- /toc -->
+
 Nuxt supports multiple rendering modes: universal (SSR), client-side (CSR), and hybrid rendering.
 
 ## Universal Rendering (Default)
@@ -122,6 +138,10 @@ export default defineNuxtConfig({
 | `cors: true` | Add CORS headers |
 | `headers: object` | Custom response headers |
 
+> **Nitro v3 changes:**
+> - Redirect rules use `status` (not `statusCode`): `redirect: { to: '/new', status: 302 }`.
+> - Cached routes (`cache`/`swr`/`isr`) now key on **path only** — the query string is dropped. Keep it with `allowQuery: true` or a list of param names: `cache: { swr: true, maxAge: 60, allowQuery: ['page'] }`.
+
 ### Inline Route Rules
 
 Define per-page:
@@ -155,6 +175,12 @@ Or use `nuxt generate`:
 ```bash
 nuxt generate
 ```
+
+### Nuxt 5: Payload Extraction & Error Pages
+
+- **Payload extraction defaults to `'client'`** (`experimental.payloadExtraction`): the payload of a prerendered/cached page is **inlined in the HTML** for the initial render, and `_payload.json` is only fetched during client-side navigation. Forced to `false` when `ssr: false`.
+- `nuxt generate` / `nuxt build --prerender` emit SPA fallbacks into `.output/public/`: **`200.html`** (client router handles unmatched paths) and **`404.html`** (keep 404 status + load app). A plain `nuxt build` does not.
+- **Prerender the error page** with `experimental.prerenderErrorPages: true` — Nuxt renders `error.vue` at build time into `404.html`. Because one file serves every missing path, guard request-specific data with `import.meta.prerender` and wrap request-specific markup in `<ClientOnly>`.
 
 ### Programmatic Prerendering
 

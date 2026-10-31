@@ -1,5 +1,24 @@
 # Use inheritAttrs: false for Wrapper Components
 
+<!-- toc -->
+## Contents
+
+- [Rule](#rule)
+- [Why This Matters](#why-this-matters)
+- [Bad Code](#bad-code)
+- [Good Code](#good-code)
+- [Setting inheritAttrs in Different Syntaxes](#setting-inheritattrs-in-different-syntaxes)
+  - [Script Setup (Vue 3.3+)](#script-setup-vue-33)
+  - [Script Setup (Before Vue 3.3)](#script-setup-before-vue-33)
+  - [Options API](#options-api)
+- [Common Wrapper Component Patterns](#common-wrapper-component-patterns)
+  - [Form Input Wrapper](#form-input-wrapper)
+  - [Button with Icon Wrapper](#button-with-icon-wrapper)
+  - [Link Wrapper Component](#link-wrapper-component)
+- [When NOT to Use inheritAttrs: false](#when-not-to-use-inheritattrs-false)
+- [References](#references)
+<!-- /toc -->
+
 ## Rule
 
 When building wrapper components where attributes should be applied to an inner element instead of the root element, always set `inheritAttrs: false` and explicitly bind `$attrs` to the target element.
@@ -15,16 +34,16 @@ When building wrapper components where attributes should be applied to an inner 
 
 ```vue
 <!-- BaseInput.vue - WRONG: attrs go to wrapper div, not input -->
+<script setup>
+defineProps(['label'])
+</script>
+
 <template>
   <div class="input-wrapper">
     <label>{{ label }}</label>
     <input type="text" />
   </div>
 </template>
-
-<script setup>
-defineProps(['label'])
-</script>
 
 <!-- Parent usage -->
 <BaseInput

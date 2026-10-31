@@ -5,6 +5,15 @@ related: syncRefs
 
 # syncRef
 
+<!-- toc -->
+## Contents
+
+- [Usage](#usage)
+  - [One directional](#one-directional)
+  - [Custom Transform](#custom-transform)
+- [Type Declarations](#type-declarations)
+<!-- /toc -->
+
 Two-way refs synchronization.
 
 ## Usage

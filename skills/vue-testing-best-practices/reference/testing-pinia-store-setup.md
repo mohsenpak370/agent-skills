@@ -8,6 +8,17 @@ tags: [vue3, testing, pinia, vitest, store, mocking, createTestingPinia]
 
 # Configure Pinia Testing with createTestingPinia and setActivePinia
 
+<!-- toc -->
+## Contents
+
+- [Task Checklist](#task-checklist)
+- [Testing with Real Actions vs Stubbed Actions](#testing-with-real-actions-vs-stubbed-actions)
+- [Mocking Specific Action Implementations](#mocking-specific-action-implementations)
+- [Spying on Actions with vi.spyOn](#spying-on-actions-with-vispyon)
+- [Testing Store $subscribe](#testing-store-subscribe)
+- [Reference](#reference)
+<!-- /toc -->
+
 **Impact: HIGH** - Testing components or composables that use Pinia stores without proper configuration results in "[Vue warn]: injection Symbol(pinia) not found" errors. Tests will fail or behave unexpectedly.
 
 Use `@pinia/testing` package with `createTestingPinia` for component tests and `setActivePinia(createPinia())` for unit testing stores directly.
